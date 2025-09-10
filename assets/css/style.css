@@ -3339,5 +3339,48 @@ img.left {
   position: relative;
   margin-top: -40px;
   margin-left: -40px;
+
 }
+.custom-Portolio:hover{
+  transform: scale(1.06); /* Zoom al pasar el mouse */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.tag-portfolio {
+  font-size: 12px;
+  padding: 4px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  margin-bottom: 15px;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; 
+}
+  
+  .tag-portfolio:hover {
+  background: var(--maincolor);
+  color: #1d1d1d; 
+}
+
+.portfolio .item:hover .cont .arrow svg {
+  stroke: var(--maincolor);
+  fill: var(--maincolor); 
+}
+
+.tag-portfolio-icon {
+  font-size: 20px;
+  padding: 4px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  margin-bottom: 15px;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; 
+}
+
+ .tag-portfolio-icon:hover {
+  background: var(--maincolor);
+  color: #1d1d1d; 
+}
+
 /* ====================== [ Start Custom FTORRES ] ====================== */
