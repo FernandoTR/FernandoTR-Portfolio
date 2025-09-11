@@ -3333,54 +3333,106 @@ img.left {
 /* ====================== [ End Responsive ] ====================== */
 
 /* ====================== [ Start Custom FTORRES ] ====================== */
-.custom-Portolio{
-  width: 500px;
-  height: auto;
-  position: relative;
-  margin-top: -40px;
-  margin-left: -40px;
 
-}
-.custom-Portolio:hover{
-  transform: scale(1.06); /* Zoom al pasar el mouse */
-  transition: transform 0.3s ease; /* Transición suave */
+/* --- ESTRUCTURA PRINCIPAL DE LA TARJETA --- */
+.swiper-slide .item {
+  display: flex;
+  flex-direction: column; /* Apila los hijos verticalmente. */
+  height: 100%; /* Asegura que la tarjeta ocupe toda la altura del slide. */
 }
 
-.tag-portfolio {
+/* --- CONTENEDOR DE LA IMAGEN --- */
+.custom-Portolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /* <-- Esta es la altura de tu imagen */
+  background-color: #e69955;
+}
+
+/* --- EFECTOS Y ESTILOS ADICIONALES --- */
+
+/**
+ * Efecto de zoom en la imagen al pasar el cursor sobre su contenedor.
+ */
+.custom-Portolio:hover img {
+    transform: scale(1.06);
+}
+
+/**
+ * Estilos para las etiquetas y los iconos de la tarjeta.
+ */
+.tag-portfolio, .tag-portfolio-icon {
   font-size: 12px;
   padding: 4px 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
   margin-bottom: 15px;
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s; 
+  transition: all .4s;
 }
-  
-  .tag-portfolio:hover {
+.tag-portfolio-icon{
+    font-size: 20px;
+}
+.tag-portfolio:hover, .tag-portfolio-icon:hover {
   background: var(--maincolor);
-  color: #1d1d1d; 
+  color: #1d1d1d;
 }
 
 .portfolio .item:hover .cont .arrow svg {
   stroke: var(--maincolor);
-  fill: var(--maincolor); 
+  fill: var(--maincolor);
 }
 
-.tag-portfolio-icon {
-  font-size: 20px;
-  padding: 4px 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 30px;
-  margin-bottom: 15px;
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s; 
+
+
+/* Asegura que todos los slides tengan la misma altura para una apariencia uniforme */
+.swiper-wrapper {
+  align-items: stretch;
 }
 
- .tag-portfolio-icon:hover {
-  background: var(--maincolor);
-  color: #1d1d1d; 
+/* Opcional: Para asegurar que el contenedor del item ocupe toda la altura del slide */
+.swiper-slide {
+    height: auto;
+}
+.swiper-slide .item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.swiper-slide .cont {
+    flex-grow: 1; /* Permite que esta sección crezca para empujar el footer hacia abajo */
+    margin-top: 200px;  /* Asegura que el contenido no se superponga con la imagen */
 }
 
-/* ====================== [ Start Custom FTORRES ] ====================== */
+/* ================================================================== */
+/* ===== MEDIA QUERY PARA CORREGIR EL SOLAPAMIENTO EN MÓVILES ===== */
+/* ================================================================== */
+
+@media (max-width: 1022px) {
+  .swiper-slide .cont {
+    /* Aumentamos el margen superior en pantallas pequeñas porque la imagen se vuelve más alta */
+    margin-top: 320px; /* Es posible que necesites ajustar este valor */
+  }
+}
+
+@media (max-width: 985px) {
+  .swiper-slide .cont {
+    /* Aumentamos el margen superior en pantallas pequeñas porque la imagen se vuelve más alta */
+    margin-top: 480px; /* Es posible que necesites ajustar este valor */
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper-slide .cont {
+    /* Aumentamos el margen superior en pantallas pequeñas porque la imagen se vuelve más alta */
+    margin-top: 260px; /* Es posible que necesites ajustar este valor */
+  }
+}
+@media (max-width: 400px) {
+  .swiper-slide .cont {
+    /* Aumentamos el margen superior en pantallas pequeñas porque la imagen se vuelve más alta */
+    margin-top: 180px; /* Es posible que necesites ajustar este valor */
+  }
+}
+/* ====================== [ End Custom FTORRES ] ====================== */
