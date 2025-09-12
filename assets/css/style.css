@@ -3405,6 +3405,31 @@ img.left {
     margin-top: 200px;  /* Asegura que el contenido no se superponga con la imagen */
 }
 
+
+.arrow svg {
+  stroke: #fff;
+  fill: #fff;
+  width: 25px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; }
+
+.item:hover  .date {
+  background: var(--maincolor);
+  color: #1d1d1d; }
+
+.item:hover .cont .arrow svg {
+  stroke: var(--maincolor);
+  fill: var(--maincolor); 
+}
+
+
+
+
+
 /* ================================================================== */
 /* ===== MEDIA QUERY PARA CORREGIR EL SOLAPAMIENTO EN MÓVILES ===== */
 /* ================================================================== */
