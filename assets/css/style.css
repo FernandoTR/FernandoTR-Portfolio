@@ -1576,7 +1576,7 @@ body.loaded {
 .fixed-box {
   position: fixed;
   top: 5vh;
-  left: calc(50% - 720px);
+  left: calc(44% - 720px);
   width: 400px;
   z-index: 99; }
 
@@ -3402,7 +3402,7 @@ img.left {
 }
 .swiper-slide .cont {
     flex-grow: 1; /* Permite que esta sección crezca para empujar el footer hacia abajo */
-    margin-top: 200px;  /* Asegura que el contenido no se superponga con la imagen */
+    margin-top: 240px;  /* Asegura que el contenido no se superponga con la imagen */
 }
 
 
