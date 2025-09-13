@@ -3489,6 +3489,29 @@ img.left {
     background-color: #28a745 !important;
 }
 
+.ulResume {
+  list-style: none; /* quitar viñetas */
+  padding-left: 0;
+}
+
+.ulResume li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;  
+  font-size: 13px;
+  font-weight: 300;
+  color: #aaa;
+}
+
+.ulResume li::before {
+  content: "•"; /* tu viñeta */
+  position: absolute;
+  left: 0;
+  color: #e28545; /* color personalizado */
+  font-weight: bold;
+}
+
+
 /* ================================================================== */
 /* ===== MEDIA QUERY PARA CORREGIR EL SOLAPAMIENTO EN MÓVILES ===== */
 /* ================================================================== */
