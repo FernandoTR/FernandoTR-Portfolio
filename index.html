@@ -687,56 +687,28 @@
 
                     <!-- ==================== Start Contact ==================== -->
 
-                    <div class="contact section-padding pt-0" data-scroll-index="4">
-                        <div class="sec-head mb-80">
-                            <h6 class="dot-titl mb-10">Get In Touch</h6>
-                            <h2 class="fz-50">Let's make your brand brilliant!</h2>
-                            <p class="fz-15 mt-10">If you would like to work with us or just want to get in
-                                touch, we’d love to hear from you!</p>
-                            <div class="phone fz-30 fw-500 mt-30 underline">
-                                <a href="#0" class="main-color">+1 840 841 25 69</a>
+                    <div class=" section-padding pt-0" data-scroll-index="4">
+                        <div class="sec-head mb-50">       
+                            <!--<h2 class="fz-50">Buscando mi próximo reto profesional.</h2>-->
+                            <h2 class="fz-50">Abierto a nuevas oportunidades como Desarrollador Full Stack .NET</h2>                           
+                            <div class="d-flex mt-20">
+                                <a href="mailto:Jose_Fer_Torres@hotmail.com" class="btnSendContactSection radius-10 mt-30 p-0"><i class="fas fa-paper-plane" style="margin-right: 10px;"></i>  Escríbeme</a>
+                                <input id="kt_share_earn_link_input" type="text" class="inputContact form-group mt-30 has-error has-danger" name="search" value="jose_fer_torres@hotmail.com"  />
+                                <button id="kt_share_earn_link_copy_button" class="  radius-10 mt-30 btnContactSection" data-clipboard-target="#kt_share_earn_link_input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 15 15" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M1 9.5A1.5 1.5 0 0 0 2.5 11H4v-1H2.5a.5.5 
+                                            0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5V4H5.5A1.5 1.5 
+                                            0 0 0 4 5.5v7A1.5 1.5 0 0 0 5.5 14h7a1.5 1.5 0 0 0 
+                                            1.5-1.5v-7A1.5 1.5 0 0 0 12.5 4H11V2.5A1.5 1.5 0 0 
+                                            0 9.5 1h-7A1.5 1.5 0 0 0 1 2.5zm4-4a.5.5 0 0 1 
+                                            .5-.5h7a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-7a.5.5 
+                                            0 0 1-.5-.5z"></path>
+                                    </svg>
+                                </button>
                             </div>
-                        </div>
-                        <form id="contact-form" method="post" action="contact.php">
 
-                            <div class="messages"></div>
 
-                            <div class="controls row">
-
-                                <div class="col-lg-6">
-                                    <div class="form-group mb-30">
-                                        <input id="form_name" type="text" name="name" placeholder="Name"
-                                            required="required">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="form-group mb-30">
-                                        <input id="form_email" type="email" name="email" placeholder="Email"
-                                            required="required">
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-group mb-30">
-                                        <input id="form_subject" type="text" name="subject" placeholder="Subject">
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea id="form_message" name="message" placeholder="Message" rows="4"
-                                            required="required"></textarea>
-                                    </div>
-                                    <div class="mt-30">
-                                        <button type="submit">
-                                            <span class="text">Send A Message</span>
-                                        </button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </form>
+                        </div>                      
                     </div>
 
                     <!-- ==================== End Contact ==================== -->                  
@@ -779,6 +751,8 @@
 
     <script src="assets/js/jquery.carouselTicker.min.js"></script>
 
+    <script src="assets/js/clipboard.min.js"></script>
+
 
     <!-- custom scripts -->
     <script src="assets/js/scripts.js"></script>
@@ -791,8 +765,42 @@
         // Actualiza el año actual
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+       
+        $(document).ready(function() {
+            // Funcionalidad de copiar al portapapeles
+            var button = document.querySelector('#kt_share_earn_link_copy_button');
+            var input = document.querySelector('#kt_share_earn_link_input');
+            var clipboard = new ClipboardJS(button);
+
+            if (!clipboard) {
+                return;
+            }
+
+            //  Copy text to clipboard. For more info check the plugin's documentation: https://clipboardjs.com/
+            clipboard.on('success', function(e) {
+                var buttonCaption = button.innerHTML;
+                //Add bgcolor
+                input.classList.add('bs-success');
+                input.classList.add('text-inverse-success');
+
+                button.innerHTML = '<i class="fas fa-check" ></i>';
+
+                setTimeout(function() {
+                    button.innerHTML = buttonCaption;
+
+                    // Remove bgcolor
+                    input.classList.remove('bs-success');
+                    input.classList.remove('text-inverse-success');
+                }, 3000);  // 3seconds
+
+                e.clearSelection();
+            });
+
+
+        });
+
         // Inicializa los carouselTicker
-        $(function() { // equivalente a $(document).ready
+        $(function() { 
             $('.carouselTicker-left').carouselTicker({
             direction: 'prev',
             speed: 1,

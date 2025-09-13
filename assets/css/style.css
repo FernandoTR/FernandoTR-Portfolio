@@ -3426,9 +3426,68 @@ img.left {
   fill: var(--maincolor); 
 }
 
+.btnContactSection {
+    width: 100px;
+    text-align: center;
+    background: #bbbaa6;
+    color: #1d1d1d;
+    border: 1px solid #bbbaa6;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s; 
+    margin-left: 20px;
+  }
+    .btnContactSection:hover {
+      background: transparent;
+      color: #bbbaa6; 
+    }
+    
+.btnSendContactSection {
+    width: 30%;
+    text-align: center;
+    background: #bbbaa6;
+    color: #1d1d1d;
+    border: 1px solid #bbbaa6;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s; 
+    font-size: 17px;
 
+    display: flex;
+    align-items: center;   /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
+    gap: 8px;  /* espacio entre el ícono y el texto */
+  }
+    .btnSendContactSection:hover {
+      background: transparent;
+      color: #bbbaa6; 
+    }
 
+.btnSendContact {
+    width: 400px !important;   /* ancho fijo */
+}
 
+.btnContact {
+    margin-left: 20px;
+}
+
+.inputContact {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    padding: 15px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    margin-left: 20px;
+     font-size: 17px;
+}
+
+.bs-success {
+    background-color: #28a745 !important;
+}
 
 /* ================================================================== */
 /* ===== MEDIA QUERY PARA CORREGIR EL SOLAPAMIENTO EN MÓVILES ===== */
