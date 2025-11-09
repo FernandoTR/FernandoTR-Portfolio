@@ -3520,6 +3520,13 @@ img.left {
     height: 100%;
 }
 
+.skills .box-item {
+  background: #101111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 40px 30px;
+  }
+
 /* ================================================================== */
 /* ===== MEDIA QUERY PARA CORREGIR EL SOLAPAMIENTO EN MÓVILES ===== */
 /* ================================================================== */
