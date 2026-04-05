@@ -3335,48 +3335,165 @@ img.left {
 /* ====================== [ Start Custom FTORRES ] ====================== */
 
 /* --- ESTRUCTURA PRINCIPAL DE LA TARJETA --- */
-.swiper-slide .item {
-  display: flex;
-  flex-direction: column; /* Apila los hijos verticalmente. */
-  height: 100%; /* Asegura que la tarjeta ocupe toda la altura del slide. */
+
+
+/* =========================
+   CARD BASE PREMIUM
+========================= */
+
+.testim-swiper .swiper-slide {
+  height: auto;
+  padding: 10px 0;
 }
 
-/* --- CONTENEDOR DE LA IMAGEN --- */
+.testim-swiper .item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+/* Glow elegante */
+.testim-swiper .item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.14),
+    rgba(230,153,85,0.28),
+    rgba(255,255,255,0.04)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+
+.testim-swiper .item:hover {
+  transform: translateY(-10px);
+  box-shadow: 1px 0 10px 10px rgba(230,153,85,0.22);
+  border-color: rgba(230,153,85,0.22);
+}
+
+.testim-swiper .item:hover::before {
+  opacity: 1;
+}
+
+.testim-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* =========================
+   IMAGE CONTAINER
+========================= */
 .custom-Portolio {
   position: absolute;
   top: 0;
   left: 0;
+  width: calc(100% + 36px);
+
+  height: 200px; /* altura fija visual */
+  overflow: hidden;
+
+}
+
+.custom-Portolio img {
   width: 100%;
-  height: auto; /* <-- Esta es la altura de tu imagen */
-  background-color: #e69955;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* --- EFECTOS Y ESTILOS ADICIONALES --- */
 
-/**
- * Efecto de zoom en la imagen al pasar el cursor sobre su contenedor.
- */
-.custom-Portolio:hover img {
-    transform: scale(1.06);
+/* Overlay elegante */
+.custom-Portolio::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.18),
+    rgba(0,0,0,0.02)
+  );
+  opacity: 1;
+  transition: opacity .35s ease;
+  pointer-events: none;
 }
 
-/**
- * Estilos para las etiquetas y los iconos de la tarjeta.
- */
-.tag-portfolio, .tag-portfolio-icon {
+.testim-swiper .item:hover .custom-Portolio img {
+  transform: scale(1.07);
+  filter: brightness(1.04);
+}
+
+.testim-swiper .item:hover .custom-Portolio::after {
+  opacity: 0.85;
+}
+
+/* =========================
+   CONTENT
+   ========================= */
+.swiper-slide .cont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;  
+  padding-top: 180px; /* espacio reservado para la imagen */
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.swiper-slide .cont h4,
+.swiper-slide .cont h6 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.swiper-slide .cont p {
+  color: rgba(255,255,255,0.78);
+  line-height: 1.7;
+  min-height: 110px; /* uniformidad visual */
+}
+
+/* =========================
+   TAGS / ICONS
+   ========================= */
+.tag-portfolio,
+.tag-portfolio-icon {
   font-size: 12px;
-  padding: 4px 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 30px;
-  margin-bottom: 15px;
-  transition: all .4s;
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  
+  transition: all .3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .tag-portfolio-icon{
     font-size: 20px;
 }
+
 .tag-portfolio:hover, .tag-portfolio-icon:hover {
   background: var(--maincolor);
-  color: #1d1d1d;
+  color: #1d1d1d;  
+  border-color: var(--maincolor);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(230,153,85,0.25);
 }
 
 .portfolio .item:hover .cont .arrow svg {
@@ -3384,26 +3501,21 @@ img.left {
   fill: var(--maincolor);
 }
 
-
-
-/* Asegura que todos los slides tengan la misma altura para una apariencia uniforme */
-.swiper-wrapper {
-  align-items: stretch;
+/* =========================
+   FOOTER / CTA
+   ========================= */
+.testim-swiper .d-flex.align-items-center:last-child {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
-/* Opcional: Para asegurar que el contenedor del item ocupe toda la altura del slide */
-.swiper-slide {
-    height: auto;
-}
-.swiper-slide .item {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-.swiper-slide .cont {
-    flex-grow: 1; /* Permite que esta sección crezca para empujar el footer hacia abajo */
-    margin-top: 240px;  /* Asegura que el contenido no se superponga con la imagen */
-}
+
+
+
+/* --- EFECTOS Y ESTILOS ADICIONALES --- */
+
+
 
 
 .arrow svg {
@@ -3527,34 +3639,144 @@ img.left {
   padding: 40px 30px;
   }
 
-/* ================================================================== */
-/* ===== MEDIA QUERY PARA CORREGIR EL SOLAPAMIENTO EN MÓVILES ===== */
-/* ================================================================== */
+  /* Project Details */
 
-@media (max-width: 1022px) {
-  .swiper-slide .cont {
-    /* Aumentamos el margen superior en pantallas pequeñas porque la imagen se vuelve más alta */
-    margin-top: 320px; /* Es posible que necesites ajustar este valor */
+  .stack-name {
+    font-size: 14px;
+    margin-right: 5px;
+    opacity: .7; 
   }
+
+  .tag-stack {
+    padding:  8px 14px;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 30px;
+    margin-right: 5px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s; 
+  }
+
+  .tag-stack:hover {
+    background: var(--maincolor);
+    color: #1d1d1d; }
+
+
+  .portfolio-shot a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 380px;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 985px) {
-  .swiper-slide .cont {
-    /* Aumentamos el margen superior en pantallas pequeñas porque la imagen se vuelve más alta */
-    margin-top: 480px; /* Es posible que necesites ajustar este valor */
-  }
+.portfolio-shot a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-@media (max-width: 600px) {
-  .swiper-slide .cont {
-    /* Aumentamos el margen superior en pantallas pequeñas porque la imagen se vuelve más alta */
-    margin-top: 260px; /* Es posible que necesites ajustar este valor */
-  }
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
-@media (max-width: 400px) {
-  .swiper-slide .cont {
-    /* Aumentamos el margen superior en pantallas pequeñas porque la imagen se vuelve más alta */
-    margin-top: 180px; /* Es posible que necesites ajustar este valor */
-  }
+
+/* Botón volver */
+.next-prev .sub-title a {
+    font-size: 15px;
+    font-weight: 500;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
+
+.next-prev .sub-title a:hover {
+    opacity: 0.85;
+    transform: translateX(-2px);
+}
+
+.text-align-justify {
+    text-align: justify !important;
+}
+
+
+/* ==================== Portfolio Detail EndpointCards ==================== */
+
+.portfolio-mini-card,
+.endpoint-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    padding: 24px 22px;
+    height: 100%;
+    transition: all 0.3s ease;
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.15); */
+}
+
+.portfolio-mini-card:hover,
+.endpoint-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.16);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+}
+
+.portfolio-mini-card h6,
+.endpoint-card h6 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #bbbaa6;
+}
+
+.portfolio-mini-card p,
+.endpoint-card p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #aaa;
+    margin: 0;
+}
+
+.endpoint-method {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.endpoint-method.get {
+    background: rgba(40, 167, 69, 0.15);
+    color: #4ade80;
+}
+
+.endpoint-method.post {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+}
+
+.endpoint-method.patch {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+}
+
+.endpoint-method.put {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+}
+
+.endpoint-method.delete {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+}
+
+
+
 /* ====================== [ End Custom FTORRES ] ====================== */

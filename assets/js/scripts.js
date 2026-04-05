@@ -439,6 +439,10 @@ $(function () {
         var direction = $(this).data('direction');
         var mousewheel = $(this).data('mousewheel');
 
+        var freeMode = $(this).data('freemode');
+        var freeMomentum = $(this).data('freemomentum');
+        var touchMove = $(this).data('touchmove');
+
         // Configuration
         var conf = {
 
@@ -517,7 +521,7 @@ $(function () {
             };
         };
 
-        if ($(this).hasClass('testim-swiper')) {
+       if ($(this).hasClass('testim-swiper')) {
             var conf = {
 
                 pagination: {
@@ -530,18 +534,34 @@ $(function () {
                     prevEl: '.testim-controls .swiper-button-prev'
                 },
 
+                loop: true,
+                freeMode: true,
+                freeModeMomentum: false,
+                allowTouchMove: true,
+
+                autoplay: {
+                    delay: 10,
+                    disableOnInteraction: false,
+                },
+
+                speed: 5000,
+
                 breakpoints: {
                     0: {
                         slidesPerView: 1,
+                        spaceBetween: 12,
                     },
                     640: {
                         slidesPerView: 1,
+                        spaceBetween: 15,
                     },
                     768: {
-                        slidesPerView: 1,
+                        slidesPerView: 2,
+                        spaceBetween: 20,
                     },
                     1024: {
-                        slidesPerView: 2,
+                        slidesPerView: 3,
+                        spaceBetween: 20,
                     },
                 }
             };
@@ -561,7 +581,18 @@ $(function () {
             conf.slidesPerView = items
         };
         if (autoplay) {
-            conf.autoplay = autoplay
+            if (typeof autoplay === "string") {
+                try {
+                    conf.autoplay = JSON.parse(autoplay);
+                } catch (e) {
+                    conf.autoplay = {
+                        delay: 2500,
+                        disableOnInteraction: false
+                    };
+                }
+            } else {
+                conf.autoplay = autoplay;
+            }
         };
         if (iSlide) {
             conf.initialSlide = iSlide
@@ -601,11 +632,60 @@ $(function () {
                 conf.paginationClickable = true
         };
 
+        if (freeMode !== undefined) {
+            conf.freeMode = freeMode;
+        };
+
+        if (freeMomentum !== undefined) {
+            conf.freeModeMomentum = freeMomentum;
+        };
+
+        if (touchMove !== undefined) {
+            conf.allowTouchMove = touchMove;
+        };
+
         // Initialization
         if (containe) {
             var initID = '#' + containe;
             var init = new Swiper(initID, conf);
+
+            if ($(this).hasClass('testim-swiper')) {
+                var $carousel = $(this);
+                var $wrapper = $carousel.find('.swiper-wrapper');
+
+                $carousel.on('mouseenter', function () {
+                    // Guardar posición actual
+                    var currentTranslate = init.getTranslate();
+
+                    // Detener autoplay
+                    if (init.autoplay) {
+                        init.autoplay.stop();
+                    }
+
+                    // Congelar movimiento
+                    init.setTranslate(currentTranslate);
+                    $wrapper.css('transition-duration', '0ms');
+                });
+
+                $carousel.on('mouseleave', function () {
+                    // Restaurar velocidad
+                    $wrapper.css('transition-duration', conf.speed + 'ms');
+
+                    // Forzar actualización
+                    init.update();
+
+                    // Reactivar autoplay con pequeño delay
+                    setTimeout(function () {
+                        if (init.autoplay) {
+                            init.autoplay.start();
+                        }
+                    }, 50);
+                });
+            }
         };
+
+       
+
     });
 
 
