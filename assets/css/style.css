@@ -3777,6 +3777,32 @@ img.left {
     color: #f87171;
 }
 
+/* ===== Hero About ===== */
 
+.hero-chips-wrap {
+    gap: 10px;
+}
+
+.hero-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.68);
+    background: rgba(255, 255, 255, 0.015);
+    letter-spacing: 0.2px;
+    transition: all 0.25s ease;
+}
+
+.hero-chip:hover {
+    color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-1px);
+}
 
 /* ====================== [ End Custom FTORRES ] ====================== */
