@@ -3966,5 +3966,108 @@ img.left {
 
 
 
+/* GRID */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* CARD */
+.skill-card {
+    padding: 26px;
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.1);
+    background: #101111;
+    transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+/* ICON */
+.skill-icon {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* LABEL */
+.skill-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* TEXT */
+.skill-card h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 14px;
+    color: #cfcfcf;
+    line-height: 1.8;
+}
+
+/* BADGES */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-badges span {
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.tech-badges span:hover {
+    transform: translateY(-2px);
+}
+
+/* NOTE */
+.skills-note {
+    padding: 18px;
+    border-radius: 16px;
+    margin-top: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.skills-highlight {
+    padding: 38px 34px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-highlight::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    /* background: radial-gradient(circle, rgba(173, 138, 255, 0.08) 0%, transparent 70%); */
+    pointer-events: none;
+}
+
+.skills-highlight h5 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+}
 
 /* ====================== [ End Custom FTORRES ] ====================== */
