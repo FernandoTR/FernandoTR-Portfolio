@@ -750,36 +750,107 @@
                     </div>
 
                     <!-- ==================== End Skills ==================== -->
-                     
-                   
 
                     <!-- ==================== Start Contact ==================== -->
 
-                    <div class=" section-padding pt-0" data-scroll-index="4" id="contact">
-                        <div class="sec-head mb-50">       
-                            <!--<h2 class="fz-50">Buscando mi próximo reto profesional.</h2>-->
-                            <h2 class="fz-50">Abierto a nuevas oportunidades como Desarrollador Full Stack .NET</h2>                           
-                            <div class="d-flex mt-20">
-                                <a href="mailto:Jose_Fer_Torres@hotmail.com" class="btnSendContactSection radius-10 mt-30 p-0"><i class="fas fa-paper-plane" style="margin-right: 10px;"></i>  Escríbeme</a>
-                                <input id="kt_share_earn_link_input" type="text" class="inputContact form-group mt-30 has-error has-danger" name="search" value="jose_fer_torres@hotmail.com"  />
-                                <button id="kt_share_earn_link_copy_button" class="  radius-10 mt-30 btnContactSection" data-clipboard-target="#kt_share_earn_link_input">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 15 15" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M1 9.5A1.5 1.5 0 0 0 2.5 11H4v-1H2.5a.5.5 
-                                            0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5V4H5.5A1.5 1.5 
-                                            0 0 0 4 5.5v7A1.5 1.5 0 0 0 5.5 14h7a1.5 1.5 0 0 0 
-                                            1.5-1.5v-7A1.5 1.5 0 0 0 12.5 4H11V2.5A1.5 1.5 0 0 
-                                            0 9.5 1h-7A1.5 1.5 0 0 0 1 2.5zm4-4a.5.5 0 0 1 
-                                            .5-.5h7a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-7a.5.5 
-                                            0 0 1-.5-.5z"></path>
-                                    </svg>
-                                </button>
+                    <section class="contact section-padding" data-scroll-index="4" id="contact">
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                
+                                <!-- Left Content -->
+                                <div class="col-lg-5 valign">
+                                    <div class="sec-head md-mb50">
+                                        <span class="sub-title mb-15">Contacto</span>
+
+                                        <h2 class="fz-50 contact-title">
+                                            Estoy abierto a <br>
+                                            <span class="main-color">nuevas oportunidades</span>
+                                        </h2>
+
+                                        <p class="mt-20">
+                                            Si crees que mi perfil puede aportar valor a tu equipo o proyecto, será un gusto conversar.
+                                        </p>
+
+                                        <div class="mt-30">
+                                            <span class="hero-chip">Disponible para oportunidades</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Form -->
+                                <div class="col-lg-6">
+                                    <div class="contact-form-box">
+                                        
+                                        <form id="contact-form" class="contact-form">
+                                             <!-- Web3Forms Access Key -->
+                                            <input type="hidden" name="access_key" value="869e45ea-dd24-4b46-a7b1-8e7479b801a7">
+
+                                            <!-- Asunto fijo del correo -->
+                                            <input type="hidden" name="subject" value="Nuevo mensaje desde tu portafolio">
+
+                                            <!-- Honeypot anti-spam -->
+                                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-20">
+                                                        <input id="form_name" type="text" name="name" placeholder="Nombre" required>
+                                                        <small class="field-error" id="error_name"></small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="mb-20">
+                                                        <input id="form_email" type="email" name="email" placeholder="Email" required>
+                                                        <small class="field-error" id="error_email"></small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-20">
+                                                        <input id="form_subject" type="text" name="subject" placeholder="Asunto">
+                                                        <small class="field-error" id="error_subject"></small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-20">
+                                                        <textarea id="form_message" name="message" placeholder="Cuéntame sobre la oportunidad o proyecto..." required></textarea>
+                                                         <small class="field-error" id="error_message"></small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <button type="submit" class="butn btnSendContactSection" id="contact-submit-btn">
+                                                        <span class="text">Enviar mensaje</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <p class="contact-note mt-20">
+                                                        Respondo normalmente en menos de 24 horas.
+                                                    </p>
+                                                </div>
+
+                                                <!-- Estado del formulario -->
+                                                <div class="col-12">
+                                                    <p id="form-status" class="form-status mt-15"></p>
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+
                             </div>
+                        </div>
+                    </section>
 
+                    <!-- ==================== End Contact ==================== -->                    
+                   
 
-                        </div>                      
-                    </div>
-
-                    <!-- ==================== End Contact ==================== -->                  
+                                 
 
 
                     <!-- ==================== Start Footer ==================== -->
@@ -883,6 +954,187 @@
         });
     </script>
 
+    <!-- contact form -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const form = document.getElementById("contact-form");
+            const btn = document.getElementById("contact-submit-btn");
+            const btnText = btn.querySelector(".text");
+
+            const toast = document.getElementById("toast");
+            const toastMessage = toast.querySelector(".toast-message");
+
+            const fields = {
+                name: document.getElementById("form_name"),
+                email: document.getElementById("form_email"),
+                subject: document.getElementById("form_subject"),
+                message: document.getElementById("form_message")
+            };
+
+            const errors = {
+                name: document.getElementById("error_name"),
+                email: document.getElementById("error_email"),
+                subject: document.getElementById("error_subject"),
+                message: document.getElementById("error_message")
+            };
+
+            let toastTimeout;
+
+            function showToast(message, type) {
+                clearTimeout(toastTimeout);
+
+                toastMessage.textContent = message;
+                toast.className = `toast show ${type}`;
+
+                toastTimeout = setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 4000);
+            }
+
+            function clearError(fieldKey) {
+                fields[fieldKey].classList.remove("input-error");
+                errors[fieldKey].textContent = "";
+                errors[fieldKey].classList.remove("show");
+            }
+
+            function setError(fieldKey, message) {
+                fields[fieldKey].classList.add("input-error");
+                errors[fieldKey].textContent = message;
+                errors[fieldKey].classList.add("show");
+            }
+
+            function validate() {
+                let valid = true;
+                let firstInvalidField = null;
+
+                // limpiar errores previos
+                Object.keys(fields).forEach(key => clearError(key));
+
+                // Validar nombre
+                if (!fields.name.value.trim()) {
+                    setError("name", "El nombre es obligatorio.");
+                    if (!firstInvalidField) firstInvalidField = fields.name;
+                    valid = false;
+                }
+
+                // Validar email
+                const emailValue = fields.email.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailValue) {
+                    setError("email", "El correo es obligatorio.");
+                    if (!firstInvalidField) firstInvalidField = fields.email;
+                    valid = false;
+                } else if (!emailRegex.test(emailValue)) {
+                    setError("email", "Ingresa un correo válido.");
+                    if (!firstInvalidField) firstInvalidField = fields.email;
+                    valid = false;
+                }
+
+                // Validar asunto
+                if (!fields.subject.value.trim()) {
+                    setError("subject", "El asunto es obligatorio.");
+                    if (!firstInvalidField) firstInvalidField = fields.subject;
+                    valid = false;
+                }
+
+                // Validar mensaje
+                if (!fields.message.value.trim()) {
+                    setError("message", "El mensaje es obligatorio.");
+                    if (!firstInvalidField) firstInvalidField = fields.message;
+                    valid = false;
+                }
+
+                if (!valid) {
+                    showToast("Corrige los campos marcados", "error");
+
+                    if (firstInvalidField) {
+                        firstInvalidField.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                        setTimeout(() => firstInvalidField.focus(), 300);
+                    }
+
+                    return false;
+                }
+
+                return true;
+            }
+
+            // limpiar error al escribir
+            Object.keys(fields).forEach(key => {
+                fields[key].addEventListener("input", function () {
+                    if (fields[key].value.trim()) {
+                        clearError(key);
+
+                        if (key === "email") {
+                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailRegex.test(fields.email.value.trim())) {
+                                setError("email", "Ingresa un correo válido.");
+                            }
+                        }
+                    } else {
+                        clearError(key);
+                    }
+                });
+            });
+
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                if (!validate()) return;
+
+                btn.classList.add("loading");
+                btn.disabled = true;
+                btnText.textContent = "Enviando...";
+
+                const formData = new FormData(form);
+
+                formData.set("name", fields.name.value.trim());
+                formData.set("email", fields.email.value.trim());
+                formData.set("title", fields.subject.value.trim());
+                formData.set("message", fields.message.value.trim());
+
+                try {
+                    const res = await fetch("https://api.web3forms.com/submit", {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    const data = await res.json();
+
+                    if (data.success) {
+                        showToast("Mensaje enviado correctamente 🚀", "success");
+                        form.reset();
+
+                        Object.keys(fields).forEach(key => clearError(key));
+                    } else {
+                        showToast("Error al enviar el mensaje", "error");
+                        console.error(data);
+                    }
+
+                } catch (err) {
+                    showToast("Error de conexión", "error");
+                    console.error(err);
+                }
+
+                btn.classList.remove("loading");
+                btn.disabled = false;
+                btnText.textContent = "Enviar mensaje";
+            });
+
+        });
+    </script>
+
+    <div id="toast" class="toast">
+    <div class="toast-content">
+        <span class="toast-icon"></span>
+        <span class="toast-message"></span>
+    </div>
+</div>
 </body>
 
 </html>
