@@ -4292,6 +4292,163 @@ img.left {
 /* ==================== End Contact Premium ==================== */
 
 
+/* ==================== Footer Ultra Minimal ==================== */
+.footer-ultra {
+    position: relative;
+    padding: 10px 0 30px;
+}
 
+.footer-ultra-box {
+    position: relative;
+     padding: 52px 42px 32px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.025) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.18);
+}
+
+.footer-ultra-box::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle, rgba(230,153,85,0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.footer-minimal-top {
+    position: relative;
+    z-index: 2;
+    max-width: 880px;
+}
+
+.footer-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.48);
+    margin-bottom: 18px;
+}
+
+.footer-minimal-title {
+    font-size: 38px;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+    color: #fff;
+    max-width: 850px;
+}
+
+.footer-minimal-text {
+    font-size: 15px;
+    line-height: 2;
+    color: rgba(255,255,255,0.62);
+    max-width: 760px;
+    margin-bottom: 0;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 42px 0 30px;
+}
+
+.footer-bottom-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-brand h6 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.54);
+    margin: 0;
+}
+
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-socials a {
+    padding: 11px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.018);
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.84);
+    transition: all 0.28s ease;
+    backdrop-filter: blur(8px);
+}
+
+.footer-socials a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(230,153,85,0.28);
+    background: rgba(230,153,85,0.07);
+    color: #fff;
+    box-shadow: 0 12px 28px rgba(230,153,85,0.08);
+}
+
+.footer-copy-row {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-copy-row p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.42);
+    margin: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+    .footer-ultra-box {
+        padding: 34px 24px 24px;
+        border-radius: 24px;
+    }
+
+    .footer-minimal-title {
+        font-size: 30px;
+    }
+
+    .footer-bottom-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-minimal-title {
+        font-size: 25px;
+        line-height: 1.15;
+    }
+
+    .footer-minimal-text {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .footer-socials {
+        width: 100%;
+    }
+}
 
 /* ====================== [ End Custom FTORRES ] ====================== */
