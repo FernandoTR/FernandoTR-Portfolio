@@ -4094,73 +4094,26 @@ img.left {
 
 .contact .sec-head p {
     max-width: 430px;
-    font-size: 16px;
     line-height: 2.05;
     color: rgba(255,255,255,0.68);
 
 }
 
-.contact-form-box {
-    padding: 34px 30px;
-    border-radius: 24px;
-    background: #101111;
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius: 999px;
     border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 18px 50px rgba(0,0,0,0.18);
-     position: relative;
-    overflow: hidden;
-}
-
-
-
-/* Inputs */
-.contact-form-box input,
-.contact-form-box textarea {
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    border-radius: 16px;
-    background: #101111;
-    color: #fff;
-    padding: 16px 18px;
+    background: rgba(255,255,255,0.02);
+    color: rgba(255,255,255,0.82);
     font-size: 15px;
-    transition: all 0.3s ease;
+    font-weight: 500;
+    backdrop-filter: blur(8px);
 }
 
-.contact-form-box input::placeholder,
-.contact-form-box textarea::placeholder {
-    color: rgba(255,255,255,0.42);
-}
 
-.contact-form-box input:focus,
-.contact-form-box textarea:focus {
-    border-color: rgba(230,153,85,0.6);
-    box-shadow: 0 0 0 4px rgba(230,153,85,0.08);
-    background: rgba(255,255,255,0.03);
-}
-
-.contact-form-box textarea {
-    min-height: 180px;
-    resize: none;
-}
-
-/* Button */
-.btnSendContactSection {
-    width: 100%;
-    min-height: 58px;
-    border-radius: 16px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    transition: all 0.28s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.btnSendContactSection:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(230,153,85,0.10);
-}
 
 /* Note */
 .contact-note {
@@ -4239,7 +4192,7 @@ img.left {
 }
 
 .input-error {
-    border: 1px solid #c1392b !important;
+    /* border: 1px solid #c1392b !important; */
     box-shadow: 0 0 0 2px rgba(255, 123, 123, 0.08);
 }
 
@@ -4297,7 +4250,7 @@ img.left {
 
 /* INPUT ERROR PRO */
 .input-error {
-    border: 1px solid #c1392b !important;
+    /* border: 1px solid #c1392b !important; */
     box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.08);
     transition: all 0.2s ease;
 }
@@ -4314,7 +4267,7 @@ img.left {
 
 /* Error visual en campos */
 .input-error {
-    border: 1px solid #ff6b6b !important;
+    /* border: 1px solid #ff6b6b !important; */
     box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.08);
     transition: all 0.2s ease;
 }
@@ -4325,7 +4278,7 @@ img.left {
     margin-top: 8px;
     font-size: 12px;
     line-height: 1.5;
-    color: #ff7b7b;
+    /* color: #ff7b7b; */
     min-height: 18px;
     opacity: 0;
     transform: translateY(-2px);
