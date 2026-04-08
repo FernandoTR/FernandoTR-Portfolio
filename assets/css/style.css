@@ -3619,18 +3619,13 @@ img.left {
   content: "•"; /* tu viñeta */
   position: absolute;
   left: 0;
-  color: #e28545; /* color personalizado */
+  color: #bbbaa6; /* color personalizado */
   font-weight: bold;
 }
 
-.igualar-altura {
-    display: flex;
-    align-items: stretch;
-}
 
-.box-item {
-    height: 100%;
-}
+
+
 
 .skills .box-item {
   background: #101111;
@@ -3804,5 +3799,172 @@ img.left {
     background: rgba(255, 255, 255, 0.03);
     transform: translateY(-1px);
 }
+
+
+/* ===== Start Resume ===== */
+
+
+/* Caja principal de experiencia */
+.resume .experience-wrapper {
+    padding: 34px 30px 24px 30px;
+}
+
+/* Fecha */
+.date-resume {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.2px;
+}
+
+/* Puesto */
+.resume .item h5 {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 6px;
+    /* color: rgba(255, 255, 255, 0.92); */
+}
+
+/* Empresa */
+.resume .company {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.58);
+}
+
+/* Texto descriptivo */
+.resume-text {
+    max-width: 700px;
+    line-height: 1.9;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.70);
+}
+
+/* Bullets */
+.ulResume {
+    padding-left: 20px;
+    margin-top: 18px;
+}
+
+.ulResume li {
+    margin-bottom: 14px;
+    line-height: 1.9;
+    font-size: 14px;
+     max-width: 750px; 
+    /* color: rgba(255, 255, 255, 0.77); */
+}
+
+/* Bullets pequeños */
+.ulResume.small li {
+    font-size: 13px;
+    opacity: 0.84;    
+}
+
+/* Separadores */
+.resume .bord-thin-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Contenedor general */
+.certifications-box {
+    padding: 34px 28px;
+}
+
+/* Cada certificación como mini-card */
+.cert-card {
+    background: #101111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 16px;
+    margin-bottom: 18px;
+    text-decoration: none;
+    transition: all 0.28s ease;
+}
+
+
+.cert-card:last-child {
+    margin-bottom: 0;
+}
+
+.cert-card:hover {
+    transform: translateY(-3px);
+}
+
+.cert-content {
+    flex: 1;
+}
+
+/* Año */
+.cert-year {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    margin-bottom: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.cert-card:hover  .cert-year {
+  background: var(--maincolor);
+  color: #1d1d1d; 
+}
+
+/* Título */
+.cert-card h5 {
+    font-size: 16px;
+    line-height: 1.45;
+    margin-bottom: 8px;
+}
+
+/* Organización */
+.cert-org {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.58);
+}
+
+/* Flecha */
+.cert-arrow {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100%;
+    min-width: 34px;
+    margin-top: 35px; 
+    opacity: 0.82;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    
+}
+
+.cert-card:hover .cert-arrow svg {
+    opacity: 1;   
+    stroke: var(--maincolor);
+    fill: var(--maincolor); 
+}
+
+.cert-arrow svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    fill: none;
+}
+
+
+
 
 /* ====================== [ End Custom FTORRES ] ====================== */
