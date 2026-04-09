@@ -1598,8 +1598,8 @@ body.loaded {
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    -webkit-transform: rotateY(7deg);
-    transform: rotateY(7deg);
+    -webkit-transform: rotateY(3deg);
+    transform: rotateY(3deg);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4449,6 +4449,76 @@ img.left {
     .footer-socials {
         width: 100%;
     }
+}
+
+/* ==================== HERO / INTRO / SIDEBAR — VEREDICTO FINAL PREMIUM ==================== */
+.about h1 {
+    letter-spacing: -1.4px;
+    line-height: 1.08;
+}
+
+.about h1 .main-color {
+    font-weight: 500;
+}
+
+.about .sub-title {
+    letter-spacing: 1.8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.72);
+}
+
+.author-profile .info h5 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+}
+
+.author-profile .info p {
+    margin-top: 12px !important;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.62);
+}
+
+.author-profile .social a {
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.02);
+}
+
+.author-profile .social a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(230,153,85,0.35);
+    box-shadow: 0 10px 24px rgba(230,153,85,0.12);
+}
+
+.author-profile .butn {
+    height: 56px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    box-shadow: 0 14px 35px rgba(255,255,255,0.05);
+    transition: all .25s ease;
+}
+
+.author-profile .butn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 45px rgba(255,255,255,0.08);
+}
+.hero-chips-wrap {
+    gap: 12px;
+}
+
+.hero-chip {
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    border: 1px solid rgba(255,255,255,0.09);
+    background: rgba(255,255,255,0.018);
+    color: rgba(255,255,255,0.78);
+    backdrop-filter: blur(8px);
 }
 
 /* ====================== [ End Custom FTORRES ] ====================== */
