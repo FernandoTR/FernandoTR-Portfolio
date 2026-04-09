@@ -786,11 +786,11 @@
                                     <div class="contact-form-box">
                                         
                                         <form id="contact-form" class="contact-form">
-                                             <!-- Web3Forms Access Key -->
-                                            <input type="hidden" name="access_key" value="869e45ea-dd24-4b46-a7b1-8e7479b801a7">
 
-                                            <!-- Asunto fijo del correo -->
-                                            <input type="hidden" name="subject" value="Nuevo mensaje desde tu portafolio">
+                                           
+
+                                             <!-- Web3Forms Access Key -->
+                                            <input type="hidden" name="access_key" value="869e45ea-dd24-4b46-a7b1-8e7479b801a7">                                        
 
                                             <!-- Honeypot anti-spam -->
                                             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
@@ -823,6 +823,9 @@
                                                          <small class="field-error" id="error_message"></small>
                                                     </div>
                                                 </div>
+
+                                                 <!-- captcha -->
+                                                <div class="h-captcha" data-captcha="true"  data-theme="dark" ></div>
 
                                                 <div class="col-12">
                                                     <button type="submit" class="butn btnSendContactSection" id="contact-submit-btn">
@@ -927,6 +930,8 @@
 
     <script src="assets/js/clipboard.min.js"></script>
 
+    <!-- Add the Web3Forms script -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 
     <!-- custom scripts -->
     <script src="assets/js/scripts.js"></script>
@@ -1014,6 +1019,8 @@
                 message: document.getElementById("error_message")
             };
 
+            const captchaError = document.getElementById("error_captcha");
+
             let toastTimeout;
 
             function showToast(message, type) {
@@ -1039,21 +1046,29 @@
                 errors[fieldKey].classList.add("show");
             }
 
+            function clearCaptchaError() {
+                captchaError.textContent = "";
+                captchaError.classList.remove("show");
+            }
+
+            function setCaptchaError(message) {
+                captchaError.textContent = message;
+                captchaError.classList.add("show");
+            }
+
             function validate() {
                 let valid = true;
                 let firstInvalidField = null;
 
-                // limpiar errores previos
                 Object.keys(fields).forEach(key => clearError(key));
+                clearCaptchaError();
 
-                // Validar nombre
                 if (!fields.name.value.trim()) {
                     setError("name", "El nombre es obligatorio.");
                     if (!firstInvalidField) firstInvalidField = fields.name;
                     valid = false;
                 }
 
-                // Validar email
                 const emailValue = fields.email.value.trim();
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -1067,17 +1082,22 @@
                     valid = false;
                 }
 
-                // Validar asunto
                 if (!fields.subject.value.trim()) {
                     setError("subject", "El asunto es obligatorio.");
                     if (!firstInvalidField) firstInvalidField = fields.subject;
                     valid = false;
                 }
 
-                // Validar mensaje
                 if (!fields.message.value.trim()) {
                     setError("message", "El mensaje es obligatorio.");
                     if (!firstInvalidField) firstInvalidField = fields.message;
+                    valid = false;
+                }
+
+                const captchaResponse = window.hcaptcha ? hcaptcha.getResponse() : "";
+
+                if (!captchaResponse) {
+                    setCaptchaError("Confirma que no eres un robot.");
                     valid = false;
                 }
 
@@ -1099,7 +1119,6 @@
                 return true;
             }
 
-            // limpiar error al escribir
             Object.keys(fields).forEach(key => {
                 fields[key].addEventListener("input", function () {
                     if (fields[key].value.trim()) {
@@ -1130,8 +1149,11 @@
 
                 formData.set("name", fields.name.value.trim());
                 formData.set("email", fields.email.value.trim());
-                formData.set("title", fields.subject.value.trim());
+                formData.set("subject", `[Portafolio] ${fields.subject.value.trim()}`);
                 formData.set("message", fields.message.value.trim());
+
+                const captchaToken = window.hcaptcha ? hcaptcha.getResponse() : "";
+                formData.append("h-captcha-response", captchaToken);
 
                 try {
                     const res = await fetch("https://api.web3forms.com/submit", {
@@ -1146,13 +1168,18 @@
                         form.reset();
 
                         Object.keys(fields).forEach(key => clearError(key));
+                        clearCaptchaError();
+
+                        if (window.hcaptcha) hcaptcha.reset();
                     } else {
                         showToast("Error al enviar el mensaje", "error");
+                        if (window.hcaptcha) hcaptcha.reset();
                         console.error(data);
                     }
 
                 } catch (err) {
                     showToast("Error de conexión", "error");
+                    if (window.hcaptcha) hcaptcha.reset();
                     console.error(err);
                 }
 
@@ -1162,7 +1189,7 @@
             });
 
         });
-    </script>
+        </script>
 
     <div id="toast" class="toast">
     <div class="toast-content">

@@ -4451,6 +4451,17 @@ img.left {
     }
 }
 
+.h-captcha {
+  margin-top: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .h-captcha iframe {
+    transform: scale(0.95);
+    transform-origin: left top;
+  }
+}
+
 /* ==================== HERO / INTRO / SIDEBAR — VEREDICTO FINAL PREMIUM ==================== */
 .about h1 {
     letter-spacing: -1.4px;
