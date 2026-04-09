@@ -1421,6 +1421,17 @@ body.loaded {
 
 /* Resume
 -----------------------------------------------------------------*/
+
+.box-item h3 {
+  font-weight: 600;
+}
+
+.box-item-parrafo {
+  max-width: 220px;
+  margin: 0 auto;
+  opacity: 0.8; 
+}
+
 .resume .box-item {
   background: #101111;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1437,7 +1448,15 @@ body.loaded {
   color: #aaa; }
 
 .resume .item h5 {
-  margin: 5px 0; }
+  margin: 5px 0; 
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.resume .company {
+  font-size: 14px;
+  opacity: 0.7;
+}
 
 .resume .item .date {
   padding: 4px 10px;
@@ -3856,10 +3875,10 @@ img.left {
 
 .ulResume li {
     margin-bottom: 14px;
-    line-height: 1.9;
+    line-height: 1.7;
     font-size: 14px;
      max-width: 750px; 
-    /* color: rgba(255, 255, 255, 0.77); */
+    color: rgba(255, 255, 255, 0.82); 
 }
 
 /* Bullets pequeños */
@@ -3881,19 +3900,22 @@ img.left {
 /* Cada certificación como mini-card */
 .cert-card {
     background: #101111;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;
 
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     gap: 20px;
-    padding: 16px 16px;
+     padding: 22px 24px;
     margin-bottom: 18px;
     text-decoration: none;
     transition: all 0.28s ease;
 }
 
+.cert-card:first-child {
+  border-left: 2px solid var(--main-color);
+}
 
 .cert-card:last-child {
     margin-bottom: 0;
@@ -3905,6 +3927,10 @@ img.left {
 
 .cert-content {
     flex: 1;
+}
+
+.cert-content span {
+  opacity: 0.8;
 }
 
 /* Año */
@@ -4607,7 +4633,9 @@ img.left {
 }
 
 
-
+/* =========================
+   Educación + Certificaciones  FINAL PREMIUM
+========================= */
 
 
 /* ====================== [ End Custom FTORRES ] ====================== */
