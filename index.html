@@ -816,13 +816,6 @@
                                                     </div>
                                                 </div>
 
-                                                <!-- <div class="col-12">
-                                                    <div class="mb-10">
-                                                        <input id="form_subject" type="text" name="subject" placeholder="Asunto">
-                                                        <small class="field-error" id="error_subject"></small>
-                                                    </div>
-                                                </div> -->
-
                                                 <div class="col-12">
                                                     <div class="mb-10">
                                                         <textarea id="form_message" name="message" placeholder="Cuéntame sobre la oportunidad o proyecto..." required></textarea>
@@ -1019,14 +1012,12 @@
             const fields = {
                 name: document.getElementById("form_name"),
                 email: document.getElementById("form_email"),
-                subject: 'Contacto',
                 message: document.getElementById("form_message")
             };
 
             const errors = {
                 name: document.getElementById("error_name"),
                 email: document.getElementById("error_email"),
-                subject: document.getElementById("error_subject"),
                 message: document.getElementById("error_message")
             };
 
@@ -1093,13 +1084,7 @@
                     setError("email", "Ingresa un correo válido.");
                     if (!firstInvalidField) firstInvalidField = fields.email;
                     valid = false;
-                }
-
-                if (!fields.subject.value.trim()) {
-                    setError("subject", "El asunto es obligatorio.");
-                    if (!firstInvalidField) firstInvalidField = fields.subject;
-                    valid = false;
-                }
+                }                
 
                 if (!fields.message.value.trim()) {
                     setError("message", "El mensaje es obligatorio.");
@@ -1162,7 +1147,7 @@
 
                 formData.set("name", fields.name.value.trim());
                 formData.set("email", fields.email.value.trim());
-                formData.set("subject", `[Portafolio] ${fields.subject.value.trim()}`);
+                formData.set("subject", `[Portafolio] Contacto de ${fields.name.value.trim()}`);
                 formData.set("message", fields.message.value.trim());
 
                 // const captchaToken = window.hcaptcha ? hcaptcha.getResponse() : "";
