@@ -4107,7 +4107,8 @@ img.left {
 /* ==================== Start Contact Premium ==================== */
 .contact-title {
     max-width: 520px;
-    line-height: 1.08;
+    font-weight: 600;
+    line-height: 1.1;
     letter-spacing: -1px;
 }
 
@@ -4153,6 +4154,11 @@ img.left {
     color: rgba(255,255,255,0.5);
     line-height: 1.7;
 }
+
+.contact-form-box {
+    padding: 32px;
+}
+
 
 /* Responsive */
 @media screen and (max-width: 992px) {

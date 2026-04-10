@@ -816,12 +816,12 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-12">
+                                                <!-- <div class="col-12">
                                                     <div class="mb-10">
                                                         <input id="form_subject" type="text" name="subject" placeholder="Asunto">
                                                         <small class="field-error" id="error_subject"></small>
                                                     </div>
-                                                </div>
+                                                </div> -->
 
                                                 <div class="col-12">
                                                     <div class="mb-10">
@@ -840,7 +840,7 @@
 
                                                 <div class="col-12">
                                                     <button type="submit" class="butn btnSendContactSection" id="contact-submit-btn">
-                                                        <span class="text">Enviar mensaje</span>
+                                                        <span class="text">Enviar mensaje →</span>
                                                     </button>
                                                 </div>
 
@@ -1019,7 +1019,7 @@
             const fields = {
                 name: document.getElementById("form_name"),
                 email: document.getElementById("form_email"),
-                subject: document.getElementById("form_subject"),
+                subject: 'Contacto',
                 message: document.getElementById("form_message")
             };
 
@@ -1156,7 +1156,7 @@
 
                 btn.classList.add("loading");
                 btn.disabled = true;
-                btnText.textContent = "Enviando...";
+                btnText.textContent = "Enviando mensaje...";
 
                 const formData = new FormData(form);
 
