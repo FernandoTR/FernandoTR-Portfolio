@@ -1820,6 +1820,9 @@ body.loaded {
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff; }
 
 .swiper-controls.arrow-out .left {
@@ -3430,11 +3433,14 @@ img.left {
 
 .custom-Portolio img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
 
+.custom-Portolio img {
+  image-rendering: auto;
+}
 
 /* Overlay elegante */
 .custom-Portolio::after {
@@ -4634,8 +4640,94 @@ img.left {
 
 
 /* =========================
-   Educación + Certificaciones  FINAL PREMIUM
+   Skills FINAL PREMIUM
 ========================= */
+
+/* Cards */
+.skill-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.25s ease;
+  max-width: 260px;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Subtexto tech */
+.skill-card p {
+  font-family: monospace;
+  font-size: 13px;
+  opacity: 0.65;
+  margin-top: 6px;
+}
+
+/* Títulos */
+.skill-card h5 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+}
+
+/* Card destacada */
+.skill-card.integration {
+  margin-top: 10px;
+  line-height: 1.6;
+  border: 1px solid rgba(255,255,255,0.15);
+  transform: scale(1.02);
+}
+
+.skill-card.integration p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-card.integration:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.skill-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tech-badges span.highlight {
+  border: 1px solid rgba(255,255,255,0.35);
+  font-weight: 600;
+}
+
+.tech-badges span {
+  transition: all 0.2s ease;
+}
+
+.tech-badges span:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.tech-badges span {
+  background: rgba(255,255,255,0.02);
+}
+
+.tech-badges {
+  gap: 10px;
+}
+
+/* .tech-badges span:nth-child(-n+5) {
+  opacity: 1;
+} */
+
+.tech-badges span {
+  white-space: nowrap;
+  opacity: 0.75;
+}
+
 
 
 /* ====================== [ End Custom FTORRES ] ====================== */
