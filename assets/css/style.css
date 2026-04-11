@@ -327,9 +327,9 @@ img {
     .butn.butn-bg:hover {
       background: transparent !important;
       border-color: #fff;
-      color: #fff !important; }
+      color: #bbbaa6 !important; }
       .butn.butn-bg:hover .text-dark {
-        color: #fff !important; }
+        color: #bbbaa6 !important; }
   .butn.hover-color:hover {
     background: var(--maincolor);
     border-color: var(--maincolor); }
@@ -4664,7 +4664,7 @@ img.left {
   background: transparent;
 }
 
-.butn-presv a.butn-bg:hover {
+.butn-presv a:hover {
   color: #bbbaa6 !important;
 }
 
