@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es-MX">
 
 <head>
 
@@ -10,20 +10,25 @@
     <meta name="description" content="Portafolio de Fernando Torres, Ingeniero en Informática y Desarrollador Full Stack .NET con más de 9 años de experiencia en aplicaciones web, facturación electrónica y soluciones empresariales.">
     <meta name="keywords" content="Fernando Torres, Desarrollador Full Stack, Portafolio .NET, C#, ASP.NET, SQL Server, Angular, Azure DevOps">
     <meta name="author" content="Fernando Torres">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0e0f0f">
     
     <meta property="og:title" content="Fernando Torres - Desarrollador Full Stack .NET">
     <meta property="og:description" content="Portafolio profesional de Fernando Torres, especialista en desarrollo .NET, SQL Server y Angular.">
-    <meta property="og:image" content="assets/imgs/header/0.jpg">
+    <meta property="og:image" content="https://byfernandotorres.online/assets/imgs/header/0.jpg">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Fernando Torres - Portafolio">
     <meta property="og:url" content="https://byfernandotorres.online/">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fernando Torres - Full Stack .NET Developer">
     <meta name="twitter:description" content="Ingeniero en Informática con 9 años de experiencia en desarrollo de software y soluciones empresariales.">
-    <meta name="twitter:image" content="assets/imgs/header/0.jpg">
+    <meta name="twitter:image" content="https://byfernandotorres.online/assets/imgs/header/0.jpg">
 
     <!-- Title  -->
-    <title>Fernando Torres - Portafolio</title>
+    <title>Fernando Torres | Desarrollador Full Stack .NET</title>
+    <link rel="canonical" href="https://byfernandotorres.online/">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/imgs/favicon.ico">
@@ -47,8 +52,8 @@
         "@type": "Person",
         "name": "Fernando Torres",
         "jobTitle": "Full Stack .NET Developer",
-        "url": "https://fernandotr.github.io/FernandoTR-Portfolio/",
-        "image": "https://fernandotr.github.io/FernandoTR-Portfolio/assets/imgs/header/0.jpg",
+        "url": "https://byfernandotorres.online/",
+        "image": "https://byfernandotorres.online/assets/imgs/header/0.jpg",
         "sameAs": [
             "https://www.linkedin.com/in/fernandotorresrivera",
             "https://github.com/FernandoTR"
@@ -111,8 +116,8 @@
                 <div class="col-lg-9 offset-lg-3">
 
                     <!-- Logo -->
-                    <a class="logo logo-hide icon-img-40" href="#">
-                        <img src="assets/imgs/logo-light.svg" alt="logo">
+                    <a class="logo logo-hide icon-img-40" href="#home" aria-label="Ir al inicio">
+                        <img src="assets/imgs/logo-light.svg" alt="Fernando Torres">
                     </a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -125,25 +130,25 @@
                     <div class="collapse navbar-collapse d-flex align-items-center mt-30" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#0" data-scroll-nav="0"><span
+                                <a class="nav-link" href="#home" data-scroll-nav="0"><span
                                         class="rolling-text">Inicio</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#0" data-scroll-nav="1"><span
+                                <a class="nav-link" href="#portfolio" data-scroll-nav="1"><span
                                         class="rolling-text">Proyectos</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#0" data-scroll-nav="2"><span
+                                <a class="nav-link" href="#resume" data-scroll-nav="2"><span
                                         class="rolling-text">Experiencia Profesional</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#0" data-scroll-nav="3"><span
+                                <a class="nav-link" href="#skills" data-scroll-nav="3"><span
                                         class="rolling-text">Tecnologías</span></a>
                             </li>
                         </ul>
                         <div class="ml-auto">
                             <div class="butn-presv">
-                                <a href="#0" class="butn butn-sm butn-bg  radius-10 skew" data-scroll-nav="4">
+                                <a href="#contact" class="butn butn-sm butn-bg  radius-10 skew" data-scroll-nav="4">
                                     <span>Contáctame!</span>
                                 </a>
                             </div>
@@ -172,8 +177,8 @@
                             <div class="d-flex align-items-center">
                                 <div>
                                     <!-- Logo -->
-                                    <a class="logo icon-img-40" href="#">
-                                        <img src="assets/imgs/logo-light.svg" alt="logo">
+                                    <a class="logo icon-img-40" href="#home" aria-label="Ir al inicio">
+                                        <img src="assets/imgs/logo-light.svg" alt="Fernando Torres">
                                     </a>
                                 </div>
                                 <div class="ml-auto text-right fz-12 text-u ls1">
@@ -181,7 +186,10 @@
                                 </div>
                             </div>
                             <div class="img mt-30">
-                                <img src="assets/imgs/header/0.jpg" alt="">
+                                <picture>
+                                    <source srcset="assets/imgs/header/0.webp" type="image/webp">
+                                    <img src="assets/imgs/header/0.jpg" alt="Fernando Torres, Desarrollador Full Stack .NET" width="800" height="981" decoding="async" fetchpriority="high">
+                                </picture>
                             </div>
                             <div class="info text-center mt-30">
                                 <h5>Fernando Torres</h5>
@@ -190,12 +198,12 @@
                                 </p>
                             </div>
                             <div class="social text-center mt-20">
-                                <a href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://github.com/FernandoTR" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/FernandoTR" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en GitHub"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <div>
-                            <a href="assets/docs/FernandoTorres_CV.pdf" download="FernandoTorres_CV.pdf"  target="_blank" class="butn butn-md radius-10 mt-30">
+                            <a href="assets/docs/FernandoTorres_CV.pdf" download="FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" class="butn butn-md radius-10 mt-30" aria-label="Ver o descargar CV de Fernando Torres en PDF">
                                 <span>Ver CV / Resume</span>
                             </a>
                         </div>
@@ -226,10 +234,10 @@
                             </div>
                         </div>
 
-                    <div class="stauts mt-80" bis_skin_checked="1">
-                                                <div class="d-flex align-items-center" bis_skin_checked="1">
-                                                    <div class="mr-60" bis_skin_checked="1">
-                                                        <div class="d-flex align-items-center" bis_skin_checked="1">
+                    <div class="stauts mt-80">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="mr-60">
+                                                        <div class="d-flex align-items-center">
                                                             <h2>+9</h2>
                                                             <p>Años construyendo <br> software empresarial</p>
                                                         </div>
@@ -261,7 +269,7 @@
                                 <div class="col-md-2 ">
                                     <div class="d-flex align-items-end justify-content-md-end justify-content-start mt-30 mt-md-0" style="padding-top: 25px!important;">
                                         <div class="swiper-controls testim-controls arrow-out d-flex align-items-center mr-20 ml-auto">
-                                            <div class="swiper-button-prev portfolio-swiper-btn">
+                                            <div class="swiper-button-prev portfolio-swiper-btn" role="button" tabindex="0" aria-label="Ver proyectos anteriores">
                                                 <span class="left">
                                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -271,7 +279,7 @@
                                                     </svg>
                                                 </span>
                                             </div>
-                                            <div class="swiper-button-next portfolio-swiper-btn ml-40">
+                                            <div class="swiper-button-next portfolio-swiper-btn ml-40" role="button" tabindex="0" aria-label="Ver proyectos siguientes">
                                                 <span class="right">
                                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -297,8 +305,11 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">                                                                       
                                                 <div class="item">     
-                                                    <div class="custom-Portolio"> 
-                                                        <img src="assets/imgs/works/PortalTrading.png" alt="Aplicación de registro y análisis de trading en .NET 8">
+                                                    <div class="custom-Portolio">
+                                                        <picture>
+                                                            <source srcset="assets/imgs/works/PortalTrading-card.webp" type="image/webp">
+                                                            <img src="assets/imgs/works/PortalTrading.png" alt="Aplicación de registro y análisis de trading en .NET 8" width="1920" height="1080" loading="lazy" decoding="async">
+                                                        </picture>
                                                     </div>                                                                                         
                                                     <div class="cont">
                                                         <div class="d-flex align-items-center">                                                           
@@ -314,7 +325,7 @@
                                                     </div>
                                                     <div class="d-flex align-items-center portfolio-footer">
                                                         <div>
-                                                            <a title="Ver repositorio en GitHub" href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank">
+                                                            <a title="Ver repositorio en GitHub" href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de TradingBook en GitHub">
                                                                 <i class="fab fa-github tag-portfolio-icon"></i>
                                                             </a>                                                          
                                                         </div>
@@ -331,8 +342,11 @@
                                             </div>
                                             <div class="swiper-slide">                                                                       
                                                 <div class="item">     
-                                                    <div class="custom-Portolio"> 
-                                                        <img src="assets/imgs/works/APIIntegracionSalesforceSAP.png" alt="API empresarial de integración entre Salesforce y SAP Business One">
+                                                    <div class="custom-Portolio">
+                                                        <picture>
+                                                            <source srcset="assets/imgs/works/APIIntegracionSalesforceSAP-card.webp" type="image/webp">
+                                                            <img src="assets/imgs/works/APIIntegracionSalesforceSAP.png" alt="API empresarial de integración entre Salesforce y SAP Business One" width="1920" height="1080" loading="lazy" decoding="async">
+                                                        </picture>
                                                     </div>                                                
                                                     <div class="cont">
                                                         <div class="d-flex align-items-center">
@@ -361,8 +375,11 @@
                                             </div>
                                             <div class="swiper-slide">                                                                       
                                                 <div class="item">     
-                                                    <div class="custom-Portolio"> 
-                                                        <img src="assets/imgs/works/PortalDistribuidores.png" alt="Portal B2B para distribuidores integrado con SAP Business One">
+                                                    <div class="custom-Portolio">
+                                                        <picture>
+                                                            <source srcset="assets/imgs/works/PortalDistribuidores-card.webp" type="image/webp">
+                                                            <img src="assets/imgs/works/PortalDistribuidores.png" alt="Portal B2B para distribuidores integrado con SAP Business One" width="1920" height="1080" loading="lazy" decoding="async">
+                                                        </picture>
                                                     </div>                                                
                                                     <div class="cont">
                                                         <div class="d-flex align-items-center">
@@ -391,8 +408,11 @@
                                             </div>                                    
                                              <div class="swiper-slide">                                                                       
                                                 <div class="item">     
-                                                    <div class="custom-Portolio"> 
-                                                        <img src="assets/imgs/works/PortalProveedores.png" alt="Portal empresarial para validación CFDI y control documental de proveedores">
+                                                    <div class="custom-Portolio">
+                                                        <picture>
+                                                            <source srcset="assets/imgs/works/PortalProveedores-card.webp" type="image/webp">
+                                                            <img src="assets/imgs/works/PortalProveedores.png" alt="Portal empresarial para validación CFDI y control documental de proveedores" width="1920" height="1080" loading="lazy" decoding="async">
+                                                        </picture>
                                                     </div>                                                
                                                     <div class="cont">
                                                         <div class="d-flex align-items-center">
@@ -421,8 +441,11 @@
                                             </div>
                                             <div class="swiper-slide">                                                                       
                                                 <div class="item">     
-                                                    <div class="custom-Portolio"> 
-                                                        <img src="assets/imgs/works/PortalViaticos.png" >
+                                                    <div class="custom-Portolio">
+                                                        <picture>
+                                                            <source srcset="assets/imgs/works/PortalViaticos-card.webp" type="image/webp">
+                                                            <img src="assets/imgs/works/PortalViaticos.png" alt="Portal empresarial de viáticos integrado con SAP Business One" width="1920" height="1080" loading="lazy" decoding="async">
+                                                        </picture>
                                                     </div>                                                
                                                     <div class="cont">
                                                         <div class="d-flex align-items-center">
@@ -609,7 +632,7 @@
                                     <h4 class="sub-title fz-28">Certificaciones</h4>
                                 </div>
 
-                                <a href="https://www.coursera.org/account/accomplishments/professional-cert/ZVFOY8NBXKO5" target="_blank" title="Ver Certificado" class="cert-card d-flex align-items-start">
+                                <a href="https://www.coursera.org/account/accomplishments/professional-cert/ZVFOY8NBXKO5" target="_blank" rel="noopener noreferrer" title="Ver Certificado" aria-label="Ver certificado Full-Stack Developer de Microsoft" class="cert-card d-flex align-items-start">
                                     <div class="cert-content">
                                         <span class="cert-year">2025</span>
                                         <h5>Full-Stack Developer (Microsoft)</h5>
@@ -624,7 +647,7 @@
                                     </div>
                                 </a>     
                                 
-                                <a href="https://www.coursera.org/account/accomplishments/specialization/D1U2EM3R2JYL" target="_blank" title="Ver Certificado" class="cert-card d-flex align-items-start">
+                                <a href="https://www.coursera.org/account/accomplishments/specialization/D1U2EM3R2JYL" target="_blank" rel="noopener noreferrer" title="Ver Certificado" aria-label="Ver certificado Back-End Developer de Microsoft" class="cert-card d-flex align-items-start">
                                     <div class="cert-content">
                                         <span class="cert-year">2025</span>
                                         <h5>Back-End Developer (Microsoft)</h5>
@@ -639,7 +662,7 @@
                                     </div>
                                 </a>
 
-                                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1013370" target="_blank" title="Ver Certificado" class="cert-card d-flex align-items-start">
+                                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1013370" target="_blank" rel="noopener noreferrer" title="Ver Certificado" aria-label="Ver certificado Scrum Fundamentals Certified" class="cert-card d-flex align-items-start">
                                     <div class="cert-content">
                                         <span class="cert-year">2024</span>
                                         <h5>Scrum Fundamentals Certified (SFC™)</h5>
@@ -812,21 +835,21 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-10">
-                                                        <input id="form_name" type="text" name="name" placeholder="Nombre" required>
+                                                        <input id="form_name" type="text" name="name" placeholder="Nombre" autocomplete="name" aria-label="Nombre" aria-describedby="error_name" required>
                                                         <small class="field-error" id="error_name"></small>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-6">
                                                     <div class="mb-10">
-                                                        <input id="form_email" type="email" name="email" placeholder="Email" required>
+                                                        <input id="form_email" type="email" name="email" placeholder="Email" autocomplete="email" aria-label="Email" aria-describedby="error_email" required>
                                                         <small class="field-error" id="error_email"></small>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-12">
                                                     <div class="mb-10">
-                                                        <textarea id="form_message" name="message" placeholder="Cuéntame sobre la oportunidad o proyecto..." required></textarea>
+                                                        <textarea id="form_message" name="message" placeholder="Cuéntame sobre la oportunidad o proyecto..." autocomplete="off" aria-label="Mensaje" aria-describedby="error_message" required></textarea>
                                                          <small class="field-error" id="error_message"></small>
                                                     </div>
                                                 </div>
@@ -834,7 +857,7 @@
                                                  <!-- captcha -->
                                                 <div class="col-12">
                                                     <div class="mb-10">
-                                                        <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
+                                                        <div class="h-captcha" data-captcha="true" data-theme="dark" aria-describedby="error_captcha"></div>
                                                         <small class="field-error" id="error_captcha"></small>
                                                     </div>
                                                 </div>
@@ -853,7 +876,7 @@
 
                                                 <!-- Estado del formulario -->
                                                 <div class="col-12">
-                                                    <p id="form-status" class="form-status mt-15"></p>
+                                                    <p id="form-status" class="form-status mt-15" role="status" aria-live="polite"></p>
                                                 </div>
 
                                             </div>
@@ -899,9 +922,9 @@
                                     </div>
 
                                     <div class="footer-links">
-                                        <a href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="https://github.com/FernandoTR" target="_blank"><i class="fab fa-github"></i></a>
-                                        <a href="assets/docs/FernandoTorres_CV.pdf" target="_blank">CV</a>
+                                        <a href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://github.com/FernandoTR" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="assets/docs/FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir CV de Fernando Torres en PDF">CV</a>
                                     </div>
 
                                 </div>
@@ -940,74 +963,38 @@
     <!-- plugins -->
     <script src="assets/js/plugins.js"></script>
 
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-
-    <script src="assets/js/jquery.carouselTicker.min.js"></script>
-
-    <script src="assets/js/clipboard.min.js"></script>
-
     <!-- Add the Web3Forms script -->
     <script src="https://web3forms.com/client/script.js" async defer></script>
 
     <!-- custom scripts -->
     <script src="assets/js/scripts.js"></script>
 
-    <script src="assets/js/three.min.js"></script>
-
-    <script src="assets/js/cdemo.js"></script>
-
     <script>
-        // Actualiza el año actual
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        (function () {
+            const homeWave = document.getElementById("home_wave");
+            const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            const coarsePointer = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+            const saveData = navigator.connection && navigator.connection.saveData;
 
-       
-        $(document).ready(function() {
-            // Funcionalidad de copiar al portapapeles
-            var button = document.querySelector('#kt_share_earn_link_copy_button');
-            var input = document.querySelector('#kt_share_earn_link_input');
-            var clipboard = new ClipboardJS(button);
-
-            if (!clipboard) {
+            if (!homeWave || reduceMotion || coarsePointer || saveData || window.innerWidth < 992) {
                 return;
             }
 
-            //  Copy text to clipboard. For more info check the plugin's documentation: https://clipboardjs.com/
-            clipboard.on('success', function(e) {
-                var buttonCaption = button.innerHTML;
-                //Add bgcolor
-                input.classList.add('bs-success');
-                input.classList.add('text-inverse-success');
+            function loadScript(src) {
+                return new Promise(function (resolve, reject) {
+                    const script = document.createElement("script");
+                    script.src = src;
+                    script.async = true;
+                    script.onload = resolve;
+                    script.onerror = reject;
+                    document.body.appendChild(script);
+                });
+            }
 
-                button.innerHTML = '<i class="fas fa-check" ></i>';
-
-                setTimeout(function() {
-                    button.innerHTML = buttonCaption;
-
-                    // Remove bgcolor
-                    input.classList.remove('bs-success');
-                    input.classList.remove('text-inverse-success');
-                }, 3000);  // 3seconds
-
-                e.clearSelection();
-            });
-
-
-        });
-
-        // Inicializa los carouselTicker
-        $(function() { 
-            $('.carouselTicker-left').carouselTicker({
-            direction: 'prev',
-            speed: 1,
-            delay: 40
-            });
-
-            $('.carouselTicker-right').carouselTicker({
-            direction: 'prev',
-            speed: 1,
-            delay: 40
-            });
-        });
+            loadScript("assets/js/three.min.js")
+                .then(function () { return loadScript("assets/js/cdemo.js"); })
+                .catch(function () {});
+        })();
     </script>
 
     <!-- contact form -->
@@ -1162,9 +1149,6 @@
                 formData.set("subject", `[Portafolio] Contacto de ${fields.name.value.trim()}`);
                 formData.set("message", fields.message.value.trim());
 
-                // const captchaToken = window.hcaptcha ? hcaptcha.getResponse() : "";
-                // formData.append("h-captcha-response", captchaToken);
-
                 try {
                     const res = await fetch("https://api.web3forms.com/submit", {
                         method: "POST",
@@ -1174,7 +1158,7 @@
                     const data = await res.json();
 
                     if (data.success) {
-                        showToast("Mensaje enviado correctamente 🚀", "success");
+                        showToast("Mensaje enviado correctamente", "success");
                         form.reset();
 
                         Object.keys(fields).forEach(key => clearError(key));
@@ -1195,13 +1179,13 @@
 
                 btn.classList.remove("loading");
                 btn.disabled = false;
-                btnText.textContent = "Enviar mensaje";
+                btnText.textContent = "Enviar mensaje →";
             });
 
         });
         </script>
 
-    <div id="toast" class="toast">
+    <div id="toast" class="toast" role="status" aria-live="polite">
     <div class="toast-content">
         <span class="toast-icon"></span>
         <span class="toast-message"></span>

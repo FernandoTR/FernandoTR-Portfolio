@@ -1196,7 +1196,9 @@ body.loaded {
     padding: 20px 15px;
     font-size: 13px; }
 
-.main-post .caption .gat a {
+.main-post .caption .gat a,
+.main-post .caption .gat > span {
+  display: inline-block;
   padding: 8px 25px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
@@ -3438,6 +3440,17 @@ img.left {
   display: block;
 }
 
+.custom-Portolio picture,
+.project-hero-shell picture,
+.portfolio-shot picture {
+  display: block;
+  width: 100%;
+}
+
+.portfolio-shot picture {
+  height: 100%;
+}
+
 .custom-Portolio img {
   image-rendering: auto;
 }
@@ -3920,7 +3933,7 @@ img.left {
 }
 
 .cert-card:first-child {
-  border-left: 2px solid var(--main-color);
+  border-left: 2px solid var(--maincolor);
 }
 
 .cert-card:last-child {
@@ -4031,7 +4044,7 @@ img.left {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
-    color: var(--main-color);
+    color: var(--maincolor);
     margin-bottom: 10px;
     display: block;
 }
