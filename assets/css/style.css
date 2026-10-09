@@ -67,8 +67,6 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   overflow-x: hidden !important; }
-  body.main-home .testim-crv .testim-swiper .item:after {
-    display: block; }
   body.main-home2 .container {
     max-width: 1170px; }
   body.dots-waves #home_wave {
@@ -1872,19 +1870,6 @@ body.loaded {
 -----------------------------------------------------------------*/
 /* Testimonials
 -----------------------------------------------------------------*/
-.testim-crv .testim-swiper .item {
-  padding: 40px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: #101111;
-  overflow: hidden;
-  position: relative;
-  z-index: 3; }
-  .testim-crv .testim-swiper .item .img {
-    width: 80px;
-    margin-top: -40px;
-    margin-left: -40px; }
-
 .swiper-controls .swiper-button-prev,
 .swiper-controls .swiper-button-next {
   position: static;
@@ -3398,10 +3383,6 @@ img.left {
     width: 50%; }
     .skills .items .img {
       margin-bottom: 50px !important; }
-  .testim-crv .testim-swiper .item {
-    padding: 40px 20px; }
-    .testim-crv .testim-swiper .item .img {
-      margin-left: -20px; }
   .clients-carso h6 {
     text-transform: capitalize !important;
     letter-spacing: 0px !important; }
@@ -3446,86 +3427,6 @@ img.left {
 /* --- ESTRUCTURA PRINCIPAL DE LA TARJETA --- */
 
 
-/* =========================
-   CARD BASE PREMIUM
-========================= */
-
-.testim-swiper .swiper-slide {
-  height: auto;
-  padding: 10px 0;
-}
-
-.testim-swiper .item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 18px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  overflow: hidden;
-  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
-}
-
-/* Glow elegante */
-.testim-swiper .item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 10px;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.14),
-    rgba(230,153,85,0.28),
-    rgba(255,255,255,0.04)
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity .35s ease;
-  pointer-events: none;
-}
-
-.testim-swiper .item:hover {
-  transform: translateY(-10px);
-  box-shadow: 1px 0 10px 10px rgba(230,153,85,0.22);
-  border-color: rgba(230,153,85,0.22);
-}
-
-.testim-swiper .item:hover::before {
-  opacity: 1;
-}
-
-.testim-swiper .swiper-wrapper {
-  transition-timing-function: linear !important;
-}
-
-/* =========================
-   IMAGE CONTAINER
-========================= */
-.custom-Portolio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100% + 36px);
-
-  height: 200px; /* altura fija visual */
-  overflow: hidden;
-
-}
-
-.custom-Portolio img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.custom-Portolio picture,
 .project-hero-shell picture,
 .portfolio-shot picture {
   display: block;
@@ -3536,65 +3437,88 @@ img.left {
   height: 100%;
 }
 
-.custom-Portolio img {
-  image-rendering: auto;
+#portfolio .portfolio-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
 }
 
-/* Overlay elegante */
-.custom-Portolio::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.18),
-    rgba(0,0,0,0.02)
-  );
-  opacity: 1;
-  transition: opacity .35s ease;
-  pointer-events: none;
+#portfolio {
+  scroll-margin-top: 100px;
 }
 
-.testim-swiper .item:hover .custom-Portolio img {
-  transform: scale(1.07);
-  filter: brightness(1.04);
-}
-
-.testim-swiper .item:hover .custom-Portolio::after {
-  opacity: 0.85;
-}
-
-/* =========================
-   CONTENT
-   ========================= */
-.swiper-slide .cont {
-  position: relative;
+#portfolio .item {
   display: flex;
   flex-direction: column;
-  height: 100%;  
-  padding-top: 180px; /* espacio reservado para la imagen */
-  border-radius: 22px;
+  height: 100%;
+  padding: 18px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  background: #111313;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.swiper-slide .cont h4,
-.swiper-slide .cont h6 {
-  margin-bottom: 10px;
+#portfolio .item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#portfolio .custom-Portolio {
+  position: relative;
+  width: calc(100% + 36px);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: -18px -18px 16px;
+  overflow: hidden;
+  background: #0b0c0c;
+}
+
+#portfolio .custom-Portolio picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#portfolio .custom-Portolio img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#portfolio .item:hover .custom-Portolio img {
+  transform: scale(1.025);
+}
+
+#portfolio .cont {
+  flex: 1;
+}
+
+#portfolio .cont .mt-20 {
+  margin-top: 0 !important;
+}
+
+#portfolio .cont h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  line-height: 1.35;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-.swiper-slide .cont p {
-  color: rgba(255,255,255,0.78);
-  line-height: 1.7;
-  min-height: 110px; /* uniformidad visual */
+#portfolio .cont p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.65;
 }
 
 /* =========================
    TAGS / ICONS
    ========================= */
-.tag-portfolio,
-.tag-portfolio-icon {
+#portfolio .tag-portfolio,
+#portfolio .tag-portfolio-icon {
   font-size: 12px;
   padding: 8px 16px;
   border: 1px solid rgba(255,255,255,0.12);
@@ -3607,30 +3531,67 @@ img.left {
   justify-content: center;
 }
 
-.tag-portfolio-icon{
-    font-size: 20px;
+#portfolio .tag-portfolio-icon {
+  font-size: 20px;
 }
 
-.tag-portfolio:hover, .tag-portfolio-icon:hover {
+.tag-portfolio-icon {
+  font-size: 20px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-portfolio-icon:hover {
   background: var(--maincolor);
-  color: #1d1d1d;  
+  color: #1d1d1d;
   border-color: var(--maincolor);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(230,153,85,0.25);
+  box-shadow: 0 10px 20px rgba(230, 153, 85, 0.25);
 }
 
-.portfolio .item:hover .cont .arrow svg {
-  stroke: var(--maincolor);
-  fill: var(--maincolor);
+#portfolio .tag-private {
+  color: rgba(255, 255, 255, 0.68);
 }
 
-/* =========================
-   FOOTER / CTA
-   ========================= */
-.testim-swiper .d-flex.align-items-center:last-child {
-  margin-top: auto;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+#portfolio .portfolio-repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+#portfolio .portfolio-repo-link:hover {
+  color: var(--maincolor);
+}
+
+#portfolio .portfolio-footer {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#portfolio .portfolio-link {
+  color: var(--maincolor);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#portfolio .portfolio-link:hover {
+  color: #f2b273;
+}
+
+#portfolio a:focus-visible {
+  outline: 2px solid var(--maincolor);
+  outline-offset: 4px;
 }
 
 
@@ -5099,69 +5060,46 @@ img.left {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.testim-crv .item {
-  height: 100%;
-  min-height: 510px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 22px 22px 20px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+#portfolio .sec-head {
+  margin-bottom: 32px !important;
 }
 
-.testim-crv .item:hover {
-  transform: translateY(-8px);
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+#portfolio .sec-head h2 {
+  font-size: clamp(24px, 2.8vw, 40px);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
-
-.testim-crv .item .cont {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+#portfolio .cont h3 {
+  font-size: clamp(20px, 1.67vw, 24px);
+  line-height: 1.3;
 }
 
-.testim-crv .item .info h4 {
-  font-size: 1.15rem;
-  line-height: 1.35;
-  margin-bottom: 12px;
+#portfolio .portfolio-subtitle {
+  max-width: 65ch;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
-.testim-crv .item .cont p {
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.76);
-  min-height: 88px;
-  margin-bottom: 0;
+#portfolio .cont p {
+  max-width: 65ch;
+  font-size: 15px !important;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 
-.portfolio-footer {
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+#portfolio .portfolio-footer {
+  margin-top: auto;
 }
 
-
-@media (max-width: 991px) {
-  .testim-crv .item {
-    min-height: auto;
-  }
-
-  .custom-Portolio img {
-    height: 220px;
-  }
-
-  .testim-crv .item .cont p {
-    min-height: auto;
+@media (min-width: 768px) {
+  #portfolio .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 
 /* =========================
    Skills FINAL PREMIUM
@@ -5352,6 +5290,18 @@ img.left {
   font-size: 17px;
   line-height: 1.9;
   color: rgba(255,255,255,0.78);
+}
+
+.project-access-note {
+  margin-top: 14px;
+  color: rgba(255,255,255,0.64);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.project-access-note strong {
+  color: rgba(255,255,255,0.88);
+  font-weight: 600;
 }
 
 .project-kpi-card {
