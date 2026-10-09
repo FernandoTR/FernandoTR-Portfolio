@@ -17,6 +17,48 @@ $(function () {
     var wind = $(window);
     var currentYear = document.getElementById('currentYear');
 
+    var orbSvg = document.querySelector('.thinking-orb-loader');
+    if (orbSvg && orbSvg.namespaceURI) {
+        var orbReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var orbDots = [];
+        for (var index = 0; index < 320; index++) {
+            var sphereY = 1 - 2 * (index + .5) / 320;
+            var ringRadius = Math.sqrt(1 - sphereY * sphereY);
+            var angle = index * Math.PI * (3 - Math.sqrt(5));
+            orbDots.push({
+                x: Math.cos(angle) * ringRadius,
+                y: sphereY,
+                z: Math.sin(angle) * ringRadius,
+                index: index,
+                node: document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+            });
+        }
+        orbDots.forEach(function (dot) {
+            dot.node.setAttribute('fill', '#bbbaa6');
+            orbSvg.appendChild(dot.node);
+        });
+        var orbFrame = function (time) {
+            var center = 48;
+            var phase = orbReducedMotion ? .4 : time * .00055;
+            var pulse = orbReducedMotion ? 0 : Math.pow(Math.max(0, Math.sin(time * .003)), 8);
+            orbDots.forEach(function (dot) {
+                var rotatedX = dot.x * Math.cos(phase) + dot.z * Math.sin(phase);
+                var depth = dot.z * Math.cos(phase) - dot.x * Math.sin(phase);
+                var x = center + (rotatedX * .94 - dot.y * .34) * 38;
+                var y = center + (rotatedX * .34 + dot.y * .94) * 38;
+                var front = (depth + 1) / 2;
+                var highlight = dot.index === 120 && depth > 0 ? pulse : 0;
+                dot.node.setAttribute('cx', x.toFixed(2));
+                dot.node.setAttribute('cy', y.toFixed(2));
+                dot.node.setAttribute('r', (.65 + front * .95 + highlight * 1.6).toFixed(2));
+                dot.node.setAttribute('fill', highlight > .05 ? '#fff' : '#aaa');
+                dot.node.setAttribute('fill-opacity', (highlight > .05 ? .8 + highlight * .2 : .04 + front * .48).toFixed(2));
+            });
+            if (!orbReducedMotion && getComputedStyle(orbSvg.closest('.loader-wrap')).display !== 'none') window.requestAnimationFrame(orbFrame);
+        };
+        window.requestAnimationFrame(orbFrame);
+    }
+
     if (currentYear) {
         currentYear.textContent = new Date().getFullYear();
     }
@@ -605,7 +647,7 @@ $(function () {
     const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
     const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
-    tl.to(".loader-wrap-heading .load-text , .loader-wrap-heading .cont", {
+    tl.to(".loader-wrap-heading .loader-status, .loader-wrap-heading .load-text, .loader-wrap-heading .cont", {
         delay: 0.5,
         y: -100,
         opacity: 0,
