@@ -4674,12 +4674,13 @@ img.left {
 /* Open footer layout */
 .footer-ultra {
     padding: 0 0 30px;
-    background: #0e0f0f;
+    background: linear-gradient(180deg, #0e0f0f 0%, #080909 70%);
 }
 
 .footer-ultra-box {
-    padding: 48px 12px 12px;
-    border-top: 1px solid rgba(255,255,255,0.12);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 24px 12px;
 }
 
 .footer-grid {
