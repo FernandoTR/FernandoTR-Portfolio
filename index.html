@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="assets/css/plugins.css">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20261012-footer-typeset">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261012-experience-svg-checks">
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -433,116 +433,79 @@
 
                     <div class="resume section-padding pt-0" data-scroll-index="2" id="resume">
                         <div class="sec-head bord-thin-bottom pb-20 mb-60">
-                            <h4 class="sub-title fz-28">Experiencia Profesional</h4>
+                            <h2 class="sub-title fz-28">Experiencia Profesional</h2>
                         </div>
 
-                        <!-- Highlights -->
-                        <div class="row mb-40">
-                            <div class="col-md-4 mb-30">
-                                <div class="box-item text-center h-100 d-flex flex-column justify-content-center">
-                                    <h3 class="main-color fz-40 mb-10">+9 años</h3>
-                                    <p class="fz-14 mb-0 box-item-parrafo">Experiencia en sistemas reales en producción</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-30">
-                                <div class="box-item text-center h-100 d-flex flex-column justify-content-center">
-                                    <h3 class="main-color fz-32 mb-10">Backend .NET</h3>
-                                    <p class="fz-14 mb-0 box-item-parrafo">Arquitectura, APIs y manejo de datos</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-30">
-                                <div class="box-item text-center h-100 d-flex flex-column justify-content-center">
-                                    <h3 class="main-color fz-32 mb-10">Integraciones empresariales</h3>
-                                    <p class="fz-14 mb-0 box-item-parrafo">Integración SAP, Salesforce y automatización</p>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <!-- Experiencia -->
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="box-item md-mb30 experience-wrapper">
-
-                                    <div class="item mb-60 pb-30 bord-thin-bottom main-post">
-                                        <span class="date-resume">Octubre 2024 - Actualidad</span>
-                                        <h5>Desarrollador Full Stack .NET</h5>
-                                        <span class="company">Freelance</span>
-
-                                        <ul class="mt-15 fz-13 list-disc pl-5 ulResume">
-                                            <li>
-                                                Construí sistemas POS (ventas, inventario, facturación) utilizados en operación real, reduciendo errores de captura en ~25%.
-                                            </li>
-                                            <li>
-                                                Diseñé arquitectura modular en .NET/EF, reduciendo ~20% el tiempo de implementación de nuevas funcionalidades.
-                                            </li>
-                                            <li>
-                                                Implementé mejoras en consultas SQL para procesos críticos, optimizando tiempos de respuesta en transacciones y reportes.
-                                            </li>
-                                        </ul>
+                                <div class="experience-timeline" data-experience-timeline>
+                                    <div class="experience-timeline__track" aria-hidden="true">
+                                        <span class="experience-timeline__progress"></span>
                                     </div>
 
-                                    <div class="item mb-60 pb-30 bord-thin-bottom">
-                                        <span class="date-resume">Septiembre 2019 - Agosto 2024</span>
-                                        <h5>Desarrollador .NET (Senior)</h5>
-                                        <span class="company">IT Consultant Soluciones de Negocio</span>
+                                    <div class="experience-timeline__entries">
+                                        <article class="experience-entry" data-experience-item>
+                                            <span class="experience-timeline__node" aria-hidden="true"></span>
+                                            <div class="experience-card">
+                                                <header class="experience-card__header">
+                                                    <span class="experience-card__logo experience-card__logo--freelance" aria-hidden="true">FT</span>
+                                                    <div class="experience-card__heading">
+                                                        <h3>Desarrollador Full Stack .NET</h3>
+                                                        <span class="company">Independiente</span>
+                                                    </div>
+                                                    <span class="date-resume"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Octubre 2024 - Actualidad</span></span>
+                                                </header>
+                                                <ul class="mt-15 fz-13 project-impact-list">
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Construí sistemas de punto de venta (POS) con módulos de inventario y facturación, utilizados en operaciones reales. Estos redujeron los errores de captura en <strong class="experience-metric">~25%</strong>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Diseñé una arquitectura modular con .NET y Entity Framework (EF). Esto redujo en <strong class="experience-metric">~20%</strong> el tiempo de implementación de nuevas funcionalidades.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Optimicé consultas SQL de procesos críticos para reducir los tiempos de respuesta de transacciones y reportes.</li>
+                                                </ul>
+                                            </div>
+                                        </article>
 
-                                        <ul class="mt-15 fz-13 list-disc pl-5 ulResume">
-                                            <li>
-                                                Lideré el desarrollo de +4 portales empresariales, digitalizando procesos administrativos y reduciendo tiempos operativos en hasta 40%.
-                                            </li>
-                                            <li>
-                                                Diseñé e implementé integraciones entre Salesforce y SAP Business One mediante APIs REST con OAuth/JWT, sincronizando pedidos,
-                                                clientes y flujo comercial y reduciendo inconsistencias de datos en ~80%.
-                                            </li>
-                                            <li>
-                                                Desarrollé un portal de proveedores (CFDI) integrado a SAP B1 para validación y conciliación documental, disminuyendo errores de
-                                                validación y tiempos de procesamiento manual.
-                                            </li>
-                                            <li>
-                                                Construí un portal B2B conectado a SAP B1 que permite a distribuidores gestionar pedidos e inventario en tiempo real.
-                                            </li>
-                                            <li>
-                                                Implementé una plataforma de gestión de viáticos con flujos de aprobación, optimizando el control financiero y reduciendo tiempos de
-                                                autorización.
-                                            </li>
-                                            <li>
-                                                Desarrollé un sistema de facturación automática a partir de tickets de compra, eliminando procesos manuales y mejorando la eficiencia
-                                                operativa.
-                                            </li>
-                                            <li>
-                                                Refactoricé sistemas legacy de alta carga, mejorando performance ~30% y reduciendo incidencias en producción.
-                                            </li>
-                                        </ul>
-                                    </div>
+                                        <article class="experience-entry" data-experience-item>
+                                            <span class="experience-timeline__node" aria-hidden="true"></span>
+                                            <div class="experience-card">
+                                                <header class="experience-card__header">
+                                                    <span class="experience-card__logo"><img src="assets/imgs/company/ItConsultant.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"></span>
+                                                    <div class="experience-card__heading">
+                                                        <h3>Desarrollador .NET Senior</h3>
+                                                        <span class="company">IT Consultant Soluciones de Negocio</span>
+                                                    </div>
+                                                    <span class="date-resume"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Septiembre 2019 - Agosto 2024</span></span>
+                                                </header>
+                                                <ul class="mt-15 fz-13 project-impact-list">
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Lideré el desarrollo de más de cuatro portales empresariales. Estos digitalizaron procesos administrativos y redujeron los tiempos operativos hasta en un <strong class="experience-metric">40%</strong>. Entre ellos están el <a class="experience-project-link" href="assets/projects/distribuidores.html">portal B2B para distribuidores</a> y el <a class="experience-project-link" href="assets/projects/proveedores.html">portal de proveedores para CFDI</a>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Integré Salesforce con SAP Business One mediante una API REST con autenticación OAuth/JWT. La integración sincronizaba pedidos, clientes y datos del flujo comercial, y redujo en <strong class="experience-metric">~80%</strong> las inconsistencias de datos. <a class="experience-project-link" href="assets/projects/apiSalesforceSap.html">Ver caso de integración</a>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Automaticé la gestión de viáticos mediante flujos de aprobación, reduciendo los tiempos de autorización. También automaticé la facturación a partir de tickets de compra y eliminé tareas manuales. <a class="experience-project-link" href="assets/projects/viaticos.html">Ver caso de viáticos</a>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Refactoricé sistemas heredados con alta carga de procesamiento y mejoré su rendimiento en <strong class="experience-metric">~30%</strong>. También reduje las incidencias en producción.</li>
+                                                </ul>
+                                            </div>
+                                        </article>
 
-                                    <div class="item mb-20">
-                                        <span class="date-resume">Junio 2016 - Julio 2019</span>
-                                        <h5>Desarrollador .NET</h5>
-                                        <span class="company">Ingeniería Aplicada TI S.A. de C.V.</span>
-
-                                        <ul class="mt-15 fz-13 list-disc pl-5 ulResume">
-                                            <li>
-                                                Desarrollé soluciones para sectores empresarial y gubernamental (GRP) enfocadas en digitalización de procesos y trazabilidad de
-                                                información.
-                                            </li>
-                                            <li>
-                                                Centralicé lógica de negocio en backend (C#, ASP.NET MVC), reduciendo errores de validación ~20%.
-                                            </li>
-                                            <li>
-                                                Optimicé consultas en módulos de reporteo de alto volumen, reduciendo tiempos de ejecución hasta 40%.
-                                            </li>
-                                            <li>
-                                                Participé en el desarrollo de una app iOS para expediente clínico, integrando servicios backend y asegurando consistencia de datos.
-                                            </li>
-                                        </ul>
-
-                                        <p class="mt-20 fz-14  text-300">Proyectos relevantes:</p>
-                                        <ul class="mt-10 fz-12 list-disc pl-5 ulResume">
-                                            <li>ZAFER G3 — Sistema de contabilidad gubernamental para la ASEJ, enfocado
-                                                            en la gestión de información financiera pública.</li>
-                                            <li>MEDIC-MOVIL — App iOS para expediente clínico</li>
-                                            <li>ESCOLAR BIT — Sistema web para control escolar y administrativo</li>
-                                        </ul>
+                                        <article class="experience-entry" data-experience-item>
+                                            <span class="experience-timeline__node" aria-hidden="true"></span>
+                                            <div class="experience-card">
+                                                <header class="experience-card__header">
+                                                    <span class="experience-card__logo"><img src="assets/imgs/company/IngenieriaAplicadaTI.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"></span>
+                                                    <div class="experience-card__heading">
+                                                        <h3>Desarrollador .NET</h3>
+                                                        <span class="company">Ingeniería Aplicada TI S.A. de C.V.</span>
+                                                    </div>
+                                                    <span class="date-resume"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Junio 2016 - Julio 2019</span></span>
+                                                </header>
+                                                <ul class="mt-15 fz-13 project-impact-list">
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Desarrollé soluciones GRP para empresas y dependencias gubernamentales, enfocadas en digitalizar procesos y dar seguimiento a la información.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Centralicé la lógica de negocio en el backend con C# y ASP.NET MVC, reduciendo en <strong class="experience-metric">~20%</strong> los errores de validación.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Optimicé las consultas de módulos de reportes con alto volumen de datos y reduje sus tiempos de ejecución hasta en un <strong class="experience-metric">40%</strong>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Colaboré en una app para iOS de expediente clínico. Integré servicios backend y ayudé a mantener la consistencia de los datos.</li>
+                                                </ul>
+                                                <p class="experience-projects-summary"><strong>Proyectos relevantes:</strong> <strong>ZAFER G3</strong> (sistema de contabilidad pública para la ASEJ), <strong>MEDIC-MOVIL</strong> (app iOS para expediente clínico) y <strong>ESCOLAR BIT</strong> (sistema de control escolar y administrativo).</p>
+                                            </div>
+                                        </article>
                                     </div>
                                 </div>
                             </div>
@@ -915,7 +878,7 @@
     <script src="https://web3forms.com/client/script.js" async defer></script>
 
     <!-- custom scripts -->
-    <script src="assets/js/scripts.js?v=20261008-orb-sphere"></script>
+    <script src="assets/js/scripts.js?v=20261012-experience-overdrive"></script>
 
     <script>
         (function () {

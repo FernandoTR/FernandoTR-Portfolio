@@ -63,6 +63,69 @@ $(function () {
         currentYear.textContent = new Date().getFullYear();
     }
 
+    var experienceTimeline = document.querySelector('[data-experience-timeline]');
+    if (experienceTimeline) {
+        var experienceTrack = experienceTimeline.querySelector('.experience-timeline__track');
+        var experienceProgress = experienceTimeline.querySelector('.experience-timeline__progress');
+        var experienceNodes = experienceTimeline.querySelectorAll('.experience-timeline__node');
+        var experienceEntries = experienceTimeline.querySelectorAll('[data-experience-item]');
+        var experienceFramePending = false;
+
+        var experiencePrefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if ('IntersectionObserver' in window && !experiencePrefersReducedMotion) {
+            var experienceRevealObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-revealed');
+                    experienceRevealObserver.unobserve(entry.target);
+                });
+            }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+            experienceEntries.forEach(function (entry, index) {
+                entry.style.setProperty('--experience-reveal-delay', Math.min(index * 120, 240) + 'ms');
+                entry.classList.add('is-pending');
+                experienceRevealObserver.observe(entry);
+            });
+        }
+
+        function measureExperienceTrack() {
+            if (!experienceNodes.length) return;
+            var timelineTop = experienceTimeline.getBoundingClientRect().top;
+            var firstNode = experienceNodes[0].getBoundingClientRect();
+            var lastNode = experienceNodes[experienceNodes.length - 1].getBoundingClientRect();
+            var trackTop = firstNode.top - timelineTop + firstNode.height / 2;
+            var trackBottom = lastNode.top - timelineTop + lastNode.height / 2;
+            experienceTrack.style.top = trackTop + 'px';
+            experienceTrack.style.height = Math.max(1, trackBottom - trackTop) + 'px';
+        }
+
+        function updateExperienceProgress() {
+            var track = experienceTrack.getBoundingClientRect();
+            var readingLine = window.innerHeight * 0.66;
+            var progress = track.height ? (readingLine - track.top) / track.height : 0;
+            experienceProgress.style.transform = 'scaleY(' + Math.min(1, Math.max(0, progress)) + ')';
+            experienceNodes.forEach(function (node) {
+                node.classList.toggle('is-active', node.getBoundingClientRect().top + node.offsetHeight / 2 <= readingLine);
+            });
+            experienceFramePending = false;
+        }
+
+        function scheduleExperienceProgress() {
+            if (experienceFramePending) return;
+            experienceFramePending = true;
+            window.requestAnimationFrame(updateExperienceProgress);
+        }
+
+        function refreshExperienceProgress() {
+            measureExperienceTrack();
+            scheduleExperienceProgress();
+        }
+
+        window.addEventListener('scroll', scheduleExperienceProgress, { passive: true });
+        window.addEventListener('resize', refreshExperienceProgress);
+        refreshExperienceProgress();
+    }
+
 
     /* =============================================================================
     -----------------------------  Smooth Scroll nav   -----------------------------
