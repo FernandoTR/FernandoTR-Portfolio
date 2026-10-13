@@ -63,6 +63,26 @@ $(function () {
         currentYear.textContent = new Date().getFullYear();
     }
 
+    var cardRevealGroups = document.querySelectorAll('.resume-education-column, #portfolio .portfolio-grid');
+    var cardRevealPrefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (cardRevealGroups.length && 'IntersectionObserver' in window && !cardRevealPrefersReducedMotion) {
+        var cardRevealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-revealed');
+                cardRevealObserver.unobserve(entry.target);
+            });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+        cardRevealGroups.forEach(function (group) {
+            group.querySelectorAll('.education-card, .certification-card, .item').forEach(function (card, index) {
+                card.style.setProperty('--experience-reveal-delay', Math.min(index * 120, 240) + 'ms');
+                card.classList.add('is-pending');
+                cardRevealObserver.observe(card);
+            });
+        });
+    }
+
     var experienceTimeline = document.querySelector('[data-experience-timeline]');
     if (experienceTimeline) {
         var experienceTrack = experienceTimeline.querySelector('.experience-timeline__track');
