@@ -84,7 +84,7 @@ $(function () {
         syncSkillsMotion();
     }
 
-    var cardRevealGroups = document.querySelectorAll('.resume-education-column, #portfolio .portfolio-grid, #skills');
+    var cardRevealGroups = document.querySelectorAll('.resume-education-column, #portfolio .portfolio-grid, #skills, #contact');
     var cardRevealPrefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (cardRevealGroups.length && 'IntersectionObserver' in window && !cardRevealPrefersReducedMotion) {
         var cardRevealObserver = new IntersectionObserver(function (entries) {
@@ -96,7 +96,7 @@ $(function () {
         }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
 
         cardRevealGroups.forEach(function (group) {
-            group.querySelectorAll('.education-card, .certification-card, .item, .skills-layout').forEach(function (card, index) {
+            group.querySelectorAll('.education-card, .certification-card, .item, .skills-layout, .contact-layout').forEach(function (card, index) {
                 card.style.setProperty('--experience-reveal-delay', Math.min(index * 120, 240) + 'ms');
                 card.classList.add('is-pending');
                 cardRevealObserver.observe(card);
