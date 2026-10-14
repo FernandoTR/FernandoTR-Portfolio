@@ -6,7 +6,7 @@
     <!-- Metas -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portafolio de Fernando Torres, Ingeniero en Informática y Desarrollador Full Stack .NET con más de 9 años de experiencia en aplicaciones web, facturación electrónica y soluciones empresariales.">
     <meta name="keywords" content="Fernando Torres, Desarrollador Full Stack, Portafolio .NET, C#, ASP.NET, SQL Server, Angular, Azure DevOps">
     <meta name="author" content="Fernando Torres">
@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="assets/css/plugins.css">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20261012-experience-svg-checks">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261014-skills-typeset">
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -194,8 +194,8 @@
                                 </div>
                             </dl>
                             <div class="hero-actions">
-                                <a href="#portfolio" data-scroll-nav="1" class="hero-action-primary">Explorar proyectos <span aria-hidden="true">→</span></a>
-                                <a href="assets/docs/FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir CV de Fernando Torres en PDF">Abrir CV</a>
+                                <a href="#portfolio" data-scroll-nav="1" class="hero-action-primary">Explorar proyectos <svg class="hero-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+                                <a href="assets/docs/FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" class="hero-action-secondary" aria-label="Abrir CV de Fernando Torres en PDF">Abrir CV <svg class="hero-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
                             </div>
                         </div>
                         <div class="author-profile">
@@ -598,101 +598,93 @@
 
                     <!-- ==================== Start Skills ==================== -->
 
-                    <div class="skills section-padding pt-0" data-scroll-index="3" id="skills">
-
-                        <!-- Header -->
-                        <div class="sec-head bord-thin-bottom pb-20 mb-60">
-                            <h4 class="sub-title fz-28">Stack & Capacidades Técnicas</h4>
-                            <p class="fz-16 mt-15 text-300" >
-                                Desarrollo de aplicaciones, APIs, manejo de datos e integración entre plataformas.
-                            </p>
+                    <section class="skills section-padding pt-0" data-scroll-index="3" id="skills" aria-labelledby="skills-title">
+                        <div class="skills-heading">
+                            <h2 class="sub-title fz-28" id="skills-title">Stack &amp; Capacidades Técnicas</h2>
+                            <p class="fz-16 mt-15 text-300 portfolio-subtitle">Desarrollo de aplicaciones, APIs, manejo de datos e integración entre plataformas.</p>
                         </div>
 
-                        <div class="row g-4 align-items-stretch">
-
-                            <!-- LEFT -->
-                            <div class="col-lg-7">
-                                <div class="skills-grid">
-
-                                    <div class="skill-card">
-                                        <div class="skill-icon">⚙️</div>
-                                        <span class="skill-label">Backend</span>
-                                        <h5>APIs y lógica de negocio</h5>
-                                    </div>
-
-                                    <div class="skill-card">
-                                        <div class="skill-icon">💻</div>
-                                        <span class="skill-label">Frontend</span>
-                                        <h5>Interfaces claras y funcionales</h5>
-                                    </div>
-
-                                    <div class="skill-card">
-                                        <div class="skill-icon">🗄️</div>
-                                        <span class="skill-label">Datos</span>
-                                        <h5>Modelado y optimización de datos</h5>
-                                    </div>
-
-                                    <div class="skill-card integration">
-                                        <div class="skill-icon">🔗</div>
-                                        <span class="skill-label">Integración</span>
-                                        <h5>Integración de sistemas</h5>
-                                        <p>REST · SOAP · SAP B1 · Salesforce REST API</p>
-                                    </div>
-
-                                </div>
+                        <div class="skills-layout">
+                            <div class="skills-map" data-skills-map>
+                                <svg class="skills-map__graphic" id="skills-map-art" viewBox="0 0 600 440" width="600" height="440" aria-hidden="true" focusable="false">
+                                    <defs>
+                                        <pattern id="skills-map-dots" width="24" height="24" patternUnits="userSpaceOnUse">
+                                            <circle cx="12" cy="12" r="1" fill="currentColor" opacity=".13" />
+                                        </pattern>
+                                        <clipPath id="skills-core-clip">
+                                            <rect x="266" y="186" width="68" height="68" rx="12" />
+                                        </clipPath>
+                                    </defs>
+                                    <rect width="600" height="440" fill="url(#skills-map-dots)" />
+                                    <g class="skills-map__connections">
+                                        <path id="skills-link-csharp" pathLength="100" d="M124 116V132Q124 152 144 152H264Q280 152 280 168V174" />
+                                        <path id="skills-link-sql" pathLength="100" d="M444 116V132Q444 152 424 152H336Q320 152 320 168V174" />
+                                        <path id="skills-link-sap" pathLength="100" d="M464 220H346" />
+                                        <path id="skills-link-salesforce" pathLength="100" d="M432 322V306Q432 286 412 286H336Q320 286 320 270V266" />
+                                        <path id="skills-link-angular" pathLength="100" d="M144 322V306Q144 286 164 286H264Q280 286 280 270V266" />
+                                        <path id="skills-link-github" pathLength="100" d="M118 222H254" />
+                                    </g>
+                                    <g class="skills-map__pulses">
+                                        <use href="#skills-link-csharp" style="--pulse-delay: 0s" />
+                                        <use href="#skills-link-sql" style="--pulse-delay: -.7s" />
+                                        <use href="#skills-link-sap" style="--pulse-delay: -1.4s" />
+                                        <use href="#skills-link-salesforce" style="--pulse-delay: -2.1s" />
+                                        <use href="#skills-link-angular" style="--pulse-delay: -2.8s" />
+                                        <use href="#skills-link-github" style="--pulse-delay: -3.5s" />
+                                    </g>
+                                    <g class="skills-map__nodes">
+                                        <rect x="92" y="52" width="64" height="64" rx="16" />
+                                        <image class="skills-map__icon--brand" href="assets/imgs/skills/csharp-white.svg" x="107" y="66" width="34" height="36" />
+                                        <rect x="412" y="52" width="64" height="64" rx="16" />
+                                        <image href="assets/imgs/skills/sql-server.svg" x="424" y="64" width="40" height="40" />
+                                        <rect x="464" y="190" width="76" height="60" rx="16" />
+                                        <image class="skills-map__icon--brand" href="assets/imgs/skills/SAP-white.svg" x="475" y="206" width="54" height="28" />
+                                        <rect x="394" y="322" width="76" height="60" rx="16" />
+                                        <image class="skills-map__icon--brand" href="assets/imgs/skills/salesforce-white.svg" x="406" y="334" width="52" height="36" />
+                                        <rect x="112" y="322" width="64" height="64" rx="16" />
+                                        <image href="assets/imgs/skills/angular.svg" x="125" y="334" width="38" height="40" />
+                                        <rect x="54" y="190" width="64" height="64" rx="16" />
+                                        <image href="assets/imgs/skills/github_dark.svg" x="68" y="204" width="36" height="36" />
+                                    </g>
+                                    <rect class="skills-map__core" x="254" y="174" width="92" height="92" rx="20" />
+                                    <image href="assets/imgs/skills/Microsoft_.NET-white.svg" x="266" y="186" width="68" height="68" clip-path="url(#skills-core-clip)" />
+                                </svg>
                             </div>
 
-                            <!-- RIGHT -->
-                            <div class="col-lg-5">
-                                <div class="box-item h-100 skills-highlight">
-
-                                    <span class="skill-label">Stack principales</span>
-                                    <h5 class="mt-15 mb-25">Tecnologías</h5>
-
-                                    <div class="tech-badges">
-                                         <!-- CORE -->
-                                        <span>C#</span>
-                                        <span>.NET</span>
-                                        <span>ASP.NET MVC</span>
-                                        <span>Web API</span>
-                                        <span>SQL Server</span>
-
-                                        <!-- BACKEND -->
-                                        <span>Entity Framework</span>
-                                        <span>JWT</span>
-                                        <span>REST API</span>
-                                        <span>SOAP</span>
-
-                                         <!-- FRONTEND -->
-                                        <span>JavaScript</span>
-                                        <span>TypeScript</span>
-                                        <span>Angular</span>
-                                        <span>JQuery</span>
-
-                                         <!-- TOOLS -->
-                                        <span>Git</span>
-                                        <span>GitHub</span>
-                                        <span>Azure DevOps</span>
-                                        <span>Swagger</span>
-
-                                        <!-- INTEGRACIÓN -->
-                                        <span>SAP B1</span>
-                                        <span>Salesforce REST API</span>
-
-                                        <!-- METODOLOGÍA -->
-                                        <span>SCRUM</span>
-
-                                    </div>
-
-
+                            <div class="skills-categories">
+                                <div class="skills-category">
+                                    <h3>Backend y datos</h3>
+                                    <p>APIs, lógica de negocio, modelado y optimización de datos.</p>
+                                    <a class="skills-proof-link" href="assets/projects/trading.html">Ver caso: TradingBook</a>
+                                    <ul class="skills-technologies" aria-label="Tecnologías de backend y datos">
+                                        <li>C#</li><li class="is-featured">.NET</li><li>ASP.NET MVC</li><li>Web API</li><li>Entity Framework</li><li>JWT</li><li>SQL Server</li><li>SAP Hana</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-category">
+                                    <h3>Frontend</h3>
+                                    <p>Interfaces claras y funcionales.</p>
+                                    <ul class="skills-technologies" aria-label="Tecnologías de frontend">
+                                        <li>JavaScript</li><li>TypeScript</li><li>Angular</li><li>jQuery</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-category">
+                                    <h3>Integración</h3>
+                                    <p>Integración de sistemas y plataformas.</p>
+                                    <a class="skills-proof-link" href="assets/projects/apiSalesforceSap.html">Ver caso: integración Salesforce ↔ SAP B1</a>
+                                    <ul class="skills-technologies" aria-label="Tecnologías de integración">
+                                        <li class="is-featured">REST API</li><li>SOAP</li><li class="is-featured">SAP B1</li><li class="is-featured">Salesforce REST API</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-category">
+                                    <h3>Herramientas y colaboración</h3>
+                                    <p>Desarrollo, control de versiones y trabajo en equipo.</p>
+                                    <ul class="skills-technologies" aria-label="Herramientas y metodología">
+                                        <li>Git</li><li>GitHub</li><li>Azure DevOps</li><li>Swagger</li><li>SCRUM</li>
+                                    </ul>
                                 </div>
                             </div>
-
                         </div>
-
-
-
-                    </div>
+                    </section>
 
                     <!-- ==================== End Skills ==================== -->
 
@@ -870,7 +862,7 @@
     <script src="https://web3forms.com/client/script.js" async defer></script>
 
     <!-- custom scripts -->
-    <script src="assets/js/scripts.js?v=20261012-experience-overdrive"></script>
+    <script src="assets/js/scripts.js?v=20261014-skills-card-reveal"></script>
 
     <script>
         (function () {

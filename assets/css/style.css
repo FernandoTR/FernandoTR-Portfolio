@@ -4137,11 +4137,11 @@ img.left {
 
 .experience-card .project-impact-marker {
     position: absolute;
-    top: .1em;
+    top: .3em;
     left: 0;
     display: grid;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     place-items: center;
     border: 1px solid rgba(187, 186, 166, 0.22);
     border-radius: 50%;
@@ -4328,56 +4328,6 @@ img.left {
     line-height: 1.4;
 }
 
-/* GRID */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-}
-
-/* CARD */
-.skill-card {
-    padding: 26px;
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.1);
-    background: #101111;
-    transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-
-
-
-
-/* ICON */
-.skill-icon {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-/* LABEL */
-.skill-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.3px;
-    color: var(--maincolor);
-    margin-bottom: 10px;
-    display: block;
-}
-
-/* TEXT */
-.skill-card h5 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    font-size: 14px;
-    color: #cfcfcf;
-    line-height: 1.8;
-}
-
 /* BADGES */
 .tech-badges {
     display: flex;
@@ -4396,43 +4346,6 @@ img.left {
 .tech-badges span:hover {
     transform: translateY(-2px);
 }
-
-/* NOTE */
-.skills-note {
-    padding: 18px;
-    border-radius: 16px;
-    margin-top: 20px;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
-.skills-highlight {
-    padding: 38px 34px;
-    border-radius: 24px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%);
-    border: 1px solid rgba(255,255,255,0.08);
-    position: relative;
-    overflow: hidden;
-}
-
-.skills-highlight::before {
-    content: "";
-    position: absolute;
-    top: -60px;
-    right: -60px;
-    width: 180px;
-    height: 180px;
-    /* background: radial-gradient(circle, rgba(173, 138, 255, 0.08) 0%, transparent 70%); */
-    pointer-events: none;
-}
-
-.skills-highlight h5 {
-    font-size: 42px;
-    line-height: 1.1;
-    margin-bottom: 28px;
-    letter-spacing: -0.5px;
-}
-
-
 
 /* ==================== Start Contact Premium ==================== */
 .contact-title {
@@ -5017,7 +4930,7 @@ img.left {
 #home .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 16px;
     margin-top: 48px;
 }
 
@@ -5025,30 +4938,49 @@ img.left {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     min-height: 56px;
-    padding: 12px 36px;
-    border: 1px solid #bbbaa6;
+    padding: 12px 28px;
+    border: 1px solid rgba(187, 186, 166, .45);
     border-radius: 12px;
     color: #bbbaa6;
     font-size: 18px;
     font-weight: 500;
-    transition: background-color .2s ease, color .2s ease;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+#home .hero-action-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    transition: transform .2s ease;
 }
 
 #home .hero-actions .hero-action-primary {
     background: #bbbaa6;
+    border-color: #bbbaa6;
     color: #1d1d1d;
 }
 
 #home .hero-actions a:hover {
     background: #bbbaa6;
+    border-color: #bbbaa6;
     color: #1d1d1d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 153, 85, .12);
 }
 
 #home .hero-actions .hero-action-primary:hover {
     background: transparent;
     color: #bbbaa6;
+}
+
+#home .hero-action-primary:hover .hero-action-icon {
+    transform: translateX(3px);
+}
+
+#home .hero-action-secondary:hover .hero-action-icon {
+    transform: translate(2px, -2px);
 }
 
 #home .hero-actions a:focus-visible {
@@ -5068,6 +5000,15 @@ img.left {
     background: #e69955;
     border-color: #e69955;
     color: #1d1d1d;
+}
+
+#home .hero-actions a:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+#home .hero-actions a:active .hero-action-icon {
+    transform: none;
 }
 
 #home ::selection {
@@ -5110,6 +5051,18 @@ img.left {
 
     #home .hero-actions .hero-action-primary {
         flex: 1.5 1 160px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #home .hero-actions a,
+    #home .hero-actions .hero-action-icon {
+        transition: none;
+    }
+
+    #home .hero-actions a:hover,
+    #home .hero-actions a:hover .hero-action-icon {
+        transform: none;
     }
 }
 
@@ -5330,60 +5283,6 @@ img.left {
    Skills FINAL PREMIUM
 ========================= */
 
-/* Cards */
-.skill-card {
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: all 0.25s ease;
-  max-width: 260px;
-}
-
-.skill-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* Subtexto tech */
-.skill-card p {
-  font-family: monospace;
-  font-size: 13px;
-  opacity: 0.65;
-  margin-top: 6px;
-}
-
-/* Títulos */
-.skill-card h5 {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  line-height: 1.4;
-}
-
-/* Card destacada */
-.skill-card.integration {
-  margin-top: 10px;
-  line-height: 1.6;
-  border: 1px solid rgba(255,255,255,0.15);
-  transform: scale(1.02);
-}
-
-.skill-card.integration p {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.skill-card.integration:hover {
-  transform: translateY(-6px) scale(1.03);
-}
-
-.skill-icon {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
 .tech-badges span.highlight {
   border: 1px solid rgba(255,255,255,0.35);
   font-weight: 600;
@@ -5417,6 +5316,72 @@ img.left {
 
 
 
+/* Skills integration map */
+#skills {
+  --skills-ink: #bbbaa6;
+  --skills-muted: #aaa99a;
+  --skills-border: rgba(255, 255, 255, .1);
+  --skills-surface: #101111;
+}
+
+#skills .skills-heading { margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--skills-border); }
+#skills .skills-heading h2 { margin-bottom: 12px; font-weight: 600; line-height: 1.15; letter-spacing: -.02em; }
+#skills .skills-heading p { max-width: 65ch; font-size: 16px; line-height: 1.7; }
+#skills { perspective: 900px; }
+#skills .skills-layout { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); align-items: center; gap: 40px; padding: 24px; border: 1px solid var(--skills-border); border-radius: 24px; background: var(--skills-surface); }
+#skills .skills-layout.is-pending:not(.is-revealed) { opacity: 0; transform: translateY(28px) rotateX(4deg); filter: blur(8px); }
+#skills .skills-layout.is-revealed { animation: experience-card-reveal 760ms cubic-bezier(.16, 1, .3, 1) backwards; animation-delay: var(--experience-reveal-delay, 0ms); }
+
+#skills .skills-map { min-width: 0; }
+#skills .skills-map__graphic { display: block; width: 100%; height: auto; color: var(--skills-ink); }
+#skills .skills-map__graphic image:not(.skills-map__icon--brand) { filter: brightness(0) invert(1); }
+#skills .skills-map__connections path, #skills .skills-map__pulses use { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+#skills .skills-map__connections path { stroke: rgba(187, 186, 166, .22); stroke-width: 1.5; }
+#skills .skills-map__pulses use { stroke: var(--maincolor); stroke-dasharray: 10 90; stroke-width: 2.5; opacity: 0; }
+#skills .skills-map.is-animating .skills-map__pulses use { animation: skills-data-flow 4s linear var(--pulse-delay) infinite; }
+
+@keyframes skills-data-flow {
+  12% { opacity: .8; }
+  78% { opacity: .8; }
+  100% { stroke-dashoffset: -100; opacity: 0; }
+}
+
+#skills .skills-map__nodes rect { fill: #171918; stroke: rgba(255, 255, 255, .12); stroke-width: 1; }
+#skills .skills-map__core { fill: #171918 !important; stroke: rgba(255, 255, 255, .18) !important; }
+#skills .skills-categories { min-width: 0; }
+#skills .skills-category { position: relative; display: grid; grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr); gap: 8px 24px; padding: 24px 0; }
+#skills .skills-category::after { position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: var(--skills-border); content: ""; }
+#skills .skills-category:first-child { padding-top: 0; }
+#skills .skills-category:last-child { padding-bottom: 0; }
+#skills .skills-category:last-child::after { display: none; }
+#skills .skills-category h3 {  font-size: 16px; font-weight: 500; line-height: 1.4; }
+#skills .skills-category > p { grid-column: 1; color: var(--skills-muted); font-size: 14px; line-height: 1.65; }
+#skills .skills-proof-link { grid-column: 1; width: fit-content; color: var(--maincolor); font-size: 13px; font-weight: 500; line-height: 1.5; text-decoration: underline; text-underline-offset: 3px; }
+#skills .skills-proof-link:hover { color: #fff; }
+#skills .skills-proof-link:focus-visible { outline: 2px solid var(--maincolor); outline-offset: 3px; }
+#skills .skills-technologies { display: flex; grid-column: 2; grid-row: 1 / span 2; flex-wrap: wrap; align-content: start; gap: 8px; min-width: 0; margin: 0; padding: 0; }
+#skills .skills-technologies li { max-width: 100%; padding: 5px 10px; border: 1px solid rgba(255, 255, 255, .1); border-radius: 999px; background: rgba(255, 255, 255, .025); color: #c8c7bb; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
+#skills .skills-technologies li.is-featured { border-color: rgba(230, 153, 85, .45); background: rgba(230, 153, 85, .08); color: #eeb68a; }
+
+@media (max-width: 991px) {
+  #skills .skills-layout { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  #skills .skills-map { width: min(100%, 560px); justify-self: center; }
+  #skills .skills-map__graphic { width: auto; max-width: 100%; height: 280px; margin-inline: auto; }
+  #skills .skills-categories { padding-top: 32px; border-top: 1px solid var(--skills-border); }
+}
+
+@media (max-width: 479px) {
+  #skills .skills-heading { margin-bottom: 32px; }
+  #skills .skills-layout { gap: 28px; padding: 16px; border-radius: 20px; }
+  #skills .skills-map__graphic { height: 180px; }
+  #skills .skills-category { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 22px 0; }
+  #skills .skills-category > p, #skills .skills-technologies { grid-column: 1; grid-row: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #skills .skills-map__pulses { display: none; }
+  #skills .skills-layout.is-pending, #skills .skills-layout.is-revealed { animation: none !important; filter: none; opacity: 1; transform: none; }
+}
 /* ==================== Reusable Project Case Study ==================== */
 .project-case-study {
   position: relative;

@@ -63,7 +63,28 @@ $(function () {
         currentYear.textContent = new Date().getFullYear();
     }
 
-    var cardRevealGroups = document.querySelectorAll('.resume-education-column, #portfolio .portfolio-grid');
+    var skillsMap = document.querySelector('#skills [data-skills-map]');
+    if (skillsMap && window.matchMedia && 'IntersectionObserver' in window) {
+        var skillsMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+        var skillsMapInView = false;
+
+        function syncSkillsMotion() {
+            skillsMap.classList.toggle('is-animating', skillsMapInView && !document.hidden && !skillsMotionPreference.matches);
+        }
+
+        var skillsMapObserver = new IntersectionObserver(function (entries) {
+            var entry = entries[entries.length - 1];
+            skillsMapInView = entry.isIntersecting && entry.intersectionRatio >= 0.15;
+            syncSkillsMotion();
+        }, { threshold: 0.15 });
+
+        skillsMapObserver.observe(skillsMap);
+        document.addEventListener('visibilitychange', syncSkillsMotion);
+        skillsMotionPreference.addEventListener('change', syncSkillsMotion);
+        syncSkillsMotion();
+    }
+
+    var cardRevealGroups = document.querySelectorAll('.resume-education-column, #portfolio .portfolio-grid, #skills');
     var cardRevealPrefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (cardRevealGroups.length && 'IntersectionObserver' in window && !cardRevealPrefersReducedMotion) {
         var cardRevealObserver = new IntersectionObserver(function (entries) {
@@ -75,7 +96,7 @@ $(function () {
         }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
 
         cardRevealGroups.forEach(function (group) {
-            group.querySelectorAll('.education-card, .certification-card, .item').forEach(function (card, index) {
+            group.querySelectorAll('.education-card, .certification-card, .item, .skills-layout').forEach(function (card, index) {
                 card.style.setProperty('--experience-reveal-delay', Math.min(index * 120, 240) + 'ms');
                 card.classList.add('is-pending');
                 cardRevealObserver.observe(card);
