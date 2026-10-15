@@ -4866,7 +4866,7 @@ img.left {
     flex-wrap: wrap;
     gap: 12px 24px;
     margin-top: 32px;
-    padding: 16px 12px 0 0;
+    padding: 16px 12px 56px 0;
     border-top: 1px solid rgba(255,255,255,0.12);
     color: #aaa;
     font-size: 13px;
@@ -4880,6 +4880,14 @@ img.left {
     min-height: 44px;
     color: #bbbaa6;
     transition: color .2s ease;
+}
+
+.footer-bottom-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 24px;
+    margin-left: auto;
 }
 
 @media screen and (max-width: 991px) {
