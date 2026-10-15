@@ -234,8 +234,9 @@ $(function () {
     });
 
     $(".navbar").on("click", ".navbar-toggler", function () {
-
-        $(".navbar .navbar-collapse").toggleClass("show");
+        var expanded = $(this).attr("aria-expanded") === "true";
+        $(".navbar .navbar-collapse").toggleClass("show", !expanded);
+        $(this).attr("aria-expanded", String(!expanded));
     });
 
     wind.on("scroll", function () {
@@ -771,6 +772,9 @@ $(function () {
     tl.to(".loader-wrap", {
         zIndex: -1,
         display: "none",
+    });
+    tl.call(function () {
+        document.body.classList.add('hero-handwriting-ready');
     });
     tl.from(
         "header",
