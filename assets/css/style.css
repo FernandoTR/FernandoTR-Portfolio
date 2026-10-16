@@ -7235,3 +7235,79 @@ img.left {
     padding: 18px 0;
   }
 }
+
+/* Portal de Distribuidores hero media. */
+.project-distribuidores .project-trading-architecture .edge {
+  marker-end: url(#distribuidores-architecture-arrow);
+}
+
+.project-distribuidores .project-hero-carousel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 20px;
+  margin: 0 0 64px;
+}
+
+.project-distribuidores .project-hero-carousel .project-hero-shell {
+  grid-column: 1 / -1;
+  margin: 44px 0 0 !important;
+}
+
+.project-distribuidores .project-hero-slide {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.project-distribuidores .project-hero-slide picture {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1.92 / 1;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #090b0f;
+}
+
+.project-distribuidores .project-hero-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-distribuidores .project-hero-caption {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+  margin: 0;
+  padding: 16px 0;
+  color: rgba(255,255,255,.72);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-distribuidores .project-hero-carousel .project-hero-motion {
+  position: static;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+}
+
+@media screen and (max-width: 768px) {
+  .project-distribuidores .project-hero-carousel {
+    margin-bottom: 48px;
+  }
+
+  .project-distribuidores .project-hero-carousel .project-hero-shell {
+    margin-top: 32px !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .project-distribuidores .project-hero-carousel {
+    column-gap: 12px;
+  }
+}
