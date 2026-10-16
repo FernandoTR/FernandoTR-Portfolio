@@ -6985,6 +6985,245 @@ img.left {
   text-underline-offset: 5px;
 }
 
+/* Salesforce ↔ SAP shares the TradingBook case-study language. */
+.project-api-salesforce-sap .caption h1 {
+  font-size: clamp(42px, 5.7vw, 78px) !important;
+}
+
+.project-api-salesforce-sap .caption {
+  display: flow-root;
+}
+
+.project-api-salesforce-sap .project-hero-shell {
+  margin: 44px 0 0 !important;
+}
+
+.project-api-salesforce-sap .project-hero-role {
+  margin-bottom: calc(24px + 44px);
+}
+
+.project-api-salesforce-sap .project-hero-media {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 1912 / 948;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #090b0f;
+}
+
+.project-api-salesforce-sap .project-hero-slide,
+.project-api-salesforce-sap .project-hero-slide picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-api-salesforce-sap .project-hero-slide[hidden] {
+  display: none;
+}
+
+.project-api-salesforce-sap .project-hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-api-salesforce-sap .project-hero-slide:first-child img {
+  object-fit: cover;
+}
+
+.project-api-salesforce-sap .project-hero-caption {
+  min-height: 44px;
+  margin: 12px 0 0;
+  padding-right: 132px;
+  color: rgba(255,255,255,.66);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.project-api-salesforce-sap .project-api-overview > p {
+  max-width: 76ch;
+}
+
+.project-api-salesforce-sap .project-api-architecture {
+  background: #0e0f0f;
+}
+
+.project-api-salesforce-sap .project-architecture {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  min-width: 900px;
+  padding: 44px 36px;
+}
+
+.project-api-salesforce-sap .project-layer {
+  display: block;
+  position: relative;
+  min-height: 200px;
+  padding: 24px;
+  border: 1px solid #45463e;
+  border-radius: 12px;
+  background: #141514;
+}
+
+.project-api-salesforce-sap .project-layer:nth-child(2) {
+  border-color: #e69955;
+}
+
+.project-api-salesforce-sap .project-layer:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 30px;
+  color: #bbbaa6;
+  content: "→";
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.project-api-salesforce-sap .project-layer:nth-child(-n+2)::after {
+  content: "↔";
+}
+
+.project-api-salesforce-sap .project-layer:nth-child(3)::after {
+  content: "←";
+}
+
+.project-api-salesforce-sap .project-layer span {
+  display: block;
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.project-api-salesforce-sap .project-layer p {
+  margin: 0;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.project-api-salesforce-sap .endpoint-directory {
+  border-top: 1px solid rgba(255,255,255,.16);
+}
+
+.project-api-salesforce-sap .endpoint-directory-labels,
+.project-api-salesforce-sap .endpoint-item {
+  display: grid;
+  grid-template-columns: 88px minmax(280px, .92fr) minmax(250px, 1.2fr);
+  align-items: center;
+  column-gap: 24px;
+}
+
+.project-api-salesforce-sap .endpoint-directory-labels {
+  padding: 12px 16px;
+  color: rgba(255,255,255,.48);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.project-api-salesforce-sap .endpoint-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-api-salesforce-sap .endpoint-item {
+  min-width: 0;
+  padding: 18px 16px;
+  border-top: 1px solid rgba(255,255,255,.11);
+  transition: background-color .2s ease;
+}
+
+.project-api-salesforce-sap .endpoint-item:last-child {
+  border-bottom: 1px solid rgba(255,255,255,.11);
+}
+
+.project-api-salesforce-sap .endpoint-item:hover {
+  background: rgba(255,255,255,.035);
+}
+
+.project-api-salesforce-sap .endpoint-item .endpoint-method {
+  justify-self: start;
+  margin: 0;
+  font-size: 11px;
+}
+
+.project-api-salesforce-sap .endpoint-item code {
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  color: #f7f7f7;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.project-api-salesforce-sap .endpoint-item p {
+  margin: 0;
+  color: rgba(255,255,255,.66);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media screen and (max-width: 991px) {
+  .project-api-salesforce-sap .endpoint-directory-labels,
+  .project-api-salesforce-sap .endpoint-item {
+    grid-template-columns: 76px minmax(0, .92fr) minmax(0, 1.2fr);
+    column-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-api-salesforce-sap .endpoint-directory-labels {
+    display: none;
+  }
+
+  .project-api-salesforce-sap .endpoint-item {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 8px 14px;
+    padding: 18px 8px;
+  }
+
+  .project-api-salesforce-sap .endpoint-item .endpoint-method {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .project-api-salesforce-sap .endpoint-item code {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .project-api-salesforce-sap .endpoint-item p {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-api-salesforce-sap .caption h1 {
+    font-size: clamp(34px, 9vw, 42px) !important;
+  }
+
+  .project-api-salesforce-sap .project-hero-shell {
+    margin-top: 32px !important;
+  }
+
+  .project-api-salesforce-sap .project-hero-caption {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .project-trading .project-trading-info {
     margin-bottom: 48px;
