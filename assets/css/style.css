@@ -7376,3 +7376,145 @@ img.left {
     column-gap: 12px;
   }
 }
+
+/* Portal de Viáticos carousel */
+.project-viaticos .project-hero-carousel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 20px;
+  margin: 0 0 64px;
+}
+
+.project-viaticos .project-hero-carousel .project-hero-shell {
+  grid-column: 1 / -1;
+  margin: 44px 0 0 !important;
+}
+
+.project-viaticos .project-hero-slide picture {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 2.05 / 1;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+}
+
+.project-viaticos .project-hero-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-viaticos .project-hero-caption {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+  margin: 0;
+  padding: 16px 0;
+  color: rgba(255,255,255,.72);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-viaticos .project-trading-info {
+  margin-top: 100px;
+}
+
+.project-viaticos .project-impact-grid {
+  margin-top: 100px;
+}
+
+.project-viaticos .project-trading-info .project-viaticos-description-context {
+  margin-top: 14px;
+}
+
+.project-viaticos .project-viaticos-architecture {
+  border-radius: 14px;
+}
+
+.project-viaticos .project-viaticos-architecture:focus-visible {
+  outline: 2px solid var(--maincolor);
+  outline-offset: 4px;
+}
+
+.project-viaticos .project-viaticos-architecture-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-viaticos .project-viaticos-architecture-flow .project-layer {
+  position: relative;
+  display: block;
+  min-width: 0;
+  height: 100%;
+}
+
+.project-viaticos .project-viaticos-architecture-flow .project-layer:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -21px;
+  z-index: 1;
+  color: #bbbaa6;
+  content: "→";
+  font-size: 20px;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.project-viaticos .project-viaticos-architecture-flow .project-layer h3 {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.project-viaticos .project-viaticos-architecture-flow .project-layer p {
+  margin: 0;
+}
+
+.project-viaticos .project-hero-carousel .project-hero-motion {
+  position: static;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+}
+
+@media screen and (max-width: 768px) {
+  .project-viaticos .project-hero-carousel {
+    margin-bottom: 48px;
+  }
+
+  .project-viaticos .project-hero-carousel .project-hero-shell {
+    margin-top: 32px !important;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .project-viaticos .project-viaticos-architecture-flow {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .project-viaticos .project-viaticos-architecture-flow .project-layer:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -22px;
+    left: 50%;
+    content: "↓";
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .project-viaticos .project-hero-carousel {
+    column-gap: 12px;
+  }
+}
