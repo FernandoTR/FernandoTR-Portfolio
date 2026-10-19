@@ -3632,6 +3632,37 @@ img.left {
   line-height: 1.65;
 }
 
+#portfolio .portfolio-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 0;
+}
+
+#portfolio .portfolio-tech-badges span {
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #bbbaa6;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+#portfolio .portfolio-tech-badges .portfolio-tech-more {
+  border-style: dashed;
+}
+
+#portfolio .portfolio-tech-description {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* =========================
    TAGS / ICONS
    ========================= */
