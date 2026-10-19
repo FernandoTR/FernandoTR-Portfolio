@@ -1,0 +1,138 @@
+/* Identity source: /DESIGN.md. All artboards export at 1584 × 396 CSS pixels. */
+:root {
+    color-scheme: dark;
+    --amber: #e69955;
+    --charcoal: #0e0f0f;
+    --charcoal-raised: #101111;
+    --charcoal-soft: #141514;
+    --warm-muted: #bbbaa6;
+    --body-muted: #aaa;
+    --white: #fff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--charcoal);
+    color: var(--warm-muted);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, p { margin: 0; }
+[hidden] { display: none !important; }
+
+.gallery-header, main, .gallery-footer { width: min(1400px, calc(100% - 64px)); margin: 0 auto; }
+.gallery-header { padding: 64px 0 44px; }
+.eyebrow { color: var(--amber); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+.gallery-header h1 { margin: 18px 0 22px; color: var(--white); font-size: clamp(30px, 4vw, 46px); font-weight: 400; letter-spacing: -1.5px; line-height: 1.25; }
+.gallery-intro { display: flex; justify-content: space-between; align-items: end; gap: 24px; }
+.gallery-intro > p { font-size: 14px; line-height: 1.8; }
+.profile-toggle { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 13px; cursor: pointer; }
+.profile-toggle input { width: 18px; height: 18px; margin: 0; accent-color: var(--amber); }
+.proposal { margin-bottom: 44px; }
+.proposal-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 0 0 15px; }
+.proposal-heading > div { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
+.proposal-number { color: var(--amber); font-size: 12px; }
+.proposal-heading h2 { color: var(--white); font-size: 17px; font-weight: 400; }
+.recommended { padding: 4px 10px; border: 1px solid rgb(230 153 85 / 30%); border-radius: 999px; color: var(--amber); font-size: 10px; }
+.download { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; color: var(--warm-muted); font-size: 12px; text-decoration: none; white-space: nowrap; }
+.download:hover { color: var(--amber); }
+a:focus-visible, input:focus-visible { outline: 2px solid var(--amber); outline-offset: 5px; }
+.proposal-note { padding-top: 13px; color: var(--body-muted); font-size: 12px; line-height: 1.7; }
+.gallery-footer { padding: 0 0 44px; color: var(--body-muted); font-size: 12px; line-height: 1.8; }
+.banner-frame { width: 100%; aspect-ratio: 4 / 1; overflow: hidden; outline: 1px solid rgb(187 186 166 / 15%); }
+
+.banner {
+    position: relative;
+    isolation: isolate;
+    width: 1584px;
+    height: 396px;
+    overflow: hidden;
+    background: var(--charcoal);
+    transform: scale(var(--preview-scale, 1));
+    transform-origin: top left;
+}
+
+.banner h2 { font-weight: 400; }
+.banner [data-copy] { position: absolute; white-space: nowrap; }
+.banner::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    left: 72px;
+    top: 240px;
+    width: 280px;
+    height: 280px;
+    display: none;
+    border: 6px solid var(--white);
+    border-radius: 50%;
+    background: var(--charcoal-soft);
+    box-shadow: 0 0 0 1px rgb(14 15 15 / 25%);
+}
+
+body:has(#profile-zone:checked) .banner::after { display: block; }
+.footer-rule { display: block; width: 40px; height: 1px; background: var(--amber); }
+
+/* 01 — Editorial: quiet brand signature, precise rules, name-first hierarchy. */
+.editorial-sidebar { position: absolute; inset: 0 auto 0 0; width: 368px; background: var(--charcoal-raised); }
+.editorial-logo { position: absolute; top: 76px; left: 145px; object-fit: contain; opacity: .8; }
+.editorial-ornament { position: absolute; top: 181px; left: 86px; color: var(--warm-muted); }
+.editorial-rail { position: absolute; top: 64px; left: 398px; bottom: 64px; width: 1px; background: rgb(187 186 166 / 20%); }
+.editorial-topline { position: absolute; top: 64px; right: 160px; left: 454px; height: 1px; background: rgb(187 186 166 / 20%); }
+.editorial-topline span { display: block; width: 54px; height: 2px; background: var(--amber); }
+.editorial-label { top: 83px; left: 454px; color: var(--warm-muted); font-size: 13px; letter-spacing: 3px; line-height: 1.5; text-transform: uppercase; }
+.editorial-name { top: 111px; left: 450px; color: var(--white); font-size: 69px; letter-spacing: -2.7px; line-height: 1.2; }
+.name-dot { color: var(--amber); }
+.editorial-role { top: 202px; left: 454px; color: var(--amber); font-size: 29px; font-weight: 400; line-height: 1.3; letter-spacing: -.4px; }
+.editorial-focus { top: 254px; left: 454px; color: var(--warm-muted); font-size: 21px; font-weight: 300; line-height: 1.5; }
+.editorial-footer { top: 315px; left: 454px; display: flex; align-items: center; gap: 17px; color: var(--warm-muted); font-size: 18px; line-height: 1.5; }
+.editorial-footer svg { margin-left: 2px; color: var(--amber); }
+
+/* 02 — Geometric: an original isometric system, not a stock illustration. */
+.geometric-grid { position: absolute; inset: 0 0 0 1000px; background-image: radial-gradient(circle, rgb(187 186 166 / 18%) .8px, transparent 1px); background-size: 20px 20px; mask-image: linear-gradient(90deg, transparent, #000 35%, #000 80%, transparent); }
+.geometric-lines { position: absolute; inset: 0; }
+.geometric-copy { position: absolute; top: 0; left: 454px; width: 600px; height: 396px; }
+.geometric-label { top: 65px; left: 0; display: flex; align-items: center; gap: 12px; color: var(--warm-muted); font-size: 13px; line-height: 1.5; letter-spacing: 2px; text-transform: uppercase; }
+.geometric-label > span { width: 7px; height: 7px; background: var(--amber); border-radius: 50%; }
+.geometric-name { top: 101px; left: -3px; color: var(--white); font-size: 58px; letter-spacing: -2.5px; line-height: 1.25; }
+.geometric-role { top: 181px; left: 0; color: var(--amber); font-size: 27px; letter-spacing: -.5px; line-height: 1.5; }
+.geometric-focus { top: 238px; left: 0; color: var(--warm-muted); font-size: 21px; font-weight: 300; line-height: 1.55; }
+.geometric-url { top: 326px; left: 0; color: var(--warm-muted); font-size: 18px; line-height: 1.5; }
+.geometric-url > span { padding-left: 12px; color: var(--amber); }
+
+/* 03 — Typographic: a specialty-led composition with a restrained amber signal. */
+.typographic-monogram { position: absolute; top: 36px; left: 48px; color: transparent; -webkit-text-stroke: 1px rgb(187 186 166 / 16%); font-size: 240px; font-weight: 600; line-height: 1.4; letter-spacing: -24px; }
+.typographic-slash { position: absolute; top: 0; right: 0; }
+.typographic-accent { position: absolute; top: 66px; bottom: 66px; right: 160px; width: 2px; background: var(--amber); }
+.typographic-name { top: 57px; left: 454px; color: var(--warm-muted); font-size: 18px; letter-spacing: 2px; line-height: 1.5; text-transform: uppercase; }
+.typographic-role { top: 109px; left: 448px; color: var(--white); font-size: 85px; letter-spacing: -4.5px; line-height: 1.16; }
+.role-prefix { display: block; margin-bottom: 6px; padding-left: 6px; color: var(--white); font-size: 29px; font-weight: 300; letter-spacing: -.5px; line-height: 1.4; }
+.dotnet { color: var(--amber); }
+.typographic-focus { top: 273px; left: 454px; color: var(--warm-muted); font-size: 21px; font-weight: 300; line-height: 1.5; }
+.typographic-footer { top: 328px; left: 454px; display: flex; align-items: center; gap: 17px; color: var(--warm-muted); font-size: 18px; line-height: 1.5; }
+.typographic-footer svg { color: var(--amber); }
+
+/* Export mode shows exactly one artboard without any gallery UI or scaling. */
+.is-export { width: 1584px; height: 396px; overflow: hidden; }
+.is-export .gallery-header, .is-export .gallery-footer,
+.is-export .proposal-heading, .is-export .proposal-note { display: none; }
+.is-export main { width: 1584px; margin: 0; }
+.is-export .proposal { margin: 0; }
+.is-export .banner-frame { width: 1584px; height: 396px; outline: none; }
+.is-export .banner { transform: none; }
+.is-export .banner::after { display: none; }
+
+@media (max-width: 700px) {
+    .gallery-header, main, .gallery-footer { width: calc(100% - 32px); }
+    .gallery-header { padding: 36px 0 28px; }
+    .gallery-intro { align-items: start; flex-direction: column; gap: 12px; }
+    .proposal-heading { align-items: start; gap: 10px; }
+    .proposal-heading > div { gap: 8px; }
+    .proposal-heading h2 { font-size: 14px; }
+    .recommended { font-size: 9px; }
+    .download { min-height: 32px; font-size: 11px; gap: 7px; }
+    .proposal-note { font-size: 11px; }
+}
