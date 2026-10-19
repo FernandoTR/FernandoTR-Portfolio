@@ -6,15 +6,15 @@
      <!-- Metas -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Case study de TradingBook, plataforma .NET 10 para análisis de performance en trading cripto con Clean Architecture, SQL Server, Identity, Chart.js y DataTables.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Proyecto TradingBook: plataforma personal desarrollada con .NET 10 para registrar operaciones con criptomonedas y analizar sus resultados. Usa Clean Architecture, SQL Server, Identity, Chart.js y DataTables.">
     <meta name="keywords" content="TradingBook, .NET 10, ASP.NET Core MVC, Clean Architecture, SQL Server, Entity Framework Core, Trading Analytics, Chart.js, DataTables">
     <meta name="author" content="Fernando Torres">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0e0f0f">
     
-    <meta property="og:title" content="TradingBook - Plataforma de trading analytics en .NET">
-    <meta property="og:description" content="Proyecto personal de Fernando Torres para registrar, analizar y optimizar operaciones de trading cripto con .NET 10 y Clean Architecture.">
+    <meta property="og:title" content="TradingBook - Análisis de operaciones cripto con .NET">
+    <meta property="og:description" content="Proyecto propio de Fernando Torres para registrar operaciones con criptomonedas y analizar sus resultados con .NET 10 y Clean Architecture.">
     <meta property="og:image" content="https://byfernandotorres.online/assets/imgs/works/PortalTrading.png">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_MX">
@@ -22,8 +22,8 @@
     <meta property="og:url" content="https://byfernandotorres.online/assets/projects/trading.html">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TradingBook - Plataforma de trading analytics en .NET">
-    <meta name="twitter:description" content="Case study de una plataforma web .NET 10 para análisis de performance en trading cripto.">
+    <meta name="twitter:title" content="TradingBook - Análisis de operaciones cripto con .NET">
+    <meta name="twitter:description" content="Plataforma .NET 10 para registrar operaciones con criptomonedas y analizar sus resultados.">
     <meta name="twitter:image" content="https://byfernandotorres.online/assets/imgs/works/PortalTrading.png">
 
     <!-- Title  -->
@@ -34,9 +34,7 @@
     <link rel="shortcut icon" href="../../assets/imgs/favicon.ico">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
         rel="stylesheet">
 
     <!-- Plugins -->
@@ -44,7 +42,7 @@
     <link rel="stylesheet" href="../../assets/css/plugins/glightbox.min.css">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css?v=20261015-privacy-footer">
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -62,6 +60,7 @@
     }
     </script>
 
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="520ea72b-00cd-44e1-91c8-b9f31af6abd1" data-domains="byfernandotorres.online" data-exclude-search="true" data-exclude-hash="true"></script>
 </head>
 
 <body>
@@ -76,15 +75,9 @@
         </svg>
 
         <div class="loader-wrap-heading">
-            <div class="load-text">
-                <span>C</span>
-                <span>a</span>
-                <span>r</span>
-                <span>g</span>
-                <span>a</span>
-                <span>n</span>
-                <span>d</span>
-                <span>o</span>
+            <div class="loader-status" role="status" aria-live="polite">
+                <svg class="thinking-orb-loader" viewBox="0 0 96 96" data-state="solving" role="img" aria-label="Preparando el caso de estudio de TradingBook"></svg>
+                <span>Cargando el proyecto...</span>
             </div>
         </div>
     </div>
@@ -108,7 +101,7 @@
 
     <!-- ==================== Start Navbar ==================== -->
 
-    <nav class="navbar navbar-expand-lg pt-20">
+    <nav class="navbar navbar-expand-lg pt-20 trading-navbar">
         <div class="container-xxl">
 
             <!-- Logo -->
@@ -116,7 +109,7 @@
                 <img src="../../assets/imgs/logo-light.svg" alt="Fernando Torres">
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir o cerrar el menú de navegación">
                 <span class="icon-bar"><i class="fas fa-bars"></i></span>
             </button>
 
@@ -130,7 +123,7 @@
                         <a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia Profesional</span></a>
+                        <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia</span></a>
                     </li>
                      <li class="nav-item">
                         <a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a>
@@ -157,299 +150,385 @@
 
         <!-- ==================== Start project ==================== -->
 
-        <section class="project section-padding project-case-study">
+        <section class="project section-padding project-case-study project-trading">
             <div class="container container-xxl">
                 <div class="row justify-content-center">
 
                     <div class="col-lg-10 main-post">
                         <div class="caption text-center">
 
-                            <div class="gat">
-                                <span>Producto propio</span>
-                                <span>.NET 10</span>
-                                <span>Clean Architecture</span>
-                                <span>Trading Analytics</span>
-                            </div>
-
-                            <h1 class="fz-55 mt-30">Trading Book</h1>
+                            <h1 class="mt-30">TradingBook</h1>
 
                             <p class="fz-18 mt-20 project-hero-copy">
-                                Plataforma web para centralizar operaciones de trading cripto, medir performance,
-                                evaluar setups y convertir ejecuciones reales en información accionable.
+                                Registra operaciones con criptomonedas y analiza su desempeño por setup (configuración de entrada), temporalidad y condiciones de entrada.
                             </p>
+
+                            <p class="project-hero-role">Producto propio <span aria-hidden="true">·</span> Diseño y desarrollo full stack</p>
+
+                            <div class="project-hero-actions">
+                                <a class="project-action-primary" href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank" rel="noopener noreferrer">Ver código en GitHub <span class="project-action-icon"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span></a>
+                            </div>
 
                         </div>
                     </div>
 
-                    <div class="col-lg-11">
+                    <div class="col-lg-10 mt-50">
+                        <!-- ==================== GALLERY ==================== -->
 
-                        <div class="project-hero-shell mb-80 mt-40">
-                            <a href="../../assets/imgs/works/PortalTrading.png" class="glightbox" data-gallery="portfolio">
+                        <div class="project-hero-shell">
+                            <svg class="project-hero-aura" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <defs>
+                                    <rect id="trading-aura-outline" width="100%" height="100%" rx="14" pathLength="100" />
+                                    <filter id="trading-aura-soft" x="-30%" y="-60%" width="160%" height="220%" color-interpolation-filters="sRGB">
+                                        <feGaussianBlur stdDeviation="26" />
+                                    </filter>
+                                    <pattern id="trading-aura-dots" patternUnits="userSpaceOnUse" width="3" height="3">
+                                        <circle cx="1.5" cy="1.5" r="0.65" fill="#fff" />
+                                    </pattern>
+                                    <mask id="trading-aura-texture" x="-30%" y="-60%" width="160%" height="220%">
+                                        <rect x="-30%" y="-60%" width="160%" height="220%" fill="url(#trading-aura-dots)" />
+                                    </mask>
+                                    <mask id="trading-aura-line-neutral-fade" x="-30%" y="-60%" width="160%" height="220%">
+                                        <g class="project-aura-line-mask" filter="url(#trading-aura-soft)">
+                                            <use href="#trading-aura-outline" class="project-aura-track project-aura-neutral" />
+                                        </g>
+                                    </mask>
+                                    <mask id="trading-aura-line-orange-fade" x="-30%" y="-60%" width="160%" height="220%">
+                                        <g class="project-aura-line-mask" filter="url(#trading-aura-soft)">
+                                            <use href="#trading-aura-outline" class="project-aura-track project-aura-orange" />
+                                        </g>
+                                    </mask>
+                                </defs>
+                                <g class="project-aura-haze" filter="url(#trading-aura-soft)">
+                                    <use href="#trading-aura-outline" class="project-aura-track project-aura-neutral" />
+                                    <use href="#trading-aura-outline" class="project-aura-track project-aura-orange" />
+                                </g>
+                                <g mask="url(#trading-aura-texture)">
+                                    <g class="project-aura-dots" filter="url(#trading-aura-soft)">
+                                        <use href="#trading-aura-outline" class="project-aura-track project-aura-neutral" />
+                                        <use href="#trading-aura-outline" class="project-aura-track project-aura-orange" />
+                                    </g>
+                                </g>
+                                <use href="#trading-aura-outline" class="project-aura-line project-aura-neutral" mask="url(#trading-aura-line-neutral-fade)" />
+                                <use href="#trading-aura-outline" class="project-aura-line project-aura-orange" mask="url(#trading-aura-line-orange-fade)" />
+                                <use href="#trading-aura-outline" class="project-aura-line project-aura-core" mask="url(#trading-aura-line-orange-fade)" />
+                            </svg>
+                            <a href="../../assets/imgs/works/PortalTrading_Detail01.png" class="glightbox project-hero-slide is-active" data-gallery="trading-hero" aria-label="Ampliar dashboard de TradingBook">
                                 <picture>
-                                    <source srcset="../../assets/imgs/works/PortalTrading.webp" type="image/webp">
-                                    <img src="../../assets/imgs/works/PortalTrading.png" alt="Dashboard principal de TradingBook" width="1920" height="1080" decoding="async" fetchpriority="high">
+                                    <source srcset="../../assets/imgs/works/PortalTrading_Detail01.webp" type="image/webp">
+                                    <img src="../../assets/imgs/works/PortalTrading_Detail01.png" alt="Dashboard de TradingBook con balances, efectividad y análisis por setup" width="1912" height="948" decoding="async" fetchpriority="high">
                                 </picture>
                             </a>
-
-                            <div class="project-hero-strip">
-                                <div>
-                                    <span class="project-metric">.NET 10</span>
-                                    <p>ASP.NET Core MVC</p>
-                                </div>
-                                <div>
-                                    <span class="project-metric">4 capas</span>
-                                    <p>Clean Architecture</p>
-                                </div>
-                                <div>
-                                    <span class="project-metric">2FA</span>
-                                    <p>Identity + Authenticator</p>
-                                </div>
-                                <div>
-                                    <span class="project-metric">SQL</span>
-                                    <p>Database-first analytics</p>
-                                </div>
-                            </div>
+                            <a href="../../assets/imgs/works/PortalTrading_Detail02.png" class="glightbox project-hero-slide" data-gallery="trading-hero" aria-label="Ampliar operaciones de TradingBook" hidden>
+                                <picture>
+                                    <source srcset="../../assets/imgs/works/PortalTrading_Detail02.webp" type="image/webp">
+                                    <img src="../../assets/imgs/works/PortalTrading_Detail02.png" alt="Órdenes de TradingBook con sus filtros, setups y resultados" width="1912" height="948" decoding="async">
+                                </picture>
+                            </a>
+                            <a href="../../assets/imgs/works/PortalTrading_Detail03.png" class="glightbox project-hero-slide" data-gallery="trading-hero" aria-label="Ampliar análisis por gatillos de TradingBook" hidden>
+                                <picture>
+                                    <source srcset="../../assets/imgs/works/PortalTrading_Detail03.webp" type="image/webp">
+                                    <img src="../../assets/imgs/works/PortalTrading_Detail03.png" alt="Análisis de efectividad por gatillos en TradingBook" width="1912" height="948" decoding="async">
+                                </picture>
+                            </a>
+                            <a href="../../assets/imgs/works/PortalTrading_Detail04.png" class="glightbox project-hero-slide" data-gallery="trading-hero" aria-label="Ampliar catálogo de instrumentos de TradingBook" hidden>
+                                <picture>
+                                    <source srcset="../../assets/imgs/works/PortalTrading_Detail04.webp" type="image/webp">
+                                    <img src="../../assets/imgs/works/PortalTrading_Detail04.png" alt="Catálogo de instrumentos disponibles en TradingBook" width="1912" height="948" decoding="async">
+                                </picture>
+                            </a>
+                            <button class="project-hero-motion" type="button" aria-pressed="false"></button>
                         </div>
 
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center mt-30 mb-50">
+                            <div class="col-lg-12 ">
 
-                            <div class="col-lg-7">
-                                <div class="cont md-mb50">
+                                    <div class="mt-20 main-post project-capabilities">
 
-                                    <p class="project-lead text-align-justify">
-                                        Trading Book nace como una herramienta para analizar la calidad operativa de cada trade.
-                                        El sistema registra operaciones, cuentas, triggers, escenarios, figuras, direcciones y temporalidades,
-                                        y los transforma en indicadores para detectar patrones, medir consistencia y mejorar la toma de decisiones.
-                                    </p>
 
-                                    <div class="info-area flex mt-30 pb-30 pt-30 bord-thin-top bord-thin-bottom">
-                                        <div>
-                                            <div class="tags flex">
-                                                <div class="valign">
-                                                    <span class="stack-name">Tecnologías: </span>
-                                                </div>
-                                                <div>
-                                                    <span class="tag-stack mt-5">.NET 10</span>
-                                                    <span class="tag-stack mt-5">ASP.NET Core MVC</span>
-                                                    <span class="tag-stack mt-5">Entity Framework Core 10</span>
-                                                    <span class="tag-stack mt-5">SQL Server</span>
-                                                    <span class="tag-stack mt-5">Clean Architecture</span>
-                                                    <span class="tag-stack mt-5">Metronic 9</span>
-                                                    <span class="tag-stack mt-5">Tailwind CSS</span>
-                                                    <span class="tag-stack mt-5">Chart.js</span>
-                                                    <span class="tag-stack mt-5">DataTables 2.x</span>
-                                                    <span class="tag-stack mt-5">ASP.NET Core Identity</span>
-                                                    <span class="tag-stack mt-5">MailKit</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-20">Contexto y solución</h5>
-                                        <p class="text-align-justify">
-                                            Trading Book convierte el registro de operaciones cripto en una base analítica para medir consistencia,
-                                            comparar setups y detectar patrones. La solución centraliza trades, cuentas, catálogos y dashboards en una
-                                            aplicación .NET con arquitectura limpia y foco en datos accionables.
-                                        </p>
-                                    </div>
-
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-30">Capacidades principales</h5>
-
-                                        <div class="project-feature-grid project-feature-grid-compact">
+                                        <h2>Funciones principales</h2>
+                                        <div class="project-feature-grid">
                                             <div class="project-feature-card">
-                                                <span class="project-feature-index">01</span>
-                                                <h6>Trading Score Engine</h6>
-                                                <p>Evalúa cada operación por ubicación, tendencia, confirmación y zonas pivote.</p>
+                                                <span class="project-feature-icon" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24" fill="none">
+                                                        <path stroke="currentColor" d="M4 19.5h16M6 17v-3m4 3V9m4 8V5m4 12v-6" />
+                                                        <path stroke="currentColor" d="m5.5 9.5 4-3 3.5 2.5 5-5M15 4h3v3" />
+                                                    </svg>
+                                                </span>
+                                                <h3>Motor de puntuación</h3>
+                                                <p>El Trading Score Engine califica cada operación por punto de entrada, tendencia, confirmaciones y zonas pivote.</p>
                                             </div>
 
                                             <div class="project-feature-card">
-                                                <span class="project-feature-index">02</span>
-                                                <h6>Análisis multidimensional</h6>
-                                                <p>Lecturas por trigger, escenario, figura, dirección, temporalidad y día.</p>
+                                                <span class="project-feature-icon" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24" fill="none">
+                                                        <path stroke="currentColor" d="M4 7h16M4 12h16M4 17h16" />
+                                                        <circle stroke="currentColor" cx="9" cy="7" r="1.7" />
+                                                        <circle stroke="currentColor" cx="15" cy="12" r="1.7" />
+                                                        <circle stroke="currentColor" cx="11" cy="17" r="1.7" />
+                                                    </svg>
+                                                </span>
+                                                <h3>Análisis por criterios</h3>
+                                                <p>Compara resultados por señal de entrada, condiciones del mercado, patrón gráfico, dirección, marco temporal y día.</p>
                                             </div>
 
                                             <div class="project-feature-card">
-                                                <span class="project-feature-index">03</span>
-                                                <h6>Dashboard y exploración</h6>
-                                                <p>Visualizaciones con Chart.js y tablas DataTables para revisar performance.</p>
+                                                <span class="project-feature-icon" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24" fill="none">
+                                                        <path stroke="currentColor" d="M7 4.5h8l3 3v12H7a2 2 0 0 1-2-2v-11a2 2 0 0 1 2-2Z" />
+                                                        <path stroke="currentColor" d="M15 4.5v3h3M9 11h6M9 14.5h6M9 18h3" />
+                                                    </svg>
+                                                </span>
+                                                <h3>Resumen y lista de operaciones</h3>
+                                                <p>Consulta el balance y la efectividad en el panel. Filtra la tabla por estado y revisa cada operación.</p>
                                             </div>
 
                                             <div class="project-feature-card">
-                                                <span class="project-feature-index">04</span>
-                                                <h6>Gestión operativa</h6>
-                                                <p>Cuentas, balances, catálogos, actividad de usuario y módulos administrativos.</p>
+                                                <span class="project-feature-icon" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24" fill="none">
+                                                        <rect stroke="currentColor" x="5" y="5" width="6" height="6" rx="1.2" />
+                                                        <rect stroke="currentColor" x="13" y="5" width="6" height="6" rx="1.2" />
+                                                        <rect stroke="currentColor" x="5" y="13" width="6" height="6" rx="1.2" />
+                                                        <path stroke="currentColor" d="M16 13v6m-3-3h6" />
+                                                    </svg>
+                                                </span>
+                                                <h3>Gestión operativa</h3>
+                                                <p>Administra cuentas, balances, catálogos, actividad de usuarios y módulos administrativos.</p>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-30">Arquitectura</h5>
-                                        <p class="text-align-justify">
-                                            El proyecto sigue Clean Architecture con dependencias unidireccionales y separación clara entre presentación,
-                                            lógica de aplicación, dominio e infraestructura.
-                                        </p>
-
-                                        <div class="project-architecture mt-30">
-                                            <div class="project-layer">
-                                                <span>Web</span>
-                                                <p>Controladores MVC, vistas Razor, middlewares, helpers y assets estáticos.</p>
-                                            </div>
-                                            <div class="project-layer">
-                                                <span>Application</span>
-                                                <p>Servicios de negocio, DTOs, contratos, modelos de resultado y recursos localizados.</p>
-                                            </div>
-                                            <div class="project-layer">
-                                                <span>Domain</span>
-                                                <p>Entidades, constantes y enumeraciones que representan el núcleo del negocio.</p>
-                                            </div>
-                                            <div class="project-layer">
-                                                <span>Infrastructure</span>
-                                                <p>Persistencia, repositorios, Identity, email y logging de actividad.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-20">Seguridad y hardening</h5>
-                                        <div class="project-security-card mt-30">
-                                            <h6>Autenticación robusta y configuración segura</h6>
-                                            <p>
-                                                Identity con 2FA, confirmación de email, recuperación de contraseña anti-enumeración,
-                                                rate limiting, cookies HTTPS y credenciales externalizadas.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-20">Mi rol</h5>
-                                        <ul class="mt-30 unorder-list rest pl-5">
-                                            <li><p>Diseñé la arquitectura funcional y técnica del producto.</p></li>
-                                            <li class="mt-10"><p>Desarrollé backend, servicios de aplicación y persistencia en SQL Server.</p></li>
-                                            <li class="mt-10"><p>Implementé dashboards, consultas analíticas y exploración tabular.</p></li>
-                                            <li class="mt-10"><p>Fortalecí autenticación, configuración segura y trazabilidad.</p></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="mt-50 project-result-card">
-                                        <span>Resultado</span>
-                                        <h5>Un producto analítico para tomar mejores decisiones operativas.</h5>
-                                        <p>
-                                            La plataforma resume datos operativos en señales claras para evaluar desempeño, consistencia y calidad de ejecución.
-                                        </p>
-                                    </div>
-
-                                </div>
                             </div>
 
-                            <div class="col-lg-4">
-                                <div class="info" id="sticky_item">
+                        </div>
+
+
+
+                        <div class="row justify-content-center mt-30">
+
+                            <div class="col-lg-12">
+                                <div class="project-trading-info mt-50">
+                                    <h2>Detalles del proyecto</h2>
                                     <ul>
-                                        <li class="mb-30">
-                                            <span class="sub-title"><i class="fa fa-calendar-alt mr-10"></i>Periodo:</span>
+                                        <li>
+                                            <span class="sub-title">Descripción</span>
+                                            <p>TradingBook reúne cada operación con su cuenta, setup y condiciones de mercado. Así puedes comparar resultados y detectar patrones de ejecución.</p>
+                                        </li>
+                                        <li>
+                                            <span class="sub-title">Año</span>
                                             <p>2025</p>
                                         </li>
-
-                                        <li class="mb-30">
-                                            <span class="sub-title"><i class="fa fa-list-ul mr-10"></i>Tipo:</span>
-                                            <p>Producto propio / Plataforma web analítica</p>
-                                        </li>
-
-                                        <li class="mb-30">
-                                            <span class="sub-title"><i class="fa fa-user mr-10"></i>Rol:</span>
-                                            <p>Full Stack Developer</p>
-                                        </li>
-
-                                        <li class="mb-30">
-                                            <span class="sub-title"><i class="fas fa-layer-group mr-10"></i>Arquitectura:</span>
-                                            <p>Clean Architecture, database-first y servicios por capa</p>
-                                        </li>
-
                                         <li>
-                                            <span class="sub-title"><i class="fas fa-code mr-10"></i>Código fuente:</span><br>
-                                            <a href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de TradingBook en GitHub">
-                                                <i class="fab fa-github tag-portfolio-icon"></i>
-                                            </a>
+                                            <span class="sub-title">Proyecto</span>
+                                            <p>Producto propio</p>
                                         </li>
+                                        <li>
+                                            <span class="sub-title">Rol</span>
+                                            <p>Desarrollador full stack</p>
+                                        </li>
+                                        <li>
+                                            <span class="sub-title">Arquitectura</span>
+                                            <p>Clean Architecture</p>
+                                        </li>
+                                        <li>
+                                            <span class="sub-title">Repositorio</span>
+                                            <a class="project-sidebar-code" href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank" rel="noopener noreferrer">Ver repositorio <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <span class="sub-title">Tecnologías utilizadas</span>
+                                            <p class="tech-badges">
+                                                <span class="mt-5">.NET 10</span>
+                                                <span class="mt-5">ASP.NET Core MVC</span>
+                                                <span class="mt-5">Entity Framework Core 10</span>
+                                                <span class="mt-5">SQL Server</span>                                                
+                                                <span class="mt-5">Metronic 9</span>
+                                                <span class="mt-5">Tailwind CSS</span>
+                                                <span class="mt-5">Chart.js</span>
+                                                <span class="mt-5">JavaScript</span>
+                                                <span class="mt-5">DataTables 2.x</span>
+                                                <span class="mt-5">ASP.NET Core Identity</span>
+                                                <span class="mt-5">MailKit</span>
+                                            </p>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <div class="col-lg-12">
+                                <div class="cont md-mb50">
 
-             <!-- ==================== GALLERY ==================== -->
-            <div class="imgs mt-80">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-11">
-                            <div class="project-gallery-head bord-thin-bottom pb-30 mb-50">
-                                <h5>Capturas del producto</h5>
-                                <p class="mt-10">Dashboard, operaciones, análisis y catálogos clave del sistema.</p>
+
+
+                                    <div class="mt-40 main-post mb-100">
+                                        <h2 class="mb-30">Cómo está construido</h2>
+                                        <div class="project-trading-architecture" role="region" aria-label="Diagrama de arquitectura de TradingBookApp. Desplázate horizontalmente para recorrerlo." tabindex="0">
+<svg viewBox="0 0 1200 856" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="architecture-title architecture-desc">
+<title id="architecture-title">Arquitectura de TradingBookApp</title>
+<desc id="architecture-desc">Web referencia Application e Infrastructure, Infrastructure referencia Application y Application referencia Domain; Infrastructure conecta SQL Server y servicios externos.</desc>
+<defs><marker id="architecture-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#bbbaa6"/></marker></defs>
+<rect width="1200" height="856" fill="#0e0f0f"/>
+
+<!-- References point toward the project being referenced. -->
+<path class="edge" d="M368 144H440"/>
+<path class="edge" d="M760 144H832"/>
+<path class="edge" d="M208 252V442Q208 450 216 450H440"/>
+<path class="edge" d="M600 360V252"/>
+<path class="edge integration" d="M440 500H248Q240 500 240 508V640"/>
+<path class="edge integration" d="M760 500H968Q976 500 976 508V640"/>
+
+<!-- Connector labels occupy reserved whitespace. -->
+<rect class="mask" x="372" y="112" width="64" height="24"/>
+<text class="label" x="404" y="128" text-anchor="middle">usa</text>
+<rect class="mask" x="764" y="112" width="64" height="24"/>
+<text class="label" x="796" y="128" text-anchor="middle">usa</text>
+<rect class="mask" x="256" y="418" width="160" height="24"/>
+<text class="label" x="336" y="434" text-anchor="middle">registra adaptadores</text>
+<rect class="mask" x="608" y="284" width="152" height="56"/>
+<text class="label" x="616" y="304">implementa sus</text>
+<text class="label" x="616" y="324">interfaces</text>
+<rect class="mask" x="248" y="556" width="144" height="44"/>
+<text class="label" x="256" y="574">lectura / escritura</text>
+<text class="label" x="256" y="594">EF Core</text>
+<rect class="mask" x="984" y="556" width="128" height="44"/>
+<text class="label" x="992" y="574">HTTP / SMTP</text>
+<text class="label" x="992" y="594">automatización</text>
+
+<rect class="node" x="48" y="72" width="320" height="180" rx="8"/>
+<text class="tag" x="72" y="104">PRESENTACIÓN</text>
+<text class="name" x="72" y="144">Web</text>
+<text class="body" x="72" y="176">Controllers, Views y Razor Pages</text>
+<text class="body" x="72" y="200">Middleware y archivos estáticos</text>
+<text class="label" x="72" y="228">Program.cs compone los servicios</text>
+
+<rect class="node" x="440" y="72" width="320" height="180" rx="8"/>
+<text class="tag" x="464" y="104">CASOS DE USO</text>
+<text class="name" x="464" y="144">Application</text>
+<text class="body" x="464" y="176">Servicios, interfaces y DTOs</text>
+<text class="body" x="464" y="200">Órdenes, cuentas y análisis</text>
+<text class="label" x="464" y="228">Reglas y orquestación de validación IA</text>
+
+<rect class="node" x="832" y="72" width="320" height="180" rx="8"/>
+<text class="tag" x="856" y="104">MODELO DE NEGOCIO</text>
+<text class="name" x="856" y="144">Domain</text>
+<text class="body" x="856" y="176">Entidades, enums y constantes</text>
+<text class="body" x="856" y="200">Modelo compartido por las capas</text>
+<text class="label" x="856" y="228">Sin referencias a otros proyectos</text>
+
+<rect class="focal" x="440" y="360" width="320" height="180" rx="8"/>
+<text class="tag" x="464" y="392" style="fill:var(--amber)">ADAPTADORES</text>
+<text class="name" x="464" y="432">Infrastructure</text>
+<text class="body" x="464" y="464">Repositorios EF Core e Identity</text>
+<text class="body" x="464" y="488">Correo, logging y clientes IA</text>
+<text class="label" x="464" y="516">Implementaciones registradas por DI</text>
+
+<rect class="external" x="80" y="640" width="352" height="128" rx="8"/>
+<text class="name" x="104" y="680">SQL Server</text>
+<text class="body" x="104" y="708">ApplicationDbContext</text>
+<text class="body" x="104" y="732">LoggingDbContext</text>
+<text class="label" x="104" y="756">Tablas, vistas y procedimientos</text>
+
+<rect class="external" x="800" y="640" width="352" height="128" rx="8"/>
+<text class="name" x="824" y="680">Servicios externos</text>
+<text class="body" x="824" y="708">Proveedores de visión IA</text>
+<text class="body" x="824" y="732">SMTP y TradingView</text>
+<text class="label" x="824" y="756">Acceso mediante adaptadores</text>
+
+<line x1="48" y1="808" x2="1152" y2="808" stroke="#30312c"/>
+<path class="edge" d="M48 832H96"/>
+<text class="label" x="112" y="836">Referencia entre proyectos</text>
+<path class="edge integration" d="M440 832H488"/>
+<text class="label" x="504" y="836">Acceso a un sistema externo</text>
+<rect x="864" y="824" width="16" height="16" rx="4" fill="#141514" stroke="#bbbaa6"/>
+<text class="label" x="896" y="836">Capa de integración</text>
+</svg>
+                                        </div>
+                                    </div>
+
+                                    <section class="mt-40 project-impact-grid" aria-label="Seguridad, contribución y resultado">
+                                        <article class="project-impact-card">
+                                            <header class="project-impact-card-head">
+                                                <span class="project-impact-icon" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 19 6.5v4.7c0 4.4-2.9 7.9-7 9.5-4.1-1.6-7-5.1-7-9.5V6.5l7-3Z"/><path d="m9 12.2 2 2 4-4.4"/></svg>
+                                                </span>
+                                                <div>
+                                                    
+                                                    <h2>Seguridad</h2>
+                                                    <p class="project-impact-intro">Autenticación robusta y configuración segura.</p>
+                                                </div>
+                                            </header>
+                                            <p class="project-impact-list-label">Cómo se protege</p>
+                                            <ul class="project-impact-list">
+                                                <li>
+                                                    <span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span>
+                                                    <div><h3>Acceso verificado</h3><p>ASP.NET Core Identity, autenticación en dos factores (2FA) y confirmación de correo.</p></div>
+                                                </li>
+                                                <li>
+                                                    <span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span>
+                                                    <div><h3>Recuperación privada</h3><p>La recuperación de contraseña no revela si una cuenta existe.</p></div>
+                                                </li>
+                                                <li>
+                                                    <span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span>
+                                                    <div><h3>Configuración segura</h3><p>Límites a la frecuencia de solicitudes, cookies para conexiones HTTPS y credenciales fuera del código.</p></div>
+                                                </li>
+                                            </ul>
+                                        </article>
+
+                                        <article class="project-impact-card">
+                                            <header class="project-impact-card-head">
+                                                <span class="project-impact-icon" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="6" height="5" rx="1.2"/><rect x="14" y="5" width="6" height="5" rx="1.2"/><rect x="9" y="15" width="6" height="5" rx="1.2"/><path d="M7 10v2.5h10V10m-5 2.5V15"/></svg>
+                                                </span>
+                                                <div>
+                                                    
+                                                    <h2>Mi contribución</h2>
+                                                    <p class="project-impact-intro">Responsabilidad funcional y técnica.</p>
+                                                </div>
+                                            </header>
+                                            <p class="project-impact-list-label">En qué trabajé</p>
+                                            <ul class="project-impact-list">
+                                                <li>
+                                                    <span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span>
+                                                    <div><h3>Arquitectura funcional</h3><p>Definí la estructura funcional y técnica del producto.</p></div>
+                                                </li>
+                                                <li>
+                                                    <span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span>
+                                                    <div><h3>Backend y datos</h3><p>Desarrollé servicios de aplicación y acceso a SQL Server.</p></div>
+                                                </li>
+                                                <li>
+                                                    <span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span>
+                                                    <div><h3>Análisis operativo</h3><p>Implementé paneles, consultas y exploración de operaciones.</p></div>
+                                                </li>
+                                                <li>
+                                                    <span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span>
+                                                    <div><h3>Seguridad y trazabilidad</h3><p>Fortalecí controles de acceso, configuración segura y registro de actividad.</p></div>
+                                                </li>
+                                            </ul>
+                                        </article>
+
+                                        <article class="project-impact-card project-impact-card-result">
+                                            <header class="project-impact-card-head">
+                                                <span class="project-impact-icon" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 19.5h14M5.5 19V5"/><path d="m8 15 3-3 2.5 2 5-6"/><circle cx="18.5" cy="8" r="1.3"/></svg>
+                                                </span>
+                                                <div>
+                                                
+                                                    <h2>Resultado</h2>
+                                                    <p class="project-impact-intro">Registro y análisis de operaciones en una sola plataforma.</p>
+                                                </div>
+                                            </header>
+                                            <p class="project-impact-list-label">Qué permite</p>
+                                            <ul class="project-impact-list project-impact-result-list">
+                                                <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span><div><h3>Registro de operaciones</h3><p>Captura nuevas operaciones.</p></div></li>
+                                                <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span><div><h3>Revisión de resultados</h3><p>Consulta el desempeño de las operaciones.</p></div></li>
+                                                <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"/></svg></span><div><h3>Gestión operativa</h3><p>Administra cuentas y catálogos.</p></div></li>
+                                            </ul>
+                                        </article>
+                                    </section>
+
+                                </div>
                             </div>
 
-                            <div class="row md-marg">
-
-                                <div class="col-md-6">
-                                    <div class="img sm-mb30 portfolio-shot">
-                                        <a href="../../assets/imgs/works/PortalTrading_Detail01.png" class="glightbox" data-gallery="portfolio">
-                                            <picture>
-                                                <source srcset="../../assets/imgs/works/PortalTrading_Detail01.webp" type="image/webp">
-                                                <img src="../../assets/imgs/works/PortalTrading_Detail01.png"
-                                                    alt="Dashboard principal TradingBook"
-                                                    class="img-fluid portfolio-img" width="1912" height="948" loading="lazy" decoding="async">
-                                            </picture>
-                                        </a>
-                                        <p class="mt-15">Dashboard con métricas de efectividad, balance y rendimiento.</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="img sm-mb30 portfolio-shot">
-                                        <a href="../../assets/imgs/works/PortalTrading_Detail02.png" class="glightbox" data-gallery="portfolio">
-                                            <picture>
-                                                <source srcset="../../assets/imgs/works/PortalTrading_Detail02.webp" type="image/webp">
-                                                <img src="../../assets/imgs/works/PortalTrading_Detail02.png"
-                                                    alt="Módulo de operaciones TradingBook"
-                                                    class="img-fluid portfolio-img" width="1912" height="948" loading="lazy" decoding="async">
-                                            </picture>
-                                        </a>
-                                        <p class="mt-15">Consulta de operaciones con filtros, objetivos y estado.</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 mt-20">
-                                    <div class="img sm-mb30 portfolio-shot">
-                                        <a href="../../assets/imgs/works/PortalTrading_Detail03.png" class="glightbox" data-gallery="portfolio">
-                                            <picture>
-                                                <source srcset="../../assets/imgs/works/PortalTrading_Detail03.webp" type="image/webp">
-                                                <img src="../../assets/imgs/works/PortalTrading_Detail03.png"
-                                                    alt="Análisis de gatillos TradingBook"
-                                                    class="img-fluid portfolio-img" width="1912" height="948" loading="lazy" decoding="async">
-                                            </picture>
-                                        </a>
-                                        <p class="mt-15">Análisis de efectividad por gatillo y objetivos alcanzados.</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 mt-20">
-                                    <div class="img sm-mb30 portfolio-shot">
-                                        <a href="../../assets/imgs/works/PortalTrading_Detail04.png" class="glightbox" data-gallery="portfolio">
-                                            <picture>
-                                                <source srcset="../../assets/imgs/works/PortalTrading_Detail04.webp" type="image/webp">
-                                                <img src="../../assets/imgs/works/PortalTrading_Detail04.png"
-                                                    alt="Catálogo de instrumentos TradingBook"
-                                                    class="img-fluid portfolio-img" width="1912" height="948" loading="lazy" decoding="async">
-                                            </picture>
-                                        </a>
-                                        <p class="mt-15">Catálogo de instrumentos para estandarizar la operación.</p>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -461,33 +540,58 @@
 
 
 
+    </main>
+
         <!-- ==================== Start Footer ==================== -->
 
-        <footer class="project-footer">
-            <div class="container">
-                <div class="project-footer-inner bord-thin-top">
-                    <a href="../../index.html#portfolio" class="project-back-link">
-                        <i class="fas fa-long-arrow-alt-left"></i>
-                        Volver a proyectos
-                    </a>
+        <footer class="footer-ultra">
+                <div class="footer-ultra-box">
+                    <div class="footer-grid">
+                        <div class="footer-column footer-brand">
+                            <a class="footer-logo" href="../../index.html" aria-label="Ir al inicio del portafolio de Fernando Torres">
+                                <img src="../../assets/imgs/logo-light.svg" alt="">
+                            </a>
+                            <h3>Fernando Torres</h3>
+                            <p>Desarrollador <span class="main-color">Full Stack .NET</span></p>
+                        </div>
 
-                    <p class="fz-12">© <span id="currentYear"></span> Fernando Torres - All Rights Reserved.</p>
+                        <nav class="footer-column" aria-label="Navegación del pie de página">
+                            <h4>Explora</h4>
+                            <ul class="footer-nav">
+                                <li><a href="../../index.html#home">Inicio</a></li>
+                                <li><a href="../../index.html#portfolio">Proyectos</a></li>
+                                <li><a href="../../index.html#resume">Experiencia</a></li>
+                                <li><a href="../../index.html#skills">Tecnologías</a></li>
+                                <li><a href="../../index.html#contact">Contacto</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="footer-column footer-contact">
+                            <h4>Contacto</h4>
+                            <p>Si crees que puedo sumar a tu equipo o proyecto, conversemos.</p>
+                            <a class="footer-action" href="../../index.html#contact">Hablemos <span aria-hidden="true">→</span></a>
+                        </div>
+
+                        <div class="footer-column">
+                            <h4>Redes profesionales</h4>
+                            <div class="footer-socials">
+                                <a href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                                <a href="https://github.com/FernandoTR" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <span>© <span id="currentYear"></span> Fernando Torres</span>
+                        <div class="footer-bottom-actions">
+                            <a href="../../assets/docs/FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" data-umami-event="cv_open" aria-label="Abrir CV de Fernando Torres en PDF">Ver CV (PDF) <span aria-hidden="true">↗</span></a>
+                            <a href="../../privacidad.html">Aviso de privacidad</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </footer>
 
         <!-- ==================== End Footer ==================== -->
-
-
-
-    </main>
-
-
-
-
-
-
-
 
 
 
@@ -508,6 +612,59 @@
         const lightbox = GLightbox({
             selector: '.glightbox'
         });
+
+        const tradingHero = document.querySelector('.project-trading .project-hero-shell');
+        if (tradingHero) {
+            let heroVisible = !('IntersectionObserver' in window);
+            let heroPaused = false;
+            let slideIndex = 0;
+            let auraTurns = 0;
+            let heroTimer;
+            const heroSlides = [...tradingHero.querySelectorAll('.project-hero-slide')];
+            const auraTracks = [...tradingHero.querySelectorAll('.project-aura-track')];
+            const motionButton = tradingHero.querySelector('.project-hero-motion');
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const advanceHero = () => {
+                heroSlides[slideIndex].hidden = true;
+                slideIndex = (slideIndex + 1) % heroSlides.length;
+                heroSlides[slideIndex].hidden = false;
+                auraTurns += 1;
+                auraTracks.forEach(track => {
+                    const start = track.classList.contains('project-aura-orange') ? 12 : -38;
+                    track.style.strokeDashoffset = start - auraTurns * 50;
+                });
+            };
+            const updateHero = () => {
+                const playing = heroVisible && !heroPaused && !document.hidden && !reducedMotion.matches;
+                auraTracks.forEach(track => {
+                    if (!track.getAnimations) return;
+                    track.getAnimations().forEach(animation => {
+                        if (playing && animation.playState === 'paused') animation.play();
+                        if (!playing && animation.playState === 'running') animation.pause();
+                    });
+                });
+                if (playing && !heroTimer) heroTimer = window.setInterval(advanceHero, 5000);
+                if (!playing && heroTimer) {
+                    window.clearInterval(heroTimer);
+                    heroTimer = null;
+                }
+            };
+            motionButton.addEventListener('click', () => {
+                heroPaused = !heroPaused;
+                motionButton.setAttribute('aria-pressed', String(heroPaused));
+                motionButton.textContent = heroPaused ? 'Reanudar animación' : 'Pausar animación';
+                updateHero();
+            });
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(([entry]) => {
+                    heroVisible = entry.isIntersecting;
+                    updateHero();
+                }, { threshold: 0.1 }).observe(tradingHero);
+            }
+            document.addEventListener('visibilitychange', updateHero);
+            reducedMotion.addEventListener('change', updateHero);
+            updateHero();
+        }
     </script>
 </body>
 

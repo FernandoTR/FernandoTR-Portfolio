@@ -6,13 +6,13 @@
     <!-- Metas -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portafolio de Fernando Torres, Ingeniero en Informática y Desarrollador Full Stack .NET con más de 9 años de experiencia en aplicaciones web, facturación electrónica y soluciones empresariales.">
     <meta name="keywords" content="Fernando Torres, Desarrollador Full Stack, Portafolio .NET, C#, ASP.NET, SQL Server, Angular, Azure DevOps">
     <meta name="author" content="Fernando Torres">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0e0f0f">
-    
+
     <meta property="og:title" content="Fernando Torres - Desarrollador Full Stack .NET">
     <meta property="og:description" content="Portafolio profesional de Fernando Torres, especialista en desarrollo .NET, SQL Server y Angular.">
     <meta property="og:image" content="https://byfernandotorres.online/assets/imgs/header/0.jpg">
@@ -34,16 +34,16 @@
     <link rel="shortcut icon" href="assets/imgs/favicon.ico">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Plugins -->
     <link rel="stylesheet" href="assets/css/plugins.css">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261019-hero-title-loop">
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -61,10 +61,12 @@
     }
     </script>
 
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="520ea72b-00cd-44e1-91c8-b9f31af6abd1" data-domains="byfernandotorres.online" data-exclude-search="true" data-exclude-hash="true"></script>
 </head>
 
 <body class="dots-waves">
 
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
 
     <!-- ==================== Start Loading ==================== -->
@@ -73,17 +75,12 @@
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
+        
 
         <div class="loader-wrap-heading">
-            <div class="load-text">
-                <span>C</span>
-                <span>a</span>
-                <span>r</span>
-                <span>g</span>
-                <span>a</span>
-                <span>n</span>
-                <span>d</span>
-                <span>o</span>
+            <div class="loader-status" role="status" aria-live="polite">
+                <svg class="thinking-orb-loader" viewBox="0 0 96 96" data-state="solving" role="img" aria-label="Estado de carga del portafolio"></svg>
+                <span>Cargando...</span>
             </div>
         </div>
     </div>
@@ -96,14 +93,14 @@
 
     <!-- ==================== Start progress-scroll-button ==================== -->
 
-    <div class="progress-wrap cursor-pointer">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+    <button type="button" class="progress-wrap cursor-pointer" aria-label="Volver al inicio">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102" aria-hidden="true" focusable="false">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
-    </div>
+    </button>
 
     <!-- ==================== End progress-scroll-button ==================== -->
-  
+
 
     <div id="home_wave"></div>
 
@@ -113,7 +110,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-xxl d-block">
             <div class="row">
-                <div class="col-lg-9 offset-lg-3">
+                <div class="col-12">
 
                     <!-- Logo -->
                     <a class="logo logo-hide icon-img-40" href="#home" aria-label="Ir al inicio">
@@ -122,7 +119,7 @@
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        aria-expanded="false" aria-label="Menú de navegación">
                         <span class="icon-bar"><i class="fas fa-bars"></i></span>
                     </button>
 
@@ -163,93 +160,88 @@
 
 
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
 
         <!-- ==================== Start main box ==================== -->
 
         <section class="box container-xxl">
 
-            <div class="fixed-box">
-                <div class="author-profile" id="sticky_item">
-                    <div class="cont">
-                        <div>
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <!-- Logo -->
-                                    <a class="logo icon-img-40" href="#home" aria-label="Ir al inicio">
-                                        <img src="assets/imgs/logo-light.svg" alt="Fernando Torres">
-                                    </a>
-                                </div>
-                                <div class="ml-auto text-right fz-12 text-u ls1">
-                                    <span>Desarrollador <br> Full Stack .NET</span>
-                                </div>
-                            </div>
-                            <div class="img mt-30">
-                                <picture>
-                                    <source srcset="assets/imgs/header/0.webp" type="image/webp">
-                                    <img src="assets/imgs/header/0.jpg" alt="Fernando Torres, Desarrollador Full Stack .NET" width="800" height="981" decoding="async" fetchpriority="high">
-                                </picture>
-                            </div>
-                            <div class="info text-center mt-30">
-                                <h5>Fernando Torres</h5>
-                                <p class="mt-10 fz-14" style="color: rgba(255,255,255,0.62);">
-                                    Software empresarial, backend e integraciones
-                                </p>
-                            </div>
-                            <div class="social text-center mt-20">
-                                <a href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://github.com/FernandoTR" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en GitHub"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="assets/docs/FernandoTorres_CV.pdf" download="FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" class="butn butn-md radius-10 mt-30" aria-label="Ver o descargar CV de Fernando Torres en PDF">
-                                <span>Ver CV / Resume</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="row">
 
-                <div class="col-lg-9 offset-lg-3">
+                <div class="col-12">
 
 
                     <!-- ==================== Start about ==================== -->
 
                     <div class="about section-padding mt-40" data-scroll-index="0" id="home">
-                        <div class="cont">
-                            <h1 class="mb-40">
-                                    Desarrollador <span class="main-color">Full Stack .NET</span> enfocado en construir software empresarial que conecta operación, datos y negocio
-                                
-                            </h1>
-
-                            <div class="d-flex flex-wrap hero-chips-wrap mb-10">
-                                <span class="hero-chip">.NET</span>
-                                <span class="hero-chip">SQL Server</span>
-                                <span class="hero-chip">SAP Business One</span>
-                                <span class="hero-chip">Salesforce</span>
-                                <span class="hero-chip">APIs & Integraciones</span>
+                        <canvas class="hero-webgl" aria-hidden="true"></canvas>
+                        <div class="hero-copy">
+                            <p class="hero-greeting">Hola, soy Fernando Torres</p>
+                            <div class="cont">
+                                <!-- shortcut: Space Grotesk outlines are fixed to this phrase; regenerate them if the title changes. -->
+                                <h1>Desarrollador <span class="main-color hero-title-handwriting"><span class="hero-title-handwriting-label">Full Stack .NET</span><svg viewBox="0 0 640 96" width="640" height="96" aria-hidden="true" focusable="false"><g transform="translate(0 76)">
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 180ms" transform="translate(0.00 0)" d="M7.1 -0.96L7.01 -68.16L48.38 -68.16L48.48 -58.75L17.38 -58.75L17.38 -39.36L45.89 -39.36L45.98 -29.95L17.38 -29.95L17.38 -0.96L7.1 -0.96Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 315ms" transform="translate(48.67 0)" d="M25.44 -0.1Q20.06 -0.1 15.84 -2.5Q11.62 -4.9 9.22 -9.31Q6.82 -13.73 6.82 -19.78L6.82 -48.19L16.7 -48.19L16.7 -20.54Q16.7 -14.4 19.78 -11.47Q22.85 -8.54 28.22 -8.54Q34.37 -8.54 38.06 -12.62Q41.76 -16.7 41.76 -24.38L41.76 -48.19L51.65 -48.19L51.65 -0.96L41.95 -0.96L41.95 -8.06L40.42 -8.06Q39.07 -5.18 35.66 -2.64Q32.26 -0.1 25.44 -0.1Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 450ms" transform="translate(104.74 0)" d="M7.3 -0.96L7.3 -68.16L17.18 -68.16L17.18 -0.96L7.3 -0.96Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 585ms" transform="translate(126.34 0)" d="M7.3 -0.96L7.3 -68.16L17.18 -68.16L17.18 -0.96L7.3 -0.96Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 720ms" transform="translate(169.54 0)" d="M29.86 0.38Q22.27 0.38 16.42 -2.3Q10.56 -4.99 7.25 -10.22Q3.94 -15.46 3.94 -22.94L3.94 -25.34L14.21 -25.34L14.21 -22.94Q14.21 -15.74 18.48 -12.24Q22.75 -8.74 29.86 -8.74Q37.06 -8.74 40.7 -11.76Q44.35 -14.78 44.35 -19.58Q44.35 -22.75 42.67 -24.77Q40.99 -26.78 37.78 -27.98Q34.56 -29.18 30.14 -30.24L26.5 -31.1Q20.16 -32.64 15.41 -34.9Q10.66 -37.15 8.06 -40.9Q5.47 -44.64 5.47 -50.5Q5.47 -56.45 8.4 -60.67Q11.33 -64.9 16.51 -67.2Q21.7 -69.5 28.7 -69.5Q35.71 -69.5 41.23 -67.1Q46.75 -64.7 49.92 -60Q53.09 -55.3 53.09 -48.19L53.09 -44.74L42.91 -44.74L42.91 -48.19Q42.91 -52.51 41.09 -55.2Q39.26 -57.89 36.1 -59.14Q32.93 -60.38 28.7 -60.38Q22.56 -60.38 19.15 -57.84Q15.74 -55.3 15.74 -50.78Q15.74 -47.71 17.23 -45.74Q18.72 -43.78 21.6 -42.53Q24.48 -41.28 28.7 -40.32L32.35 -39.46Q38.88 -38.02 43.87 -35.76Q48.86 -33.5 51.74 -29.66Q54.62 -25.82 54.62 -19.78Q54.62 -13.73 51.55 -9.22Q48.48 -4.7 42.96 -2.16Q37.44 0.38 29.86 0.38Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 855ms" transform="translate(225.18 0)" d="M25.06 -0.96C22.18 -0.96 19.89 -1.82 18.19 -3.55Q15.65 -6.14 15.65 -10.46L15.65 -40.03L2.59 -39.94L2.69 -48.19L15.65 -48.19L15.65 -64.03L25.44 -63.94L25.44 -48.19L39.65 -48.19L39.74 -40.03L25.44 -39.94L25.44 -12.1Q25.44 -9.22 28.22 -9.22L38.02 -9.22L38.02 -0.96L25.06 -0.96Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 990ms" transform="translate(266.27 0)" d="M21.98 0.38Q16.9 0.38 12.91 -1.34Q8.93 -3.07 6.58 -6.43Q4.22 -9.79 4.22 -14.59Q4.22 -19.39 6.58 -22.66Q8.93 -25.92 13.01 -27.55Q17.09 -29.18 22.27 -29.18L36.77 -29.18L36.77 -32.26Q36.77 -36.38 34.22 -38.88Q31.68 -41.38 26.5 -41.38Q21.41 -41.38 18.72 -38.98Q16.03 -36.58 15.17 -32.74L5.95 -35.71Q7.1 -39.55 9.65 -42.67Q12.19 -45.79 16.42 -47.66Q20.64 -49.54 26.59 -49.54Q35.81 -49.54 41.09 -44.88Q46.37 -40.22 46.37 -31.58L46.37 -12.1Q46.37 -9.22 49.06 -9.22L53.09 -9.22L53.09 -0.96L45.7 -0.96C43.46 -0.96 41.65 -1.54 40.27 -2.69Q38.21 -4.42 38.21 -7.39L38.21 -7.68L36.67 -7.68Q36 -6.24 34.42 -4.32Q32.83 -2.4 29.86 -1.01Q26.88 0.38 21.98 0.38ZM23.42 -7.78Q29.38 -7.78 33.07 -11.18Q36.77 -14.59 36.77 -20.54L36.77 -21.5L22.85 -21.5Q18.91 -21.5 16.51 -19.82Q14.11 -18.14 14.11 -14.88Q14.11 -11.62 16.61 -9.7Q19.1 -7.78 23.42 -7.78Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 1125ms" transform="translate(318.65 0)" d="M29.28 0.38Q22.46 0.38 16.94 -2.5Q11.42 -5.38 8.21 -10.85Q4.99 -16.32 4.99 -24L4.99 -25.25Q4.99 -32.83 8.21 -38.3Q11.42 -43.78 16.94 -46.66Q22.46 -49.54 29.28 -49.54Q36.1 -49.54 40.9 -47.09Q45.7 -44.64 48.62 -40.51Q51.55 -36.38 52.32 -31.39L42.82 -29.38Q42.34 -32.54 40.8 -35.14Q39.26 -37.73 36.48 -39.26Q33.7 -40.8 29.47 -40.8Q25.34 -40.8 22.03 -38.93Q18.72 -37.06 16.8 -33.55Q14.88 -30.05 14.88 -25.06L14.88 -24.19Q14.88 -19.2 16.8 -15.65Q18.72 -12.1 22.03 -10.22Q25.34 -8.35 29.47 -8.35Q35.81 -8.35 39.02 -11.62Q42.24 -14.88 43.1 -19.87L52.7 -17.66Q51.55 -12.77 48.62 -8.64Q45.7 -4.51 40.9 -2.06Q36.1 0.38 29.28 0.38Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 1260ms" transform="translate(371.47 0)" d="M7.3 -0.96L7.3 -68.16L17.18 -68.16L17.18 -29.86L18.72 -29.86L37.34 -48.19L50.5 -48.19L26.5 -25.34L51.26 -0.96L38.3 -0.96L18.72 -20.64L17.18 -20.64L17.18 -0.96L7.3 -0.96Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 1395ms" transform="translate(443.08 0)" d="M13.25 0.38Q9.89 0.38 7.68 -1.78Q5.47 -3.94 5.47 -7.39Q5.38 -10.94 7.63 -13.1Q9.89 -15.26 13.25 -15.26Q16.61 -15.26 18.82 -13.06Q21.02 -10.85 21.02 -7.39Q21.02 -4.03 18.82 -1.82Q16.61 0.38 13.25 0.38Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 1530ms" transform="translate(463.59 0)" d="M7.01 -0.96L7.01 -68.16L26.88 -68.16L45.22 -7.87L46.75 -7.87L46.75 -68.16L57.02 -68.16L57.02 -0.96L37.15 -0.96L18.82 -61.34L17.28 -61.34L17.28 -0.96L7.01 -0.96Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 1665ms" transform="translate(524.74 0)" d="M7.1 -0.96L7.01 -68.16L49.25 -68.16L49.34 -58.75L17.38 -58.75L17.38 -39.46L46.56 -39.46L46.66 -30.05L17.38 -30.14L17.38 -10.37L49.73 -10.37L49.82 -0.96L7.1 -0.96Z"/>
+                                        <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 1800ms" transform="translate(575.52 0)" d="M23.14 -0.96L23.04 -58.75L2.5 -58.75L2.4 -68.16L53.95 -68.16L54.05 -58.75L33.31 -58.75L33.41 -0.96L23.14 -0.96Z"/>
+                                    </g></svg></span></h1>
+                                <p class="hero-lead">Desarrollo sistemas empresariales y APIs escalables con .NET que simplifican la operación. Automatizo procesos, diseño integraciones entre plataformas y modernizo sistemas existentes para mejorar la calidad de los datos y el rendimiento.</p>
+                                <div class="d-flex flex-wrap hero-chips-wrap">
+                                    <span class="hero-chip"><img src="assets/imgs/skills/Microsoft_.NET.svg" alt="" width="20" height="20" aria-hidden="true">.NET</span>
+                                    <span class="hero-chip"><img src="assets/imgs/skills/sql-server.svg" alt="" width="20" height="20" aria-hidden="true">SQL Server</span>
+                                    <span class="hero-chip"><img src="assets/imgs/skills/SAP.svg" alt="" width="20" height="20" aria-hidden="true">SAP Business One</span>
+                                    <span class="hero-chip"><img src="assets/imgs/skills/salesforce.svg" alt="" width="20" height="20" aria-hidden="true">Salesforce</span>
+                                    <span class="hero-chip"><svg class="hero-chip-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-11-2 14"/></svg>APIs &amp; Integraciones</span>
+                                </div>
                             </div>
+                            <dl class="hero-metrics">
+                                <div>
+                                    <dt>+10</dt>
+                                    <dd>Años construyendo<br>software empresarial</dd>
+                                </div>
+                            </dl>
+                            <div class="hero-actions">
+                                <a href="#portfolio" data-scroll-nav="1" class="hero-action-primary">Explorar proyectos <svg class="hero-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+                                <a href="assets/docs/FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" class="hero-action-secondary" data-umami-event="cv_open" aria-label="Abrir CV de Fernando Torres en PDF">Abrir CV <svg class="hero-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                                <div class="hero-social-links">
+                                    <a class="hero-social-link" href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                                    <a class="hero-social-link" href="https://github.com/FernandoTR" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+
                         </div>
-
-                    <div class="stauts mt-80">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="mr-60">
-                                                        <div class="d-flex align-items-center">
-                                                            <h2>+9</h2>
-                                                            <p>Años construyendo <br> software empresarial</p>
-                                                        </div>
-                                                    </div>                               
-                                                </div>
-                                            </div>
-
-                        <div class="text mt-70">
-                            <h6 class="sub-title mb-20">Perfil profesional</h6>
-                            <p class="fz-19 " style="max-width: 980px;">
-                                 Mi enfoque está en construir software útil para negocio: sistemas internos, integraciones, automatización operativa y backend robusto para procesos críticos.
-                            </p>
+                        <div class="author-profile">
+                            <div class="cont">
+                                <div>
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <!-- Logo -->
+                                            <a class="logo icon-img-40" href="#home" aria-label="Ir al inicio">
+                                                <img src="assets/imgs/logo-light.svg" alt="Fernando Torres">
+                                            </a>
+                                        </div>
+                                        <div class="ml-auto text-right fz-12 text-u ls1">
+                                            <span>Desarrollador <br> Full Stack .NET</span>
+                                        </div>
+                                    </div>
+                                    <div class="img mt-30">
+                                        <picture>
+                                            <img src="assets/imgs/header/0.jpg" alt="Fernando Torres, Desarrollador Full Stack .NET" width="800" height="981" decoding="async" fetchpriority="high">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <span class="availability-tag"><span class="availability-dot" aria-hidden="true"></span>Abierto a oportunidades</span>
+                            </div>
                         </div>
                     </div>
 
@@ -257,225 +249,188 @@
 
                     <!-- ==================== Start Portfolio ==================== -->
 
-                    <div class="testim-crv section-padding pt-0" data-scroll-index="1" id="portfolio">
+                    <div class="portfolio-section section-padding pt-0" data-scroll-index="1" id="portfolio">
                         <div class="sec-head bord-thin-bottom pb-20 mb-80">
                             <div class="row">
                                 <div class="col-md-10">
-                                    <h4 class="sub-title fz-28">Proyectos Relevantes</h4>
+                                    <h2 class="sub-title fz-28">Proyectos destacados</h2>
                                     <p class="fz-16 mt-15 text-300 portfolio-subtitle" >
-                                        Soluciones reales enfocadas en automatización, integración de sistemas y operación empresarial.
-                                    </p> 
+                                        Aplicaciones Full Stack .NET e integraciones con SAP y Salesforce. Explora el reto, mi aportación y la solución técnica en cada caso.
+                                    </p>
                                 </div>
-                                <div class="col-md-2 ">
-                                    <div class="d-flex align-items-end justify-content-md-end justify-content-start mt-30 mt-md-0" style="padding-top: 25px!important;">
-                                        <div class="swiper-controls testim-controls arrow-out d-flex align-items-center mr-20 ml-auto">
-                                            <div class="swiper-button-prev portfolio-swiper-btn" role="button" tabindex="0" aria-label="Ver proyectos anteriores">
-                                                <span class="left">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M17.2031 10.3281L11.5781 15.9531C11.535 15.9961 11.4839 16.0303 11.4276 16.0536C11.3713 16.077 11.3109 16.089 11.25 16.089C11.1891 16.089 11.1287 16.077 11.0724 16.0536C11.0161 16.0303 10.965 15.9961 10.9219 15.9531C10.8788 15.91 10.8446 15.8588 10.8213 15.8025C10.798 15.7462 10.786 15.6859 10.786 15.6249C10.786 15.564 10.798 15.5036 10.8213 15.4473C10.8446 15.391 10.8788 15.3399 10.9219 15.2968L15.7422 10.4687H3.125C3.00068 10.4687 2.88145 10.4193 2.79354 10.3314C2.70564 10.2435 2.65625 10.1242 2.65625 9.99993C2.65625 9.87561 2.70564 9.75638 2.79354 9.66847C2.88145 9.58056 3.00068 9.53118 3.125 9.53118H15.7422L10.9219 4.70305C10.8349 4.61603 10.786 4.498 10.786 4.37493C10.786 4.25186 10.8349 4.13383 10.9219 4.0468C11.0089 3.95978 11.1269 3.91089 11.25 3.91089C11.3731 3.91089 11.4911 3.95978 11.5781 4.0468L17.2031 9.6718C17.2476 9.71412 17.2829 9.76503 17.3071 9.82143C17.3313 9.87784 17.3438 9.93856 17.3438 9.99993C17.3438 10.0613 17.3313 10.122 17.3071 10.1784C17.2829 10.2348 17.2476 10.2857 17.2031 10.3281Z"
-                                                            fill="currentColor"></path>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="swiper-button-next portfolio-swiper-btn ml-40" role="button" tabindex="0" aria-label="Ver proyectos siguientes">
-                                                <span class="right">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M17.2031 10.3281L11.5781 15.9531C11.535 15.9961 11.4839 16.0303 11.4276 16.0536C11.3713 16.077 11.3109 16.089 11.25 16.089C11.1891 16.089 11.1287 16.077 11.0724 16.0536C11.0161 16.0303 10.965 15.9961 10.9219 15.9531C10.8788 15.91 10.8446 15.8588 10.8213 15.8025C10.798 15.7462 10.786 15.6859 10.786 15.6249C10.786 15.564 10.798 15.5036 10.8213 15.4473C10.8446 15.391 10.8788 15.3399 10.9219 15.2968L15.7422 10.4687H3.125C3.00068 10.4687 2.88145 10.4193 2.79354 10.3314C2.70564 10.2435 2.65625 10.1242 2.65625 9.99993C2.65625 9.87561 2.70564 9.75638 2.79354 9.66847C2.88145 9.58056 3.00068 9.53118 3.125 9.53118H15.7422L10.9219 4.70305C10.8349 4.61603 10.786 4.498 10.786 4.37493C10.786 4.25186 10.8349 4.13383 10.9219 4.0468C11.0089 3.95978 11.1269 3.91089 11.25 3.91089C11.3731 3.91089 11.4911 3.95978 11.5781 4.0468L17.2031 9.6718C17.2476 9.71412 17.2829 9.76503 17.3071 9.82143C17.3313 9.87784 17.3438 9.93856 17.3438 9.99993C17.3438 10.0613 17.3313 10.122 17.3071 10.1784C17.2829 10.2348 17.2476 10.2857 17.2031 10.3281Z"
-                                                            fill="currentColor"></path>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
+
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <div class="testim-swiper" 
-                                     data-carousel="swiper" 
-                                     data-items="3" 
-                                     data-space="24"  >
-                                    <div id="content-carousel-container-unq-testim" class="swiper-container"
-                                        data-swiper="container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">                                                                       
-                                                <div class="item">     
+                                <div class="portfolio-grid">
+
+                                                <article class="item">
+                                                    <a href="./assets/projects/trading.html" class="portfolio-card-link" data-umami-event="project_open" data-umami-event-project="trading" aria-label="Ver caso de estudio de Trading Book" aria-describedby="portfolio-tech-trading">
                                                     <div class="custom-Portolio">
                                                         <picture>
                                                             <source srcset="assets/imgs/works/PortalTrading-card.webp" type="image/webp">
                                                             <img src="assets/imgs/works/PortalTrading.png" alt="Aplicación de registro y análisis de trading en .NET 8" width="1920" height="1080" loading="lazy" decoding="async">
                                                         </picture>
-                                                    </div>                                                                                         
+                                                        <span class="portfolio-card-notch" aria-hidden="true"></span>
+                                                        <span class="portfolio-link portfolio-card-arrow" aria-hidden="true">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                                                <path d="M7 17 17 7M7 7h10v10"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
                                                     <div class="cont">
-                                                        <div class="d-flex align-items-center">                                                           
+                                                        <div class="d-flex align-items-center">
                                                             <div class="mt-20">
                                                                 <div class="info">
-                                                                    <h4>Trading Book</h4>
+                                                                    <h3>Trading Book</h3>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <p class="fw-200 fz-14 mb-10"> 
-                                                            Plataforma de análisis de performance para trading cripto, enfocada en trazabilidad operativa, métricas clave y mejora de toma de decisiones.
+                                                        <p class="fw-200 fz-14 mb-10">
+                                                            Desarrollé una aplicación en ASP.NET Core con Clean Architecture para registrar y analizar operaciones de trading cripto.
                                                         </p>
+                                                        <p class="tech-badges portfolio-tech-badges" aria-label="Tecnologías principales">
+                                                            <span>.NET 10</span><span>ASP.NET Core MVC</span><span>Entity Framework Core 10</span><span>SQL Server</span><span class="portfolio-tech-more">+7</span>
+                                                        </p>
+                                                        <span class="portfolio-tech-description" id="portfolio-tech-trading">Tecnologías principales: .NET 10, ASP.NET Core MVC, Entity Framework Core 10 y SQL Server; 7 tecnologías adicionales.</span>
                                                     </div>
-                                                    <div class="d-flex align-items-center portfolio-footer">
-                                                        <div>
-                                                            <a title="Ver repositorio en GitHub" href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de TradingBook en GitHub">
-                                                                <i class="fab fa-github tag-portfolio-icon"></i>
-                                                            </a>                                                          
-                                                        </div>
-                                                        <div class="ml-auto">                                                         
-                                                            <a href="./assets/projects/trading.html" class="portfolio-link">
-                                                                Ver más
-                                                                <svg class="ml-5" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M17.2031 10.3281L11.5781 15.9531C11.535 15.9961 11.4839 16.0303 11.4276 16.0536C11.3713 16.077 11.3109 16.089 11.25 16.089C11.1891 16.089 11.1287 16.077 11.0724 16.0536C11.0161 16.0303 10.965 15.9961 10.9219 15.9531C10.8788 15.91 10.8446 15.8588 10.8213 15.8025C10.798 15.7462 10.786 15.6859 10.786 15.6249C10.786 15.564 10.798 15.5036 10.8213 15.4473C10.8446 15.391 10.8788 15.3399 10.9219 15.2968L15.7422 10.4687H3.125C3.00068 10.4687 2.88145 10.4193 2.79354 10.3314C2.70564 10.2435 2.65625 10.1242 2.65625 9.99993C2.65625 9.87561 2.70564 9.75638 2.79354 9.66847C2.88145 9.58056 3.00068 9.53118 3.125 9.53118H15.7422L10.9219 4.70305C10.8349 4.61603 10.786 4.498 10.786 4.37493C10.786 4.25186 10.8349 4.13383 10.9219 4.0468C11.0089 3.95978 11.1269 3.91089 11.25 3.91089C11.3731 3.91089 11.4911 3.95978 11.5781 4.0468L17.2031 9.6718C17.2476 9.71412 17.2829 9.76503 17.3071 9.82143C17.3313 9.87784 17.3438 9.93856 17.3438 9.99993C17.3438 10.0613 17.3313 10.122 17.3071 10.1784C17.2829 10.2348 17.2476 10.2857 17.2031 10.3281Z" fill="currentColor"></path>
-                                                                </svg>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">                                                                       
-                                                <div class="item">     
+                                                    </a>
+                                                </article>
+
+                                                <article class="item">
+                                                    <a href="./assets/projects/apiSalesforceSap.html" class="portfolio-card-link" data-umami-event="project_open" data-umami-event-project="apiSalesforceSap" aria-label="Ver caso de estudio de la API de integración Salesforce y SAP B1" aria-describedby="portfolio-tech-salesforce-sap">
                                                     <div class="custom-Portolio">
                                                         <picture>
                                                             <source srcset="assets/imgs/works/APIIntegracionSalesforceSAP-card.webp" type="image/webp">
                                                             <img src="assets/imgs/works/APIIntegracionSalesforceSAP.png" alt="API empresarial de integración entre Salesforce y SAP Business One" width="1920" height="1080" loading="lazy" decoding="async">
                                                         </picture>
-                                                    </div>                                                
+                                                        <span class="portfolio-card-notch" aria-hidden="true"></span>
+                                                        <span class="portfolio-link portfolio-card-arrow" aria-hidden="true">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                                                <path d="M7 17 17 7M7 7h10v10"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
                                                     <div class="cont">
                                                         <div class="d-flex align-items-center">
                                                             <div class="mt-20">
                                                                 <div class="info">
-                                                                    <h4>API Integración Salesforce ↔ SAP B1</h4>
+                                                                    <h3>API de integración Salesforce ↔ SAP B1</h3>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <p class="fw-200 fz-14 mb-10">
-                                                            API empresarial para sincronizar pedidos, clientes y flujo comercial entre Salesforce y SAP Business One de forma automatizada.
+                                                            Integré Salesforce y SAP Business One mediante una API REST en .NET 8 para automatizar pedidos y consultas comerciales, reduciendo la captura manual.
                                                         </p>
+                                                        <p class="tech-badges portfolio-tech-badges" aria-label="Tecnologías principales">
+                                                            <span>.NET 8</span><span>API REST</span><span>Salesforce API</span><span>SAP Business One</span><span class="portfolio-tech-more">+5</span>
+                                                        </p>
+                                                        <span class="portfolio-tech-description" id="portfolio-tech-salesforce-sap">Tecnologías principales: .NET 8, API REST, Salesforce API y SAP Business One; 5 tecnologías adicionales.</span>
                                                     </div>
-                                                    <div class="d-flex align-items-center portfolio-footer">                                                       
-                                                        <span class="tag-portfolio tag-private">Privado</span>                                                      
-                                                        <div class="ml-auto">                                                         
-                                                            <a href="./assets/projects/apiSalesforceSap.html" class="portfolio-link">
-                                                                Ver más
-                                                                <svg class="ml-5" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M17.2031 10.3281L11.5781 15.9531C11.535 15.9961 11.4839 16.0303 11.4276 16.0536C11.3713 16.077 11.3109 16.089 11.25 16.089C11.1891 16.089 11.1287 16.077 11.0724 16.0536C11.0161 16.0303 10.965 15.9961 10.9219 15.9531C10.8788 15.91 10.8446 15.8588 10.8213 15.8025C10.798 15.7462 10.786 15.6859 10.786 15.6249C10.786 15.564 10.798 15.5036 10.8213 15.4473C10.8446 15.391 10.8788 15.3399 10.9219 15.2968L15.7422 10.4687H3.125C3.00068 10.4687 2.88145 10.4193 2.79354 10.3314C2.70564 10.2435 2.65625 10.1242 2.65625 9.99993C2.65625 9.87561 2.70564 9.75638 2.79354 9.66847C2.88145 9.58056 3.00068 9.53118 3.125 9.53118H15.7422L10.9219 4.70305C10.8349 4.61603 10.786 4.498 10.786 4.37493C10.786 4.25186 10.8349 4.13383 10.9219 4.0468C11.0089 3.95978 11.1269 3.91089 11.25 3.91089C11.3731 3.91089 11.4911 3.95978 11.5781 4.0468L17.2031 9.6718C17.2476 9.71412 17.2829 9.76503 17.3071 9.82143C17.3313 9.87784 17.3438 9.93856 17.3438 9.99993C17.3438 10.0613 17.3313 10.122 17.3071 10.1784C17.2829 10.2348 17.2476 10.2857 17.2031 10.3281Z" fill="currentColor"></path>
-                                                                </svg>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">                                                                       
-                                                <div class="item">     
+                                                    </a>
+                                                </article>
+
+                                                <article class="item">
+                                                    <a href="./assets/projects/distribuidores.html" class="portfolio-card-link" data-umami-event="project_open" data-umami-event-project="distribuidores" aria-label="Ver caso de estudio del Portal de Distribuidores" aria-describedby="portfolio-tech-distribuidores">
                                                     <div class="custom-Portolio">
                                                         <picture>
                                                             <source srcset="assets/imgs/works/PortalDistribuidores-card.webp" type="image/webp">
                                                             <img src="assets/imgs/works/PortalDistribuidores.png" alt="Portal B2B para distribuidores integrado con SAP Business One" width="1920" height="1080" loading="lazy" decoding="async">
                                                         </picture>
-                                                    </div>                                                
+                                                        <span class="portfolio-card-notch" aria-hidden="true"></span>
+                                                        <span class="portfolio-link portfolio-card-arrow" aria-hidden="true">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                                                <path d="M7 17 17 7M7 7h10v10"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
                                                     <div class="cont">
                                                         <div class="d-flex align-items-center">
                                                             <div class="mt-20">
                                                                 <div class="info">
-                                                                    <h4>Portal de Distribuidores</h4>
+                                                                    <h3>Portal de Distribuidores</h3>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <p class="fw-200 fz-14 mb-10">
-                                                            Portal B2B para distribuidores enfocado en pedidos, catálogo y autoservicio comercial, integrado con SAP Business One.
+                                                            Desarrollé un portal B2B en ASP.NET MVC para consultar el catálogo, realizar pagos y registrar pedidos en SAP Business One.
                                                         </p>
+                                                        <p class="tech-badges portfolio-tech-badges" aria-label="Tecnologías principales">
+                                                            <span>ASP.NET MVC</span><span>C#</span><span>SQL Server</span><span>SAP Business One</span><span class="portfolio-tech-more">+6</span>
+                                                        </p>
+                                                        <span class="portfolio-tech-description" id="portfolio-tech-distribuidores">Tecnologías principales: ASP.NET MVC, C#, SQL Server y SAP Business One; 6 tecnologías adicionales.</span>
                                                     </div>
-                                                    <div class="d-flex align-items-center portfolio-footer">                                                       
-                                                        <span class="tag-portfolio tag-private">Privado</span>                                                      
-                                                        <div class="ml-auto">                                                         
-                                                            <a href="./assets/projects/distribuidores.html" class="portfolio-link">
-                                                                Ver más
-                                                                <svg class="ml-5" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M17.2031 10.3281L11.5781 15.9531C11.535 15.9961 11.4839 16.0303 11.4276 16.0536C11.3713 16.077 11.3109 16.089 11.25 16.089C11.1891 16.089 11.1287 16.077 11.0724 16.0536C11.0161 16.0303 10.965 15.9961 10.9219 15.9531C10.8788 15.91 10.8446 15.8588 10.8213 15.8025C10.798 15.7462 10.786 15.6859 10.786 15.6249C10.786 15.564 10.798 15.5036 10.8213 15.4473C10.8446 15.391 10.8788 15.3399 10.9219 15.2968L15.7422 10.4687H3.125C3.00068 10.4687 2.88145 10.4193 2.79354 10.3314C2.70564 10.2435 2.65625 10.1242 2.65625 9.99993C2.65625 9.87561 2.70564 9.75638 2.79354 9.66847C2.88145 9.58056 3.00068 9.53118 3.125 9.53118H15.7422L10.9219 4.70305C10.8349 4.61603 10.786 4.498 10.786 4.37493C10.786 4.25186 10.8349 4.13383 10.9219 4.0468C11.0089 3.95978 11.1269 3.91089 11.25 3.91089C11.3731 3.91089 11.4911 3.95978 11.5781 4.0468L17.2031 9.6718C17.2476 9.71412 17.2829 9.76503 17.3071 9.82143C17.3313 9.87784 17.3438 9.93856 17.3438 9.99993C17.3438 10.0613 17.3313 10.122 17.3071 10.1784C17.2829 10.2348 17.2476 10.2857 17.2031 10.3281Z" fill="currentColor"></path>
-                                                                </svg>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>                                    
-                                             <div class="swiper-slide">                                                                       
-                                                <div class="item">     
+                                                    </a>
+                                                </article>
+
+                                                <article class="item">
+                                                    <a href="./assets/projects/proveedores.html" class="portfolio-card-link" data-umami-event="project_open" data-umami-event-project="proveedores" aria-label="Ver caso de estudio del Portal de Proveedores" aria-describedby="portfolio-tech-proveedores">
                                                     <div class="custom-Portolio">
                                                         <picture>
                                                             <source srcset="assets/imgs/works/PortalProveedores-card.webp" type="image/webp">
                                                             <img src="assets/imgs/works/PortalProveedores.png" alt="Portal empresarial para validación CFDI y control documental de proveedores" width="1920" height="1080" loading="lazy" decoding="async">
                                                         </picture>
-                                                    </div>                                                
+                                                        <span class="portfolio-card-notch" aria-hidden="true"></span>
+                                                        <span class="portfolio-link portfolio-card-arrow" aria-hidden="true">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                                                <path d="M7 17 17 7M7 7h10v10"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
                                                     <div class="cont">
                                                         <div class="d-flex align-items-center">
                                                             <div class="mt-20">
                                                                 <div class="info">
-                                                                    <h4>Portal de Proveedores</h4>
+                                                                    <h3>Portal de Proveedores</h3>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <p class="fw-200 fz-14 mb-10">
-                                                            Portal empresarial para validación de CFDI, conciliación documental y control de proveedores integrado con SAP Business One.
+                                                            Desarrollé un portal en ASP.NET MVC para validar CFDI, detectar facturas duplicadas y dar seguimiento a pagos, integrado con SAP Business One.
                                                         </p>
+                                                        <p class="tech-badges portfolio-tech-badges" aria-label="Tecnologías principales">
+                                                            <span>ASP.NET MVC</span><span>C#</span><span>SQL Server</span><span>SAP Business One</span><span class="portfolio-tech-more">+5</span>
+                                                        </p>
+                                                        <span class="portfolio-tech-description" id="portfolio-tech-proveedores">Tecnologías principales: ASP.NET MVC, C#, SQL Server y SAP Business One; 5 tecnologías adicionales.</span>
                                                     </div>
-                                                    <div class="d-flex align-items-center portfolio-footer">                                                       
-                                                        <span class="tag-portfolio tag-private">Privado</span>                                                      
-                                                        <div class="ml-auto">                                                         
-                                                            <a href="./assets/projects/proveedores.html" class="portfolio-link">
-                                                                Ver más
-                                                                <svg class="ml-5" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M17.2031 10.3281L11.5781 15.9531C11.535 15.9961 11.4839 16.0303 11.4276 16.0536C11.3713 16.077 11.3109 16.089 11.25 16.089C11.1891 16.089 11.1287 16.077 11.0724 16.0536C11.0161 16.0303 10.965 15.9961 10.9219 15.9531C10.8788 15.91 10.8446 15.8588 10.8213 15.8025C10.798 15.7462 10.786 15.6859 10.786 15.6249C10.786 15.564 10.798 15.5036 10.8213 15.4473C10.8446 15.391 10.8788 15.3399 10.9219 15.2968L15.7422 10.4687H3.125C3.00068 10.4687 2.88145 10.4193 2.79354 10.3314C2.70564 10.2435 2.65625 10.1242 2.65625 9.99993C2.65625 9.87561 2.70564 9.75638 2.79354 9.66847C2.88145 9.58056 3.00068 9.53118 3.125 9.53118H15.7422L10.9219 4.70305C10.8349 4.61603 10.786 4.498 10.786 4.37493C10.786 4.25186 10.8349 4.13383 10.9219 4.0468C11.0089 3.95978 11.1269 3.91089 11.25 3.91089C11.3731 3.91089 11.4911 3.95978 11.5781 4.0468L17.2031 9.6718C17.2476 9.71412 17.2829 9.76503 17.3071 9.82143C17.3313 9.87784 17.3438 9.93856 17.3438 9.99993C17.3438 10.0613 17.3313 10.122 17.3071 10.1784C17.2829 10.2348 17.2476 10.2857 17.2031 10.3281Z" fill="currentColor"></path>
-                                                                </svg>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">                                                                       
-                                                <div class="item">     
+                                                    </a>
+                                                </article>
+
+                                                <article class="item">
+                                                    <a href="./assets/projects/viaticos.html" class="portfolio-card-link" data-umami-event="project_open" data-umami-event-project="viaticos" aria-label="Ver caso de estudio del Portal de Viáticos" aria-describedby="portfolio-tech-viaticos">
                                                     <div class="custom-Portolio">
                                                         <picture>
                                                             <source srcset="assets/imgs/works/PortalViaticos-card.webp" type="image/webp">
                                                             <img src="assets/imgs/works/PortalViaticos.png" alt="Portal empresarial de viáticos integrado con SAP Business One" width="1920" height="1080" loading="lazy" decoding="async">
                                                         </picture>
-                                                    </div>                                                
+                                                        <span class="portfolio-card-notch" aria-hidden="true"></span>
+                                                        <span class="portfolio-link portfolio-card-arrow" aria-hidden="true">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                                                <path d="M7 17 17 7M7 7h10v10"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
                                                     <div class="cont">
                                                         <div class="d-flex align-items-center">
-                                                           
+
                                                             <div class="mt-20">
                                                                 <div class="info">
-                                                                    <h4>Portal de Viáticos</h4>
+                                                                    <h3>Portal de Viáticos</h3>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <p class="fw-200 fz-14 mb-10">
-                                                             Plataforma web integrada con SAP Business One para gestionar solicitudes, comprobaciones 
-                                                             y autorizaciones de viáticos, optimizando el control financiero y la operación administrativa.
+                                                             Automaticé el flujo de viáticos con ASP.NET MVC y SAP Business One: solicitudes, comprobaciones y autorizaciones sin acceso directo al ERP.
                                                         </p>
+                                                        <p class="tech-badges portfolio-tech-badges" aria-label="Tecnologías principales">
+                                                            <span>ASP.NET MVC</span><span>C#</span><span>SQL Server</span><span>SAP B1 DI API</span><span class="portfolio-tech-more">+4</span>
+                                                        </p>
+                                                        <span class="portfolio-tech-description" id="portfolio-tech-viaticos">Tecnologías principales: ASP.NET MVC, C#, SQL Server y SAP B1 DI API; 4 tecnologías adicionales.</span>
                                                     </div>
-                                                     <div class="d-flex align-items-center portfolio-footer">                                                       
-                                                        <span class="tag-portfolio tag-private">Privado</span>                                                      
-                                                        <div class="ml-auto">                                                         
-                                                            <a href="./assets/projects/viaticos.html" class="portfolio-link">
-                                                                Ver más 
-                                                                <svg class="ml-5" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M17.2031 10.3281L11.5781 15.9531C11.535 15.9961 11.4839 16.0303 11.4276 16.0536C11.3713 16.077 11.3109 16.089 11.25 16.089C11.1891 16.089 11.1287 16.077 11.0724 16.0536C11.0161 16.0303 10.965 15.9961 10.9219 15.9531C10.8788 15.91 10.8446 15.8588 10.8213 15.8025C10.798 15.7462 10.786 15.6859 10.786 15.6249C10.786 15.564 10.798 15.5036 10.8213 15.4473C10.8446 15.391 10.8788 15.3399 10.9219 15.2968L15.7422 10.4687H3.125C3.00068 10.4687 2.88145 10.4193 2.79354 10.3314C2.70564 10.2435 2.65625 10.1242 2.65625 9.99993C2.65625 9.87561 2.70564 9.75638 2.79354 9.66847C2.88145 9.58056 3.00068 9.53118 3.125 9.53118H15.7422L10.9219 4.70305C10.8349 4.61603 10.786 4.498 10.786 4.37493C10.786 4.25186 10.8349 4.13383 10.9219 4.0468C11.0089 3.95978 11.1269 3.91089 11.25 3.91089C11.3731 3.91089 11.4911 3.95978 11.5781 4.0468L17.2031 9.6718C17.2476 9.71412 17.2829 9.76503 17.3071 9.82143C17.3313 9.87784 17.3438 9.93856 17.3438 9.99993C17.3438 10.0613 17.3313 10.122 17.3071 10.1784C17.2829 10.2348 17.2476 10.2857 17.2031 10.3281Z" fill="currentColor"></path>
-                                                                </svg>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    </a>
+                                                </article>
+
                                 </div>
                             </div>
                         </div>
@@ -487,308 +442,258 @@
 
                     <div class="resume section-padding pt-0" data-scroll-index="2" id="resume">
                         <div class="sec-head bord-thin-bottom pb-20 mb-60">
-                            <h4 class="sub-title fz-28">Experiencia Profesional</h4>
+                            <h2 class="sub-title fz-28">Experiencia Profesional</h2>
                         </div>
 
-                        <!-- Highlights -->
-                        <div class="row mb-40">
-                            <div class="col-md-4 mb-30">
-                                <div class="box-item text-center h-100 d-flex flex-column justify-content-center">
-                                    <h3 class="main-color fz-40 mb-10">+9 años</h3>
-                                    <p class="fz-14 mb-0 box-item-parrafo">Experiencia en sistemas reales en producción</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-30">
-                                <div class="box-item text-center h-100 d-flex flex-column justify-content-center">
-                                    <h3 class="main-color fz-32 mb-10">Backend .NET</h3>
-                                    <p class="fz-14 mb-0 box-item-parrafo">Arquitectura, APIs y manejo de datos</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-30">
-                                <div class="box-item text-center h-100 d-flex flex-column justify-content-center">
-                                    <h3 class="main-color fz-32 mb-10">Integraciones empresariales</h3>
-                                    <p class="fz-14 mb-0 box-item-parrafo">Integración SAP, Salesforce y automatización</p>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <!-- Experiencia -->
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="box-item md-mb30 experience-wrapper">
-
-                                    <div class="item mb-60 pb-30 bord-thin-bottom main-post">
-                                        <span class="date-resume">Octubre 2024 - Actualidad</span>
-                                        <h5>Desarrollador Full Stack .NET</h5>
-                                        <span class="company">Freelance</span>
-
-                                        <ul class="mt-15 fz-13 list-disc pl-5 ulResume">
-                                            <li>
-                                                Construí sistemas POS (ventas, inventario, facturación) utilizados en operación real, reduciendo errores de captura en ~25%.
-                                            </li>
-                                            <li>
-                                                Diseñé arquitectura modular en .NET/EF, reduciendo ~20% el tiempo de implementación de nuevas funcionalidades.
-                                            </li>
-                                            <li>
-                                                Implementé mejoras en consultas SQL para procesos críticos, optimizando tiempos de respuesta en transacciones y reportes.
-                                            </li>
-                                        </ul>
+                                <div class="experience-timeline" data-experience-timeline>
+                                    <div class="experience-timeline__track" aria-hidden="true">
+                                        <span class="experience-timeline__progress"></span>
                                     </div>
 
-                                    <div class="item mb-60 pb-30 bord-thin-bottom">
-                                        <span class="date-resume">Septiembre 2019 - Agosto 2024</span>
-                                        <h5>Desarrollador .NET (Senior)</h5>
-                                        <span class="company">IT Consultant Soluciones de Negocio</span>
+                                    <div class="experience-timeline__entries">
+                                        <article class="experience-entry" data-experience-item>
+                                            <span class="experience-timeline__node" aria-hidden="true"></span>
+                                            <div class="experience-card">
+                                                <header class="experience-card__header">
+                                                    <span class="experience-card__logo experience-card__logo--freelance" aria-hidden="true">FT</span>
+                                                    <div class="experience-card__heading">
+                                                        <h3>Desarrollador Full Stack .NET</h3>
+                                                        <span class="company">Independiente</span>
+                                                    </div>
+                                                    <span class="date-resume"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Octubre 2024 - Actualidad</span></span>
+                                                </header>
+                                                <ul class="mt-15 fz-13 project-impact-list">
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Construí sistemas de punto de venta (POS) con módulos de inventario y facturación, utilizados en operaciones reales. Estos redujeron los errores de captura en <strong class="experience-metric">~25%</strong>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Diseñé una arquitectura modular con .NET y Entity Framework (EF). Esto redujo en <strong class="experience-metric">~20%</strong> el tiempo de implementación de nuevas funcionalidades.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Optimicé consultas SQL de procesos críticos para reducir los tiempos de respuesta de transacciones y reportes.</li>
+                                                </ul>
+                                            </div>
+                                        </article>
 
-                                        <ul class="mt-15 fz-13 list-disc pl-5 ulResume">
-                                            <li>
-                                                Lideré el desarrollo de +4 portales empresariales, digitalizando procesos administrativos y reduciendo tiempos operativos en hasta 40%.
-                                            </li>
-                                            <li>
-                                                Diseñé e implementé integraciones entre Salesforce y SAP Business One mediante APIs REST con OAuth/JWT, sincronizando pedidos,
-                                                clientes y flujo comercial y reduciendo inconsistencias de datos en ~80%.
-                                            </li>
-                                            <li>
-                                                Desarrollé un portal de proveedores (CFDI) integrado a SAP B1 para validación y conciliación documental, disminuyendo errores de
-                                                validación y tiempos de procesamiento manual.
-                                            </li>
-                                            <li>
-                                                Construí un portal B2B conectado a SAP B1 que permite a distribuidores gestionar pedidos e inventario en tiempo real.
-                                            </li>
-                                            <li>
-                                                Implementé una plataforma de gestión de viáticos con flujos de aprobación, optimizando el control financiero y reduciendo tiempos de
-                                                autorización.
-                                            </li>
-                                            <li>
-                                                Desarrollé un sistema de facturación automática a partir de tickets de compra, eliminando procesos manuales y mejorando la eficiencia
-                                                operativa.
-                                            </li>
-                                            <li>
-                                                Refactoricé sistemas legacy de alta carga, mejorando performance ~30% y reduciendo incidencias en producción.
-                                            </li>
-                                        </ul>
-                                    </div>
+                                        <article class="experience-entry" data-experience-item>
+                                            <span class="experience-timeline__node" aria-hidden="true"></span>
+                                            <div class="experience-card">
+                                                <header class="experience-card__header">
+                                                    <span class="experience-card__logo"><img src="assets/imgs/company/ItConsultant.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"></span>
+                                                    <div class="experience-card__heading">
+                                                        <h3>Desarrollador .NET Senior</h3>
+                                                        <span class="company">IT Consultant Soluciones de Negocio</span>
+                                                    </div>
+                                                    <span class="date-resume"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Septiembre 2019 - Agosto 2024</span></span>
+                                                </header>
+                                                <ul class="mt-15 fz-13 project-impact-list">
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Lideré el desarrollo de más de cuatro portales empresariales. Estos digitalizaron procesos administrativos y redujeron los tiempos operativos hasta en un <strong class="experience-metric">40%</strong>. Entre ellos están el <a class="experience-project-link" href="assets/projects/distribuidores.html" data-umami-event="project_open" data-umami-event-project="distribuidores">portal B2B para distribuidores</a> y el <a class="experience-project-link" href="assets/projects/proveedores.html" data-umami-event="project_open" data-umami-event-project="proveedores">portal de proveedores para CFDI</a>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Integré Salesforce con SAP Business One mediante una API REST con autenticación OAuth/JWT. La integración sincronizaba pedidos, clientes y datos del flujo comercial, y redujo en <strong class="experience-metric">~80%</strong> las inconsistencias de datos. <a class="experience-project-link" href="assets/projects/apiSalesforceSap.html" data-umami-event="project_open" data-umami-event-project="apiSalesforceSap">Ver caso de integración</a>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Automaticé la gestión de viáticos mediante flujos de aprobación, reduciendo los tiempos de autorización. También automaticé la facturación a partir de tickets de compra y eliminé tareas manuales. <a class="experience-project-link" href="assets/projects/viaticos.html" data-umami-event="project_open" data-umami-event-project="viaticos">Ver caso de viáticos</a>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Refactoricé sistemas heredados con alta carga de procesamiento y mejoré su rendimiento en <strong class="experience-metric">~30%</strong>. También reduje las incidencias en producción.</li>
+                                                </ul>
+                                            </div>
+                                        </article>
 
-                                    <div class="item mb-20">
-                                        <span class="date-resume">Junio 2016 - Julio 2019</span>
-                                        <h5>Desarrollador .NET</h5>
-                                        <span class="company">Ingeniería Aplicada TI S.A. de C.V.</span>
-
-                                        <ul class="mt-15 fz-13 list-disc pl-5 ulResume">
-                                            <li>
-                                                Desarrollé soluciones para sectores empresarial y gubernamental (GRP) enfocadas en digitalización de procesos y trazabilidad de
-                                                información.
-                                            </li>
-                                            <li>
-                                                Centralicé lógica de negocio en backend (C#, ASP.NET MVC), reduciendo errores de validación ~20%.
-                                            </li>
-                                            <li>
-                                                Optimicé consultas en módulos de reporteo de alto volumen, reduciendo tiempos de ejecución hasta 40%.
-                                            </li>
-                                            <li>
-                                                Participé en el desarrollo de una app iOS para expediente clínico, integrando servicios backend y asegurando consistencia de datos.
-                                            </li>
-                                        </ul>
-
-                                        <p class="mt-20 fz-14  text-300">Proyectos relevantes:</p>
-                                        <ul class="mt-10 fz-12 list-disc pl-5 ulResume">
-                                            <li>ZAFER G3 — Sistema de contabilidad gubernamental para la ASEJ, enfocado
-                                                            en la gestión de información financiera pública.</li>
-                                            <li>MEDIC-MOVIL — App iOS para expediente clínico</li>
-                                            <li>ESCOLAR BIT — Sistema web para control escolar y administrativo</li>
-                                        </ul>
+                                        <article class="experience-entry" data-experience-item>
+                                            <span class="experience-timeline__node" aria-hidden="true"></span>
+                                            <div class="experience-card">
+                                                <header class="experience-card__header">
+                                                    <span class="experience-card__logo"><img src="assets/imgs/company/IngenieriaAplicadaTI.jpg" alt="" width="48" height="48" loading="lazy" decoding="async"></span>
+                                                    <div class="experience-card__heading">
+                                                        <h3>Desarrollador .NET</h3>
+                                                        <span class="company">Ingeniería Aplicada TI S.A. de C.V.</span>
+                                                    </div>
+                                                    <span class="date-resume"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>Junio 2016 - Julio 2019</span></span>
+                                                </header>
+                                                <ul class="mt-15 fz-13 project-impact-list">
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Desarrollé soluciones GRP para empresas y dependencias gubernamentales, enfocadas en digitalizar procesos y dar seguimiento a la información.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Centralicé la lógica de negocio en el backend con C# y ASP.NET MVC, reduciendo en <strong class="experience-metric">~20%</strong> los errores de validación.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Optimicé las consultas de módulos de reportes con alto volumen de datos y reduje sus tiempos de ejecución hasta en un <strong class="experience-metric">40%</strong>.</li>
+                                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7"></path></svg></span>Colaboré en una app para iOS de expediente clínico. Integré servicios backend y ayudé a mantener la consistencia de los datos.</li>
+                                                </ul>
+                                                <p class="experience-projects-summary"><strong>Proyectos relevantes:</strong> <strong>ZAFER G3</strong> (sistema de contabilidad pública para la ASEJ), <strong>MEDIC-MOVIL</strong> (app iOS para expediente clínico) y <strong>ESCOLAR BIT</strong> (sistema de control escolar y administrativo).</p>
+                                            </div>
+                                        </article>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Educación + Certificaciones -->
-                        <div class="row mt-40">
-                            <div class="col-lg-6">
+                        <div class="resume-education-grid mt-60">
+                            <section class="resume-education-column">
                                 <div class="sec-head bord-thin-bottom pb-20 mb-60">
-                                    <h4 class="sub-title fz-28">Formación técnica</h4>
+                                    <h3 class="sub-title fz-28">Formación técnica</h3>
                                 </div>
 
-                                <div class="cert-card ">
-                                    <div class="cert-content">
-                                        <span class="cert-year">2012 - 2017</span>
-                                        <h5>Ingeniería en Informática</h5>
-                                        <span class="cert-org">Instituto Tecnológico Superior Campus Tequila</span>
-                                    </div>
-                                </div>
+                                <article class="experience-card education-card">
+                                    <header class="experience-card__header">
+                                        <div class="experience-card__heading">
+                                            <h4>Ingeniería en Informática</h4>
+                                            <span class="company">Instituto Tecnológico Superior Campus Tequila · Carrera concluida</span>
+                                        </div>
+                                        <span class="date-resume"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>2012 - 2017</span></span>
+                                    </header>
+                                </article>
 
-                                <div class="cert-card ">
-                                    <div class="cert-content">
-                                        <span class="cert-year">2009 - 2012</span>
-                                        <h5>Técnico en Informática</h5>
-                                        <span class="cert-org">CBTA #106</span>
-                                    </div>
-                                </div>                            
+                                <article class="experience-card education-card">
+                                    <header class="experience-card__header">
+                                        <div class="experience-card__heading">
+                                            <h4>Técnico en Informática</h4>
+                                            <span class="company">CBTA #106</span>
+                                        </div>
+                                        <span class="date-resume"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>2009 - 2012</span></span>
+                                    </header>
+                                </article>
 
-                                
-                            </div>
-                             <div class="col-lg-6">
+
+                            </section>
+                            <section class="resume-education-column">
                                 <div class="sec-head bord-thin-bottom pb-20 mb-60">
-                                    <h4 class="sub-title fz-28">Certificaciones</h4>
+                                    <h3 class="sub-title fz-28">Certificaciones</h3>
                                 </div>
 
-                                <a href="https://www.coursera.org/account/accomplishments/professional-cert/ZVFOY8NBXKO5" target="_blank" rel="noopener noreferrer" title="Ver Certificado" aria-label="Ver certificado Full-Stack Developer de Microsoft" class="cert-card d-flex align-items-start">
-                                    <div class="cert-content">
-                                        <span class="cert-year">2025</span>
-                                        <h5>Full-Stack Developer (Microsoft)</h5>
-                                        <span class="cert-org">.NET, APIs y desarrollo web</span>
-                                    </div>
-                                    <div class="cert-arrow ml-auto">
-                                        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.2 32.3" xml:space="preserve" style="stroke-width: 2;">
-                                            <line x1="0" y1="16" x2="33" y2="16"></line>
-                                            <line x1="17.3" y1="0.7" x2="33.2" y2="16.5"></line>
-                                            <line x1="17.3" y1="31.6" x2="33.5" y2="15.4"></line>
-                                        </svg>
-                                    </div>
-                                </a>     
-                                
-                                <a href="https://www.coursera.org/account/accomplishments/specialization/D1U2EM3R2JYL" target="_blank" rel="noopener noreferrer" title="Ver Certificado" aria-label="Ver certificado Back-End Developer de Microsoft" class="cert-card d-flex align-items-start">
-                                    <div class="cert-content">
-                                        <span class="cert-year">2025</span>
-                                        <h5>Back-End Developer (Microsoft)</h5>
-                                        <span class="cert-org">APIs, arquitectura y servicios backend</span>
-                                    </div>
-                                    <div class="cert-arrow ml-auto">
-                                        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.2 32.3" xml:space="preserve" style="stroke-width: 2;">
-                                            <line x1="0" y1="16" x2="33" y2="16"></line>
-                                            <line x1="17.3" y1="0.7" x2="33.2" y2="16.5"></line>
-                                            <line x1="17.3" y1="31.6" x2="33.5" y2="15.4"></line>
-                                        </svg>
-                                    </div>
+                                <a href="https://www.coursera.org/account/accomplishments/professional-cert/ZVFOY8NBXKO5" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial en Coursera: Microsoft Full-Stack Developer" class="experience-card certification-card">
+                                    <header class="experience-card__header">
+                                        <span class="experience-card__logo"><img src="assets/imgs/certificate/MSFT-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span>
+                                        <div class="experience-card__heading">
+                                            <h4>Full-Stack Developer (Microsoft)</h4>
+                                            <span class="company">C#, Blazor y desarrollo web con .NET</span>
+                                        </div>
+                                        <time class="date-resume" datetime="2025"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>2025</span></time>
+                                    </header>
+                                    <span class="certification-card__link-label">Ver certificado profesional en Coursera <span aria-hidden="true">↗</span></span>
                                 </a>
 
-                                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1013370" target="_blank" rel="noopener noreferrer" title="Ver Certificado" aria-label="Ver certificado Scrum Fundamentals Certified" class="cert-card d-flex align-items-start">
-                                    <div class="cert-content">
-                                        <span class="cert-year">2024</span>
-                                        <h5>Scrum Fundamentals Certified (SFC™)</h5>
-                                        <span class="cert-org">Metodologías ágiles y trabajo en equipo</span>
-                                    </div>
-                                    <div class="cert-arrow ml-auto">
-                                        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.2 32.3" xml:space="preserve" style="stroke-width: 2;">
-                                            <line x1="0" y1="16" x2="33" y2="16"></line>
-                                            <line x1="17.3" y1="0.7" x2="33.2" y2="16.5"></line>
-                                            <line x1="17.3" y1="31.6" x2="33.5" y2="15.4"></line>
-                                        </svg>
-                                    </div>
+                                <a href="https://www.coursera.org/account/accomplishments/specialization/D1U2EM3R2JYL" target="_blank" rel="noopener noreferrer" aria-label="Ver credencial en Coursera: Microsoft Back-End Developer" class="experience-card certification-card">
+                                    <header class="experience-card__header">
+                                        <span class="experience-card__logo"><img src="assets/imgs/certificate/MSFT-logo.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span>
+                                        <div class="experience-card__heading">
+                                            <h4>Back-End Developer (Microsoft)</h4>
+                                            <span class="company">APIs, datos, seguridad y despliegue con .NET</span>
+                                        </div>
+                                        <time class="date-resume" datetime="2025"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>2025</span></time>
+                                    </header>
+                                    <span class="certification-card__link-label">Ver certificado profesional en Coursera <span aria-hidden="true">↗</span></span>
                                 </a>
 
-                                
+                                <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=1013370" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado en ScrumStudy: Scrum Fundamentals Certified" class="experience-card certification-card">
+                                    <header class="experience-card__header">
+                                        <span class="experience-card__logo"><img src="assets/imgs/certificate/SFC_logo.png" alt="" width="48" height="48" loading="lazy" decoding="async"></span>
+                                        <div class="experience-card__heading">
+                                            <h4>Scrum Fundamentals Certified (SFC™)</h4>
+                                            <span class="company">Metodologías ágiles y trabajo en equipo</span>
+                                        </div>
+                                        <time class="date-resume" datetime="2024"><i class="fas fa-calendar-alt" aria-hidden="true"></i><span>2024</span></time>
+                                    </header>
+                                    <span class="certification-card__link-label">Ver certificado en ScrumStudy <span aria-hidden="true">↗</span></span>
+                                </a>
 
 
-                                
-                                
-                            </div>
+
+
+
+
+                            </section>
 
 
 
                         </div>
                     </div>
 
-                    <!-- ==================== End Resume ==================== -->   
+                    <!-- ==================== End Resume ==================== -->
 
 
                     <!-- ==================== Start Skills ==================== -->
 
-                    <div class="skills section-padding pt-0" data-scroll-index="3" id="skills">
-                        
-                        <!-- Header -->
-                        <div class="sec-head bord-thin-bottom pb-20 mb-60">
-                            <h4 class="sub-title fz-28">Stack & Capacidades Técnicas</h4>
-                            <p class="fz-16 mt-15 text-300" >
-                                Desarrollo de aplicaciones, APIs, manejo de datos e integración entre plataformas.
-                            </p>
+                    <section class="skills section-padding pt-0" data-scroll-index="3" id="skills" aria-labelledby="skills-title">
+                        <div class="skills-heading">
+                            <h2 class="sub-title fz-28" id="skills-title">Stack &amp; Capacidades Técnicas</h2>
+                            <p class="fz-16 mt-15 text-300 portfolio-subtitle">Desarrollo de aplicaciones, APIs, manejo de datos e integración entre plataformas.</p>
                         </div>
 
-                        <div class="row g-4 align-items-stretch">
-
-                            <!-- LEFT -->
-                            <div class="col-lg-7">
-                                <div class="skills-grid">
-
-                                    <div class="skill-card">
-                                        <div class="skill-icon">⚙️</div>
-                                        <span class="skill-label">Backend</span>
-                                        <h5>APIs y lógica de negocio</h5>
-                                    </div>
-
-                                    <div class="skill-card">
-                                        <div class="skill-icon">💻</div>
-                                        <span class="skill-label">Frontend</span>
-                                        <h5>Interfaces claras y funcionales</h5>
-                                    </div>
-
-                                    <div class="skill-card">
-                                        <div class="skill-icon">🗄️</div>
-                                        <span class="skill-label">Datos</span>
-                                        <h5>Modelado y optimización de datos</h5>
-                                    </div>
-
-                                    <div class="skill-card integration">
-                                        <div class="skill-icon">🔗</div>
-                                        <span class="skill-label">Integración</span>
-                                        <h5>Integración de sistemas</h5>
-                                        <p>REST · SOAP · SAP B1 · Salesforce REST API</p>
-                                    </div>
-
-                                </div>
+                        <div class="skills-layout">
+                            <div class="skills-map" data-skills-map>
+                                <svg class="skills-map__graphic" id="skills-map-art" viewBox="0 0 560 700" width="560" height="700" aria-hidden="true" focusable="false">
+                                    <defs>
+                                        <pattern id="skills-map-dots" width="24" height="24" patternUnits="userSpaceOnUse">
+                                            <circle cx="12" cy="12" r="1" fill="currentColor" opacity=".13" />
+                                        </pattern>
+                                        <clipPath id="skills-core-clip">
+                                            <rect x="266" y="316" width="68" height="68" rx="12" />
+                                        </clipPath>
+                                    </defs>
+                                    <rect width="560" height="700" fill="url(#skills-map-dots)" />
+                                    <g class="skills-map__connections">
+                                        <path id="skills-link-csharp" pathLength="100" d="M124 99V236Q124 256 144 256H264Q280 256 280 272V304" />
+                                        <path id="skills-link-sql" pathLength="100" d="M444 99V236Q444 256 424 256H336Q320 256 320 272V304" />
+                                        <path id="skills-link-sap" pathLength="100" d="M464 350H346" />
+                                        <path id="skills-link-salesforce" pathLength="100" d="M432 620V500Q432 480 412 480H336Q320 480 320 464V396" />
+                                        <path id="skills-link-angular" pathLength="100" d="M144 620V500Q144 480 164 480H264Q280 480 280 464V396" />
+                                        <path id="skills-link-github" pathLength="100" d="M118 350H254" />
+                                    </g>
+                                    <g class="skills-map__pulses">
+                                        <use href="#skills-link-csharp" style="--pulse-delay: 0s" />
+                                        <use href="#skills-link-sql" style="--pulse-delay: -.7s" />
+                                        <use href="#skills-link-sap" style="--pulse-delay: -1.4s" />
+                                        <use href="#skills-link-salesforce" style="--pulse-delay: -2.1s" />
+                                        <use href="#skills-link-angular" style="--pulse-delay: -2.8s" />
+                                        <use href="#skills-link-github" style="--pulse-delay: -3.5s" />
+                                    </g>
+                                    <g class="skills-map__nodes">
+                                        <rect x="92" y="35" width="64" height="64" rx="16" />
+                                        <image class="skills-map__icon--brand" href="assets/imgs/skills/csharp-white.svg" x="107" y="49" width="34" height="36" />
+                                        <rect x="412" y="35" width="64" height="64" rx="16" />
+                                        <image href="assets/imgs/skills/sql-server.svg" x="424" y="47" width="40" height="40" />
+                                        <rect x="464" y="320" width="76" height="60" rx="16" />
+                                        <image class="skills-map__icon--brand" href="assets/imgs/skills/SAP-white.svg" x="475" y="336" width="54" height="28" />
+                                        <rect x="394" y="620" width="76" height="60" rx="16" />
+                                        <image class="skills-map__icon--brand" href="assets/imgs/skills/salesforce-white.svg" x="406" y="632" width="52" height="36" />
+                                        <rect x="112" y="620" width="64" height="64" rx="16" />
+                                        <image href="assets/imgs/skills/angular.svg" x="125" y="632" width="38" height="40" />
+                                        <rect x="54" y="318" width="64" height="64" rx="16" />
+                                        <image href="assets/imgs/skills/github_dark.svg" x="68" y="332" width="36" height="36" />
+                                    </g>
+                                    <rect class="skills-map__core" x="254" y="304" width="92" height="92" rx="20" />
+                                    <image href="assets/imgs/skills/Microsoft_.NET-white.svg" x="266" y="316" width="68" height="68" clip-path="url(#skills-core-clip)" />
+                                </svg>
                             </div>
 
-                            <!-- RIGHT -->
-                            <div class="col-lg-5">
-                                <div class="box-item h-100 skills-highlight">
-
-                                    <span class="skill-label">Stack principales</span>
-                                    <h5 class="mt-15 mb-25">Tecnologías</h5>
-
-                                    <div class="tech-badges">
-                                         <!-- CORE -->
-                                        <span>C#</span>
-                                        <span>.NET</span>
-                                        <span>ASP.NET MVC</span>
-                                        <span>Web API</span>
-                                        <span>SQL Server</span>
-
-                                        <!-- BACKEND -->
-                                        <span>Entity Framework</span>
-                                        <span>JWT</span>
-                                        <span>REST API</span>
-                                        <span>SOAP</span>
-
-                                         <!-- FRONTEND -->
-                                        <span>JavaScript</span>
-                                        <span>TypeScript</span>
-                                        <span>Angular</span>
-                                        <span>JQuery</span>
-
-                                         <!-- TOOLS -->
-                                        <span>Git</span>
-                                        <span>GitHub</span>
-                                        <span>Azure DevOps</span>
-                                        <span>Swagger</span>
-
-                                        <!-- INTEGRACIÓN -->
-                                        <span>SAP B1</span>
-                                        <span>Salesforce REST API</span>
-
-                                        <!-- METODOLOGÍA -->
-                                        <span>SCRUM</span>
-
-                                    </div>
-
-
+                            <div class="skills-categories">
+                                <div class="skills-category">
+                                    <h3>Backend y datos</h3>
+                                    <p>Desarrollo APIs y servicios en .NET con lógica de negocio y consultas SQL optimizadas.</p>
+                                    <a class="skills-proof-link" href="assets/projects/trading.html" data-umami-event="project_open" data-umami-event-project="trading">Ver caso: Trading Book</a>
+                                    <ul class="skills-technologies" aria-label="Tecnologías de backend y datos">
+                                        <li>C#</li><li class="is-featured">.NET</li><li>ASP.NET MVC</li><li>Web API</li><li>Entity Framework</li><li>JWT</li><li>SQL Server</li><li>SAP HANA</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-category">
+                                    <h3>Frontend</h3>
+                                    <p>Construyo interfaces web funcionales.</p>
+                                    <ul class="skills-technologies" aria-label="Tecnologías de frontend">
+                                        <li>JavaScript</li><li>TypeScript</li><li>Angular</li><li>jQuery</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-category">
+                                    <h3>Integración</h3>
+                                    <p>Conecto Salesforce y SAP Business One mediante APIs REST y SOAP.</p>
+                                    <a class="skills-proof-link" href="assets/projects/apiSalesforceSap.html" data-umami-event="project_open" data-umami-event-project="apiSalesforceSap">Ver caso: integración Salesforce ↔ SAP B1</a>
+                                    <ul class="skills-technologies" aria-label="Tecnologías de integración">
+                                        <li class="is-featured">REST API</li><li>SOAP</li><li class="is-featured">SAP B1</li><li class="is-featured">Salesforce REST API</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-category">
+                                    <h3>Herramientas y colaboración</h3>
+                                    <p>Versiono código con Git y GitHub, documento APIs con Swagger y gestiono el trabajo con Azure DevOps y Scrum.</p>
+                                    <ul class="skills-technologies" aria-label="Herramientas y colaboración">
+                                        <li>Git</li><li>GitHub</li><li>Azure DevOps</li><li>Swagger</li><li>Scrum</li>
+                                    </ul>
                                 </div>
                             </div>
-
                         </div>
-
-                    
-
-                    </div>
+                    </section>
 
                     <!-- ==================== End Skills ==================== -->
 
@@ -796,38 +701,36 @@
 
                     <section class="contact section-padding" data-scroll-index="4" id="contact">
                         <div class="container">
-                            <div class="row justify-content-between">
-                                
+                            <div class="row justify-content-between contact-layout">
+
                                 <!-- Left Content -->
                                 <div class="col-lg-5 valign">
                                     <div class="sec-head md-mb50">
-                                        <span class="sub-title mb-15">Contacto</span>
-
-                                        <h2 class="fz-50 contact-title">
-                                            Estoy abierto a <br>
+                                        <h2 class="contact-title">
+                                            Estoy abierto a
                                             <span class="main-color">nuevas oportunidades</span>
                                         </h2>
 
                                         <p class="mt-20">
-                                            Si crees que mi perfil puede aportar valor a tu equipo o proyecto, será un gusto conversar.
+                                            ¿Tienes una vacante en mente? Cuéntame el puesto, la empresa y qué reto busca resolver el equipo; así podremos hablar de cómo puedo aportar.
                                         </p>
 
-                                        <div class="mt-30">
-                                            <span class="hero-chip">Disponible para oportunidades</span>
-                                        </div>
+                                        <p class="contact-note contact-alternative">
+                                            También puedes <a class="contact-link" href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer">escribirme por LinkedIn</a>.
+                                        </p>
                                     </div>
                                 </div>
 
                                 <!-- Right Form -->
                                 <div class="col-lg-6">
                                     <div class="contact-form-box">
-                                        
+
                                         <form id="contact-form" class="contact-form">
 
-                                           
+
 
                                              <!-- Web3Forms Access Key -->
-                                            <input type="hidden" name="access_key" value="869e45ea-dd24-4b46-a7b1-8e7479b801a7">                                        
+                                            <input type="hidden" name="access_key" value="869e45ea-dd24-4b46-a7b1-8e7479b801a7">
 
                                             <!-- Honeypot anti-spam -->
                                             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
@@ -835,21 +738,24 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-10">
-                                                        <input id="form_name" type="text" name="name" placeholder="Nombre" autocomplete="name" aria-label="Nombre" aria-describedby="error_name" required>
+                                                        <label class="contact-label" for="form_name">Nombre</label>
+                                                        <input id="form_name" type="text" name="name" autocomplete="name" aria-describedby="error_name" required>
                                                         <small class="field-error" id="error_name"></small>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-6">
                                                     <div class="mb-10">
-                                                        <input id="form_email" type="email" name="email" placeholder="Email" autocomplete="email" aria-label="Email" aria-describedby="error_email" required>
+                                                        <label class="contact-label" for="form_email">Correo electrónico</label>
+                                                        <input id="form_email" type="email" name="email" autocomplete="email" aria-describedby="error_email" required>
                                                         <small class="field-error" id="error_email"></small>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-12">
                                                     <div class="mb-10">
-                                                        <textarea id="form_message" name="message" placeholder="Cuéntame sobre la oportunidad o proyecto..." autocomplete="off" aria-label="Mensaje" aria-describedby="error_message" required></textarea>
+                                                        <label class="contact-label" for="form_message">Mensaje</label>
+                                                        <textarea id="form_message" name="message" placeholder="Describe el puesto y el reto que busca resolver el equipo." autocomplete="off" aria-describedby="error_message" required></textarea>
                                                          <small class="field-error" id="error_message"></small>
                                                     </div>
                                                 </div>
@@ -864,7 +770,7 @@
 
                                                 <div class="col-12">
                                                     <button type="submit" class="butn btnSendContactSection" id="contact-submit-btn">
-                                                        <span class="text">Enviar mensaje →</span>
+                                                        <span class="text">Enviar mensaje</span>
                                                     </button>
                                                 </div>
 
@@ -889,57 +795,7 @@
                         </div>
                     </section>
 
-                    <!-- ==================== End Contact ==================== -->                    
-                   
-
-                                 
-
-
-                   <!-- ==================== Start Footer ==================== -->
-
-                    <footer class="footer-ultra">
-                        <div class="footer-ultra-box">
-
-                            <div class="footer-grid">
-
-                                <!-- LEFT -->
-                                <div class="footer-left">
-                                    <p class="footer-eyebrow">Disponible para oportunidades</p>
-
-                                    <h3 class="footer-title">
-                                        .NET, Backend e integraciones para sistemas reales.
-                                    </h3>
-
-                                </div>
-
-                                <!-- RIGHT -->
-                                <div class="footer-right">
-
-                                    <div class="footer-cta">
-                                        <a href="#contact" class="footer-btn">
-                                            Hablemos
-                                        </a>
-                                    </div>
-
-                                    <div class="footer-links">
-                                        <a href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="https://github.com/FernandoTR" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en GitHub"><i class="fab fa-github"></i></a>
-                                        <a href="assets/docs/FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir CV de Fernando Torres en PDF">CV</a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="footer-bottom">
-                                <span>Fernando Torres</span>
-                                <span>© <span id="currentYear"></span></span>
-                            </div>
-
-                        </div>
-                    </footer>
-
-                    <!-- ==================== End Footer ==================== -->
+                    <!-- ==================== End Contact ==================== -->
 
                 </div>
             </div>
@@ -948,9 +804,61 @@
 
         <!-- ==================== End main box ==================== -->
 
-
-
     </main>
+
+
+
+
+                   <!-- ==================== Start Footer ==================== -->
+
+                    <footer class="footer-ultra">
+                        <div class="footer-ultra-box">
+                            <div class="footer-grid">
+                                <div class="footer-column footer-brand">
+                                        <a class="footer-logo" href="index.html" aria-label="Ir al inicio del portafolio de Fernando Torres">
+                                            <img src="assets/imgs/logo-light.svg" alt="">
+                                        </a>
+                                        <h3>Fernando Torres</h3>
+                                        <p>Desarrollador <span class="main-color">Full Stack .NET</span></p>
+                                </div>
+
+                                <nav class="footer-column" aria-label="Navegación del pie de página">
+                                    <h4>Explora</h4>
+                                    <ul class="footer-nav">
+                                        <li><a href="#home" data-scroll-nav="0">Inicio</a></li>
+                                        <li><a href="#portfolio" data-scroll-nav="1">Proyectos</a></li>
+                                        <li><a href="#resume" data-scroll-nav="2">Experiencia</a></li>
+                                        <li><a href="#skills" data-scroll-nav="3">Tecnologías</a></li>
+                                        <li><a href="#contact" data-scroll-nav="4">Contacto</a></li>
+                                    </ul>
+                                </nav>
+
+                                <div class="footer-column footer-contact">
+                                    <h4>Contacto</h4>
+                                    <p>Si crees que puedo sumar a tu equipo o proyecto, conversemos.</p>
+                                    <a class="footer-action" href="#contact" data-scroll-nav="4">Hablemos <span aria-hidden="true">→</span></a>
+                                </div>
+
+                                <div class="footer-column">
+                                    <h4>Redes profesionales</h4>
+                                    <div class="footer-socials">
+                                        <a href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                                        <a href="https://github.com/FernandoTR" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-bottom">
+                                <span>© <span id="currentYear"></span> Fernando Torres</span>
+                                <div class="footer-bottom-actions">
+                                    <a href="assets/docs/FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" data-umami-event="cv_open" aria-label="Abrir CV de Fernando Torres en PDF">Ver CV (PDF) <span aria-hidden="true">↗</span></a>
+                                    <a href="privacidad.html">Aviso de privacidad</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                    <!-- ==================== End Footer ==================== -->
 
 
 
@@ -963,11 +871,34 @@
     <!-- plugins -->
     <script src="assets/js/plugins.js"></script>
 
-    <!-- Add the Web3Forms script -->
-    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <!-- Load captcha only as the contact form approaches the viewport. -->
+    <script>
+        (function () {
+            const contact = document.getElementById("contact");
+            if (!contact) return;
+
+            function loadContactCaptcha() {
+                const script = document.createElement("script");
+                script.src = "https://web3forms.com/client/script.js";
+                script.async = true;
+                document.body.appendChild(script);
+            }
+
+            if ("IntersectionObserver" in window) {
+                const observer = new IntersectionObserver(function (entries) {
+                    if (!entries[0].isIntersecting) return;
+                    observer.disconnect();
+                    loadContactCaptcha();
+                }, { rootMargin: "800px 0px" });
+                observer.observe(contact);
+            } else {
+                loadContactCaptcha();
+            }
+        })();
+    </script>
 
     <!-- custom scripts -->
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js?v=20261019-hero-title-loop-5s"></script>
 
     <script>
         (function () {
@@ -991,9 +922,62 @@
                 });
             }
 
-            loadScript("assets/js/three.min.js")
-                .then(function () { return loadScript("assets/js/cdemo.js"); })
-                .catch(function () {});
+            function loadHeroEffect() {
+                loadScript("assets/js/three.min.js")
+                    .then(function () { return loadScript("assets/js/cdemo.js"); })
+                    .then(function () {
+                        if (!window.THREE) return;
+                        var canvas = document.querySelector(".hero-webgl");
+                        if (!canvas) return;
+
+                        var scene = new THREE.Scene();
+                        var camera = new THREE.PerspectiveCamera(42, 1, .1, 100);
+                        camera.position.z = 4.8;
+                        var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+                        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+                        var points = [];
+                        for (var i = 0; i < 900; i++) {
+                            var y = 1 - (i / 899) * 2;
+                            var radius = Math.sqrt(1 - y * y);
+                            var angle = i * 2.399963;
+                            points.push(Math.cos(angle) * radius, y, Math.sin(angle) * radius);
+                        }
+                        var geometry = new THREE.BufferGeometry();
+                        geometry.setAttribute("position", new THREE.Float32BufferAttribute(points, 3));
+                        var material = new THREE.PointsMaterial({ color: 0xbbbaa6, size: .026, transparent: true, opacity: .52, sizeAttenuation: true });
+                        var orb = new THREE.Points(geometry, material);
+                        orb.rotation.z = -.22;
+                        scene.add(orb);
+                        var pointer = { x: 0, y: 0 };
+                        window.addEventListener("pointermove", function (event) {
+                            pointer.x = (event.clientX / window.innerWidth - .5) * 2;
+                            pointer.y = (event.clientY / window.innerHeight - .5) * 2;
+                        }, { passive: true });
+                        function resize() {
+                            var rect = canvas.parentElement.getBoundingClientRect();
+                            renderer.setSize(rect.width, rect.height, false);
+                            camera.aspect = rect.width / rect.height;
+                            camera.updateProjectionMatrix();
+                        }
+                        function render(time) {
+                            orb.rotation.y = time * .00012 + pointer.x * .18;
+                            orb.rotation.x = pointer.y * .08;
+                            renderer.render(scene, camera);
+                            if (document.visibilityState !== "hidden") window.requestAnimationFrame(render);
+                        }
+                        resize();
+                        window.addEventListener("resize", resize, { passive: true });
+                        canvas.classList.add("is-ready");
+                        window.requestAnimationFrame(render);
+                    })
+                    .catch(function () {});
+            }
+
+            if ("requestIdleCallback" in window) {
+                window.requestIdleCallback(loadHeroEffect, { timeout: 2000 });
+            } else {
+                window.setTimeout(loadHeroEffect, 1000);
+            }
         })();
     </script>
 
@@ -1007,6 +991,7 @@
 
             const toast = document.getElementById("toast");
             const toastMessage = toast.querySelector(".toast-message");
+            const formStatus = document.getElementById("form-status");
 
             const fields = {
                 name: document.getElementById("form_name"),
@@ -1035,14 +1020,21 @@
                 }, 4000);
             }
 
+            function setFormStatus(message, type) {
+                formStatus.textContent = message;
+                formStatus.className = `form-status mt-15 ${type}`;
+            }
+
             function clearError(fieldKey) {
                 fields[fieldKey].classList.remove("input-error");
+                fields[fieldKey].removeAttribute("aria-invalid");
                 errors[fieldKey].textContent = "";
                 errors[fieldKey].classList.remove("show");
             }
 
             function setError(fieldKey, message) {
                 fields[fieldKey].classList.add("input-error");
+                fields[fieldKey].setAttribute("aria-invalid", "true");
                 errors[fieldKey].textContent = message;
                 errors[fieldKey].classList.add("show");
             }
@@ -1083,7 +1075,7 @@
                     setError("email", "Ingresa un correo válido.");
                     if (!firstInvalidField) firstInvalidField = fields.email;
                     valid = false;
-                }                
+                }
 
                 if (!fields.message.value.trim()) {
                     setError("message", "El mensaje es obligatorio.");
@@ -1099,6 +1091,7 @@
                 }
 
                 if (!valid) {
+                    setFormStatus("Revisa los campos marcados y completa hCaptcha.", "error");
                     showToast("Corrige los campos marcados", "error");
 
                     if (firstInvalidField) {
@@ -1138,6 +1131,7 @@
 
                 if (!validate()) return;
 
+                setFormStatus("Enviando mensaje…", "loading");
                 btn.classList.add("loading");
                 btn.disabled = true;
                 btnText.textContent = "Enviando mensaje...";
@@ -1159,33 +1153,41 @@
 
                     if (data.success) {
                         showToast("Mensaje enviado correctamente", "success");
+                        setFormStatus("Mensaje enviado correctamente. Gracias por escribir.", "success");
                         form.reset();
 
                         Object.keys(fields).forEach(key => clearError(key));
                         clearCaptchaError();
 
                         if (window.hcaptcha) hcaptcha.reset();
+                        try {
+                            window.umami?.track("contact_sent");
+                        } catch (err) {
+                            console.error("No se pudo registrar el evento de analítica.", err);
+                        }
                     } else {
-                        showToast("Error al enviar el mensaje", "error");
+                        showToast("No se pudo enviar el mensaje", "error");
+                        setFormStatus("No se pudo enviar tu mensaje. Inténtalo de nuevo.", "error");
                         if (window.hcaptcha) hcaptcha.reset();
                         console.error(data);
                     }
 
                 } catch (err) {
                     showToast("Error de conexión", "error");
+                    setFormStatus("No hay conexión. Revisa tu internet e inténtalo de nuevo.", "error");
                     if (window.hcaptcha) hcaptcha.reset();
                     console.error(err);
                 }
 
                 btn.classList.remove("loading");
                 btn.disabled = false;
-                btnText.textContent = "Enviar mensaje →";
+                btnText.textContent = "Enviar mensaje";
             });
 
         });
         </script>
 
-    <div id="toast" class="toast" role="status" aria-live="polite">
+    <div id="toast" class="toast" aria-hidden="true">
     <div class="toast-content">
         <span class="toast-icon"></span>
         <span class="toast-message"></span>

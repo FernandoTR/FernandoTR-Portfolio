@@ -7,14 +7,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Case study del Portal de Proveedores, sistema ASP.NET MVC para validar CFDI, integrar documentos con SAP Business One y centralizar el seguimiento documental de proveedores.">
+    <meta name="description" content="Caso de estudio del Portal de Proveedores: aplicación ASP.NET MVC que valida CFDI, integra documentos con SAP Business One y permite consultar el estado de pago.">
     <meta name="keywords" content="Portal de Proveedores, ASP.NET MVC, C#, SQL Server, SAP Business One, SAP DI API, CFDI, XML, proveedores, integración ERP">
     <meta name="author" content="Fernando Torres">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0e0f0f">
     
     <meta property="og:title" content="Portal de Proveedores - Integración CFDI y SAP Business One">
-    <meta property="og:description" content="Proyecto empresarial desarrollado por Fernando Torres para validar CFDI, evitar duplicidad documental e integrar proveedores con SAP Business One.">
+    <meta property="og:description" content="Proyecto empresarial desarrollado por Fernando Torres. Valida CFDI, evita documentos duplicados y conecta la gestión de proveedores con SAP Business One.">
     <meta property="og:image" content="https://byfernandotorres.online/assets/imgs/works/PortalProveedores.png">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_MX">
@@ -23,7 +23,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Portal de Proveedores - Integración CFDI y SAP B1">
-    <meta name="twitter:description" content="Case study de un portal ASP.NET MVC para validación documental de proveedores e integración con SAP Business One.">
+    <meta name="twitter:description" content="Caso de estudio de un portal ASP.NET MVC para validar CFDI, integrar documentos con SAP Business One y consultar el estado de pago.">
     <meta name="twitter:image" content="https://byfernandotorres.online/assets/imgs/works/PortalProveedores.png">
 
     <!-- Title  -->
@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="../../assets/css/plugins/glightbox.min.css">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css?v=20261016-proveedores">
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -62,6 +62,7 @@
     }
     </script>
 
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="520ea72b-00cd-44e1-91c8-b9f31af6abd1" data-domains="byfernandotorres.online" data-exclude-search="true" data-exclude-hash="true"></script>
 </head>
 
 <body>
@@ -70,21 +71,15 @@
 
     <!-- ==================== Start Loading ==================== -->
 
-    <div class="loader-wrap">
+     <div class="loader-wrap">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
 
         <div class="loader-wrap-heading">
-            <div class="load-text">
-                <span>C</span>
-                <span>a</span>
-                <span>r</span>
-                <span>g</span>
-                <span>a</span>
-                <span>n</span>
-                <span>d</span>
-                <span>o</span>
+            <div class="loader-status" role="status" aria-live="polite">
+                <svg class="thinking-orb-loader" viewBox="0 0 96 96" data-state="solving" role="img" aria-label="Preparando el caso de estudio de TradingBook"></svg>
+                <span>Cargando el proyecto...</span>
             </div>
         </div>
     </div>
@@ -108,7 +103,7 @@
 
     <!-- ==================== Start Navbar ==================== -->
 
-    <nav class="navbar navbar-expand-lg pt-20">
+    <nav class="navbar navbar-expand-lg pt-20 trading-navbar">
         <div class="container-xxl">
 
             <!-- Logo -->
@@ -130,7 +125,7 @@
                         <a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia Profesional</span></a>
+                        <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia</span></a>
                     </li>
                      <li class="nav-item">
                         <a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a>
@@ -157,277 +152,302 @@
 
         <!-- ==================== Start project ==================== -->
 
-        <section class="project section-padding project-case-study">
+        <section class="project section-padding project-case-study project-trading project-proveedores">
             <div class="container container-xxl">
                 <div class="row justify-content-center">
 
                     <div class="col-lg-10 main-post">
                         <div class="caption text-center">
 
-                            <div class="gat">
-                                <span>Proyecto empresarial</span>
-                                <span>SAP Business One</span>
-                                <span>CFDI</span>
-                                <span>Integración ERP</span>
-                            </div>
-
-                            <h1 class="fz-55 mt-30">Portal de Proveedores</h1>
+                            <h1 class="mt-30">Portal de Proveedores</h1>
 
                             <p class="fz-18 mt-20 project-hero-copy">
-                                Plataforma web para validar CFDI, controlar documentación fiscal y conectar el proceso
-                                de proveedores con SAP Business One de forma trazable.
+                                Portal web para que los proveedores carguen documentos y consulten el estado de pago.
+                                Antes de integrar cada factura con SAP Business One, valida los datos del CFDI y conserva el seguimiento documental.
                             </p>
+                            <p class="project-hero-role">Proyecto empresarial <span aria-hidden="true">·</span> Full Stack .NET Developer</p>
+                            
 
                         </div>
                     </div>
 
-                    <div class="col-lg-11">
+                    <div class="col-lg-10 mt-50">
+                        <div class="project-hero-carousel" role="region" aria-roledescription="carrusel" aria-label="Capturas del Portal de Proveedores">
+                            <div class="project-hero-shell" id="providers-hero-slides">
+                                <svg class="project-hero-aura" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                    <defs>
+                                        <rect id="providers-aura-outline" width="100%" height="100%" rx="14" pathLength="100" />
+                                        <filter id="providers-aura-soft" x="-30%" y="-60%" width="160%" height="220%" color-interpolation-filters="sRGB">
+                                            <feGaussianBlur stdDeviation="26" />
+                                        </filter>
+                                        <pattern id="providers-aura-dots" patternUnits="userSpaceOnUse" width="3" height="3">
+                                            <circle cx="1.5" cy="1.5" r="0.65" fill="#fff" />
+                                        </pattern>
+                                        <mask id="providers-aura-texture" x="-30%" y="-60%" width="160%" height="220%">
+                                            <rect x="-30%" y="-60%" width="160%" height="220%" fill="url(#providers-aura-dots)" />
+                                        </mask>
+                                        <mask id="providers-aura-line-neutral-fade" x="-30%" y="-60%" width="160%" height="220%">
+                                            <g class="project-aura-line-mask" filter="url(#providers-aura-soft)">
+                                                <use href="#providers-aura-outline" class="project-aura-track project-aura-neutral" />
+                                            </g>
+                                        </mask>
+                                        <mask id="providers-aura-line-orange-fade" x="-30%" y="-60%" width="160%" height="220%">
+                                            <g class="project-aura-line-mask" filter="url(#providers-aura-soft)">
+                                                <use href="#providers-aura-outline" class="project-aura-track project-aura-orange" />
+                                            </g>
+                                        </mask>
+                                    </defs>
+                                    <g class="project-aura-haze" filter="url(#providers-aura-soft)">
+                                        <use href="#providers-aura-outline" class="project-aura-track project-aura-neutral" />
+                                        <use href="#providers-aura-outline" class="project-aura-track project-aura-orange" />
+                                    </g>
+                                    <g mask="url(#providers-aura-texture)">
+                                        <g class="project-aura-dots" filter="url(#providers-aura-soft)">
+                                            <use href="#providers-aura-outline" class="project-aura-track project-aura-neutral" />
+                                            <use href="#providers-aura-outline" class="project-aura-track project-aura-orange" />
+                                        </g>
+                                    </g>
+                                    <use href="#providers-aura-outline" class="project-aura-line project-aura-neutral" mask="url(#providers-aura-line-neutral-fade)" />
+                                    <use href="#providers-aura-outline" class="project-aura-line project-aura-orange" mask="url(#providers-aura-line-orange-fade)" />
+                                    <use href="#providers-aura-outline" class="project-aura-line project-aura-core" mask="url(#providers-aura-line-orange-fade)" />
+                                </svg>
+                                <a href="../../assets/imgs/works/PortalProveedores_inicio.png" class="glightbox project-hero-slide" data-gallery="proveedores-hero" data-caption="Pantalla de bienvenida y acceso al Portal de Proveedores." aria-label="Ampliar pantalla de bienvenida del Portal de Proveedores">
+                                    <picture>
+                                        <source srcset="../../assets/imgs/works/PortalProveedores_inicio.webp" type="image/webp">
+                                        <img src="../../assets/imgs/works/PortalProveedores_inicio.png" alt="Pantalla de bienvenida del Portal de Proveedores con acceso a la cuenta" width="1832" height="912" decoding="async" fetchpriority="high">
+                                    </picture>
+                                </a>
+                                <a href="../../assets/imgs/works/PortalProveedores_Detail01.png" class="glightbox project-hero-slide" data-gallery="proveedores-hero" data-caption="Lista de documentos procesados, archivos adjuntos y facturas relacionadas." aria-label="Ampliar lista de documentos procesados y facturas relacionadas" hidden>
+                                    <picture>
+                                        <source srcset="../../assets/imgs/works/PortalProveedores_Detail01.webp" type="image/webp">
+                                        <img src="../../assets/imgs/works/PortalProveedores_Detail01.png" alt="Documentos procesados con archivos XML y PDF adjuntos, y sus facturas relacionadas" width="2291" height="1039" decoding="async">
+                                    </picture>
+                                </a>
+                            </div>
+                            <p class="project-hero-caption" id="providers-hero-caption">Pantalla de bienvenida y acceso al Portal de Proveedores.</p>
+                            <button class="project-hero-motion" type="button" aria-pressed="false" aria-controls="providers-hero-slides" aria-describedby="providers-hero-caption"></button>
+                        </div>
 
-                        <div class="project-hero-shell mb-80 mt-40">
-                            <a href="../../assets/imgs/works/PortalProveedores.png" class="glightbox" data-gallery="portfolio">
-                                <picture>
-                                    <source srcset="../../assets/imgs/works/PortalProveedores.webp" type="image/webp">
-                                    <img src="../../assets/imgs/works/PortalProveedores.png" alt="Portal de Proveedores integrado con SAP Business One" width="1920" height="1080" decoding="async" fetchpriority="high">
-                                </picture>
-                            </a>
-
-                            <div class="project-hero-strip">
-                                <div>
-                                    <span class="project-metric">CFDI</span>
-                                    <p>Validación fiscal XML/PDF</p>
-                                </div>
-                                <div>
-                                    <span class="project-metric">SAP B1</span>
-                                    <p>Integración con ERP</p>
-                                </div>
-                                <div>
-                                    <span class="project-metric">Multiempresa</span>
-                                    <p>Operación por sociedad</p>
-                                </div>
-                                <div>
-                                    <span class="project-metric">Trazabilidad</span>
-                                    <p>Estatus y seguimiento</p>
+                        <div class="row justify-content-center mt-30 mb-50">
+                            <div class="col-lg-12">
+                                <div class="mt-20 main-post project-capabilities">
+                                    <h2>Funciones principales</h2>
+                                    <div class="project-feature-grid">
+                                        <article class="project-feature-card">
+                                            <span class="project-feature-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none">
+                                                    <path stroke="currentColor" d="M6.5 3.5h8l3 3v14h-11a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2Z" />
+                                                    <path stroke="currentColor" d="M14.5 3.5v3h3M9 11h6M9 14h3" />
+                                                    <path stroke="currentColor" d="m13.5 17 1.5 1.5 3-3" />
+                                                </svg>
+                                            </span>
+                                            <h3>Validación de CFDI</h3>
+                                            <p>Revisa los archivos XML y PDF y valida el UUID, el RFC, los importes y las reglas fiscales antes del registro.</p>
+                                        </article>
+                                        <article class="project-feature-card">
+                                            <span class="project-feature-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none">
+                                                    <rect stroke="currentColor" x="3.5" y="5" width="6" height="5" rx="1" />
+                                                    <rect stroke="currentColor" x="14.5" y="5" width="6" height="5" rx="1" />
+                                                    <rect stroke="currentColor" x="9" y="15" width="6" height="5" rx="1" />
+                                                    <path stroke="currentColor" d="M6.5 10v2.5h11V10m-5.5 2.5V15" />
+                                                </svg>
+                                            </span>
+                                            <h3>Integración con SAP Business One</h3>
+                                            <p>Asocia documentos con órdenes, facturas y registros existentes en SAP Business One.</p>
+                                        </article>
+                                        <article class="project-feature-card">
+                                            <span class="project-feature-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none">
+                                                    <circle stroke="currentColor" cx="9" cy="7.5" r="3" />
+                                                    <path stroke="currentColor" d="M3.5 20v-1.5a5.5 5.5 0 0 1 11 0V20Z" />
+                                                    <path stroke="currentColor" d="M18 14v6m-2.5-3.5L18 14l2.5 2.5" />
+                                                </svg>
+                                            </span>
+                                            <h3>Portal de autoservicio</h3>
+                                            <p>Permite a los proveedores registrarse, cargar documentos y consultar el estado de pago en línea.</p>
+                                        </article>
+                                        <article class="project-feature-card">
+                                            <span class="project-feature-icon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none">
+                                                    <path stroke="currentColor" d="M3.5 20.5h17M5.5 20V5.5l6.5-2 6.5 2V20" />
+                                                    <path stroke="currentColor" d="M8.5 8h1m5 0h1m-7 4h1m5 0h1M10 20v-4h4v4" />
+                                                </svg>
+                                            </span>
+                                            <h3>Control multiempresa</h3>
+                                            <p>Valida cada documento según la sociedad y el RFC receptor, y centraliza los archivos XML y PDF.</p>
+                                        </article>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row justify-content-center">
-
-                            <div class="col-lg-7">
-                                <div class="cont md-mb50">
-
-                                    <p class="project-lead text-align-justify">
-                                        El portal centraliza la recepción documental de proveedores y reduce validaciones manuales
-                                        antes de relacionar facturas con información existente en SAP Business One. La solución
-                                        combina una experiencia simple para usuarios externos con reglas técnicas para proteger la
-                                        calidad de datos del ERP.
-                                    </p>
-
-                                    <div class="info-area flex mt-30 pb-30 pt-30 bord-thin-top bord-thin-bottom">
-                                        <div>
-                                            <div class="tags flex">
-                                                <div class="valign">
-                                                    <span class="stack-name">Tecnologías: </span>
-                                                </div>
-                                                <div>
-                                                    <span class="tag-stack mt-5">ASP.NET MVC</span>
-                                                    <span class="tag-stack mt-5">C#</span>
-                                                    <span class="tag-stack mt-5">SQL Server</span>
-                                                    <span class="tag-stack mt-5">SAP Business One</span>
-                                                    <span class="tag-stack mt-5">SAP DI API</span>
-                                                    <span class="tag-stack mt-5">CFDI / Anexo 20</span>
-                                                    <span class="tag-stack mt-5">JavaScript</span>
-                                                    <span class="tag-stack mt-5">jQuery</span>
-                                                    <span class="tag-stack mt-5">Bootstrap</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-20">Contexto y solución</h5>
-                                        <p class="text-align-justify">
-                                            La operación requería validar XML, PDF, UUID, RFC, importes y sociedad receptora antes
-                                            de aceptar documentos de proveedores. Se implementó un portal que automatiza estas reglas,
-                                            evita duplicidad documental y permite consultar el estatus de pago sin depender de procesos
-                                            manuales o correos aislados.
-                                        </p>
-                                    </div>
-
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-30">Capacidades principales</h5>
-
-                                        <div class="project-feature-grid project-feature-grid-compact">
-                                            <div class="project-feature-card">
-                                                <span class="project-feature-index">01</span>
-                                                <h6>Validación CFDI</h6>
-                                                <p>Lectura de XML y PDF para validar UUID, RFC, importes y reglas fiscales previas al registro.</p>
-                                            </div>
-
-                                            <div class="project-feature-card">
-                                                <span class="project-feature-index">02</span>
-                                                <h6>Integración SAP B1</h6>
-                                                <p>Asociación de documentos con órdenes, facturas y datos registrados en SAP Business One.</p>
-                                            </div>
-
-                                            <div class="project-feature-card">
-                                                <span class="project-feature-index">03</span>
-                                                <h6>Autoservicio proveedor</h6>
-                                                <p>Alta, carga documental y consulta de estatus de pago desde una interfaz web clara.</p>
-                                            </div>
-
-                                            <div class="project-feature-card">
-                                                <span class="project-feature-index">04</span>
-                                                <h6>Control multiempresa</h6>
-                                                <p>Validaciones por sociedad, RFC receptor y repositorio centralizado de XML y PDF.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-30">Arquitectura e integración</h5>
-                                        <p class="text-align-justify">
-                                            La solución separa la experiencia web, las reglas fiscales y la comunicación con SAP para mantener
-                                            un flujo comprensible para negocio y suficientemente controlado para operación técnica.
-                                        </p>
-
-                                        <div class="project-architecture mt-30">
-                                            <div class="project-layer">
-                                                <span>Web</span>
-                                                <p>ASP.NET MVC, vistas Razor, Bootstrap, jQuery y flujos guiados para proveedores.</p>
-                                            </div>
-                                            <div class="project-layer">
-                                                <span>Reglas</span>
-                                                <p>Validación de CFDI, UUID único, tolerancia de importes y coincidencia de RFC.</p>
-                                            </div>
-                                            <div class="project-layer">
-                                                <span>SAP / Datos</span>
-                                                <p>Consultas SQL Server, reglas de negocio e integración con SAP Business One mediante DI API.</p>
-                                            </div>
-                                            <div class="project-layer">
-                                                <span>Documentos</span>
-                                                <p>Repositorio de XML/PDF y seguimiento del estado documental asociado al proveedor.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-20">Control documental</h5>
-                                        <div class="project-security-card mt-30">
-                                            <h6>Validaciones antes de impactar el flujo ERP</h6>
-                                            <p>
-                                                El portal bloquea duplicidades por UUID, valida datos fiscales contra SAP, controla importes con tolerancia
-                                                configurable y conserva evidencia documental para seguimiento interno y externo.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-50 main-post">
-                                        <h5 class="mb-20">Mi rol</h5>
-                                        <ul class="mt-30 unorder-list rest pl-5">
-                                            <li><p>Desarrollé backend en ASP.NET MVC y C# para los flujos de carga, consulta y validación.</p></li>
-                                            <li class="mt-10"><p>Implementé reglas CFDI conforme a necesidades fiscales y operativas del proceso.</p></li>
-                                            <li class="mt-10"><p>Construí consultas SQL e integración con SAP Business One para validar documentos.</p></li>
-                                            <li class="mt-10"><p>Diseñé interfaces funcionales para proveedores y equipos administrativos.</p></li>
-                                            <li class="mt-10"><p>Fortalecí trazabilidad documental, soporte multiempresa y controles anti-duplicidad.</p></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="mt-50 project-result-card">
-                                        <span>Resultado</span>
-                                        <h5>Un proceso más controlado para recibir, validar y consultar documentación de proveedores.</h5>
-                                        <p>
-                                            La plataforma redujo fricción operativa, mejoró la confiabilidad de la validación previa de CFDI y dio mayor
-                                            visibilidad al estado de facturas antes de su seguimiento en SAP Business One.
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <div class="info" id="sticky_item">
+                        <div class="row justify-content-center mt-30">
+                            <div class="col-lg-12">
+                                <div class="project-trading-info mt-50">
+                                    <h2>Detalles del proyecto</h2>
                                     <ul>
-                                        <li class="mb-30">
-                                            <span class="sub-title"><i class="fa fa-calendar-alt mr-10"></i>Periodo:</span>
+                                        <li>
+                                            <span class="sub-title">Descripción</span>
+                                            <p>Al recibir una factura, el portal revisa sus archivos XML y PDF, valida el UUID, el RFC, los importes y la sociedad receptora, y detecta documentos duplicados. Después, relaciona la factura con SAP Business One y permite consultar su estado de pago.</p>
+                                        </li>
+                                        <li>
+                                            <span class="sub-title">Periodo</span>
                                             <p>2024</p>
                                         </li>
-
-                                        <li class="mb-30">
-                                            <span class="sub-title"><i class="fa fa-list-ul mr-10"></i>Tipo:</span>
-                                            <p>Sistema empresarial / Web App </p>
+                                        <li>
+                                            <span class="sub-title">Tipo</span>
+                                            <p>Sistema empresarial / aplicación web</p>
                                         </li>
-
-                                        <li class="mb-30">
-                                            <span class="sub-title"><i class="fa fa-building mr-10"></i>Empresa:</span>
+                                        <li>
+                                            <span class="sub-title">Empresa</span>
                                             <p>IT Consultant</p>
                                         </li>
-
-                                        <li class="mb-30">
-                                            <span class="sub-title"><i class="fa fa-user mr-10"></i>Rol:</span>
+                                        <li>
+                                            <span class="sub-title">Rol</span>
                                             <p>Full Stack .NET Developer</p>
                                         </li>
-
-                                        <li class="mb-30">
-                                            <span class="sub-title"><i class="fas fa-plug mr-10"></i>Integración:</span>
+                                        <li>
+                                            <span class="sub-title">Integración</span>
                                             <p>SAP Business One, SQL Server y SAP DI API</p>
                                         </li>
-
                                         <li>
-                                            <span class="sub-title"><i class="fas fa-lock mr-10"></i>Disponibilidad:</span>
+                                            <span class="sub-title">Disponibilidad</span>
                                             <p>Proyecto interno / no público</p>
+                                        </li>
+                                        <li>
+                                            <span class="sub-title">Tecnologías utilizadas</span>
+                                            <p class="tech-badges">
+                                                <span>ASP.NET MVC</span>
+                                                <span>C#</span>
+                                                <span>SQL Server</span>
+                                                <span>SAP Business One</span>
+                                                <span>SAP DI API</span>
+                                                <span>CFDI / Anexo 20</span>
+                                                <span>JavaScript</span>
+                                                <span>jQuery</span>
+                                                <span>Bootstrap</span>
+                                            </p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- ==================== GALLERY ==================== -->
-            <div class="imgs mt-80">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-11">
-                            <div class="project-gallery-head bord-thin-bottom pb-30 mb-50">
-                                <h5>Capturas del sistema</h5>
-                                <p class="mt-10">Vistas principales para seguimiento documental y gestión de proveedores.</p>
-                            </div>
+                        <div class="row justify-content-center mt-30">
+                            <div class="col-lg-12">
+                                <div class="mt-40 main-post mb-100">
+                                    <h2 class="mb-20">Arquitectura e integración</h2>
+                                    <p class="text-align-justify">El proceso se organiza en cuatro capas: el portal para proveedores, las reglas de validación, la conexión con SAP y el almacenamiento de documentos. El diagrama muestra cómo se relacionan.</p>
+                                    <div class="project-trading-architecture mt-30" role="region" aria-label="Diagrama de arquitectura del Portal de Proveedores. Desplázate horizontalmente para recorrerlo." tabindex="0">
+                                        <svg viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="providers-architecture-title providers-architecture-desc">
+                                            <title id="providers-architecture-title">Arquitectura del Portal de Proveedores</title>
+                                            <desc id="providers-architecture-desc">El portal, desarrollado con ASP.NET MVC, Razor, Bootstrap y jQuery, permite a los proveedores cargar y consultar documentos. Antes de registrarlos, valida el CFDI, el UUID, el RFC receptor, la sociedad y las tolerancias de importes. Después, consulta SQL Server y SAP Business One mediante SAP DI API, y asocia los archivos XML y PDF con cada proveedor para darles seguimiento.</desc>
+                                            <defs>
+                                                <marker id="architecture-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                                                    <path d="M0 0L8 4L0 8Z" fill="#bbbaa6" />
+                                                </marker>
+                                            </defs>
+                                            <rect width="1200" height="720" fill="#0e0f0f" />
 
-                            <div class="row md-marg">
+                                            <path class="edge" d="M600 232V312" />
+                                            <path class="edge integration" d="M440 400H280Q272 400 272 408V536" />
+                                            <path class="edge integration" d="M760 400H920Q928 400 928 408V536" />
 
-                                <div class="col-md-6">
-                                    <div class="img sm-mb30 portfolio-shot">
-                                        <a href="../../assets/imgs/works/PortalProveedores_Detail01.png" class="glightbox" data-gallery="portfolio">
-                                            <picture>
-                                                <source srcset="../../assets/imgs/works/PortalProveedores_Detail01.webp" type="image/webp">
-                                                <img src="../../assets/imgs/works/PortalProveedores_Detail01.png"
-                                                    alt="Consulta y seguimiento documental del Portal de Proveedores"
-                                                    class="img-fluid portfolio-img" width="2291" height="1039" loading="lazy" decoding="async">
-                                            </picture>
-                                        </a>
-                                        <p class="mt-15">Consulta y seguimiento de documentos cargados por proveedores.</p>
+                                            <rect class="mask" x="526" y="258" width="148" height="28" />
+                                            <text class="label" x="600" y="277" text-anchor="middle">envío a validación</text>
+                                            <rect class="mask" x="192" y="462" width="160" height="28" />
+                                            <text class="label" x="272" y="481" text-anchor="middle">consulta y contraste</text>
+                                            <rect class="mask" x="844" y="462" width="152" height="28" />
+                                            <text class="label" x="920" y="481" text-anchor="middle">archivo y seguimiento</text>
+
+                                            <rect class="node" x="440" y="56" width="320" height="176" rx="8" />
+                                            <text class="tag" x="464" y="88">PRESENTACIÓN</text>
+                                            <text class="name" x="464" y="128">Web</text>
+                                            <text class="body" x="464" y="160">ASP.NET MVC y vistas Razor</text>
+                                            <text class="body" x="464" y="184">Bootstrap, jQuery y flujos guiados</text>
+                                            <text class="label" x="464" y="212">Carga y consulta del proveedor</text>
+
+                                            <rect class="focal" x="440" y="312" width="320" height="176" rx="8" />
+                                            <text class="tag" x="464" y="344" style="fill:var(--amber)">REGLAS DE NEGOCIO</text>
+                                            <text class="name" x="464" y="384">Validación</text>
+                                            <text class="body" x="464" y="416">CFDI, UUID único y RFC receptor</text>
+                                            <text class="body" x="464" y="440">Sociedad e importes con tolerancia</text>
+                                            <text class="label" x="464" y="468">Validaciones previas al registro</text>
+
+                                            <rect class="node" x="80" y="536" width="400" height="160" rx="8" />
+                                            <text class="tag" x="104" y="568">ERP Y DATOS</text>
+                                            <text class="name" x="104" y="608">SAP / Datos</text>
+                                            <text class="body" x="104" y="640">Consultas SQL Server y reglas de negocio</text>
+                                            <text class="body" x="104" y="664">SAP Business One mediante DI API</text>
+
+                                            <rect class="node" x="720" y="536" width="400" height="160" rx="8" />
+                                            <text class="tag" x="744" y="568">GESTIÓN DOCUMENTAL</text>
+                                            <text class="name" x="744" y="608">Documentos</text>
+                                            <text class="body" x="744" y="640">Repositorio de archivos XML y PDF</text>
+                                            <text class="body" x="744" y="664">Estado documental por proveedor</text>
+                                        </svg>
                                     </div>
                                 </div>
-
-                                <div class="col-md-6">
-                                    <div class="img sm-mb30 portfolio-shot">
-                                        <a href="../../assets/imgs/works/PortalProveedores_Detail02.png" class="glightbox" data-gallery="portfolio">
-                                            <picture>
-                                                <source srcset="../../assets/imgs/works/PortalProveedores_Detail02.webp" type="image/webp">
-                                                <img src="../../assets/imgs/works/PortalProveedores_Detail02.png"
-                                                    alt="Alta de proveedores en el Portal de Proveedores"
-                                                    class="img-fluid portfolio-img" width="1251" height="898" loading="lazy" decoding="async">
-                                            </picture>
-                                        </a>
-                                        <p class="mt-15">Alta de proveedores y administración de información base.</p>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
+
+                        <section class="mt-40 project-impact-grid" aria-label="Control documental, mi contribución y resultado">
+                            <article class="project-impact-card">
+                                <header class="project-impact-card-head">
+                                    <span class="project-impact-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 19 6.5v4.7c0 4.4-2.9 7.9-7 9.5-4.1-1.6-7-5.1-7-9.5V6.5Z" /><path d="m9 12.2 2 2 4-4.4" /></svg>
+                                    </span>
+                                    <div>
+                                        <h2>Control documental</h2>
+                                        <p class="project-impact-intro">Reglas que revisan los documentos antes de integrarlos con SAP Business One.</p>
+                                    </div>
+                                </header>
+                                <p class="project-impact-list-label">Validaciones y seguimiento</p>
+                                <ul class="project-impact-list">
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>UUID único</h3><p>Impide registrar de nuevo un documento con el mismo UUID.</p></div></li>
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>Coherencia fiscal</h3><p>Compara los datos fiscales del CFDI con los registrados en SAP y admite una tolerancia configurable para diferencias en los importes.</p></div></li>
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>Seguimiento documental</h3><p>Conserva los XML y PDF asociados a cada proveedor.</p></div></li>
+                                </ul>
+                            </article>
+
+                            <article class="project-impact-card">
+                                <header class="project-impact-card-head">
+                                    <span class="project-impact-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="6" height="5" rx="1.2" /><rect x="14" y="5" width="6" height="5" rx="1.2" /><rect x="9" y="15" width="6" height="5" rx="1.2" /><path d="M7 10v2.5h10V10m-5 2.5V15" /></svg>
+                                    </span>
+                                    <div>
+                                        <h2>Mi contribución</h2>
+                                        <p class="project-impact-intro">Desarrollo de las funciones y la integración del portal.</p>
+                                    </div>
+                                </header>
+                                <p class="project-impact-list-label">Responsabilidades</p>
+                                <ul class="project-impact-list">
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>Flujos del portal</h3><p>Desarrollé la carga y consulta de documentos, así como su validación con ASP.NET MVC y C#.</p></div></li>
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>Reglas CFDI</h3><p>Implementé las validaciones fiscales y operativas aplicadas a los documentos.</p></div></li>
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>Integración y datos</h3><p>Escribí consultas SQL y conecté el portal con SAP Business One para validar documentos.</p></div></li>
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>Interfaces y control</h3><p>Diseñé pantallas para proveedores y personal administrativo, con seguimiento documental, operación multiempresa y prevención de duplicados.</p></div></li>
+                                </ul>
+                            </article>
+
+                            <article class="project-impact-card project-impact-card-result">
+                                <header class="project-impact-card-head">
+                                    <span class="project-impact-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M5 19.5h14M5.5 19V5" /><path d="m8 15 3-3 2.5 2 5-6" /><circle cx="18.5" cy="8" r="1.3" /></svg>
+                                    </span>
+                                    <div>
+                                        <h2>Resultado</h2>
+                                        <p class="project-impact-intro">La documentación de proveedores se gestiona en un portal con validaciones y seguimiento de pagos.</p>
+                                    </div>
+                                </header>
+                                <p class="project-impact-list-label">Cambios en la operación</p>
+                                <ul class="project-impact-list project-impact-result-list">
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>Menos tareas manuales</h3><p>Centralizó el seguimiento de documentos que antes se llevaba con tareas manuales y correos separados.</p></div></li>
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>Validación antes del registro</h3><p>Revisa los datos del CFDI antes de integrarlo con SAP Business One.</p></div></li>
+                                    <li><span class="project-impact-marker" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="m3 8 3 3 7-7" /></svg></span><div><h3>Seguimiento de pagos</h3><p>Permite consultar el estado de pago y dar seguimiento a las facturas.</p></div></li>
+                                </ul>
+                            </article>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -436,35 +456,59 @@
 
         <!-- ==================== End project ==================== -->
 
+    </main>
 
 
         <!-- ==================== Start Footer ==================== -->
 
-        <footer class="project-footer">
-            <div class="container">
-                <div class="project-footer-inner bord-thin-top">
-                    <a href="../../index.html#portfolio" class="project-back-link">
-                        <i class="fas fa-long-arrow-alt-left"></i>
-                        Volver a proyectos
-                    </a>
+        <footer class="footer-ultra">
+            <div class="footer-ultra-box">
+                <div class="footer-grid">
+                    <div class="footer-column footer-brand">
+                        <a class="footer-logo" href="../../index.html" aria-label="Ir al inicio del portafolio de Fernando Torres">
+                            <img src="../../assets/imgs/logo-light.svg" alt="">
+                        </a>
+                        <h3>Fernando Torres</h3>
+                        <p>Desarrollador <span class="main-color">Full Stack .NET</span></p>
+                    </div>
 
-                    <p class="fz-12">© <span id="currentYear"></span> Fernando Torres - All Rights Reserved.</p>
+                    <nav class="footer-column" aria-label="Navegación del pie de página">
+                        <h4>Explora</h4>
+                        <ul class="footer-nav">
+                            <li><a href="../../index.html#home">Inicio</a></li>
+                            <li><a href="../../index.html#portfolio">Proyectos</a></li>
+                            <li><a href="../../index.html#resume">Experiencia</a></li>
+                            <li><a href="../../index.html#skills">Tecnologías</a></li>
+                            <li><a href="../../index.html#contact">Contacto</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-column footer-contact">
+                        <h4>Contacto</h4>
+                        <p>Si crees que puedo sumar a tu equipo o proyecto, conversemos.</p>
+                        <a class="footer-action" href="../../index.html#contact">Hablemos <span aria-hidden="true">→</span></a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Redes profesionales</h4>
+                        <div class="footer-socials">
+                            <a href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                            <a href="https://github.com/FernandoTR" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Torres en GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <span>© <span id="currentYear"></span> Fernando Torres</span>
+                    <div class="footer-bottom-actions">
+                        <a href="../../assets/docs/FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" data-umami-event="cv_open" aria-label="Abrir CV de Fernando Torres en PDF">Ver CV (PDF) <span aria-hidden="true">↗</span></a>
+                        <a href="../../privacidad.html">Aviso de privacidad</a>
+                    </div>
                 </div>
             </div>
         </footer>
 
         <!-- ==================== End Footer ==================== -->
-
-
-
-    </main>
-
-
-
-
-
-
-
 
 
 
@@ -484,7 +528,63 @@
     <script>
         const lightbox = GLightbox({
             selector: '.glightbox'
-        });       
+        });
+
+        const providersHero = document.querySelector('.project-proveedores .project-hero-shell');
+        if (providersHero) {
+            let heroVisible = !('IntersectionObserver' in window);
+            let heroPaused = false;
+            let slideIndex = 0;
+            let auraTurns = 0;
+            let heroTimer;
+            const heroSlides = [...providersHero.querySelectorAll('.project-hero-slide')];
+            const auraTracks = [...providersHero.querySelectorAll('.project-aura-track')];
+            const carousel = providersHero.parentElement;
+            const motionButton = carousel.querySelector('.project-hero-motion');
+            const caption = carousel.querySelector('.project-hero-caption');
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const advanceHero = () => {
+                heroSlides[slideIndex].hidden = true;
+                slideIndex = (slideIndex + 1) % heroSlides.length;
+                heroSlides[slideIndex].hidden = false;
+                caption.textContent = heroSlides[slideIndex].dataset.caption;
+                auraTurns += 1;
+                auraTracks.forEach(track => {
+                    const start = track.classList.contains('project-aura-orange') ? 12 : -38;
+                    track.style.strokeDashoffset = start - auraTurns * 50;
+                });
+            };
+            const updateHero = () => {
+                const playing = heroVisible && !heroPaused && !document.hidden && !reducedMotion.matches;
+                auraTracks.forEach(track => {
+                    if (!track.getAnimations) return;
+                    track.getAnimations().forEach(animation => {
+                        if (playing && animation.playState === 'paused') animation.play();
+                        if (!playing && animation.playState === 'running') animation.pause();
+                    });
+                });
+                if (playing && !heroTimer) heroTimer = window.setInterval(advanceHero, 5000);
+                if (!playing && heroTimer) {
+                    window.clearInterval(heroTimer);
+                    heroTimer = null;
+                }
+            };
+            motionButton.addEventListener('click', () => {
+                heroPaused = !heroPaused;
+                motionButton.setAttribute('aria-pressed', String(heroPaused));
+                motionButton.textContent = heroPaused ? 'Reanudar animación' : 'Pausar animación';
+                updateHero();
+            });
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(([entry]) => {
+                    heroVisible = entry.isIntersecting;
+                    updateHero();
+                }, { threshold: 0.1 }).observe(providersHero);
+            }
+            document.addEventListener('visibilitychange', updateHero);
+            reducedMotion.addEventListener('change', updateHero);
+            updateHero();
+        }
     </script>
 </body>
 
