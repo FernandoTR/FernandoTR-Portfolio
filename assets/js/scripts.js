@@ -775,6 +775,16 @@ $(function () {
     });
     tl.call(function () {
         document.body.classList.add('hero-handwriting-ready');
+
+        var handwritingTitle = document.querySelector('#home h1 .hero-title-handwriting');
+        if (!handwritingTitle || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+
+        handwritingTitle.classList.add('is-playing');
+        window.setInterval(function () {
+            handwritingTitle.classList.remove('is-playing');
+            void handwritingTitle.offsetWidth;
+            handwritingTitle.classList.add('is-playing');
+        }, 5000);
     });
     tl.from(
         "header",
