@@ -1,165 +1,159 @@
 <div align="center">
-  <img src="assets/imgs/logo-light.svg" alt="Fernando Torres" height="84" />
+  <img src="assets/imgs/logo-light.svg" alt="Logo de Fernando Torres" height="84" />
 
-  <h1>Fernando Torres | Personal Portfolio & Resume</h1>
+  <h1>Fernando Torres | Portafolio profesional</h1>
 
-  <p><strong>Portafolio profesional de un Desarrollador Full Stack .NET enfocado en software empresarial, backend, datos e integraciones.</strong></p>
+  <p>Desarrollo Full Stack .NET, software empresarial e integraciones entre SAP Business One y Salesforce.</p>
 
   <p>
     <a href="https://byfernandotorres.online/">Ver sitio</a> ·
-    <a href="#proyectos-destacados">Proyectos</a> ·
-    <a href="#ejecución-local">Ejecución local</a> ·
-    <a href="#personalización">Personalización</a>
+    <a href="assets/docs/FernandoTorres_CV.pdf">Abrir CV</a> ·
+    <a href="https://www.linkedin.com/in/fernandotorresrivera">LinkedIn</a>
   </p>
 
   <p>
-    <a href="https://byfernandotorres.online/"><img src="https://img.shields.io/badge/site-byfernandotorres.online-e69955?style=flat-square" alt="Sitio web" /></a>
-    <img src="https://img.shields.io/badge/static-HTML%20%7C%20CSS%20%7C%20JS-0e0f0f?style=flat-square" alt="Static HTML CSS JS" />
-    <img src="https://img.shields.io/badge/deploy-GitHub%20Pages-222?style=flat-square&logo=github" alt="GitHub Pages" />
-    <img src="https://img.shields.io/badge/contact-Web3Forms-146ef5?style=flat-square" alt="Web3Forms" />
+    <img src="https://img.shields.io/badge/HTML%20%7C%20CSS%20%7C%20JavaScript-0e0f0f?style=flat-square" alt="HTML, CSS y JavaScript" />
+    <a href="https://byfernandotorres.online/"><img src="https://img.shields.io/badge/GitHub%20Pages-en%20línea-e69955?style=flat-square&amp;logo=github" alt="Publicado en GitHub Pages" /></a>
   </p>
 </div>
 
+[Características](#características) · [Proyectos](#proyectos-destacados) · [Ejecución local](#ejecución-local) · [Mantenimiento](#mantenimiento) · [Publicación](#publicación)
+
 ## Descripción
 
-Este repositorio contiene el sitio personal de **Fernando Torres**, Ingeniero en Informática y **Full Stack .NET Developer** con más de 9 años de experiencia construyendo aplicaciones web, APIs, sistemas internos e integraciones empresariales.
+Sitio personal de **Fernando Torres**, Ingeniero en Informática y Desarrollador Full Stack .NET. Reúne experiencia profesional, tecnologías, formación, certificaciones y casos de estudio para que reclutadores y equipos técnicos puedan conocer su trabajo y ponerse en contacto.
 
-El sitio está pensado como una carta de presentación técnica: resume experiencia profesional, stack principal, certificaciones, CV descargable y case studies de proyectos reales enfocados en automatización, SAP Business One, Salesforce, SQL Server y desarrollo .NET.
+Cada caso presenta el problema, la solución técnica, la aportación de Fernando y los resultados, con diagramas y capturas de la aplicación.
 
 > [!NOTE]
-> Es un sitio estático. No requiere framework, bundler ni proceso de build para ejecutarse localmente o publicarse en GitHub Pages.
+> El portafolio es un sitio estático: no necesita instalar paquetes, compilar ni ejecutar un backend .NET. Las tecnologías .NET, SQL Server y SAP corresponden a los proyectos presentados.
 
 ## Características
 
-- Landing personal con perfil, enlaces profesionales y CV en PDF.
-- Carrusel de proyectos relevantes con tarjetas optimizadas y enlaces a case studies.
-- Páginas individuales para proyectos con contexto, arquitectura, tecnologías, rol, capturas y resultados.
-- Sección de experiencia profesional, formación técnica y certificaciones.
-- Sección de stack técnico orientada a backend, frontend, datos e integraciones.
-- Formulario de contacto con Web3Forms, hCaptcha, validación cliente y mensajes de estado accesibles.
-- SEO básico y social sharing con canonical, Open Graph, Twitter Cards y JSON-LD.
-- Imágenes WebP con fallback PNG/JPG, lazy loading y lightbox para galerías.
-- Animación de fondo con Three.js cargada de forma condicional para cuidar rendimiento.
+- **Perfil y trayectoria:** experiencia profesional, formación, certificaciones, enlaces profesionales y CV en PDF.
+- **Proyectos con evidencia:** cuadrícula adaptable y cinco casos de estudio independientes con galerías GLightbox.
+- **Contacto:** Web3Forms y hCaptcha, validación de campos y estados de envío, éxito y error.
+- **Experiencia visual:** tema oscuro, navegación adaptable, animaciones con soporte para movimiento reducido y efectos Three.js de carga condicional.
+- **Optimización y SEO:** imágenes WebP con fallbacks PNG/JPG, carga diferida, canonical, Open Graph, Twitter Cards y JSON-LD.
+- **Analítica:** Umami Cloud para visitas y eventos de proyectos, CV y contacto, con [aviso de privacidad](privacidad.html).
 
-## Stack del sitio
+## Tecnologías del sitio
 
-| Área | Tecnologías |
+| Área | Implementación |
 | --- | --- |
-| Base | HTML5, CSS3, JavaScript |
-| UI | Bootstrap, Font Awesome, Swiper, GLightbox |
-| Interacción | jQuery, scripts propios, Three.js condicional |
-| Formulario | Web3Forms, hCaptcha |
-| SEO | Metadata social, JSON-LD, canonical URLs |
-| Hosting | GitHub Pages con dominio personalizado |
+| Base | HTML5, CSS3 y JavaScript; contenido en español de México (`es-MX`) |
+| Interfaz | Bootstrap, jQuery, Font Awesome y GLightbox |
+| Animación | GSAP y Three.js; estilos y scripts propios |
+| Servicios externos | Web3Forms, hCaptcha, Umami Cloud y Google Fonts |
+| Publicación | GitHub Pages con dominio personalizado |
 
-## Stack profesional presentado
-
-El contenido del portafolio destaca experiencia con:
-
-- **Backend:** C#, .NET, ASP.NET MVC, ASP.NET Web API, Entity Framework.
-- **Datos:** SQL Server, SAP HANA, modelado y optimización de consultas.
-- **Frontend:** JavaScript, TypeScript, Angular, jQuery, Bootstrap.
-- **Integraciones:** REST, SOAP, SAP Business One, SAP DI API, Salesforce REST API.
-- **Herramientas:** Git, GitHub, Azure DevOps, Swagger, Postman, IIS.
+Las bibliotecas de interfaz se incluyen en `assets/`; no hay `package.json`, bundler ni proceso de build.
 
 ## Proyectos destacados
 
-| Proyecto | Enfoque | Stack principal | Disponibilidad |
-| --- | --- | --- | --- |
-| [Trading Book](assets/projects/trading.html) | Plataforma analítica para registrar y evaluar operaciones de trading cripto. | .NET 10, ASP.NET Core MVC, EF Core, SQL Server, Clean Architecture, Chart.js | [Código fuente](https://github.com/FernandoTR/NET-TradingBookApp) |
-| [API Integración Salesforce SAP B1](assets/projects/apiSalesforceSap.html) | API REST para sincronizar órdenes, clientes, inventario, precios y productos entre CRM y ERP. | .NET 8, C#, REST API, JWT, OAuth 2.0, Salesforce API, SAP B1, SAP HANA | Privado |
-| [Portal de Distribuidores](assets/projects/distribuidores.html) | Portal B2B para catálogo, carrito, checkout y preórdenes integradas con SAP Business One. | ASP.NET MVC, C#, SQL Server, SAP B1 API, PayPal, Crystal Reports | Privado |
-| [Portal de Proveedores](assets/projects/proveedores.html) | Validación CFDI, control documental y autoservicio para proveedores integrado con SAP B1. | ASP.NET MVC, C#, SQL Server, SAP DI API, CFDI, Bootstrap | Privado |
-| [Portal de Viáticos](assets/projects/viaticos.html) | Gestión de solicitudes, comprobaciones, autorizaciones y evidencias de viáticos. | ASP.NET MVC, C#, SQL Server, SAP B1 DI API, IIS, XML, PDF | Privado |
+| Caso de estudio | Solución | Tecnologías principales |
+| --- | --- | --- |
+| [Trading Book](assets/projects/trading.html) | Registro y análisis de operaciones con criptomonedas. [Código fuente](https://github.com/FernandoTR/NET-TradingBookApp). | .NET 10, ASP.NET Core MVC, EF Core, SQL Server, Clean Architecture, Chart.js |
+| [Integración Salesforce–SAP Business One](assets/projects/apiSalesforceSap.html) | API REST para órdenes de venta, clientes, inventario, precios y productos. | .NET 8, C#, JWT, OAuth 2.0, Salesforce API, SAP B1, SAP HANA |
+| [Portal de Distribuidores](assets/projects/distribuidores.html) | Plataforma B2B con catálogo, pedidos, pagos y preórdenes integradas con SAP. | ASP.NET MVC, C#, SQL Server, SAP B1 API, PayPal, Crystal Reports |
+| [Portal de Proveedores](assets/projects/proveedores.html) | Validación de CFDI, control documental y consulta del estado de pago. | ASP.NET MVC, C#, SQL Server, SAP DI API, XML |
+| [Portal de Viáticos](assets/projects/viaticos.html) | Solicitudes, comprobaciones, autorizaciones y evidencias de gastos. | ASP.NET MVC, C#, SQL Server, SAP B1 DI API, XML, PDF |
+
+Los proyectos empresariales se documentan como casos de estudio; su código es privado.
+
+## Ejecución local
+
+Necesitas **Git**, **Python 3** y un navegador moderno.
+
+1. Clona el repositorio y entra en su carpeta:
+
+   ```bash
+   git clone https://github.com/FernandoTR/FernandoTR-Portfolio.git portfolio
+   cd portfolio
+   ```
+
+2. Inicia un servidor estático desde la raíz del proyecto.
+
+   **Windows:**
+
+   ```powershell
+   py -m http.server 8080
+   ```
+
+   **macOS / Linux:**
+
+   ```bash
+   python3 -m http.server 8080
+   ```
+
+3. Abre [http://localhost:8080](http://localhost:8080). Detén el servidor con `Ctrl+C`.
+
+> [!TIP]
+> También puedes usar Live Server en VS Code. Sirve siempre la raíz del repositorio por HTTP; evita abrir las páginas con `file://`.
+
+El formulario, las fuentes de Google y la analítica usan servicios externos y requieren conexión. Umami está restringido al dominio de producción mediante `data-domains`, por lo que las visitas a `localhost` no se registran.
 
 ## Estructura del proyecto
 
 ```text
 .
-├── CNAME
-├── README.md
-├── index.html
+├── index.html                  # Perfil, proyectos, experiencia, tecnologías y contacto
+├── privacidad.html             # Aviso sobre analítica y datos de contacto
+├── CNAME                       # Dominio de producción
+├── DESIGN.md                   # Identidad visual y componentes
+├── PRODUCT.md                  # Propósito, audiencia y restricciones
+├── specs/                      # Especificaciones y decisiones de implementación
 └── assets/
-    ├── css/
-    │   ├── plugins.css
-    │   ├── style.css
-    │   └── plugins/
-    ├── docs/
-    │   └── FernandoTorres_CV.pdf
-    ├── fonts/
-    ├── imgs/
-    │   ├── header/
-    │   ├── skills/
-    │   └── works/
-    ├── js/
-    │   ├── scripts.js
-    │   ├── plugins.js
-    │   ├── glightbox.min.js
-    │   ├── jquery-3.6.0.min.js
-    │   ├── jquery-migrate-3.4.0.min.js
-    │   ├── three.min.js
-    │   └── cdemo.js
-    └── projects/
-        ├── trading.html
-        ├── apiSalesforceSap.html
-        ├── distribuidores.html
-        ├── proveedores.html
-        ├── viaticos.html
-        └── project-template.html
+    ├── css/                    # style.css y estilos de bibliotecas
+    ├── docs/FernandoTorres_CV.pdf
+    ├── fonts/                  # Fuentes de iconos locales
+    ├── imgs/                   # Logo, retrato, tecnologías y capturas en works/
+    ├── js/                     # scripts.js, bibliotecas y efectos visuales
+    └── projects/               # Cinco casos de estudio y project-template.html
 ```
 
-## Ejecución local
+## Mantenimiento
 
-Clona el repositorio y levanta un servidor estático desde la raíz del proyecto.
+### Contenido y diseño
 
-```bash
-git clone <repository-url>
-cd "FTORRES - Personal Portfolio & Resume"
-```
+- Edita perfil, experiencia, tarjetas de proyectos y contacto en [`index.html`](index.html).
+- Ajusta los estilos en [`assets/css/style.css`](assets/css/style.css) y el comportamiento compartido en [`assets/js/scripts.js`](assets/js/scripts.js). Los inicializadores del formulario y la carga condicional de Three.js están en `index.html`.
+- Sustituye el CV en `assets/docs/FernandoTorres_CV.pdf` y conserva las rutas de sus enlaces.
+- Consulta [`DESIGN.md`](DESIGN.md), [`PRODUCT.md`](PRODUCT.md) y las [especificaciones](specs/) para mantener la identidad y las decisiones del sitio.
 
-Opción con Python en Windows:
+### Agregar un proyecto
 
-```powershell
-py -m http.server 8080
-```
+1. Copia [`project-template.html`](assets/projects/project-template.html) dentro de `assets/projects/` con un nombre propio.
+2. Completa contenido, capturas y metadatos específicos. La plantilla conserva `noindex, nofollow`; ajusta esa directiva cuando el caso esté listo para publicarse.
+3. Añade las imágenes en `assets/imgs/works/`, con versiones WebP y fallbacks PNG/JPG, y crea su tarjeta en `.portfolio-grid` de `index.html`.
+4. Usa rutas `assets/...` en la página principal y `../../assets/...` en los casos. Conserva el regreso a `../../index.html#portfolio` y verifica la galería GLightbox.
 
-Opción con Python en macOS/Linux:
+### Formulario y analítica
 
-```bash
-python3 -m http.server 8080
-```
-
-Luego abre `http://localhost:8080` en el navegador.
-
-> [!TIP]
-> También puedes usar extensiones como Live Server en VS Code. Lo importante es servir el sitio por HTTP y no abrir los archivos directamente con `file://`.
-
-
-
-## Personalización
-
-Los puntos principales de edición están concentrados en archivos estáticos:
-
-- `index.html`: perfil, experiencia, proyectos del carrusel, tecnologías, certificaciones y formulario.
-- `assets/projects/*.html`: case studies individuales de cada proyecto.
-- `assets/projects/project-template.html`: plantilla interna para crear nuevos proyectos, marcada como `noindex`.
-- `assets/css/style.css`: estilos visuales principales y componentes personalizados.
-- `assets/js/scripts.js`: comportamiento global del tema y utilidades del sitio.
-- `assets/docs/FernandoTorres_CV.pdf`: CV descargable.
-- `assets/imgs/works/`: capturas principales, galerías y versiones WebP.
+- Conserva la clave `access_key` de Web3Forms, `h-captcha-response`, los IDs de campos y errores, `#contact-submit-btn` y `#toast`, salvo que actualices también su JavaScript.
+- hCaptcha se carga cuando el visitante se acerca al formulario. Comprueba tanto los errores de validación como la respuesta del servicio.
+- Umami se incluye en la página principal y los cinco casos públicos. Registra `project_open`, `cv_open` y `contact_sent`; este último se envía tras una respuesta de éxito de Web3Forms. No se envía el contenido del formulario a Umami.
+- Mantén [`privacidad.html`](privacidad.html) alineado con los servicios utilizados.
 
 > [!IMPORTANT]
-> Si cambias imágenes de proyectos, conserva el fallback PNG/JPG y genera también la versión WebP correspondiente para mantener rendimiento y compatibilidad.
+> Respeta el orden de carga: jQuery → jQuery Migrate → `plugins.js` → plugins específicos, como GLightbox → `scripts.js` → inicializadores correspondientes.
 
-## Checklist de calidad
+## Publicación
 
-Antes de publicar cambios, conviene validar:
+El sitio se publica directamente desde los archivos del repositorio en **GitHub Pages**:
 
-- La home carga correctamente en escritorio y móvil.
-- El carrusel de proyectos responde a mouse, teclado y touch.
-- Las galerías de proyectos abren con GLightbox.
-- El formulario valida campos, hCaptcha y envío con Web3Forms.
-- Los enlaces externos abren correctamente.
-- El CV se descarga o abre desde `assets/docs/FernandoTorres_CV.pdf`.
-- Las rutas canonical, Open Graph y Twitter Cards apuntan al dominio final.
-- Lighthouse no reporta regresiones importantes en Performance, Accessibility, Best Practices y SEO.
+1. En **Settings → Pages**, selecciona **Deploy from a branch**, la rama que quieras publicar y la carpeta **`/ (root)`**.
+2. Configura el dominio personalizado `byfernandotorres.online`, sus registros DNS y HTTPS.
+3. Conserva [`CNAME`](CNAME) y las URLs canonical, Open Graph, Twitter y JSON-LD alineadas con `https://byfernandotorres.online/`.
+
+No hay un workflow de CI propio en el repositorio. GitHub Pages sirve el HTML y los recursos estáticos sin una compilación de la aplicación.
+
+### Verificación antes de publicar
+
+- [ ] Revisar la página principal y los casos de estudio en escritorio y móvil.
+- [ ] Recorrer navegación, enlaces y tarjetas con teclado; comprobar foco visible y movimiento reducido.
+- [ ] Abrir las galerías GLightbox y comprobar imágenes y fallbacks.
+- [ ] Validar el formulario: campos vacíos, correo inválido, hCaptcha, envío y estados de error.
+- [ ] Abrir el CV y los enlaces profesionales y de privacidad.
+- [ ] Revisar metadatos sociales y URLs de producción; comprobar los eventos de Umami en el dominio publicado.
+- [ ] Ejecutar Lighthouse para detectar regresiones de rendimiento, accesibilidad y SEO.

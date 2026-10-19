@@ -1,6 +1,6 @@
 # SPEC 03 — Analítica de visitas con Umami
 
-> **Estado:** En Pausa · **Dependencias:** revisión del aviso de privacidad antes de publicar · **Fecha:** 2026-10-15
+> **Estado:** Implementado · **Dependencias:** revisión del aviso de privacidad antes de publicar · **Fecha:** 2026-10-15
 > **Objetivo:** Medir visitas y acciones clave del portafolio con Umami Cloud gratuito e informar sobre el tratamiento de datos de analítica y contacto.
 
 ## Alcance
