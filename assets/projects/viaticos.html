@@ -6,7 +6,7 @@
      <!-- Metas -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Case study del Portal de Viáticos, aplicación empresarial .NET integrada con SAP Business One para automatizar solicitudes, comprobaciones, autorizaciones y registro contable de gastos.">
     <meta name="keywords" content="Portal de Viáticos, ASP.NET MVC, C#, SQL Server, SAP Business One, SAP B1 DI API, automatización financiera, IIS, validación fiscal">
     <meta name="author" content="Fernando Torres">
@@ -34,9 +34,9 @@
     <link rel="shortcut icon" href="../../assets/imgs/favicon.ico">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
         rel="stylesheet">
 
     <!-- Plugins -->
@@ -44,7 +44,13 @@
     <link rel="stylesheet" href="../../assets/css/plugins/glightbox.min.css">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="../../assets/css/style.css?v=20261017-viaticos-case">
+    <link rel="stylesheet" href="../../assets/css/style.css?v=20261114-typeset">
+    <link rel="stylesheet" href="../../assets/css/typography.css?v=20261113">
+    <link rel="stylesheet" href="../../assets/css/trading.css?v=20261115-architecture-type">
+    <link rel="stylesheet" href="../../assets/css/viaticos.css?v=20261115">
+    <noscript>
+        <style>.loader-wrap, .cursor { display: none !important; }</style>
+    </noscript>
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -78,7 +84,7 @@
 
         <div class="loader-wrap-heading">
             <div class="loader-status" role="status" aria-live="polite">
-                <svg class="thinking-orb-loader" viewBox="0 0 96 96" data-state="solving" role="img" aria-label="Preparando el caso de estudio de TradingBook"></svg>
+                <svg class="thinking-orb-loader" viewBox="0 0 96 96" data-state="solving" role="img" aria-label="Preparando el caso de estudio del Portal de Viáticos"></svg>
                 <span>Cargando el proyecto...</span>
             </div>
         </div>
@@ -103,41 +109,42 @@
 
     <!-- ==================== Start Navbar ==================== -->
 
-    <nav class="navbar navbar-expand-lg pt-20 trading-navbar">
-        <div class="container-xxl">
-
-            <!-- Logo -->
-            <a class="logo icon-img-50" href="../../index.html" aria-label="Ir al inicio del portafolio de Fernando Torres">
-                <img src="../../assets/imgs/logo-light.svg" alt="Fernando Torres">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir o cerrar el menú de navegación">
-                <span class="icon-bar"><i class="fas fa-bars"></i></span>
-            </button>
-
-            <!-- navbar links -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html"><span class="rolling-text">Inicio</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="md-hide ml-auto">
-                <div class="butn-presv">
-                    <a href="../../index.html#contact" class="butn butn-sm butn-bg bg-white radius-10 skew">
-                        <span class="text-dark">Contáctame</span>
+    <nav class="navbar navbar-expand-lg trading-navbar">
+        <div class="container-xxl d-block">
+            <div class="row">
+                <div class="col-12">
+                    <a class="logo logo-hide icon-img-40" href="../../index.html#home" aria-label="Fernando Torres, ir al inicio">
+                        <img src="../../assets/imgs/logo-light.svg" alt="Fernando Torres">
+                        <span class="engineering-brand">Fernando Torres<span>Full Stack .NET</span></span>
                     </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Menú de navegación">
+                        <span class="icon-bar"><i class="fas fa-bars"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-flex align-items-center mt-30" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#home"><span class="rolling-text">Inicio</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia Profesional</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a>
+                            </li>
+                        </ul>
+                        <div class="ml-auto">
+                            <div class="butn-presv">
+                                <a href="../../index.html#contact" class="butn butn-sm butn-bg radius-10 skew">
+                                    <span>Contáctame!</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,20 +164,23 @@
                 <div class="row justify-content-center">
 
                     <div class="col-lg-10 main-post">
-                        <div class="caption text-center">
+                        <div class="caption text-center trading-intro">
 
 
-                            <h1 class="fz-55 mt-30">Portal de Viáticos</h1>
+                            <h1 class="mt-30">Portal de Viáticos</h1>
 
                             <p class="fz-18 mt-20 project-hero-copy">
                                 Portal web para gestionar solicitudes, comprobaciones y autorizaciones de viáticos sin dar acceso directo a SAP Business One.
                             </p>
                             <p class="project-hero-role">Proyecto privado <span aria-hidden="true">·</span> Desarrollo Full Stack .NET</p>
+                            <div class="project-hero-actions">
+                                <a class="trading-explore" href="#arquitectura">Explorar arquitectura <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+                            </div>
 
                         </div>
                     </div>
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-10 mt-100">
 
                         <!-- ==================== GALLERY ==================== -->
                         <figure class="project-hero-carousel" role="region" aria-roledescription="carrusel" aria-label="Capturas del Portal de Viáticos">
@@ -234,7 +244,14 @@
                             <button class="project-hero-motion" type="button" aria-pressed="false" aria-controls="viaticos-hero-slides" aria-describedby="viaticos-hero-caption" hidden></button>
                         </figure>
 
-                        <section class="mt-40 main-post project-capabilities" aria-labelledby="viaticos-capabilities-title">
+                        <nav class="trading-case-nav" aria-label="Secciones del caso de estudio">
+                            <a href="#funciones">Funciones</a>
+                            <a href="#detalles">Proyecto y stack</a>
+                            <a href="#arquitectura">Arquitectura</a>
+                            <a href="#resultado">Contribución y resultado</a>
+                        </nav>
+
+                        <section class="main-post project-capabilities trading-functions" id="funciones" aria-labelledby="viaticos-capabilities-title">
                             <h2 id="viaticos-capabilities-title">Qué permite hacer el portal</h2>
                             <div class="project-feature-grid">
                                 <article class="project-feature-card">
@@ -286,53 +303,39 @@
                             </div>
                         </section>
 
-                        <section class="project-trading-info" aria-labelledby="viaticos-project-details-title">
-                            <h2 id="viaticos-project-details-title">Detalles del proyecto</h2>
-                            <ul>
-                                <li>
-                                    <span class="sub-title">Problema y solución</span>
-                                    <div>
-                                        <p>La gestión de viáticos dependía de procesos manuales, documentos dispersos y acceso directo a SAP Business One. El portal centraliza solicitudes, comprobaciones y autorizaciones, aplica validaciones fiscales y sincroniza operaciones con SAP para mantener la consistencia contable. Así, los usuarios finales pueden trabajar sin licencias ni acceso directo al ERP.</p>
+                        <section class="trading-facts" id="detalles" aria-labelledby="viaticos-project-details-title">
+                            <div class="trading-facts-overview">
+                                <header class="trading-facts-intro">
+                                    <h2 id="viaticos-project-details-title">Detalles del proyecto</h2>
+                                    <p>La gestión de viáticos dependía de procesos manuales, documentos dispersos y acceso directo a SAP Business One. El portal centraliza solicitudes, comprobaciones y autorizaciones, aplica validaciones fiscales y sincroniza operaciones con SAP para mantener la consistencia contable. Así, los usuarios finales pueden trabajar sin licencias ni acceso directo al ERP.</p>
+                                    <a class="trading-facts-source" href="#contribucion">Ver mi contribución <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                                </header>
+                                <dl class="trading-facts-meta">
+                                    <div><dt>Periodo</dt><dd>2020</dd></div>
+                                    <div><dt>Empresa</dt><dd>IT Consultant</dd></div>
+                                    <div><dt>Tipo</dt><dd>Aplicación web empresarial</dd></div>
+                                    <div><dt>Rol</dt><dd>Full Stack .NET Developer</dd></div>
+                                    <div><dt>Integración</dt><dd>SAP Business One DI API</dd></div>
+                                    <div><dt>Disponibilidad</dt><dd>Proyecto interno; repositorio no público</dd></div>
+                                </dl>
+                            </div>
+                            <div class="trading-facts-stack">
+                                <h3>Tecnologías utilizadas</h3>
+                                <div class="trading-stack-groups">
+                                    <div class="trading-stack-group">
+                                        <h4>Backend y despliegue</h4>
+                                        <ul><li>ASP.NET MVC</li><li>C#</li><li>IIS</li></ul>
                                     </div>
-                                </li>
-                                <li>
-                                    <span class="sub-title">Periodo</span>
-                                    <p>2020</p>
-                                </li>
-                                <li>
-                                    <span class="sub-title">Tipo</span>
-                                    <p>Aplicación web empresarial</p>
-                                </li>
-                                <li>
-                                    <span class="sub-title">Empresa</span>
-                                    <p>IT Consultant</p>
-                                </li>
-                                <li>
-                                    <span class="sub-title">Rol</span>
-                                    <p>Full Stack .NET Developer</p>
-                                </li>
-                                <li>
-                                    <span class="sub-title">Integración</span>
-                                    <p>SAP Business One DI API</p>
-                                </li>
-                                <li>
-                                    <span class="sub-title">Disponibilidad</span>
-                                    <p>Proyecto interno; repositorio no público</p>
-                                </li>
-                                <li>
-                                    <span class="sub-title">Tecnologías</span>
-                                    <p class="tech-badges">
-                                        <span class="mt-5">ASP.NET MVC</span>
-                                        <span class="mt-5">C#</span>
-                                        <span class="mt-5">SQL Server</span>
-                                        <span class="mt-5">SAP B1 DI API</span>
-                                        <span class="mt-5">IIS</span>
-                                        <span class="mt-5">JavaScript / jQuery</span>
-                                        <span class="mt-5">XML</span>
-                                        <span class="mt-5">PDF / Evidencias</span>
-                                    </p>
-                                </li>
-                            </ul>
+                                    <div class="trading-stack-group">
+                                        <h4>Datos e integración</h4>
+                                        <ul><li>SQL Server</li><li>SAP B1 DI API</li></ul>
+                                    </div>
+                                    <div class="trading-stack-group">
+                                        <h4>Interfaz y documentos</h4>
+                                        <ul><li>JavaScript / jQuery</li><li>XML</li><li>PDF / Evidencias</li></ul>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
 
                         <div class="row justify-content-center">
@@ -340,35 +343,86 @@
                             <div class="col-lg-12">
                                 <div class="cont md-mb50">
 
-                                    <div class="mt-50 main-post">
-                                        <h2 class="mb-30" id="viaticos-architecture-title">Arquitectura e integración</h2>
-                                        <p class="text-align-justify">
-                                            El portal combina ASP.NET MVC y C# con almacenamiento en SQL Server. Se despliega en IIS y utiliza DI API para integrar las operaciones financieras con SAP Business One.
-                                        </p>
-
-                                        <div class="project-viaticos-architecture mt-30" role="region" aria-label="Diagrama de arquitectura con las capas Web MVC, Negocio, Integración y Datos / IIS." tabindex="0">
-                                            <ol class="project-viaticos-architecture-flow">
-                                                <li class="project-layer">
-                                                    <h3>Web MVC</h3>
-                                                    <p>Formularios, validaciones de entrada y carga de documentos con JavaScript y jQuery.</p>
-                                                </li>
-                                                <li class="project-layer">
-                                                    <h3>Negocio</h3>
-                                                    <p>Reglas de autorización, comprobación, validación fiscal y seguimiento de estados.</p>
-                                                </li>
-                                                <li class="project-layer">
-                                                    <h3>Integración</h3>
-                                                    <p>Conexión con SAP Business One mediante DI API para documentos, pagos, reembolsos y reintegros contables.</p>
-                                                </li>
-                                                <li class="project-layer">
-                                                    <h3>Datos / IIS</h3>
-                                                    <p>Almacenamiento en SQL Server, gestión de comprobantes y despliegue en IIS sobre Windows.</p>
-                                                </li>
-                                            </ol>
+                                    <section class="trading-architecture" id="arquitectura" aria-labelledby="viaticos-architecture-title">
+                                        <header class="trading-section-head">
+                                            <h2 id="viaticos-architecture-title">Arquitectura e integración</h2>
+                                            <p><span class="trading-section-lead">Del gasto al registro contable.</span><span class="trading-section-instruction">Selecciona una capa para explorar sus responsabilidades y conexiones.</span></p>
+                                        </header>
+                                        <div class="architecture-explorer viaticos-explorer" data-architecture data-architecture-initial="business">
+                                            <div class="architecture-toolbar">
+                                                <p>Portal de Viáticos <span>ASP.NET MVC</span></p>
+                                                <button type="button" class="architecture-reset" data-architecture-reset hidden aria-pressed="false">Ver mapa completo <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg></button>
+                                            </div>
+                                            <div class="architecture-workspace">
+                                                <div class="architecture-map" role="group" aria-label="Capas y sistemas del Portal de Viáticos">
+                                                    <svg class="architecture-wires" viewBox="0 0 760 560" fill="none" aria-hidden="true">
+                                                        <defs>
+                                                            <marker id="viaticos-wire-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="m1 1 5 2.5L1 6" fill="none" stroke="#858779" stroke-width="1.2"/></marker>
+                                                            <marker id="viaticos-trace-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="m1 1 5 2.5L1 6" fill="none" stroke="#e69955" stroke-width="1.2"/></marker>
+                                                        </defs>
+                                                        <!-- Conceptual relationships, not live operations or an execution sequence. -->
+                                                        <g class="architecture-wire" data-from="web" data-to="business"><path d="M380 152V238"/><path class="architecture-trace" pathLength="1" d="M380 152V238"/></g>
+                                                        <g class="architecture-wire is-external" data-from="business" data-to="integration"><path d="M280 294H168Q152 294 152 310V420"/><path class="architecture-trace" pathLength="1" d="M280 294H168Q152 294 152 310V420"/></g>
+                                                        <g class="architecture-wire" data-from="business" data-to="data"><path d="M478 294H592Q608 294 608 310V420"/><path class="architecture-trace" pathLength="1" d="M478 294H592Q608 294 608 310V420"/></g>
+                                                        <g class="architecture-wire-labels">
+                                                            <text x="398" y="198">solicitudes y comprobación</text>
+                                                            <text x="168" y="369">operaciones financieras</text>
+                                                            <text x="592" y="369" text-anchor="end">estados y documentos</text>
+                                                        </g>
+                                                    </svg>
+                                                    <button class="architecture-node" type="button" data-layer="web" aria-controls="layer-web" disabled>
+                                                        <i class="fas fa-desktop" aria-hidden="true"></i><strong>Web MVC</strong><span>Presentación</span>
+                                                    </button>
+                                                    <button class="architecture-node" type="button" data-layer="business" aria-controls="layer-business" disabled>
+                                                        <i class="fas fa-code" aria-hidden="true"></i><strong>Negocio</strong><span>Reglas y permisos</span>
+                                                    </button>
+                                                    <button class="architecture-node is-external" type="button" data-layer="integration" aria-controls="layer-integration" disabled>
+                                                        <i class="fas fa-exchange-alt" aria-hidden="true"></i><strong>Integración</strong><span>SAP Business One</span>
+                                                    </button>
+                                                    <button class="architecture-node" type="button" data-layer="data" aria-controls="layer-data" disabled>
+                                                        <i class="fas fa-database" aria-hidden="true"></i><strong>Datos / IIS</strong><span>Persistencia</span>
+                                                    </button>
+                                                </div>
+                                                <div class="architecture-inspector">
+                                                    <article class="architecture-detail" id="layer-overview" data-detail="overview">
+                                                        <h3>Un portal conectado con SAP.</h3>
+                                                        <p>El portal combina ASP.NET MVC y C# con almacenamiento en SQL Server. Se despliega en IIS y utiliza DI API para integrar las operaciones financieras con SAP Business One.</p>
+                                                        <h4>Cómo leer el mapa</h4>
+                                                        <p>Las flechas muestran relaciones conceptuales entre capas; la línea discontinua identifica la integración con SAP. No representan operaciones en tiempo real ni una secuencia de ejecución.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-web" data-detail="web">
+                                                        <h3>Web MVC</h3><p class="architecture-role">Presentación</p>
+                                                        <ul><li>Formularios con ASP.NET MVC</li><li>Validaciones de entrada con JavaScript y jQuery</li><li>Carga de XML, PDF e imágenes</li></ul>
+                                                        <h4>Conexiones</h4><p>Conecta las solicitudes y comprobaciones del usuario con las reglas de negocio del portal.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-business" data-detail="business">
+                                                        <h3>Negocio</h3><p class="architecture-role">Reglas y permisos</p>
+                                                        <ul><li>Autorización y permisos por rol</li><li>Comprobación y validación fiscal</li><li>Seguimiento de estados</li></ul>
+                                                        <h4>Conexiones</h4><p>Relaciona las solicitudes de Web MVC con la integración financiera en SAP y la persistencia de estados y comprobantes.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-integration" data-detail="integration">
+                                                        <h3>Integración</h3><p class="architecture-role">SAP Business One · DI API</p>
+                                                        <ul><li>Sincronización de facturas y documentos</li><li>Pagos y reembolsos</li><li>Reintegros contables</li></ul>
+                                                        <h4>Conexiones</h4><p>Conecta las operaciones financieras del portal con SAP Business One mediante DI API, sin acceso directo de los usuarios al ERP.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-data" data-detail="data">
+                                                        <h3>Datos / IIS</h3><p class="architecture-role">Persistencia y despliegue</p>
+                                                        <ul><li>Almacenamiento en SQL Server</li><li>Gestión de comprobantes</li><li>Despliegue en IIS sobre Windows</li></ul>
+                                                        <h4>Conexiones</h4><p>Da soporte a las reglas de negocio con el almacenamiento de información y documentos. IIS aloja la aplicación web.</p>
+                                                    </article>
+                                                    <a class="architecture-source" href="#contribucion">Ver mi contribución <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="architecture-legend" aria-label="Leyenda del diagrama">
+                                                <span><svg viewBox="0 0 32 12" fill="none" aria-hidden="true"><path d="M1 6h28m-5-4 5 4-5 4"/></svg>Relación entre capas</span>
+                                                <span><svg viewBox="0 0 32 12" fill="none" aria-hidden="true"><path d="M1 6h26" stroke-dasharray="3 3"/><path d="m24 2 5 4-5 4"/></svg>Integración con SAP</span>
+                                                <span class="architecture-selection-key"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="4"/></svg>Conexión seleccionada</span>
+                                            </div>
+                                            <p class="trading-sr-only" data-architecture-status role="status" aria-live="polite" aria-atomic="true"></p>
                                         </div>
-                                    </div>
+                                    </section>
 
-                                    <section class="project-impact-grid" aria-label="Control operativo, contribución y resultado">
+                                    <section class="project-impact-grid trading-outcomes" id="resultado" aria-label="Control operativo, contribución y resultado">
                                         <article class="project-impact-card">
                                             <header class="project-impact-card-head">
                                                 <span class="project-impact-icon" aria-hidden="true">
@@ -387,7 +441,7 @@
                                             </ul>
                                         </article>
 
-                                        <article class="project-impact-card">
+                                        <article class="project-impact-card" id="contribucion">
                                             <header class="project-impact-card-head">
                                                 <span class="project-impact-icon" aria-hidden="true">
                                                     <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="6" height="5" rx="1.2"/><rect x="14" y="5" width="6" height="5" rx="1.2"/><rect x="9" y="15" width="6" height="5" rx="1.2"/><path d="M7 10v2.5h10V10m-5 2.5V15"/></svg>
@@ -524,6 +578,7 @@
 
     <!-- custom scripts -->
     <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/trading.js?v=20261115"></script>
 
     <script>
         const lightbox = GLightbox({

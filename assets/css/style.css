@@ -64,7 +64,7 @@ body {
   color: #bbbaa6;
   background-color: #0e0f0f;
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-vela-sans);
   font-weight: 400;
   overflow-x: hidden !important; }
   body.main-home2 .container {
@@ -281,7 +281,7 @@ img {
   height: auto; }
 
 .numb {
-  font-family: 'Space Grotesk', sans-serif; }
+  font-family: var(--font-inter-gs-inter-2020-11); }
 
 /* Buttons
 -----------------------------------------------------------------*/
@@ -694,7 +694,7 @@ img {
         line-height: 1;
         margin: 0; }
         .main-marq .box .item h4 .icon {
-          font-family: 'Sora', sans-serif;
+          font-family: var(--font-vela-sans);
           margin-bottom: -15px; }
       .main-marq .box .item h2 {
         line-height: 1;
@@ -1169,7 +1169,7 @@ body.loaded {
   letter-spacing: 1px; }
 
 .num-font {
-  font-family: 'Space Grotesk', sans-serif; }
+  font-family: var(--font-vela-sans); }
 
 .vew-all a {
   position: relative;
@@ -1353,7 +1353,7 @@ body.loaded {
       top: 80px;
       left: -100px;
       font-size: 180px;
-      font-family: Poppins;
+      font-family: var(--font-vela-sans);
       line-height: 0; }
 
 .main-post .iner-img {
@@ -4247,7 +4247,7 @@ img.left {
 
 .experience-metric {
     color: var(--maincolor);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-inter-gs-inter-2020-11);
     font-variant-numeric: tabular-nums;
     font-weight: 600;
     white-space: nowrap;
@@ -4758,7 +4758,9 @@ img.left {
 /* Open footer layout */
 .footer-ultra {
     padding: 0 0 30px;
-    background: linear-gradient(180deg, #0e0f0f 0%, #080909 70%);
+    /*background: linear-gradient(180deg, #0e0f0f 0%, #080909 70%);*/
+    background:  #080909;
+
 }
 
 .footer-ultra-box {
@@ -5138,7 +5140,7 @@ img.left {
 
 #home .cont h1 {
     font-size: clamp(40px, 5.4vw, 84px);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-vela-sans);
     font-weight: 500;
     line-height: 1.05;
     letter-spacing: -.03em;
@@ -5232,7 +5234,7 @@ img.left {
 
 #home .hero-metrics dt {
     font-size: clamp(32px, 4vw, 60px);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-inter-gs-inter-2020-11);
     font-weight: 400;
     line-height: 1.1;
     font-variant-numeric: tabular-nums;
@@ -5817,7 +5819,7 @@ img.left {
   display: block;
   margin-bottom: 6px;
   color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-inter-gs-inter-2020-11);
   font-size: 21px;
   font-weight: 700;
   letter-spacing: -0.3px;
@@ -5865,7 +5867,7 @@ img.left {
 .project-kpi-card span {
   margin-bottom: 18px;
   color: var(--maincolor);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-inter-gs-inter-2020-11);
   font-size: 13px;
   font-weight: 700;
 }
@@ -5920,7 +5922,7 @@ img.left {
 .project-feature-index {
   margin-bottom: 24px;
   color: var(--maincolor);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-inter-gs-inter-2020-11);
   font-size: 13px;
   font-weight: 700;
 }
@@ -5959,7 +5961,7 @@ img.left {
 
 .project-layer span {
   color: #fff;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-vela-sans);
   font-size: 15px;
   font-weight: 700;
 }
@@ -6643,7 +6645,7 @@ img.left {
   width: 100%;
   min-width: 1200px;
   height: auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-vela-sans);
 }
 
 .project-trading-architecture .node { fill: #101111; stroke: #45463e; stroke-width: 1; }
@@ -6769,7 +6771,7 @@ img.left {
   color: #fff;
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.4;
   letter-spacing: -.025em;
   text-wrap: balance;
 }
@@ -7294,7 +7296,7 @@ img.left {
   padding: 0;
   background: transparent;
   color: #f7f7f7;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-inter-gs-inter-2020-11);
   font-size: 14px;
   line-height: 1.45;
   overflow-wrap: anywhere;

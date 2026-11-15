@@ -1,0 +1,18 @@
+/* TradingBook supplies the editorial system; only this map's geometry is local. */
+.project-distribuidores :is(a, button):focus-visible { outline: 2px solid var(--trading-accent); outline-offset: 5px; }
+.project-distribuidores .trading-section-head h2 { max-width: 15ch; }
+.distribuidores-explorer .architecture-node { top: 40%; }
+.distribuidores-explorer .architecture-node[data-layer="business"] { left: 36.842%; }
+.distribuidores-explorer .architecture-node[data-layer="sql"] { top: 14.286%; left: 70.263%; height: 20%; }
+.distribuidores-explorer .architecture-node[data-layer="sap"] { top: 70%; left: 70.263%; }
+.distribuidores-explorer .architecture-wire > path { marker-end: url(#distribuidores-wire-arrow); }
+.distribuidores-explorer .architecture-wire > .architecture-trace { marker-end: url(#distribuidores-trace-arrow); }
+.distribuidores-explorer .architecture-detail { min-height: 380px; }
+
+@media (max-width: 1199px) {
+    .distribuidores-explorer .architecture-detail { min-height: 0; }
+}
+@media (max-width: 767px) {
+    .project-distribuidores .trading-section-head h2 { max-width: none; }
+    .distribuidores-explorer.is-ready .architecture-detail { min-height: 390px; }
+}

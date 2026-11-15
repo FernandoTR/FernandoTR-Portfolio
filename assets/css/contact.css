@@ -1,0 +1,285 @@
+/* Carta viva — correspondence, with one envelope gesture tied to submission. */
+#contact.contact-letter {
+    --letter-paper: #ece9df;
+    --letter-ink: #252820;
+    --letter-muted: #5d6055;
+    --letter-rule: #8a8c7d;
+    --letter-accent: #e69955;
+    --letter-ease: cubic-bezier(.16, 1, .3, 1);
+    padding-block: 112px 104px;
+    overflow: clip;
+    scroll-margin-top: 100px;
+}
+
+#contact.contact-letter::after { content: none; }
+#contact.contact-letter .container { perspective: none; }
+#contact.contact-letter .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(40px, 6vw, 88px);
+    max-width: 1192px;
+    margin-inline: auto;
+}
+
+/* The form is visible immediately, including without animation support. */
+#contact.contact-letter .contact-layout:is(.is-pending, .is-revealed) {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    animation: none;
+}
+
+#contact .contact-intro { padding-top: 28px; min-width: 0; }
+#contact.contact-letter .sec-head { margin-bottom: 0; }
+#contact.contact-letter .contact-title {
+    max-width: 11ch;
+    font-size: clamp(38px, 3.7vw, 54px);
+    line-height: 1.15;
+    letter-spacing: -.04em;
+    font-weight: 400;
+    color: var(--letter-paper);
+    text-wrap: balance;
+}
+#contact .contact-title .main-color { color: var(--letter-accent); }
+#contact.contact-letter .sec-head .contact-description {
+    max-width: 42ch;
+    margin-top: 28px;
+    color: #b7b6a8;
+    font-size: 15px;
+    line-height: 1.85;
+    font-weight: 400;
+}
+#contact .contact-alternative { margin: 24px 0 0; color: #b7b6a8; font-size: 13px; }
+#contact .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    color: var(--letter-paper);
+    font-size: 15px;
+    text-decoration: underline;
+    text-decoration-color: #777568;
+    text-underline-offset: 6px;
+    transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+#contact .contact-link svg { width: 19px; height: 19px; }
+
+/* A single sheet of warm stationery: no nested form panels. */
+#contact .contact-stationery {
+    min-width: 0;
+    background: var(--letter-paper);
+    color: var(--letter-ink);
+    border-radius: 4px;
+    box-shadow: 0 20px 48px #0003;
+    color-scheme: light;
+}
+#contact .contact-stationery ::selection { background: #b8b9a5; color: #171a16; }
+#contact .letter-paper { padding: 32px 36px 0; }
+#contact .letter-recipient {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #b9baac;
+}
+#contact .letter-recipient-label { font-size: 12px; color: var(--letter-muted); }
+#contact .letter-recipient p { margin: 3px 0 2px; color: var(--letter-ink); font-size: 21px; font-weight: 500; line-height: 1.4; }
+#contact .letter-recipient-role { color: var(--letter-muted); font-size: 12px; }
+#contact .letter-stamp {
+    display: grid;
+    place-items: center;
+    flex: 0 0 52px;
+    height: 64px;
+    border: 1px dashed #8a8c7d;
+    outline: 1px solid #b9baac;
+    outline-offset: -5px;
+    transform: rotate(7deg);
+}
+#contact .letter-stamp img { width: 28px; height: 28px; object-fit: contain; filter: brightness(0); opacity: .8; }
+#contact .letter-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 10px 24px; padding-top: 26px; }
+#contact .letter-field { min-width: 0; }
+#contact .letter-field--message { grid-column: 1 / -1; }
+#contact .contact-label { margin-bottom: 4px; color: var(--letter-muted); font-size: 13px; font-weight: 500; transition: color 180ms ease; }
+#contact .letter-field:focus-within .contact-label { color: #82501e; }
+#contact.contact-letter :is(input:not([type="hidden"]), textarea) {
+    display: block;
+    width: 100%;
+    padding: 10px 0 12px;
+    border: 0;
+    border-bottom: 1px solid var(--letter-rule);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--letter-ink);
+    caret-color: #82501e;
+    font: 400 16px/1.65 var(--font-vela-sans);
+    transition: border-color 180ms ease;
+    scroll-margin-block: 120px;
+}
+#contact.contact-letter input { min-height: 50px; }
+#contact.contact-letter textarea { min-height: 126px; max-height: 420px; resize: vertical; scrollbar-color: #8a8c7d var(--letter-paper); }
+#contact.contact-letter :is(input, textarea)::placeholder { color: #676a60; opacity: 1; }
+#contact.contact-letter :is(input, textarea):focus {
+    border-bottom-color: #82501e;
+    outline: none;
+    box-shadow: none;
+}
+#contact.contact-letter :is(input, textarea):focus-visible {
+    outline: 2px solid #82501e;
+    outline-offset: 4px;
+}
+#contact.contact-letter :is(input, textarea).input-error { border-color: #a23125 !important; box-shadow: none; }
+#contact .field-error {
+    min-height: 20px;
+    margin-top: 6px;
+    color: #a23125;
+    font-size: 12px;
+    line-height: 1.6;
+    transform: none;
+    transition: opacity 180ms ease;
+}
+#contact .letter-dispatch { margin-top: 8px; padding: 24px 36px 26px; border-top: 1px dashed #b9baac; }
+#contact .letter-verification { margin-bottom: 14px; }
+#contact .h-captcha { min-height: 78px; }
+#contact .h-captcha[data-size="compact"] { min-height: 144px; }
+#contact.contact-letter #contact-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 56px;
+    padding: 14px 20px;
+    border: 1px solid var(--letter-ink);
+    border-radius: 3px;
+    background: var(--letter-ink);
+    color: var(--letter-paper);
+    font: 500 14px/1.5 var(--font-inter-gs-inter-2020-11);
+    text-transform: none;
+    letter-spacing: 0;
+    transform: none;
+    transition: background-color 180ms ease, color 180ms ease;
+    touch-action: manipulation;
+}
+#contact #contact-submit-btn:focus-visible { outline: 2px solid #82501e; outline-offset: 4px; }
+#contact #contact-submit-btn:disabled { opacity: .75; cursor: wait; }
+#contact #contact-submit-btn.loading .text { opacity: 1; }
+#contact .letter-send-icon { width: 24px; height: 24px; flex: 0 0 24px; transition: transform 220ms var(--letter-ease); }
+#contact .letter-send-lid { transform-origin: 12px 8px; transition: transform 320ms var(--letter-ease); }
+#contact:is([data-letter-state="sending"], [data-letter-state="sent"]) .letter-send-lid { transform: scaleY(-1); }
+#contact .letter-dispatch .contact-note { margin-top: 14px; color: var(--letter-muted); font-size: 13px; line-height: 1.7; }
+#contact .form-status { min-height: 0; margin-top: 0; font-size: 13px; line-height: 1.7; transition: none; }
+#contact .form-status:not(:empty) { margin-top: 14px; }
+#contact .form-status.loading { color: var(--letter-muted); }
+#contact .form-status.success { color: #32633b; }
+#contact .form-status.error { color: #a23125; }
+
+/* Authored envelope. All motion is finite and driven by real form states. */
+#contact .letter-scene { position: relative; width: 260px; height: 210px; margin-top: 30px; perspective: 700px; }
+#contact .letter-envelope { position: absolute; inset: 12px 0 18px; transform: rotate(-7deg); }
+#contact .letter-envelope-back { position: absolute; inset: 0; width: 260px; height: 180px; transition: opacity 160ms ease; }
+#contact .letter-sheet {
+    position: absolute;
+    top: 26px;
+    left: 28px;
+    width: 204px;
+    height: 136px;
+    padding: 17px 20px;
+    border-radius: 2px;
+    background: var(--letter-paper);
+    color: var(--letter-ink);
+    transform: translateY(0);
+    transform-origin: top;
+    transition: transform 450ms var(--letter-ease);
+}
+#contact .letter-sheet-to { display: block; margin-bottom: 14px; font-size: 11px; font-weight: 500; }
+#contact .letter-sheet-line { display: block; height: 1px; width: 100%; margin-bottom: 8px; background: #a4a693; transform-origin: left; transform: scaleX(.7); transition: transform 450ms var(--letter-ease); }
+#contact .letter-sheet-line:nth-of-type(3) { width: 82%; transition-delay: 40ms; }
+#contact .letter-sheet-line:nth-of-type(4) { width: 58%; transition-delay: 80ms; }
+#contact .letter-sheet-signature { display: block; overflow: hidden; margin-top: 11px; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; color: var(--letter-muted); }
+#contact .letter-envelope-front { position: absolute; left: 0; bottom: 0; width: 260px; height: 110px; }
+#contact .letter-envelope-flap {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 260px;
+    height: 80px;
+    transform-origin: top;
+    transform: rotateX(-180deg);
+    backface-visibility: hidden;
+    transition: transform 320ms var(--letter-ease);
+}
+#contact[data-letter-state="idle"]:has(.contact-form :is(input, textarea):focus) .letter-sheet,
+#contact[data-letter-state="writing"] .letter-sheet { transform: translateY(-18px); }
+#contact[data-letter-state="writing"] .letter-sheet-line { transform: scaleX(1); }
+#contact:is([data-letter-state="sending"], [data-letter-state="sent"]) .letter-sheet { transform: translateY(46px) scaleY(.65); }
+#contact:is([data-letter-state="sending"], [data-letter-state="sent"]) .letter-envelope-back { opacity: 0; transition-delay: 160ms; }
+#contact:is([data-letter-state="sending"], [data-letter-state="sent"]) .letter-envelope-flap { transform: rotateX(0); transition-delay: 160ms; }
+#contact[data-letter-state="sent"] .letter-envelope { animation: letter-depart 800ms var(--letter-ease) both; }
+#contact .letter-delivered { position: absolute; inset: 0; display: grid; align-content: center; justify-items: start; gap: 14px; color: var(--letter-accent); opacity: 0; transform: translateY(8px); transition: opacity 220ms ease, transform 350ms var(--letter-ease); }
+#contact .letter-delivered svg { width: 48px; height: 48px; }
+#contact .letter-delivered span { font-size: 14px; color: var(--letter-paper); }
+#contact[data-letter-state="sent"] .letter-delivered { opacity: 1; transform: none; transition-delay: 500ms; }
+@keyframes letter-depart {
+    0%, 35% { transform: rotate(-7deg); opacity: 1; }
+    100% { transform: translate(72px, -32px) rotate(5deg) scale(.94); opacity: 0; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #contact .contact-link:hover { color: var(--letter-accent); text-decoration-color: var(--letter-accent); }
+    #contact.contact-letter #contact-submit-btn:not(:disabled):hover { background: #3d4235; border-color: #3d4235; }
+    #contact #contact-submit-btn:not(:disabled):hover .letter-send-icon { transform: translateX(4px); }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #contact .letter-paper { padding-inline: 26px; }
+    #contact .letter-dispatch { padding-inline: 26px; }
+    #contact .letter-fields { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+}
+
+@media (max-width: 991px) {
+    #contact.contact-letter { padding-block: 72px; }
+    #contact.contact-letter .contact-layout { grid-template-columns: minmax(0, 1fr); gap: 36px; max-width: 600px; }
+    #contact .contact-intro { position: relative; padding-top: 0; }
+    #contact.contact-letter .contact-title { max-width: 15ch; font-size: clamp(34px, 5.6vw, 48px); }
+    #contact.contact-letter .sec-head .contact-description { max-width: 50ch; margin-top: 22px; }
+    #contact .letter-scene { display: none; }
+    #contact .contact-alternative { margin-top: 20px; }
+    /* On touch, the same envelope gesture lives on the send icon. */
+    #contact[data-letter-state="sent"] .letter-send-icon { animation: letter-send-confirm 450ms var(--letter-ease); }
+}
+
+@keyframes letter-send-confirm {
+    45% { transform: translateX(14px); opacity: 0; }
+    46% { transform: translateX(-8px); }
+    100% { transform: none; opacity: 1; }
+}
+
+@media (max-width: 575px) {
+    #contact.contact-letter { padding-block: 56px 64px; }
+    #contact.contact-letter > .container { padding-inline: 0; }
+    #contact.contact-letter .contact-layout { gap: 28px; }
+    #contact.contact-letter .contact-title { font-size: clamp(30px, 8.7vw, 42px); }
+    #contact.contact-letter .sec-head .contact-description { font-size: 14px; line-height: 1.8; }
+    #contact .letter-paper { padding: 24px 22px 0; }
+    #contact .letter-recipient { padding-bottom: 20px; gap: 12px; }
+    #contact .letter-recipient p { font-size: 18px; }
+    #contact .letter-recipient-role { font-size: 12px; }
+    #contact .letter-stamp { flex-basis: 42px; height: 54px; }
+    #contact .letter-stamp img { width: 23px; height: 23px; }
+    #contact .letter-fields { grid-template-columns: minmax(0, 1fr); gap: 4px; padding-top: 22px; }
+    #contact .letter-dispatch { padding: 22px; }
+    #contact.contact-letter textarea { min-height: 150px; }
+}
+
+@media (max-width: 479px) {
+    #contact .h-captcha { min-height: 144px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #contact.contact-letter *, #contact.contact-letter *::before, #contact.contact-letter *::after { animation: none !important; transition: none !important; }
+    #contact .letter-sheet { transform: none !important; }
+    #contact[data-letter-state="sent"] .letter-envelope { opacity: 0; }
+}

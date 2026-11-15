@@ -36,14 +36,17 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
         rel="stylesheet">
 
     <!-- Plugins -->
     <link rel="stylesheet" href="assets/css/plugins.css">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20261019-hero-title-loop">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261113-typography">
+    <link rel="stylesheet" href="assets/css/engineering.css?v=20261113-handwriting">
+    <link rel="stylesheet" href="assets/css/contact.css?v=20261113-typography">
+    <link rel="stylesheet" href="assets/css/typography.css?v=20261113-handwriting">
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -64,7 +67,7 @@
     <script defer src="https://cloud.umami.is/script.js" data-website-id="520ea72b-00cd-44e1-91c8-b9f31af6abd1" data-domains="byfernandotorres.online" data-exclude-search="true" data-exclude-hash="true"></script>
 </head>
 
-<body class="dots-waves">
+<body class="engineering-home">
 
     <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
@@ -102,7 +105,6 @@
     <!-- ==================== End progress-scroll-button ==================== -->
 
 
-    <div id="home_wave"></div>
 
 
     <!-- ==================== Start Navbar ==================== -->
@@ -113,8 +115,9 @@
                 <div class="col-12">
 
                     <!-- Logo -->
-                    <a class="logo logo-hide icon-img-40" href="#home" aria-label="Ir al inicio">
+                    <a class="logo logo-hide icon-img-40" href="#home" aria-label="Fernando Torres, ir al inicio">
                         <img src="assets/imgs/logo-light.svg" alt="Fernando Torres">
+                        <span class="engineering-brand">Fernando Torres<span>Full Stack .NET</span></span>
                     </a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -175,12 +178,10 @@
                     <!-- ==================== Start about ==================== -->
 
                     <div class="about section-padding mt-40" data-scroll-index="0" id="home">
-                        <canvas class="hero-webgl" aria-hidden="true"></canvas>
                         <div class="hero-copy">
-                            <p class="hero-greeting">Hola, soy Fernando Torres</p>
                             <div class="cont">
-                                <!-- shortcut: Space Grotesk outlines are fixed to this phrase; regenerate them if the title changes. -->
-                                <h1>Desarrollador <span class="main-color hero-title-handwriting"><span class="hero-title-handwriting-label">Full Stack .NET</span><svg viewBox="0 0 640 96" width="640" height="96" aria-hidden="true" focusable="false"><g transform="translate(0 76)">
+                                <!-- Original outline lettering; the text label provides the accessible name. -->
+                                <h1>Desarrollador <span class="main-color engineering-title hero-title-handwriting"><span class="hero-title-handwriting-label">Full Stack .NET</span><svg viewBox="0 0 640 96" width="640" height="96" aria-hidden="true" focusable="false"><g transform="translate(0 76)">
                                         <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 180ms" transform="translate(0.00 0)" d="M7.1 -0.96L7.01 -68.16L48.38 -68.16L48.48 -58.75L17.38 -58.75L17.38 -39.36L45.89 -39.36L45.98 -29.95L17.38 -29.95L17.38 -0.96L7.1 -0.96Z"/>
                                         <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 315ms" transform="translate(48.67 0)" d="M25.44 -0.1Q20.06 -0.1 15.84 -2.5Q11.62 -4.9 9.22 -9.31Q6.82 -13.73 6.82 -19.78L6.82 -48.19L16.7 -48.19L16.7 -20.54Q16.7 -14.4 19.78 -11.47Q22.85 -8.54 28.22 -8.54Q34.37 -8.54 38.06 -12.62Q41.76 -16.7 41.76 -24.38L41.76 -48.19L51.65 -48.19L51.65 -0.96L41.95 -0.96L41.95 -8.06L40.42 -8.06Q39.07 -5.18 35.66 -2.64Q32.26 -0.1 25.44 -0.1Z"/>
                                         <path class="hero-title-glyph" pathLength="1" style="--draw-delay: 450ms" transform="translate(104.74 0)" d="M7.3 -0.96L7.3 -68.16L17.18 -68.16L17.18 -0.96L7.3 -0.96Z"/>
@@ -204,12 +205,6 @@
                                     <span class="hero-chip"><svg class="hero-chip-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-11-2 14"/></svg>APIs &amp; Integraciones</span>
                                 </div>
                             </div>
-                            <dl class="hero-metrics">
-                                <div>
-                                    <dt>+10</dt>
-                                    <dd>Años construyendo<br>software empresarial</dd>
-                                </div>
-                            </dl>
                             <div class="hero-actions">
                                 <a href="#portfolio" data-scroll-nav="1" class="hero-action-primary">Explorar proyectos <svg class="hero-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
                                 <a href="assets/docs/FernandoTorres_CV.pdf" target="_blank" rel="noopener noreferrer" class="hero-action-secondary" data-umami-event="cv_open" aria-label="Abrir CV de Fernando Torres en PDF">Abrir CV <svg class="hero-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
@@ -220,28 +215,77 @@
                             </div>
 
                         </div>
-                        <div class="author-profile">
-                            <div class="cont">
-                                <div>
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <!-- Logo -->
-                                            <a class="logo icon-img-40" href="#home" aria-label="Ir al inicio">
-                                                <img src="assets/imgs/logo-light.svg" alt="Fernando Torres">
-                                            </a>
-                                        </div>
-                                        <div class="ml-auto text-right fz-12 text-u ls1">
-                                            <span>Desarrollador <br> Full Stack .NET</span>
-                                        </div>
-                                    </div>
-                                    <div class="img mt-30">
-                                        <picture>
-                                            <img src="assets/imgs/header/0.jpg" alt="Fernando Torres, Desarrollador Full Stack .NET" width="800" height="981" decoding="async" fetchpriority="high">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <span class="availability-tag"><span class="availability-dot" aria-hidden="true"></span>Abierto a oportunidades</span>
+                        <figure class="integration" data-integration data-active="salesforce" aria-labelledby="integration-title">
+                            <div class="integration-heading">
+                                <h2 id="integration-title">Sistemas que se conectan.</h2>
+                                <button class="integration-motion" type="button" aria-pressed="false" hidden></button>
                             </div>
+                            <div class="integration-stage">
+                                <span class="integration-api" aria-hidden="true">APIs &amp; integraciones</span>
+                                <svg class="integration-drawing" viewBox="0 0 640 480" fill="none" aria-hidden="true" focusable="false">
+                                    <defs>
+                                        <pattern id="integration-grid" width="48" height="28" patternUnits="userSpaceOnUse" patternTransform="matrix(1 .5 -1 .5 320 40)">
+                                            <path d="M48 0H0V28" stroke="#bbbaa6" stroke-opacity=".12" stroke-width="1"/>
+                                        </pattern>
+                                        <linearGradient id="integration-metal" x1="220" y1="150" x2="440" y2="320" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#36332b"/><stop offset="1" stop-color="#171918"/>
+                                        </linearGradient>
+                                        <linearGradient id="integration-edge" x1="210" y1="200" x2="430" y2="290" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#f4c190"/><stop offset="1" stop-color="#715035"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M12 220 320 42 628 220 320 448Z" fill="url(#integration-grid)"/>
+                                    <path class="integration-perimeter" d="M42 242 320 80 598 242 320 404Z" stroke="#55564b" stroke-dasharray="3 8"/>
+                                    <g class="integration-route" data-route="salesforce">
+                                        <path d="M116 152V206L255 286 320 248"/>
+                                        <path class="integration-pulse" pathLength="1000" d="M116 152V206L255 286 320 248"/>
+                                        <circle cx="116" cy="206" r="4"/>
+                                    </g>
+                                    <g class="integration-route" data-route="sap">
+                                        <path d="M522 264V302L426 358 320 296V248"/>
+                                        <path class="integration-pulse" pathLength="1000" d="M522 264V302L426 358 320 296V248"/>
+                                        <circle cx="522" cy="302" r="4"/>
+                                    </g>
+                                    <g class="integration-route" data-route="data">
+                                        <path d="M178 376V346L254 302 320 340V248"/>
+                                        <path class="integration-pulse" pathLength="1000" d="M178 376V346L254 302 320 340V248"/>
+                                        <circle cx="178" cy="346" r="4"/>
+                                    </g>
+                                    <g class="integration-core">
+                                        <path d="M210 274 320 210 430 274V292L320 356 210 292Z" fill="#151716" stroke="#4d4d41"/>
+                                        <path d="m210 274 110 64 110-64M320 338v18" stroke="#696556"/>
+                                        <path d="M210 238 320 174 430 238V256L320 320 210 256Z" fill="#1d201c" stroke="#70624e"/>
+                                        <path d="m210 238 110 64 110-64M320 302v18" stroke="#ad8157"/>
+                                        <path d="M210 202 320 138 430 202V220L320 284 210 220Z" fill="#22241f" stroke="url(#integration-edge)" stroke-width="1.5"/>
+                                        <path d="m210 202 110 64 110-64-110-64Z" fill="url(#integration-metal)" stroke="url(#integration-edge)" stroke-width="1.5"/>
+                                        <path d="M320 266v18M226 228v5m8-1v5m8-1v5m8-1v5m8-1v5" stroke="#e69955" stroke-width="2"/>
+                                        <path d="m246 202 74-43 74 43-74 43Z" stroke="#e69955" stroke-opacity=".25"/>
+                                        <text x="320" y="208" text-anchor="middle" fill="#f4e7d5" font-size="32" font-weight="500">.NET</text>
+                                    </g>
+                                    <path d="M320 108V80m-5 5 5-5 5 5" stroke="#bbbaa6"/>
+                                </svg>
+                                <div class="integration-nodes" role="group" aria-label="Explorar tecnologías de integración">
+                                    <button class="integration-node integration-node--salesforce" type="button" data-system="salesforce" aria-pressed="true" aria-controls="integration-detail" disabled><img src="assets/imgs/skills/salesforce.svg" width="35" height="28" alt=""><span>Salesforce</span><span class="integration-node-type">CRM</span></button>
+                                    <button class="integration-node integration-node--sap" type="button" data-system="sap" aria-pressed="false" aria-controls="integration-detail" disabled><img src="assets/imgs/skills/SAP.svg" width="42" height="24" alt=""><span>SAP Business One</span><span class="integration-node-type">ERP</span></button>
+                                    <button class="integration-node integration-node--data" type="button" data-system="data" aria-pressed="false" aria-controls="integration-detail" disabled><img src="assets/imgs/skills/sql-server.svg" width="28" height="28" alt=""><span>SQL Server</span><span class="integration-node-type">Datos</span></button>
+                                </div>
+                            </div>
+                            <figcaption>
+                                <p class="integration-hint">Explora las conexiones</p>
+                                <div id="integration-detail" class="integration-detail" aria-live="polite" aria-atomic="true">
+                                    <h3>Del CRM a la operación.</h3>
+                                    <p>Salesforce y SAP Business One conectados mediante una API REST en .NET 8 para automatizar pedidos y consultas comerciales.</p>
+                                    <a href="assets/projects/apiSalesforceSap.html" data-umami-event="project_open" data-umami-event-project="apiSalesforceSap">Explorar la integración <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <div class="engineering-signature">
+                            <div class="engineering-person">
+                                <img src="assets/imgs/header/0.jpg" alt="Fernando Torres" width="800" height="981" decoding="async">
+                                <div><p>Fernando Torres</p><span>+10 años construyendo software empresarial</span></div>
+                            </div>
+                            <span class="engineering-availability"><span aria-hidden="true"></span>Abierto a oportunidades</span>
+                            <a class="engineering-scroll" href="#portfolio" data-scroll-nav="1">Conoce mi trabajo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
                         </div>
                     </div>
 
@@ -264,39 +308,6 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="portfolio-grid">
-
-                                                <article class="item">
-                                                    <a href="./assets/projects/trading.html" class="portfolio-card-link" data-umami-event="project_open" data-umami-event-project="trading" aria-label="Ver caso de estudio de Trading Book" aria-describedby="portfolio-tech-trading">
-                                                    <div class="custom-Portolio">
-                                                        <picture>
-                                                            <source srcset="assets/imgs/works/PortalTrading-card.webp" type="image/webp">
-                                                            <img src="assets/imgs/works/PortalTrading.png" alt="Aplicación de registro y análisis de trading en .NET 8" width="1920" height="1080" loading="lazy" decoding="async">
-                                                        </picture>
-                                                        <span class="portfolio-card-notch" aria-hidden="true"></span>
-                                                        <span class="portfolio-link portfolio-card-arrow" aria-hidden="true">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                                                                <path d="M7 17 17 7M7 7h10v10"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </div>
-                                                    <div class="cont">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="mt-20">
-                                                                <div class="info">
-                                                                    <h3>Trading Book</h3>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <p class="fw-200 fz-14 mb-10">
-                                                            Desarrollé una aplicación en ASP.NET Core con Clean Architecture para registrar y analizar operaciones de trading cripto.
-                                                        </p>
-                                                        <p class="tech-badges portfolio-tech-badges" aria-label="Tecnologías principales">
-                                                            <span>.NET 10</span><span>ASP.NET Core MVC</span><span>Entity Framework Core 10</span><span>SQL Server</span><span class="portfolio-tech-more">+7</span>
-                                                        </p>
-                                                        <span class="portfolio-tech-description" id="portfolio-tech-trading">Tecnologías principales: .NET 10, ASP.NET Core MVC, Entity Framework Core 10 y SQL Server; 7 tecnologías adicionales.</span>
-                                                    </div>
-                                                    </a>
-                                                </article>
 
                                                 <article class="item">
                                                     <a href="./assets/projects/apiSalesforceSap.html" class="portfolio-card-link" data-umami-event="project_open" data-umami-event-project="apiSalesforceSap" aria-label="Ver caso de estudio de la API de integración Salesforce y SAP B1" aria-describedby="portfolio-tech-salesforce-sap">
@@ -327,6 +338,39 @@
                                                             <span>.NET 8</span><span>API REST</span><span>Salesforce API</span><span>SAP Business One</span><span class="portfolio-tech-more">+5</span>
                                                         </p>
                                                         <span class="portfolio-tech-description" id="portfolio-tech-salesforce-sap">Tecnologías principales: .NET 8, API REST, Salesforce API y SAP Business One; 5 tecnologías adicionales.</span>
+                                                    </div>
+                                                    </a>
+                                                </article>
+
+                                                <article class="item">
+                                                    <a href="./assets/projects/trading.html" class="portfolio-card-link" data-umami-event="project_open" data-umami-event-project="trading" aria-label="Ver caso de estudio de Trading Book" aria-describedby="portfolio-tech-trading">
+                                                    <div class="custom-Portolio">
+                                                        <picture>
+                                                            <source srcset="assets/imgs/works/PortalTrading-card.webp" type="image/webp">
+                                                            <img src="assets/imgs/works/PortalTrading.png" alt="Aplicación de registro y análisis de trading en .NET 8" width="1920" height="1080" loading="lazy" decoding="async">
+                                                        </picture>
+                                                        <span class="portfolio-card-notch" aria-hidden="true"></span>
+                                                        <span class="portfolio-link portfolio-card-arrow" aria-hidden="true">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                                                <path d="M7 17 17 7M7 7h10v10"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="cont">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="mt-20">
+                                                                <div class="info">
+                                                                    <h3>Trading Book</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="fw-200 fz-14 mb-10">
+                                                            Desarrollé una aplicación en ASP.NET Core con Clean Architecture para registrar y analizar operaciones de trading cripto.
+                                                        </p>
+                                                        <p class="tech-badges portfolio-tech-badges" aria-label="Tecnologías principales">
+                                                            <span>.NET 10</span><span>ASP.NET Core MVC</span><span>Entity Framework Core 10</span><span>SQL Server</span><span class="portfolio-tech-more">+7</span>
+                                                        </p>
+                                                        <span class="portfolio-tech-description" id="portfolio-tech-trading">Tecnologías principales: .NET 10, ASP.NET Core MVC, Entity Framework Core 10 y SQL Server; 7 tecnologías adicionales.</span>
                                                     </div>
                                                     </a>
                                                 </article>
@@ -699,98 +743,106 @@
 
                     <!-- ==================== Start Contact ==================== -->
 
-                    <section class="contact section-padding" data-scroll-index="4" id="contact">
+                    <section class="contact contact-letter section-padding" data-scroll-index="4" id="contact" aria-labelledby="contact-title" data-letter-state="idle">
                         <div class="container">
-                            <div class="row justify-content-between contact-layout">
-
-                                <!-- Left Content -->
-                                <div class="col-lg-5 valign">
-                                    <div class="sec-head md-mb50">
-                                        <h2 class="contact-title">
+                            <div class="contact-layout">
+                                <div class="contact-intro">
+                                    <div class="sec-head">
+                                        <h2 class="contact-title" id="contact-title">
                                             Estoy abierto a
                                             <span class="main-color">nuevas oportunidades</span>
                                         </h2>
-
-                                        <p class="mt-20">
+                                        <p class="contact-description">
                                             ¿Tienes una vacante en mente? Cuéntame el puesto, la empresa y qué reto busca resolver el equipo; así podremos hablar de cómo puedo aportar.
                                         </p>
-
-                                        <p class="contact-note contact-alternative">
-                                            También puedes <a class="contact-link" href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer">escribirme por LinkedIn</a>.
-                                        </p>
                                     </div>
-                                </div>
-
-                                <!-- Right Form -->
-                                <div class="col-lg-6">
-                                    <div class="contact-form-box">
-
-                                        <form id="contact-form" class="contact-form">
-
-
-
-                                             <!-- Web3Forms Access Key -->
-                                            <input type="hidden" name="access_key" value="869e45ea-dd24-4b46-a7b1-8e7479b801a7">
-
-                                            <!-- Honeypot anti-spam -->
-                                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="mb-10">
-                                                        <label class="contact-label" for="form_name">Nombre</label>
-                                                        <input id="form_name" type="text" name="name" autocomplete="name" aria-describedby="error_name" required>
-                                                        <small class="field-error" id="error_name"></small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="mb-10">
-                                                        <label class="contact-label" for="form_email">Correo electrónico</label>
-                                                        <input id="form_email" type="email" name="email" autocomplete="email" aria-describedby="error_email" required>
-                                                        <small class="field-error" id="error_email"></small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <div class="mb-10">
-                                                        <label class="contact-label" for="form_message">Mensaje</label>
-                                                        <textarea id="form_message" name="message" placeholder="Describe el puesto y el reto que busca resolver el equipo." autocomplete="off" aria-describedby="error_message" required></textarea>
-                                                         <small class="field-error" id="error_message"></small>
-                                                    </div>
-                                                </div>
-
-                                                 <!-- captcha -->
-                                                <div class="col-12">
-                                                    <div class="mb-10">
-                                                        <div class="h-captcha" data-captcha="true" data-theme="dark" aria-describedby="error_captcha"></div>
-                                                        <small class="field-error" id="error_captcha"></small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <button type="submit" class="butn btnSendContactSection" id="contact-submit-btn">
-                                                        <span class="text">Enviar mensaje</span>
-                                                    </button>
-                                                </div>
-
-                                                <div class="col-12">
-                                                    <p class="contact-note mt-20">
-                                                        Respondo normalmente en menos de 24 horas.
-                                                    </p>
-                                                </div>
-
-                                                <!-- Estado del formulario -->
-                                                <div class="col-12">
-                                                    <p id="form-status" class="form-status mt-15" role="status" aria-live="polite"></p>
-                                                </div>
-
+                                    <div class="letter-scene" aria-hidden="true">
+                                        <div class="letter-envelope">
+                                            <svg class="letter-envelope-back" viewBox="0 0 260 180" fill="none">
+                                                <path d="M1 72 130 1 259 72v106H1Z" fill="#242621" stroke="#777568"/>
+                                                <path d="m1 72 129 81L259 72" stroke="#777568"/>
+                                            </svg>
+                                            <div class="letter-sheet">
+                                                <span class="letter-sheet-to">Para Fernando</span>
+                                                <span class="letter-sheet-line"></span>
+                                                <span class="letter-sheet-line"></span>
+                                                <span class="letter-sheet-line"></span>
+                                                <span class="letter-sheet-signature" data-letter-sender>Tu próximo mensaje</span>
                                             </div>
-
-                                        </form>
+                                            <svg class="letter-envelope-front" viewBox="0 0 260 110" fill="none">
+                                                <path d="M1 1 130 71 259 1v108H1Z" fill="#30322b" stroke="#8a8573"/>
+                                                <path d="m1 109 92-63m166 63-92-63" stroke="#777568"/>
+                                            </svg>
+                                            <svg class="letter-envelope-flap" viewBox="0 0 260 80" fill="none">
+                                                <path d="M1 1h258L130 78Z" fill="#3c3e33" stroke="#a3997c"/>
+                                            </svg>
+                                        </div>
+                                        <div class="letter-delivered">
+                                            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="currentColor"/><path d="m15 24 6 6 13-13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            <span>Gracias por escribir.</span>
+                                        </div>
                                     </div>
+                                    <p class="contact-note contact-alternative">
+                                        También puedes<br>
+                                        <a class="contact-link" href="https://www.linkedin.com/in/fernandotorresrivera" target="_blank" rel="noopener noreferrer">
+                                            escribirme por LinkedIn
+                                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </p>
                                 </div>
 
+                                <form id="contact-form" class="contact-form contact-stationery" action="https://api.web3forms.com/submit" method="POST">
+                                    <!-- Web3Forms and honeypot contracts -->
+                                    <input type="hidden" name="access_key" value="869e45ea-dd24-4b46-a7b1-8e7479b801a7">
+                                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                                    <div class="letter-paper">
+                                        <div class="letter-recipient">
+                                            <div>
+                                                <span class="letter-recipient-label">Para</span>
+                                                <p>Fernando Torres</p>
+                                                <span class="letter-recipient-role">Desarrollador Full Stack .NET</span>
+                                            </div>
+                                            <div class="letter-stamp" aria-hidden="true">
+                                                <img src="assets/imgs/logo-light.svg" alt="" width="28" height="28" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="letter-fields">
+                                            <div class="letter-field">
+                                                <label class="contact-label" for="form_name">Nombre</label>
+                                                <input id="form_name" type="text" name="name" placeholder="Tu nombre" autocomplete="name" aria-describedby="error_name" required>
+                                                <small class="field-error" id="error_name"></small>
+                                            </div>
+                                            <div class="letter-field">
+                                                <label class="contact-label" for="form_email">Correo electrónico</label>
+                                                <input id="form_email" type="email" name="email" placeholder="tu@empresa.com" autocomplete="email" aria-describedby="error_email" required>
+                                                <small class="field-error" id="error_email"></small>
+                                            </div>
+                                            <div class="letter-field letter-field--message">
+                                                <label class="contact-label" for="form_message">Mensaje</label>
+                                                <textarea id="form_message" name="message" placeholder="Describe el puesto y el reto que busca resolver el equipo." autocomplete="off" aria-describedby="error_message" required></textarea>
+                                                <small class="field-error" id="error_message"></small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="letter-dispatch">
+                                        <div class="letter-verification">
+                                            <div class="h-captcha" data-captcha="true" data-theme="light" aria-describedby="error_captcha"></div>
+                                            <small class="field-error" id="error_captcha"></small>
+                                        </div>
+                                        <button type="submit" class="butn btnSendContactSection" id="contact-submit-btn">
+                                            <span class="text">Enviar mensaje</span>
+                                            <svg class="letter-send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M3 8v12h18V8M3 20l6-7m12 7-6-7m-12-5 9 7 9-7"/>
+                                                <path class="letter-send-lid" d="m3 8 9-6 9 6"/>
+                                            </svg>
+                                        </button>
+                                        <p class="contact-note">Respondo normalmente en menos de 24 horas.</p>
+                                        <noscript><p class="contact-note">Activa JavaScript para completar hCaptcha, o escríbeme por LinkedIn.</p></noscript>
+                                        <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </section>
@@ -878,6 +930,9 @@
             if (!contact) return;
 
             function loadContactCaptcha() {
+                if (window.matchMedia("(max-width: 479px), (pointer: coarse)").matches) {
+                    contact.querySelector(".h-captcha").dataset.size = "compact";
+                }
                 const script = document.createElement("script");
                 script.src = "https://web3forms.com/client/script.js";
                 script.async = true;
@@ -899,6 +954,7 @@
 
     <!-- custom scripts -->
     <script src="assets/js/scripts.js?v=20261019-hero-title-loop-5s"></script>
+    <script src="assets/js/engineering.js?v=20261113"></script>
 
     <script>
         (function () {
@@ -992,6 +1048,12 @@
             const toast = document.getElementById("toast");
             const toastMessage = toast.querySelector(".toast-message");
             const formStatus = document.getElementById("form-status");
+            const contact = document.getElementById("contact");
+            const letterSender = contact.querySelector("[data-letter-sender]");
+            const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+            // Keep native validation as the fallback; use the inline, accessible errors with JS.
+            form.noValidate = true;
 
             const fields = {
                 name: document.getElementById("form_name"),
@@ -1022,7 +1084,8 @@
 
             function setFormStatus(message, type) {
                 formStatus.textContent = message;
-                formStatus.className = `form-status mt-15 ${type}`;
+                formStatus.className = `form-status ${type}`;
+                contact.dataset.letterState = type === "loading" ? "sending" : type === "success" ? "sent" : "error";
             }
 
             function clearError(fieldKey) {
@@ -1096,11 +1159,13 @@
 
                     if (firstInvalidField) {
                         firstInvalidField.scrollIntoView({
-                            behavior: "smooth",
+                            behavior: reducedMotion.matches ? "instant" : "smooth",
                             block: "center"
                         });
 
-                        setTimeout(() => firstInvalidField.focus(), 300);
+                        firstInvalidField.focus({ preventScroll: true });
+                    } else {
+                        contact.querySelector(".h-captcha iframe")?.focus();
                     }
 
                     return false;
@@ -1111,6 +1176,11 @@
 
             Object.keys(fields).forEach(key => {
                 fields[key].addEventListener("input", function () {
+                    if (contact.dataset.letterState === "sent" || contact.dataset.letterState === "error") {
+                        formStatus.textContent = "";
+                    }
+                    contact.dataset.letterState = "writing";
+                    letterSender.textContent = fields.name.value.trim() || "Tu próximo mensaje";
                     if (fields[key].value.trim()) {
                         clearError(key);
 
@@ -1129,12 +1199,15 @@
             form.addEventListener("submit", async function (e) {
                 e.preventDefault();
 
+                if (btn.disabled) return;
                 if (!validate()) return;
 
                 setFormStatus("Enviando mensaje…", "loading");
+                form.setAttribute("aria-busy", "true");
                 btn.classList.add("loading");
                 btn.disabled = true;
                 btnText.textContent = "Enviando mensaje...";
+                Object.values(fields).forEach(field => { field.readOnly = true; });
 
                 const formData = new FormData(form);
 
@@ -1151,10 +1224,11 @@
 
                     const data = await res.json();
 
-                    if (data.success) {
+                    if (res.ok && data.success) {
                         showToast("Mensaje enviado correctamente", "success");
                         setFormStatus("Mensaje enviado correctamente. Gracias por escribir.", "success");
                         form.reset();
+                        letterSender.textContent = "Tu próximo mensaje";
 
                         Object.keys(fields).forEach(key => clearError(key));
                         clearCaptchaError();
@@ -1177,11 +1251,13 @@
                     setFormStatus("No hay conexión. Revisa tu internet e inténtalo de nuevo.", "error");
                     if (window.hcaptcha) hcaptcha.reset();
                     console.error(err);
+                } finally {
+                    btn.classList.remove("loading");
+                    btn.disabled = false;
+                    btnText.textContent = "Enviar mensaje";
+                    form.removeAttribute("aria-busy");
+                    Object.values(fields).forEach(field => { field.readOnly = false; });
                 }
-
-                btn.classList.remove("loading");
-                btn.disabled = false;
-                btnText.textContent = "Enviar mensaje";
             });
 
         });

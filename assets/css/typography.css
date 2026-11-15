@@ -1,0 +1,223 @@
+/* Shared typography contract — see DESIGN.md, Tokens — Typography. */
+:root {
+    --font-sans-serif: sans-serif;
+    --font-vela-sans: "Vela Sans", "Inter", "Noto Sans", var(--font-sans-serif);
+    --font-noto-sans: "Noto Sans", "Inter", var(--font-sans-serif);
+    --font-inter-gs-inter-2020-11: "Inter", "Noto Sans", var(--font-sans-serif);
+    --font-sf-pro-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-primary-features: "blwf" 1, "cv03" 1, "cv04" 1, "cv09" 1, "cv11" 1;
+
+    --text-caption: .75rem;
+    --text-body-sm: .875rem;
+    --text-body: 1rem;
+    --text-subheading: 1.125rem;
+    --text-heading-sm: 1.25rem;
+    --text-heading: 1.5rem;
+    --text-heading-lg: 2rem;
+    --text-display: 5rem;
+    --text-control: .9375rem;
+    --text-display-fluid: clamp(var(--text-heading-lg), 5.56vw, var(--text-display));
+
+    --leading-caption: 1.2;
+    --leading-body-sm: 1.7;
+    --leading-body: 1.5;
+    --leading-subheading: 1.4;
+    --leading-heading-sm: 1.4;
+    --leading-heading: 1.33;
+    --leading-heading-lg: 1.2;
+    --leading-display: 1.1;
+    --tracking-small: .02em;
+    --tracking-body: 0em;
+    --tracking-heading: -.01em;
+}
+
+body {
+    font-family: var(--font-vela-sans);
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
+    font-feature-settings: var(--font-primary-features);
+}
+
+input, textarea, select { font-family: var(--font-vela-sans); font-feature-settings: var(--font-primary-features); }
+button, .butn, .tech-badges, .date-resume, .project-back-link {
+    font-family: var(--font-inter-gs-inter-2020-11);
+    font-feature-settings: normal;
+    letter-spacing: var(--tracking-small);
+}
+strong, b { font-weight: 600; }
+.fw-100, .fw-200, .fw-300, .text-300 { font-weight: 400 !important; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-vela-sans);
+    font-weight: 500;
+    letter-spacing: 0;
+}
+h1 { font-size: var(--text-display-fluid); line-height: var(--leading-display); letter-spacing: var(--tracking-heading); }
+h2 { font-size: var(--text-heading-lg); line-height: var(--leading-heading-lg); letter-spacing: var(--tracking-heading); }
+h3 { font-size: var(--text-heading); line-height: var(--leading-heading); }
+h4 { font-size: var(--text-heading-sm); line-height: var(--leading-heading-sm); }
+h5, h6 { font-size: var(--text-subheading); line-height: var(--leading-subheading); }
+p { font-size: var(--text-body); font-weight: 400; line-height: var(--leading-body); }
+
+.navbar .navbar-nav .nav-link,
+.engineering-home .navbar .navbar-nav .nav-link {
+    font-family: var(--font-vela-sans);
+    font-size: var(--text-body-sm);
+    font-weight: 400;
+    letter-spacing: var(--tracking-small);
+}
+.butn, .butn.butn-sm { font-size: var(--text-control); font-weight: 600; line-height: var(--leading-caption); }
+.engineering-home #home .cont h1,
+.project .caption h1,
+.project-case-study .caption h1,
+.privacy-content h1 {
+    font-size: var(--text-display-fluid) !important;
+    font-weight: 500;
+    line-height: var(--leading-display);
+    letter-spacing: var(--tracking-heading);
+}
+#contact .contact-title .main-color { font-style: italic; }
+
+.engineering-home #home .hero-lead {
+    font-size: var(--text-body);
+    line-height: var(--leading-body-sm);
+    letter-spacing: var(--tracking-body);
+    max-width: 60ch;
+}
+.engineering-home #home .hero-actions a {
+    font-family: var(--font-inter-gs-inter-2020-11);
+    font-size: var(--text-control);
+    font-weight: 600;
+    line-height: var(--leading-caption);
+    letter-spacing: var(--tracking-small);
+}
+.engineering-brand { font-size: var(--text-body-sm); }
+.engineering-home #home .hero-chip,
+.engineering-brand > span,
+.engineering-person span,
+.engineering-availability,
+.engineering-scroll,
+.integration-motion,
+.integration-api,
+.integration-node,
+.integration-node-type,
+.integration-hint,
+.integration-detail a {
+    font-family: var(--font-inter-gs-inter-2020-11);
+    font-size: var(--text-caption);
+    line-height: var(--leading-caption);
+    letter-spacing: var(--tracking-small);
+}
+.engineering-person p { font-size: var(--text-body-sm); line-height: var(--leading-body-sm); }
+.integration-heading h2 { font-size: var(--text-body-sm); line-height: var(--leading-subheading); letter-spacing: var(--tracking-small); }
+.integration-detail h3 { font-size: var(--text-subheading); line-height: var(--leading-subheading); }
+.integration-detail p { font-size: var(--text-body-sm); line-height: var(--leading-body-sm); letter-spacing: var(--tracking-small); }
+.integration-drawing text { font-family: var(--font-vela-sans); font-feature-settings: var(--font-primary-features); }
+
+.engineering-home #portfolio .sub-title,
+#resume .sec-head :is(h2, h3),
+#skills .skills-heading h2 {
+    font-size: var(--text-heading-lg) !important;
+    font-weight: 500;
+    line-height: var(--leading-heading-lg);
+    letter-spacing: var(--tracking-heading);
+}
+.engineering-home #portfolio .cont h3 { font-size: var(--text-heading); font-weight: 500; line-height: var(--leading-heading); letter-spacing: 0; }
+.engineering-home #portfolio .item:first-child h3 { font-size: var(--text-heading-lg); line-height: var(--leading-heading-lg); letter-spacing: var(--tracking-heading); }
+.engineering-home #portfolio .cont p,
+.engineering-home #portfolio .item:first-child .cont p { font-size: var(--text-body) !important; line-height: var(--leading-body-sm); letter-spacing: var(--tracking-body); }
+.engineering-home #portfolio .portfolio-subtitle { font-size: var(--text-body); line-height: var(--leading-body); }
+.engineering-home #portfolio .portfolio-tech-badges span,
+.tech-badges span { font-family: var(--font-inter-gs-inter-2020-11); font-size: var(--text-caption); line-height: var(--leading-caption); letter-spacing: var(--tracking-small); }
+
+.experience-card__heading h3 { font-size: var(--text-heading); font-weight: 500; line-height: var(--leading-heading); letter-spacing: 0; }
+.education-card .experience-card__heading h4,
+.certification-card .experience-card__heading h4 { font-size: var(--text-heading-sm); font-weight: 500; line-height: var(--leading-heading-sm); }
+.resume .experience-card .company,
+.experience-card .project-impact-list li,
+#skills .skills-heading p { font-size: var(--text-body); font-weight: 400; line-height: var(--leading-body-sm); letter-spacing: var(--tracking-body); }
+.resume .experience-card .date-resume { font-size: var(--text-caption); line-height: var(--leading-caption); }
+.certification-card__link-label { font-family: var(--font-inter-gs-inter-2020-11); font-size: var(--text-caption); line-height: var(--leading-caption); letter-spacing: var(--tracking-small); }
+#skills .skills-category h3 { font-size: var(--text-heading-sm); line-height: var(--leading-heading-sm); }
+#skills .skills-category > p { font-size: var(--text-body-sm); line-height: var(--leading-body-sm); letter-spacing: var(--tracking-small); }
+#skills .skills-technologies li, #skills .skills-proof-link { font-family: var(--font-inter-gs-inter-2020-11); font-size: var(--text-caption); line-height: var(--leading-caption); letter-spacing: var(--tracking-small); }
+.experience-metric, .project-metric, .numb { font-family: var(--font-inter-gs-inter-2020-11); font-variant-numeric: tabular-nums; }
+
+/* Correspondence keeps its underline-only focus treatment. */
+#contact.contact-letter .contact-title {
+    max-width: 15ch;
+    font-size: clamp(var(--text-heading-lg), 3.5vw, var(--text-display));
+    line-height: var(--leading-display);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 500;
+}
+#contact.contact-letter .sec-head .contact-description { font-size: var(--text-body); line-height: var(--leading-body-sm); letter-spacing: var(--tracking-body); }
+#contact.contact-letter :is(input:not([type="hidden"]), textarea) {
+    font-family: var(--font-vela-sans);
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
+}
+#contact .contact-label,
+#contact .letter-recipient-label,
+#contact .letter-recipient-role,
+#contact .field-error,
+#contact .letter-sheet-to,
+#contact .letter-sheet-signature {
+    font-family: var(--font-inter-gs-inter-2020-11);
+    font-size: var(--text-caption);
+    line-height: var(--leading-caption);
+    letter-spacing: var(--tracking-small);
+}
+#contact .letter-recipient p { font-size: var(--text-heading-sm); line-height: var(--leading-heading-sm); }
+#contact.contact-letter #contact-submit-btn { font-family: var(--font-inter-gs-inter-2020-11); font-size: var(--text-control); font-weight: 600; line-height: var(--leading-caption); letter-spacing: var(--tracking-small); }
+#contact .contact-alternative,
+#contact .letter-dispatch .contact-note,
+#contact .form-status { font-size: var(--text-body-sm); line-height: var(--leading-body-sm); letter-spacing: var(--tracking-small); }
+#contact .contact-link { font-size: var(--text-body); line-height: var(--leading-body); }
+.toast { font-family: var(--font-sf-pro-display); font-size: var(--text-body); line-height: var(--leading-caption); font-feature-settings: normal; }
+
+/* Case studies share the same hierarchy, including the internal template. */
+.project :is(h2, h5.mb-20),
+.project-trading .project-trading-architecture h2,
+.project-trading .project-impact-card h2 {
+    font-size: var(--text-heading-lg);
+    font-weight: 500;
+    line-height: var(--leading-heading-lg);
+    letter-spacing: var(--tracking-heading);
+}
+.project-trading .project-feature-card h3,
+.project :is(.project-layer h3, .project-result-card h5) { font-size: var(--text-heading); font-weight: 500; line-height: var(--leading-heading); letter-spacing: 0; }
+.project .project-impact-list h3 { font-size: var(--text-heading-sm); font-weight: 500; line-height: var(--leading-heading-sm); letter-spacing: 0; }
+.project .project-hero-copy, .project .project-lead { font-size: var(--text-subheading) !important; line-height: var(--leading-subheading); letter-spacing: 0; }
+.project .project-hero-role { font-size: var(--text-body-sm); line-height: var(--leading-body-sm); letter-spacing: var(--tracking-small); }
+.project :is(.project-feature-card p, .project-impact-list p, .project-impact-list > li, .project-layer p, .project-trading-info p, .project-trading-info li, .project-trading-info li > div, .project-viaticos-description-context) {
+    font-size: var(--text-body);
+    font-weight: 400;
+    line-height: var(--leading-body-sm);
+    letter-spacing: var(--tracking-body);
+}
+.project :is(.project-access-note, .project-hero-caption, .project-impact-intro, .endpoint-item p) { font-size: var(--text-body-sm); line-height: var(--leading-body-sm); letter-spacing: var(--tracking-small); }
+.project-trading-architecture .body { font-weight: 400; }
+.project-layer span { font-weight: 600; }
+
+.privacy-content h2 { font-size: var(--text-heading-lg); line-height: var(--leading-heading-lg); letter-spacing: var(--tracking-heading); }
+.privacy-content p, .privacy-content li { font-size: var(--text-body); line-height: var(--leading-body-sm); letter-spacing: var(--tracking-body); }
+.privacy-content .privacy-intro { font-size: var(--text-subheading); line-height: var(--leading-subheading); }
+.privacy-content .privacy-updated, .privacy-eyebrow { font-size: var(--text-caption); line-height: var(--leading-caption); letter-spacing: var(--tracking-small); }
+.footer-brand h3 { font-size: var(--text-heading); line-height: var(--leading-heading); }
+.footer-column h4 { font-size: var(--text-subheading); line-height: var(--leading-subheading); }
+.footer-column p, .footer-brand p, .footer-nav a, .footer-action { font-size: var(--text-body-sm); line-height: var(--leading-body-sm); letter-spacing: var(--tracking-small); }
+.footer-bottom { font-size: var(--text-caption); line-height: var(--leading-caption); letter-spacing: var(--tracking-small); }
+.footer-bottom-actions a { font-size: var(--text-caption); line-height: var(--leading-caption); }
+
+@media (max-width: 575px) {
+    .engineering-home #home .hero-actions a { flex-basis: auto; }
+    .engineering-home #portfolio .item:first-child h3 { font-size: var(--text-heading); line-height: var(--leading-heading); }
+    .experience-card__heading h3 { font-size: var(--text-heading-sm); line-height: var(--leading-heading-sm); }
+    #resume .resume-education-column .sec-head h3 { font-size: var(--text-heading) !important; line-height: var(--leading-heading); }
+    #contact .letter-recipient p { font-size: var(--text-subheading); line-height: var(--leading-subheading); }
+}

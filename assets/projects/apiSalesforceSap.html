@@ -6,7 +6,7 @@
      <!-- Metas -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="API REST en .NET 8 que integra Salesforce y SAP Business One para crear órdenes de venta, registrar clientes, consultar inventario y precios, y sincronizar productos.">
     <meta name="keywords" content="Salesforce SAP B1, API REST .NET 8, C#, integración CRM ERP, SAP Business One, SAP HANA, JWT, OAuth 2.0, backend developer">
     <meta name="author" content="Fernando Torres">
@@ -34,9 +34,9 @@
     <link rel="shortcut icon" href="../../assets/imgs/favicon.ico">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
         rel="stylesheet">
 
     <!-- Plugins -->
@@ -44,7 +44,13 @@
     <link rel="stylesheet" href="../../assets/css/plugins/glightbox.min.css">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="../../assets/css/style.css?v=20261016-section-spacing">
+    <link rel="stylesheet" href="../../assets/css/style.css?v=20261113-typography">
+    <link rel="stylesheet" href="../../assets/css/typography.css?v=20261113">
+    <link rel="stylesheet" href="../../assets/css/trading.css?v=20261115-architecture-type">
+    <link rel="stylesheet" href="../../assets/css/salesforce-sap.css?v=20261115">
+    <noscript>
+        <style>.loader-wrap, .cursor { display: none !important; }</style>
+    </noscript>
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -79,7 +85,7 @@
 
         <div class="loader-wrap-heading">
             <div class="loader-status" role="status" aria-live="polite">
-                <svg class="thinking-orb-loader" viewBox="0 0 96 96" data-state="solving" role="img" aria-label="Preparando el caso de estudio de TradingBook"></svg>
+                <svg class="thinking-orb-loader" viewBox="0 0 96 96" data-state="solving" role="img" aria-label="Preparando el caso de estudio de Salesforce y SAP"></svg>
                 <span>Cargando el proyecto...</span>
             </div>
         </div>
@@ -104,41 +110,45 @@
 
     <!-- ==================== Start Navbar ==================== -->
 
-    <nav class="navbar navbar-expand-lg pt-20 trading-navbar">
-        <div class="container-xxl">
+    <nav class="navbar navbar-expand-lg trading-navbar">
+        <div class="container-xxl d-block">
+            <div class="row">
+                <div class="col-12">
 
-            <!-- Logo -->
-            <a class="logo icon-img-50" href="../../index.html" aria-label="Ir al inicio del portafolio de Fernando Torres">
-                <img src="../../assets/imgs/logo-light.svg" alt="Fernando Torres">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir o cerrar el menú de navegación">
-                <span class="icon-bar"><i class="fas fa-bars"></i></span>
-            </button>
-
-            <!-- navbar links -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html"><span class="rolling-text">Inicio</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="md-hide ml-auto">
-                <div class="butn-presv">
-                    <a href="../../index.html#contact" class="butn butn-sm butn-bg bg-white radius-10 skew">
-                        <span class="text-dark">Contáctame!</span>
+                    <!-- Logo -->
+                    <a class="logo logo-hide icon-img-40" href="../../index.html#home" aria-label="Fernando Torres, ir al inicio">
+                        <img src="../../assets/imgs/logo-light.svg" alt="Fernando Torres">
+                        <span class="engineering-brand">Fernando Torres<span>Full Stack .NET</span></span>
                     </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir o cerrar el menú de navegación">
+                        <span class="icon-bar"><i class="fas fa-bars"></i></span>
+                    </button>
+
+                    <!-- navbar links -->
+                    <div class="collapse navbar-collapse d-flex align-items-center mt-30" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html"><span class="rolling-text">Inicio</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia Profesional</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a>
+                            </li>
+                        </ul>
+                        <div class="ml-auto">
+                            <div class="butn-presv">
+                                <a href="../../index.html#contact" class="butn butn-sm butn-bg radius-10 skew">
+                                    <span>Contáctame!</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,7 +168,7 @@
                 <div class="row justify-content-center">
 
                     <div class="col-lg-10 main-post">
-                        <div class="caption text-center">
+                        <div class="caption text-center trading-intro">
                             <h1 class="mt-30">Integración de Salesforce y SAP Business One</h1>
 
                             <p class="fz-18 mt-20 project-hero-copy">
@@ -169,7 +179,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-10 ">
+                    <div class="col-lg-10 mt-50">
 
                         <div class="project-hero-shell">
                             <svg class="project-hero-aura" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -239,13 +249,19 @@
 
                         <p class="project-hero-caption" data-project-hero-caption aria-live="polite">Documentación Swagger de la API; está abierta la operación para generar un token.</p>
 
-
+                        <nav class="trading-case-nav" aria-label="Contenido del caso de estudio">
+                            <a href="#funciones">Funciones</a>
+                            <a href="#detalles">Proyecto y stack</a>
+                            <a href="#arquitectura">Arquitectura</a>
+                            <a href="#endpoints">Endpoints</a>
+                            <a href="#resultado">Contribución y resultado</a>
+                        </nav>
 
                         <div class="row justify-content-center project-api-content mt-30">
                             <div class="col-lg-12">
                                 <div class="cont">
 
-                                    <div class="main-post project-capabilities">
+                                    <div class="main-post project-capabilities trading-functions" id="funciones">
                                         <h2>Funciones principales</h2>
 
                                         <div class="project-feature-grid">
@@ -275,75 +291,112 @@
                                         </div>
                                     </div>
 
-                                    <div class="project-trading-info mt-100">
-                                        <h2>Detalles del proyecto</h2>
-                                        <ul>
-                                            <li>
-                                                <span class="sub-title">Descripción</span>
-                                                <p>La integración permite crear órdenes de venta y clientes, consultar inventario y listas de precios, y sincronizar
-                                                    productos entre Salesforce y SAP Business One. Su objetivo es reducir tareas manuales y mantener
-                                                    el control, la trazabilidad y la seguridad de estos procesos.</p>
-                                            </li>
-                                            <li><span class="sub-title">Periodo</span><p>2024</p></li>
-                                            <li><span class="sub-title">Tipo</span><p>Desarrollo backend / integración empresarial</p></li>
-                                            <li><span class="sub-title">Empresa</span><p>IT Consultant / Cliente privado</p></li>
-                                            <li><span class="sub-title">Rol</span><p>Desarrollador backend</p></li>
-                                            <li><span class="sub-title">Arquitectura</span><p>API REST, integración CRM/ERP y SAP HANA</p></li>
-                                            <li><span class="sub-title">Disponibilidad</span><p>Proyecto interno / No público</p></li>
-                                            <li>
-                                                <span class="sub-title">Tecnologías utilizadas</span>
-                                                <p class="tech-badges">
-                                                    <span class="mt-5">.NET 8</span>
-                                                    <span class="mt-5">C#</span>
-                                                    <span class="mt-5">API REST</span>
-                                                    <span class="mt-5">JWT</span>
-                                                    <span class="mt-5">OAuth 2.0</span>
-                                                    <span class="mt-5">Salesforce API</span>
-                                                    <span class="mt-5">SAP Business One</span>
-                                                    <span class="mt-5">SAP HANA</span>
-                                                    <span class="mt-5">Postman</span>
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="row justify-content-center mt-30">
-                                        <div class="col-lg-12">
-                                            <div class="cont md-mb50">
-                                                <div class="mt-40 main-post mb-100">
-                                                    <h2 class="mb-30">Cómo está construida la API</h2>
-                                                    <p>
-                                                        La API separa las rutas REST, la validación y conversión de datos, y la comunicación con Salesforce y SAP.
-                                                        Esta organización facilita entender y mantener cada parte de la integración.
-                                                    </p>
-
-                                                    <div class="project-trading-architecture project-api-architecture mt-30" role="region" aria-label="El diagrama muestra cómo la API .NET conecta Salesforce y SAP Business One, y consulta inventario y listas de precios en SAP HANA. Desplázate horizontalmente para recorrerlo." tabindex="0">
-                                                        <div class="project-architecture">
-                                                            <div class="project-layer">
-                                                                <span>Salesforce</span>
-                                                                <p>Envía solicitudes comerciales y datos de clientes, productos y órdenes.</p>
-                                                            </div>
-                                                            <div class="project-layer">
-                                                                <span>API .NET</span>
-                                                                <p>Autentica las solicitudes, valida y adapta los datos, y coordina cada operación.</p>
-                                                            </div>
-                                                            <div class="project-layer">
-                                                                <span>SAP B1</span>
-                                                                <p>Recibe órdenes de venta y permite consultar la información operativa del ERP.</p>
-                                                            </div>
-                                                            <div class="project-layer">
-                                                                <span>SAP HANA</span>
-                                                                <p>Proporciona los datos de inventario y las listas de precios que consulta la integración.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                    <section class="trading-facts" id="detalles" aria-labelledby="api-facts-title">
+                                        <div class="trading-facts-overview">
+                                            <header class="trading-facts-intro">
+                                                <h2 id="api-facts-title">Detalles del proyecto</h2>
+                                                <p>La integración permite crear órdenes de venta y clientes, consultar inventario y listas de precios, y sincronizar productos entre Salesforce y SAP Business One. Su objetivo es reducir tareas manuales y mantener el control, la trazabilidad y la seguridad de estos procesos.</p>
+                                            </header>
+                                            <dl class="trading-facts-meta">
+                                                <div><dt>Año</dt><dd>2024</dd></div>
+                                                <div><dt>Empresa</dt><dd>IT Consultant / Cliente privado</dd></div>
+                                                <div><dt>Rol</dt><dd>Desarrollador backend</dd></div>
+                                                <div><dt>Tipo</dt><dd>Integración empresarial</dd></div>
+                                                <div><dt>Arquitectura</dt><dd>API REST, CRM/ERP y SAP HANA</dd></div>
+                                                <div><dt>Disponibilidad</dt><dd>Proyecto interno / No público</dd></div>
+                                            </dl>
+                                        </div>
+                                        <div class="trading-facts-stack">
+                                            <h3>Tecnologías utilizadas</h3>
+                                            <div class="trading-stack-groups">
+                                                <div class="trading-stack-group">
+                                                    <h4>Backend y contratos</h4>
+                                                    <ul><li>.NET 8</li><li>C#</li><li>API REST</li></ul>
+                                                </div>
+                                                <div class="trading-stack-group">
+                                                    <h4>Sistemas y datos</h4>
+                                                    <ul><li>Salesforce API</li><li>SAP Business One</li><li>SAP HANA</li></ul>
+                                                </div>
+                                                <div class="trading-stack-group">
+                                                    <h4>Seguridad y pruebas</h4>
+                                                    <ul><li>JWT</li><li>OAuth 2.0</li><li>Postman</li></ul>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </section>
 
-                                    <div class="main-post">
-                                        <h2 class="mb-30">Endpoints destacados</h2>
+                                    <section class="trading-architecture api-architecture" id="arquitectura" aria-labelledby="api-architecture-title">
+                                        <header class="trading-section-head">
+                                            <h2 id="api-architecture-title">Cómo está construida la API</h2>
+                                            <p><span class="trading-section-lead">Del proceso comercial a la operación.</span><span class="trading-section-instruction">Selecciona un sistema para explorar sus responsabilidades y conexiones.</span></p>
+                                        </header>
+
+                                        <div class="architecture-explorer api-explorer" data-architecture data-architecture-initial="api">
+                                            <div class="architecture-toolbar">
+                                                <p>Integración CRM / ERP <span>.NET 8</span></p>
+                                                <button type="button" class="architecture-reset" data-architecture-reset hidden aria-pressed="false">Ver mapa completo <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg></button>
+                                            </div>
+                                            <div class="architecture-workspace">
+                                                <div class="architecture-map" role="group" aria-label="Sistemas de la integración Salesforce y SAP">
+                                                    <svg class="architecture-wires" viewBox="0 0 760 560" fill="none" aria-hidden="true">
+                                                        <defs>
+                                                            <marker id="api-wire-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><path d="m1 1 5 2.5L1 6" fill="none" stroke="#858779" stroke-width="1.2"/></marker>
+                                                            <marker id="api-trace-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><path d="m1 1 5 2.5L1 6" fill="none" stroke="#e69955" stroke-width="1.2"/></marker>
+                                                        </defs>
+                                                        <!-- Relations summarize integration responsibilities, not live requests or execution order. -->
+                                                        <g class="architecture-wire api-exchange" data-from="salesforce" data-to="api"><path d="M226 280H280"/><path class="architecture-trace" pathLength="1" d="M226 280H280"/></g>
+                                                        <g class="architecture-wire api-exchange" data-from="api" data-to="sap"><path d="M478 280H490Q506 280 506 264V152Q506 136 522 136H534"/><path class="architecture-trace" pathLength="1" d="M478 280H490Q506 280 506 264V152Q506 136 522 136H534"/></g>
+                                                        <g class="architecture-wire is-external" data-from="api" data-to="hana"><path d="M379 336V432Q379 448 395 448H534"/><path class="architecture-trace" pathLength="1" d="M379 336V432Q379 448 395 448H534"/></g>
+                                                        <g class="architecture-wire-labels"><text x="28" y="198">Solicitudes comerciales</text><text x="534" y="58">Órdenes y clientes</text><text x="394" y="395">Consulta de</text><text x="394" y="416">inventario y precios</text></g>
+                                                    </svg>
+                                                    <button class="architecture-node is-external" type="button" data-layer="salesforce" aria-controls="system-salesforce" disabled><i class="fas fa-cloud" aria-hidden="true"></i><strong>Salesforce</strong><span>Gestión comercial</span></button>
+                                                    <button class="architecture-node" type="button" data-layer="api" aria-controls="system-api" disabled><i class="fas fa-code" aria-hidden="true"></i><strong>API .NET 8</strong><span>Integración y validación</span></button>
+                                                    <button class="architecture-node is-external" type="button" data-layer="sap" aria-controls="system-sap" disabled><i class="fas fa-cubes" aria-hidden="true"></i><strong>SAP Business One</strong><span>Operación del ERP</span></button>
+                                                    <button class="architecture-node is-external" type="button" data-layer="hana" aria-controls="system-hana" disabled><i class="fas fa-database" aria-hidden="true"></i><strong>SAP HANA</strong><span>Inventario y precios</span></button>
+                                                </div>
+                                                <div class="architecture-inspector">
+                                                    <article class="architecture-detail" id="system-overview" data-detail="overview">
+                                                        <h3>Una API entre ambos sistemas.</h3>
+                                                        <p>Las rutas REST, la validación y conversión de datos, y la comunicación con Salesforce y SAP están separadas para facilitar el mantenimiento.</p>
+                                                        <h4>Cómo leer el mapa</h4><p>Las conexiones representan intercambio de información y acceso a datos. Ilustran la integración; no son solicitudes en tiempo real.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="system-salesforce" data-detail="salesforce">
+                                                        <h3>Salesforce</h3><p class="architecture-role">Gestión comercial</p>
+                                                        <ul><li>Solicitudes comerciales</li><li>Datos de clientes y órdenes</li><li>Actualización de productos</li></ul>
+                                                        <h4>Conexión con la API</h4><p>Envía la información comercial que procesa la API .NET y recibe actualizaciones de productos.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="system-api" data-detail="api">
+                                                        <h3>API .NET 8</h3><p class="architecture-role">Integración y validación</p>
+                                                        <ul><li>Autenticación de solicitudes</li><li>Validación y conversión de datos</li><li>Coordinación de cada operación</li></ul>
+                                                        <h4>Conexiones</h4><p>Conecta Salesforce con SAP Business One y consulta inventario y listas de precios en SAP HANA.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="system-sap" data-detail="sap">
+                                                        <h3>SAP Business One</h3><p class="architecture-role">Operación del ERP</p>
+                                                        <ul><li>Creación de órdenes de venta</li><li>Registro de clientes</li><li>Información operativa del ERP</li></ul>
+                                                        <h4>Conexión con la API</h4><p>Recibe órdenes y clientes con la información de Salesforce que la API valida y adapta.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="system-hana" data-detail="hana">
+                                                        <h3>SAP HANA</h3><p class="architecture-role">Acceso a datos</p>
+                                                        <ul><li>Existencias por artículo</li><li>Inventario por almacén</li><li>Listas de precios</li></ul>
+                                                        <h4>Consulta desde la API</h4><p>Proporciona el inventario y las listas de precios que consulta la integración para los procesos comerciales.</p>
+                                                    </article>
+                                                    <a class="architecture-source" href="#endpoints">Ver endpoints <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+                                                </div>
+                                            </div>
+                                            <div class="architecture-legend" aria-label="Leyenda del diagrama">
+                                                <span><svg viewBox="0 0 32 12" fill="none" aria-hidden="true"><path d="M2 6h28M7 2 2 6l5 4m18-8 5 4-5 4"/></svg>Intercambio de información</span>
+                                                <span><svg viewBox="0 0 32 12" fill="none" aria-hidden="true"><path d="M1 6h26" stroke-dasharray="3 3"/><path d="m24 2 5 4-5 4"/></svg>Consulta de datos</span>
+                                                <span class="architecture-selection-key"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="4"/></svg>Conexión seleccionada</span>
+                                            </div>
+                                            <p class="trading-sr-only" data-architecture-status role="status" aria-live="polite" aria-atomic="true"></p>
+                                        </div>
+                                    </section>
+
+                                    <section class="main-post api-endpoints" id="endpoints" aria-labelledby="api-endpoints-title">
+                                        <header class="trading-section-head">
+                                            <h2 id="api-endpoints-title">Endpoints destacados</h2>
+                                            <p><span class="trading-section-lead">Contratos para cada operación.</span><span class="trading-section-instruction">Autenticación, ventas y consultas desde una sola API.</span></p>
+                                        </header>
 
                                         <div class="endpoint-directory">
                                             <div class="endpoint-directory-labels" aria-hidden="true">
@@ -384,9 +437,9 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </section>
 
-                                    <section class="mt-100 project-impact-grid" aria-label="Seguridad, contribución y resultado">
+                                    <section class="project-impact-grid trading-outcomes" id="resultado" aria-label="Seguridad, contribución y resultado">
                                         <article class="project-impact-card">
                                             <header class="project-impact-card-head">
                                                 <span class="project-impact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 19 6.5v4.7c0 4.4-2.9 7.9-7 9.5-4.1-1.6-7-5.1-7-9.5V6.5l7-3Z"/><path d="m9 12.2 2 2 4-4.4"/></svg></span>
@@ -524,6 +577,7 @@
 
     <!-- custom scripts -->
     <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/trading.js?v=20261115"></script>
 
     <script>
         const lightbox = GLightbox({
