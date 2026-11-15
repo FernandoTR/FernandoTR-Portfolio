@@ -46,6 +46,11 @@
     <!-- Core Style Css -->
     <link rel="stylesheet" href="../../assets/css/style.css?v=20261113-typography">
     <link rel="stylesheet" href="../../assets/css/typography.css?v=20261113">
+    <link rel="stylesheet" href="../../assets/css/trading.css?v=20261115-architecture-type">
+    <link rel="stylesheet" href="../../assets/css/proveedores.css?v=20261115">
+    <noscript>
+        <style>.loader-wrap, .cursor { display: none !important; }</style>
+    </noscript>
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -79,7 +84,7 @@
 
         <div class="loader-wrap-heading">
             <div class="loader-status" role="status" aria-live="polite">
-                <svg class="thinking-orb-loader" viewBox="0 0 96 96" data-state="solving" role="img" aria-label="Preparando el caso de estudio de TradingBook"></svg>
+                <svg class="thinking-orb-loader" viewBox="0 0 96 96" data-state="solving" role="img" aria-label="Preparando el caso de estudio del Portal de Proveedores"></svg>
                 <span>Cargando el proyecto...</span>
             </div>
         </div>
@@ -104,41 +109,30 @@
 
     <!-- ==================== Start Navbar ==================== -->
 
-    <nav class="navbar navbar-expand-lg pt-20 trading-navbar">
-        <div class="container-xxl">
-
-            <!-- Logo -->
-            <a class="logo icon-img-50" href="../../index.html" aria-label="Ir al inicio del portafolio de Fernando Torres">
-                <img src="../../assets/imgs/logo-light.svg" alt="Fernando Torres">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-bar"><i class="fas fa-bars"></i></span>
-            </button>
-
-            <!-- navbar links -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html"><span class="rolling-text">Inicio</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="md-hide ml-auto">
-                <div class="butn-presv">
-                    <a href="../../index.html#contact" class="butn butn-sm butn-bg bg-white radius-10 skew">
-                        <span class="text-dark">Contáctame!</span>
+    <nav class="navbar navbar-expand-lg trading-navbar">
+        <div class="container-xxl d-block">
+            <div class="row">
+                <div class="col-12">
+                    <a class="logo logo-hide icon-img-40" href="../../index.html#home" aria-label="Fernando Torres, ir al inicio">
+                        <img src="../../assets/imgs/logo-light.svg" alt="Fernando Torres">
+                        <span class="engineering-brand">Fernando Torres<span>Full Stack .NET</span></span>
                     </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Menú de navegación">
+                        <span class="icon-bar"><i class="fas fa-bars"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-flex align-items-center mt-30" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="../../index.html#home"><span class="rolling-text">Inicio</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia Profesional</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a></li>
+                        </ul>
+                        <div class="ml-auto">
+                            <div class="butn-presv">
+                                <a href="../../index.html#contact" class="butn butn-sm butn-bg radius-10 skew"><span>Contáctame!</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,7 +152,7 @@
                 <div class="row justify-content-center">
 
                     <div class="col-lg-10 main-post">
-                        <div class="caption text-center">
+                        <div class="caption text-center trading-intro">
 
                             <h1 class="mt-30">Portal de Proveedores</h1>
 
@@ -167,7 +161,9 @@
                                 Antes de integrar cada factura con SAP Business One, valida los datos del CFDI y conserva el seguimiento documental.
                             </p>
                             <p class="project-hero-role">Proyecto empresarial <span aria-hidden="true">·</span> Full Stack .NET Developer</p>
-                            
+                            <div class="project-hero-actions">
+                                <a class="trading-explore" href="#arquitectura">Explorar arquitectura <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+                            </div>
 
                         </div>
                     </div>
@@ -229,9 +225,16 @@
                             <button class="project-hero-motion" type="button" aria-pressed="false" aria-controls="providers-hero-slides" aria-describedby="providers-hero-caption"></button>
                         </div>
 
+                        <nav class="trading-case-nav" aria-label="Contenido del caso de estudio">
+                            <a href="#funciones">Funciones</a>
+                            <a href="#detalles">Proyecto y stack</a>
+                            <a href="#arquitectura">Arquitectura</a>
+                            <a href="#resultado">Contribución y resultado</a>
+                        </nav>
+
                         <div class="row justify-content-center mt-30 mb-50">
                             <div class="col-lg-12">
-                                <div class="mt-20 main-post project-capabilities">
+                                <div class="mt-20 main-post project-capabilities trading-functions" id="funciones">
                                     <h2>Funciones principales</h2>
                                     <div class="project-feature-grid">
                                         <article class="project-feature-card">
@@ -285,115 +288,127 @@
 
                         <div class="row justify-content-center mt-30">
                             <div class="col-lg-12">
-                                <div class="project-trading-info mt-50">
-                                    <h2>Detalles del proyecto</h2>
-                                    <ul>
-                                        <li>
-                                            <span class="sub-title">Descripción</span>
+                                <section class="trading-facts" id="detalles" aria-labelledby="providers-facts-title">
+                                    <div class="trading-facts-overview">
+                                        <header class="trading-facts-intro">
+                                            <h2 id="providers-facts-title">Detalles del proyecto</h2>
                                             <p>Al recibir una factura, el portal revisa sus archivos XML y PDF, valida el UUID, el RFC, los importes y la sociedad receptora, y detecta documentos duplicados. Después, relaciona la factura con SAP Business One y permite consultar su estado de pago.</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Periodo</span>
-                                            <p>2024</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Tipo</span>
-                                            <p>Sistema empresarial / aplicación web</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Empresa</span>
-                                            <p>IT Consultant</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Rol</span>
-                                            <p>Full Stack .NET Developer</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Integración</span>
-                                            <p>SAP Business One, SQL Server y SAP DI API</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Disponibilidad</span>
-                                            <p>Proyecto interno / no público</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Tecnologías utilizadas</span>
-                                            <p class="tech-badges">
-                                                <span>ASP.NET MVC</span>
-                                                <span>C#</span>
-                                                <span>SQL Server</span>
-                                                <span>SAP Business One</span>
-                                                <span>SAP DI API</span>
-                                                <span>CFDI / Anexo 20</span>
-                                                <span>JavaScript</span>
-                                                <span>jQuery</span>
-                                                <span>Bootstrap</span>
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
+                                            <a class="trading-facts-source" href="#contribucion">Ver mi contribución <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                                        </header>
+                                        <dl class="trading-facts-meta">
+                                            <div><dt>Año</dt><dd>2024</dd></div>
+                                            <div><dt>Empresa</dt><dd>IT Consultant</dd></div>
+                                            <div><dt>Proyecto</dt><dd>Sistema empresarial / aplicación web</dd></div>
+                                            <div><dt>Rol</dt><dd>Full Stack .NET Developer</dd></div>
+                                            <div><dt>Integración</dt><dd>SAP Business One, SQL Server y SAP DI API</dd></div>
+                                            <div><dt>Disponibilidad</dt><dd>Proyecto interno / no público</dd></div>
+                                        </dl>
+                                    </div>
+                                    <div class="trading-facts-stack">
+                                        <h3>Tecnologías utilizadas</h3>
+                                        <div class="trading-stack-groups">
+                                            <div class="trading-stack-group">
+                                                <h4>Backend y validación</h4>
+                                                <ul><li>ASP.NET MVC</li><li>C#</li><li>CFDI / Anexo 20</li></ul>
+                                            </div>
+                                            <div class="trading-stack-group">
+                                                <h4>Datos e integración</h4>
+                                                <ul><li>SQL Server</li><li>SAP Business One</li><li>SAP DI API</li></ul>
+                                            </div>
+                                            <div class="trading-stack-group">
+                                                <h4>Interfaz</h4>
+                                                <ul><li>JavaScript</li><li>jQuery</li><li>Bootstrap</li></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
                         </div>
 
                         <div class="row justify-content-center mt-30">
                             <div class="col-lg-12">
-                                <div class="mt-40 main-post mb-100">
-                                    <h2 class="mb-20">Arquitectura e integración</h2>
-                                    <p class="text-align-justify">El proceso se organiza en cuatro capas: el portal para proveedores, las reglas de validación, la conexión con SAP y el almacenamiento de documentos. El diagrama muestra cómo se relacionan.</p>
-                                    <div class="project-trading-architecture mt-30" role="region" aria-label="Diagrama de arquitectura del Portal de Proveedores. Desplázate horizontalmente para recorrerlo." tabindex="0">
-                                        <svg viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="providers-architecture-title providers-architecture-desc">
-                                            <title id="providers-architecture-title">Arquitectura del Portal de Proveedores</title>
-                                            <desc id="providers-architecture-desc">El portal, desarrollado con ASP.NET MVC, Razor, Bootstrap y jQuery, permite a los proveedores cargar y consultar documentos. Antes de registrarlos, valida el CFDI, el UUID, el RFC receptor, la sociedad y las tolerancias de importes. Después, consulta SQL Server y SAP Business One mediante SAP DI API, y asocia los archivos XML y PDF con cada proveedor para darles seguimiento.</desc>
-                                            <defs>
-                                                <marker id="architecture-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-                                                    <path d="M0 0L8 4L0 8Z" fill="#bbbaa6" />
-                                                </marker>
-                                            </defs>
-                                            <rect width="1200" height="720" fill="#0e0f0f" />
-
-                                            <path class="edge" d="M600 232V312" />
-                                            <path class="edge integration" d="M440 400H280Q272 400 272 408V536" />
-                                            <path class="edge integration" d="M760 400H920Q928 400 928 408V536" />
-
-                                            <rect class="mask" x="526" y="258" width="148" height="28" />
-                                            <text class="label" x="600" y="277" text-anchor="middle">envío a validación</text>
-                                            <rect class="mask" x="192" y="462" width="160" height="28" />
-                                            <text class="label" x="272" y="481" text-anchor="middle">consulta y contraste</text>
-                                            <rect class="mask" x="844" y="462" width="152" height="28" />
-                                            <text class="label" x="920" y="481" text-anchor="middle">archivo y seguimiento</text>
-
-                                            <rect class="node" x="440" y="56" width="320" height="176" rx="8" />
-                                            <text class="tag" x="464" y="88">PRESENTACIÓN</text>
-                                            <text class="name" x="464" y="128">Web</text>
-                                            <text class="body" x="464" y="160">ASP.NET MVC y vistas Razor</text>
-                                            <text class="body" x="464" y="184">Bootstrap, jQuery y flujos guiados</text>
-                                            <text class="label" x="464" y="212">Carga y consulta del proveedor</text>
-
-                                            <rect class="focal" x="440" y="312" width="320" height="176" rx="8" />
-                                            <text class="tag" x="464" y="344" style="fill:var(--amber)">REGLAS DE NEGOCIO</text>
-                                            <text class="name" x="464" y="384">Validación</text>
-                                            <text class="body" x="464" y="416">CFDI, UUID único y RFC receptor</text>
-                                            <text class="body" x="464" y="440">Sociedad e importes con tolerancia</text>
-                                            <text class="label" x="464" y="468">Validaciones previas al registro</text>
-
-                                            <rect class="node" x="80" y="536" width="400" height="160" rx="8" />
-                                            <text class="tag" x="104" y="568">ERP Y DATOS</text>
-                                            <text class="name" x="104" y="608">SAP / Datos</text>
-                                            <text class="body" x="104" y="640">Consultas SQL Server y reglas de negocio</text>
-                                            <text class="body" x="104" y="664">SAP Business One mediante DI API</text>
-
-                                            <rect class="node" x="720" y="536" width="400" height="160" rx="8" />
-                                            <text class="tag" x="744" y="568">GESTIÓN DOCUMENTAL</text>
-                                            <text class="name" x="744" y="608">Documentos</text>
-                                            <text class="body" x="744" y="640">Repositorio de archivos XML y PDF</text>
-                                            <text class="body" x="744" y="664">Estado documental por proveedor</text>
-                                        </svg>
+                                <section class="trading-architecture" id="arquitectura" aria-labelledby="providers-architecture-title">
+                                    <header class="trading-section-head">
+                                        <h2 id="providers-architecture-title">Arquitectura e integración</h2>
+                                        <p><span class="trading-section-lead">Del CFDI al seguimiento documental.</span><span class="trading-section-instruction">Selecciona una capa para explorar sus responsabilidades y conexiones.</span></p>
+                                    </header>
+                                    <div class="architecture-explorer providers-explorer" data-architecture data-architecture-initial="validation">
+                                        <div class="architecture-toolbar">
+                                            <p>Portal de Proveedores <span>ASP.NET MVC</span></p>
+                                            <button type="button" class="architecture-reset" data-architecture-reset hidden aria-pressed="false">Ver mapa completo <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg></button>
+                                        </div>
+                                        <div class="architecture-workspace">
+                                            <div class="architecture-map" role="group" aria-label="Capas y sistemas del Portal de Proveedores">
+                                                <svg class="architecture-wires" viewBox="0 0 760 560" fill="none" aria-hidden="true">
+                                                    <defs>
+                                                        <marker id="providers-wire-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="m1 1 5 2.5L1 6" fill="none" stroke="#858779" stroke-width="1.2"/></marker>
+                                                        <marker id="providers-trace-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="m1 1 5 2.5L1 6" fill="none" stroke="#e69955" stroke-width="1.2"/></marker>
+                                                    </defs>
+                                                    <!-- Conceptual connections, not live processing or project references. -->
+                                                    <g class="architecture-wire" data-from="web" data-to="validation"><path d="M380 152V238"/><path class="architecture-trace" pathLength="1" d="M380 152V238"/></g>
+                                                    <g class="architecture-wire is-external" data-from="validation" data-to="sap"><path d="M280 294H168Q152 294 152 310V420"/><path class="architecture-trace" pathLength="1" d="M280 294H168Q152 294 152 310V420"/></g>
+                                                    <g class="architecture-wire" data-from="validation" data-to="documents"><path d="M478 294H592Q608 294 608 310V420"/><path class="architecture-trace" pathLength="1" d="M478 294H592Q608 294 608 310V420"/></g>
+                                                    <g class="architecture-wire-labels">
+                                                        <text x="398" y="198">envío a validación</text>
+                                                        <text x="168" y="369">consulta y contraste</text>
+                                                        <text x="592" y="369" text-anchor="end">archivo y seguimiento</text>
+                                                    </g>
+                                                </svg>
+                                                <button class="architecture-node" type="button" data-layer="web" aria-controls="layer-web" disabled>
+                                                    <i class="fas fa-desktop" aria-hidden="true"></i><strong>Web</strong><span>Presentación</span>
+                                                </button>
+                                                <button class="architecture-node" type="button" data-layer="validation" aria-controls="layer-validation" disabled>
+                                                    <i class="fas fa-check-double" aria-hidden="true"></i><strong>Validación</strong><span>Reglas de negocio</span>
+                                                </button>
+                                                <button class="architecture-node is-external" type="button" data-layer="sap" aria-controls="layer-sap" disabled>
+                                                    <i class="fas fa-database" aria-hidden="true"></i><strong>SAP / Datos</strong><span>ERP y consultas</span>
+                                                </button>
+                                                <button class="architecture-node" type="button" data-layer="documents" aria-controls="layer-documents" disabled>
+                                                    <i class="fas fa-file-alt" aria-hidden="true"></i><strong>Documentos</strong><span>XML y PDF</span>
+                                                </button>
+                                            </div>
+                                            <div class="architecture-inspector">
+                                                <article class="architecture-detail" id="layer-overview" data-detail="overview">
+                                                    <h3>Validar antes de integrar.</h3>
+                                                    <p>El portal, las reglas de validación, la conexión con SAP y el almacenamiento documental organizan el proceso en cuatro capas.</p>
+                                                    <h4>Cómo leer el mapa</h4>
+                                                    <p>Las flechas muestran relaciones conceptuales entre componentes; la línea discontinua identifica la integración con SAP y datos. No representan actividad en tiempo real.</p>
+                                                </article>
+                                                <article class="architecture-detail" id="layer-web" data-detail="web">
+                                                    <h3>Web</h3><p class="architecture-role">Presentación</p>
+                                                    <ul><li>ASP.NET MVC y vistas Razor</li><li>Bootstrap, jQuery y flujos guiados</li><li>Carga de documentos y consulta del estado de pago</li></ul>
+                                                    <h4>Conexiones</h4><p>Envía los documentos del proveedor a las reglas de validación antes de registrarlos.</p>
+                                                </article>
+                                                <article class="architecture-detail" id="layer-validation" data-detail="validation">
+                                                    <h3>Validación</h3><p class="architecture-role">Reglas de negocio</p>
+                                                    <ul><li>CFDI y UUID único</li><li>RFC receptor y sociedad</li><li>Importes con tolerancia configurable</li></ul>
+                                                    <h4>Conexiones</h4><p>Recibe documentos de Web, contrasta datos con SAP y SQL Server y conecta el archivo documental con su seguimiento.</p>
+                                                </article>
+                                                <article class="architecture-detail" id="layer-sap" data-detail="sap">
+                                                    <h3>SAP / Datos</h3><p class="architecture-role">ERP y consultas</p>
+                                                    <ul><li>Consultas en SQL Server</li><li>SAP Business One mediante SAP DI API</li><li>Relación con órdenes, facturas y registros existentes</li></ul>
+                                                    <h4>Conexiones</h4><p>La capa de validación consulta y contrasta la información fiscal y operativa con los datos del ERP.</p>
+                                                </article>
+                                                <article class="architecture-detail" id="layer-documents" data-detail="documents">
+                                                    <h3>Documentos</h3><p class="architecture-role">Gestión documental</p>
+                                                    <ul><li>Repositorio de archivos XML y PDF</li><li>Documentos asociados a cada proveedor</li><li>Seguimiento del estado documental</li></ul>
+                                                    <h4>Conexiones</h4><p>Se relaciona con la capa de validación para conservar los archivos y dar seguimiento a los documentos del proveedor.</p>
+                                                </article>
+                                                <a class="architecture-source" href="#contribucion">Ver mi contribución <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="architecture-legend" aria-label="Leyenda del diagrama">
+                                            <span><svg viewBox="0 0 32 12" fill="none" aria-hidden="true"><path d="M1 6h28m-5-4 5 4-5 4"/></svg>Relación entre capas</span>
+                                            <span><svg viewBox="0 0 32 12" fill="none" aria-hidden="true"><path d="M1 6h26" stroke-dasharray="3 3"/><path d="m24 2 5 4-5 4"/></svg>Integración ERP y datos</span>
+                                            <span class="architecture-selection-key"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="4"/></svg>Conexión seleccionada</span>
+                                        </div>
+                                        <p class="trading-sr-only" data-architecture-status role="status" aria-live="polite" aria-atomic="true"></p>
                                     </div>
-                                </div>
+                                </section>
                             </div>
                         </div>
 
-                        <section class="mt-40 project-impact-grid" aria-label="Control documental, mi contribución y resultado">
+                        <section class="mt-40 project-impact-grid trading-outcomes" id="resultado" aria-label="Control documental, mi contribución y resultado">
                             <article class="project-impact-card">
                                 <header class="project-impact-card-head">
                                     <span class="project-impact-icon" aria-hidden="true">
@@ -412,7 +427,7 @@
                                 </ul>
                             </article>
 
-                            <article class="project-impact-card">
+                            <article class="project-impact-card" id="contribucion">
                                 <header class="project-impact-card-head">
                                     <span class="project-impact-icon" aria-hidden="true">
                                         <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="6" height="5" rx="1.2" /><rect x="14" y="5" width="6" height="5" rx="1.2" /><rect x="9" y="15" width="6" height="5" rx="1.2" /><path d="M7 10v2.5h10V10m-5 2.5V15" /></svg>
@@ -525,6 +540,7 @@
 
     <!-- custom scripts -->
     <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/trading.js?v=20261113"></script>
 
     <script>
         const lightbox = GLightbox({

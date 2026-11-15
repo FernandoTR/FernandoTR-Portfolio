@@ -290,3 +290,11 @@ The Distribuidores case study reuses TradingBook's navigation, editorial feature
 - Select Web, Negocio, SQL Server or SAP Business One to explore the four documented components. Negocio is selected initially. Connections represent the conceptual architecture, not live transactions or an execution sequence; the dashed connection identifies the ERP integration.
 - The shared finite trace animation, keyboard controls, pressed states and live announcements follow TradingBook. Mobile uses a two-column selector with textual connections below. Reduced motion disables the explorer animation; without JavaScript all responsibilities remain visible.
 - The private project's facts, technologies, contribution and outcomes remain grounded in the existing case study. The inspector links to the contribution section rather than an unavailable source repository.
+
+## Proveedores: Validación conectada
+
+The Proveedores case study uses the TradingBook editorial system and shared architecture explorer through `assets/css/trading.css` and `assets/js/trading.js`. Local map geometry lives in `assets/css/proveedores.css`. The existing `project-hero-shell`, aura, carousel, captions and motion control retain their implementation.
+
+- In Experience mode, the architecture map makes the four documented layers explorable: Web, Validación, SAP / Datos and Documentos. Validación is selected initially. Connections describe conceptual relationships, not live processing; the dashed line identifies the ERP and data integration.
+- Navigation, open feature rows, project facts, grouped technologies and outcome rows follow TradingBook. Existing factual content and project availability are retained; contribution links lead to the local contribution section.
+- The shared finite trace animation supports keyboard selection, pressed states, live announcements and reduced motion. Mobile presents a two-column selector with textual connection descriptions. Without JavaScript, all responsibilities remain readable and the loading overlay is hidden.
