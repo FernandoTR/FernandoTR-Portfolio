@@ -282,3 +282,11 @@ The Salesforce–SAP case study reuses TradingBook's navigation, editorial featu
 - Two-way arrows represent information exchange; the one-way connection to SAP HANA represents a data query. These are conceptual integration relationships, not live telemetry or an execution sequence. The shared finite trace animation respects reduced motion, data saving and page visibility.
 - On mobile the diagram becomes a two-column system selector with connection descriptions beneath it. Without JavaScript all descriptions remain readable. The endpoint directory retains the six documented routes and reflows to method/path rows with descriptions below.
 - Method labels retain semantic blue, green and amber, with higher-contrast pairs: POST `#a7c8ed` on `#192535`, GET `#a8d3b5` on `#192b21`, PATCH `#edc27e` on `#302719`. Their compact 4px corners distinguish code metadata from interactive controls; the page otherwise inherits the charcoal, warm-paper and amber palette.
+
+## Distribuidores: Comercio conectado
+
+The Distribuidores case study reuses TradingBook's navigation, editorial feature rows, project facts, grouped stack, outcome rows and architecture explorer through `assets/css/trading.css` and `assets/js/trading.js`. Local map geometry lives in `assets/css/distribuidores.css`. The existing `project-hero-shell`, aura, carousel, captions and motion control retain their implementation.
+
+- Select Web, Negocio, SQL Server or SAP Business One to explore the four documented components. Negocio is selected initially. Connections represent the conceptual architecture, not live transactions or an execution sequence; the dashed connection identifies the ERP integration.
+- The shared finite trace animation, keyboard controls, pressed states and live announcements follow TradingBook. Mobile uses a two-column selector with textual connections below. Reduced motion disables the explorer animation; without JavaScript all responsibilities remain visible.
+- The private project's facts, technologies, contribution and outcomes remain grounded in the existing case study. The inspector links to the contribution section rather than an unavailable source repository.
