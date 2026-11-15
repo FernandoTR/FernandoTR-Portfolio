@@ -298,3 +298,11 @@ The Proveedores case study uses the TradingBook editorial system and shared arch
 - In Experience mode, the architecture map makes the four documented layers explorable: Web, Validación, SAP / Datos and Documentos. Validación is selected initially. Connections describe conceptual relationships, not live processing; the dashed line identifies the ERP and data integration.
 - Navigation, open feature rows, project facts, grouped technologies and outcome rows follow TradingBook. Existing factual content and project availability are retained; contribution links lead to the local contribution section.
 - The shared finite trace animation supports keyboard selection, pressed states, live announcements and reduced motion. Mobile presents a two-column selector with textual connection descriptions. Without JavaScript, all responsibilities remain readable and the loading overlay is hidden.
+
+## Viáticos: Arquitectura viva
+
+The Viáticos case study uses TradingBook's editorial system and shared architecture explorer through `assets/css/trading.css` and `assets/js/trading.js`. Local map geometry lives in `assets/css/viaticos.css`. The existing `project-hero-shell`, aura, carousel, captions and motion control retain their implementation.
+
+- In Experience mode, select Web MVC, Negocio, Integración or Datos / IIS to explore the four documented layers. Negocio is selected initially. Arrows describe conceptual relationships; the dashed connection identifies SAP Business One integration through DI API, not live activity or an execution sequence.
+- Navigation, open feature rows, compact project facts, grouped technologies and outcome rows follow TradingBook. Existing project facts, contribution and results are retained; contribution links lead to the local section for this private project.
+- The shared finite trace animation supports keyboard selection, pressed states, live announcements and reduced motion. On mobile the map becomes a two-column selector with textual connection descriptions. Without JavaScript all responsibilities remain visible and the loading overlay is hidden.

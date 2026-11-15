@@ -1,0 +1,19 @@
+/* TradingBook's editorial system; local geometry for the expense portal's layers. */
+.project-viaticos :is(a, button):focus-visible { outline: 2px solid var(--trading-accent); outline-offset: 5px; }
+.project-viaticos #contribucion { scroll-margin-top: 120px; }
+.project-viaticos .trading-section-head h2 { max-width: 15ch; }
+.viaticos-explorer .architecture-node[data-layer="web"] { top: 7.143%; left: 36.842%; }
+.viaticos-explorer .architecture-node[data-layer="business"] { top: 42.857%; left: 36.842%; }
+.viaticos-explorer .architecture-node[data-layer="integration"] { top: 75%; left: 7.105%; }
+.viaticos-explorer .architecture-node[data-layer="data"] { top: 75%; left: 66.974%; }
+.viaticos-explorer .architecture-wire > path { marker-end: url(#viaticos-wire-arrow); }
+.viaticos-explorer .architecture-wire > .architecture-trace { marker-end: url(#viaticos-trace-arrow); }
+.viaticos-explorer .architecture-detail { min-height: 380px; }
+
+@media (max-width: 1199px) {
+    .viaticos-explorer .architecture-detail { min-height: 0; }
+}
+@media (max-width: 767px) {
+    .project-viaticos .trading-section-head h2 { max-width: none; }
+    .viaticos-explorer.is-ready .architecture-detail { min-height: 370px; }
+}
