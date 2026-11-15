@@ -127,7 +127,6 @@
 .engineering-home #portfolio .portfolio-subtitle { color: var(--engineering-muted); font-size: 14px; max-width: 70ch; }
 .engineering-home #portfolio .portfolio-grid { gap: 44px 32px; perspective: none; }
 .engineering-home #portfolio .item { border: 0; border-radius: 0; padding: 0; background: transparent; overflow: visible; }
-.engineering-home #portfolio .portfolio-grid > .item:is(.is-pending, .is-revealed) { opacity: 1; transform: none; animation: none; filter: none; }
 .engineering-home #portfolio .custom-Portolio { width: 100%; margin: 0 0 22px; overflow: hidden; border-radius: 8px; background: #171a17; }
 .engineering-home #portfolio .portfolio-card-notch { display: none; }
 .engineering-home #portfolio .portfolio-link.portfolio-card-arrow { right: 14px; bottom: 14px; width: 42px; height: 42px; border-radius: 5px; background: var(--engineering-paper); }
