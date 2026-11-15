@@ -1,4 +1,4 @@
-/* TradingBook's dependency explorer. The project image carousel is independent. */
+/* Shared case-study architecture explorer. Project image carousels are independent. */
 (function () {
     'use strict';
 
@@ -54,7 +54,7 @@
         const panel = details.find(detail => detail.dataset.detail === layer);
         if (announce) {
             status.textContent = overview
-                ? 'Mapa completo. Todas las dependencias están visibles.'
+                ? 'Mapa completo. Todas las conexiones están visibles.'
                 : panel.querySelector('h3').textContent + '. ' + panel.querySelector('h4 + p').textContent;
             if (!reducedMotion.matches && !saveData && panel.animate) {
                 animations.push(panel.animate(
@@ -72,7 +72,7 @@
     reset.hidden = false;
     reset.addEventListener('click', () => selectLayer('overview', true));
     explorer.classList.add('is-ready');
-    selectLayer('infrastructure', false);
+    selectLayer(explorer.dataset.architectureInitial || 'infrastructure', false);
 
     reducedMotion.addEventListener('change', stopMotion);
     document.addEventListener('visibilitychange', () => { if (document.hidden) stopMotion(); });

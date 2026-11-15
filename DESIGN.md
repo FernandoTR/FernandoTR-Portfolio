@@ -273,3 +273,12 @@ The TradingBook case study uses a dependency explorer as its authored interactio
 - Native buttons select Web, Application, Domain, Infrastructure, SQL Server or external services. The map highlights direct incoming and outgoing relationships and presents the selected responsibilities alongside it. Arrows mean project references or external access, never live data flow. Reset restores the complete map.
 - Connection traces draw once on selection; interrupted animations cancel cleanly. Reduced motion and data-saving preferences receive immediate state changes. Offscreen or hidden-page animations stop.
 - Below 768px the map becomes a two-column selector with readable responsibilities and textual dependencies below, in the same order as keyboard navigation. Keyboard focus, pressed states and a polite status announcement expose selection. Without JavaScript the loading overlay is hidden and the static map and all responsibilities remain visible.
+
+## Salesforce–SAP: Integración viva
+
+The Salesforce–SAP case study reuses TradingBook's navigation, editorial feature rows, project facts, grouped stack, outcome rows and architecture explorer through `assets/css/trading.css` and `assets/js/trading.js`. Local overrides in `assets/css/salesforce-sap.css` position the integration map and improve the endpoint directory. The existing `project-hero-shell`, aura, images, captions and carousel animation remain authoritative.
+
+- Select Salesforce, API .NET 8, SAP Business One or SAP HANA to reveal responsibilities and highlight direct connections. `data-architecture-initial="api"` selects the integration layer initially; TradingBook retains its Infrastructure default.
+- Two-way arrows represent information exchange; the one-way connection to SAP HANA represents a data query. These are conceptual integration relationships, not live telemetry or an execution sequence. The shared finite trace animation respects reduced motion, data saving and page visibility.
+- On mobile the diagram becomes a two-column system selector with connection descriptions beneath it. Without JavaScript all descriptions remain readable. The endpoint directory retains the six documented routes and reflows to method/path rows with descriptions below.
+- Method labels retain semantic blue, green and amber, with higher-contrast pairs: POST `#a7c8ed` on `#192535`, GET `#a8d3b5` on `#192b21`, PATCH `#edc27e` on `#302719`. Their compact 4px corners distinguish code metadata from interactive controls; the page otherwise inherits the charcoal, warm-paper and amber palette.
