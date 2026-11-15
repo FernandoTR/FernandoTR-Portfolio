@@ -44,8 +44,12 @@
     <link rel="stylesheet" href="../../assets/css/plugins/glightbox.min.css">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="../../assets/css/style.css?v=20261113-typography">
+    <link rel="stylesheet" href="../../assets/css/style.css?v=20261114-typeset">
     <link rel="stylesheet" href="../../assets/css/typography.css?v=20261113">
+    <link rel="stylesheet" href="../../assets/css/trading.css?v=20261115-architecture-type">
+    <noscript>
+        <style>.loader-wrap, .cursor { display: none !important; }</style>
+    </noscript>
 
     <!-- Datos estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -104,41 +108,47 @@
 
     <!-- ==================== Start Navbar ==================== -->
 
-    <nav class="navbar navbar-expand-lg pt-20 trading-navbar">
-        <div class="container-xxl">
+    <nav class="navbar navbar-expand-lg trading-navbar">
+        <div class="container-xxl d-block">
+            <div class="row">
+                <div class="col-12">
 
-            <!-- Logo -->
-            <a class="logo icon-img-50" href="../../index.html" aria-label="Ir al inicio del portafolio de Fernando Torres">
-                <img src="../../assets/imgs/logo-light.svg" alt="Fernando Torres">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir o cerrar el menú de navegación">
-                <span class="icon-bar"><i class="fas fa-bars"></i></span>
-            </button>
-
-            <!-- navbar links -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html"><span class="rolling-text">Inicio</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="md-hide ml-auto">
-                <div class="butn-presv">
-                    <a href="../../index.html#contact" class="butn butn-sm butn-bg bg-white radius-10 skew">
-                        <span class="text-dark">Contáctame!</span>
+                    <!-- Logo -->
+                    <a class="logo logo-hide icon-img-40" href="../../index.html#home" aria-label="Fernando Torres, ir al inicio">
+                        <img src="../../assets/imgs/logo-light.svg" alt="Fernando Torres">
+                        <span class="engineering-brand">Fernando Torres<span>Full Stack .NET</span></span>
                     </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Menú de navegación">
+                        <span class="icon-bar"><i class="fas fa-bars"></i></span>
+                    </button>
+
+                    <!-- navbar links -->
+                    <div class="collapse navbar-collapse d-flex align-items-center mt-30" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#home"><span class="rolling-text">Inicio</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#portfolio"><span class="rolling-text">Proyectos</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#resume"><span class="rolling-text">Experiencia Profesional</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../index.html#skills"><span class="rolling-text">Tecnologías</span></a>
+                            </li>
+                        </ul>
+                        <div class="ml-auto">
+                            <div class="butn-presv">
+                                <a href="../../index.html#contact" class="butn butn-sm butn-bg radius-10 skew">
+                                    <span>Contáctame!</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,7 +168,7 @@
                 <div class="row justify-content-center">
 
                     <div class="col-lg-10 main-post">
-                        <div class="caption text-center">
+                        <div class="caption text-center trading-intro">
 
                             <h1 class="mt-30">TradingBook</h1>
 
@@ -170,12 +180,13 @@
 
                             <div class="project-hero-actions">
                                 <a class="project-action-primary" href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank" rel="noopener noreferrer">Ver código en GitHub <span class="project-action-icon"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span></a>
+                                <a class="trading-explore" href="#arquitectura">Explorar arquitectura <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="col-lg-10 mt-50">
+                    <div class="col-lg-10 mt-100">
                         <!-- ==================== GALLERY ==================== -->
 
                         <div class="project-hero-shell">
@@ -243,10 +254,17 @@
                             <button class="project-hero-motion" type="button" aria-pressed="false"></button>
                         </div>
 
+                        <nav class="trading-case-nav" aria-label="Contenido del caso de estudio">
+                            <a href="#funciones">Funciones</a>
+                            <a href="#detalles">Proyecto y stack</a>
+                            <a href="#arquitectura">Arquitectura</a>
+                            <a href="#resultado">Contribución y resultado</a>
+                        </nav>
+
                         <div class="row justify-content-center mt-30 mb-50">
                             <div class="col-lg-12 ">
 
-                                    <div class="mt-20 main-post project-capabilities">
+                                    <div class="mt-20 main-post project-capabilities trading-functions" id="funciones">
 
 
 
@@ -310,52 +328,64 @@
                         <div class="row justify-content-center mt-30">
 
                             <div class="col-lg-12">
-                                <div class="project-trading-info mt-50">
-                                    <h2>Detalles del proyecto</h2>
-                                    <ul>
-                                        <li>
-                                            <span class="sub-title">Descripción</span>
+                                <section class="trading-facts" id="detalles" aria-labelledby="trading-facts-title">
+                                    <div class="trading-facts-overview">
+                                        <header class="trading-facts-intro">
+                                            <h2 id="trading-facts-title">Detalles del proyecto</h2>
                                             <p>TradingBook reúne cada operación con su cuenta, setup y condiciones de mercado. Así puedes comparar resultados y detectar patrones de ejecución.</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Año</span>
-                                            <p>2025</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Proyecto</span>
-                                            <p>Producto propio</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Rol</span>
-                                            <p>Desarrollador full stack</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Arquitectura</span>
-                                            <p>Clean Architecture</p>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Repositorio</span>
-                                            <a class="project-sidebar-code" href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank" rel="noopener noreferrer">Ver repositorio <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li>
-                                            <span class="sub-title">Tecnologías utilizadas</span>
-                                            <p class="tech-badges">
-                                                <span class="mt-5">.NET 10</span>
-                                                <span class="mt-5">ASP.NET Core MVC</span>
-                                                <span class="mt-5">Entity Framework Core 10</span>
-                                                <span class="mt-5">SQL Server</span>                                                
-                                                <span class="mt-5">Metronic 9</span>
-                                                <span class="mt-5">Tailwind CSS</span>
-                                                <span class="mt-5">Chart.js</span>
-                                                <span class="mt-5">JavaScript</span>
-                                                <span class="mt-5">DataTables 2.x</span>
-                                                <span class="mt-5">ASP.NET Core Identity</span>
-                                                <span class="mt-5">MailKit</span>
-                                            </p>
-                                        </li>
-
-                                    </ul>
-                                </div>
+                                            <a class="trading-facts-source" href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank" rel="noopener noreferrer">Ver repositorio <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                        </header>
+                                        <dl class="trading-facts-meta">
+                                            <div>
+                                                <dt>Año</dt>
+                                                <dd>2025</dd>
+                                            </div>
+                                            <div>
+                                                <dt>Proyecto</dt>
+                                                <dd>Producto propio</dd>
+                                            </div>
+                                            <div>
+                                                <dt>Rol</dt>
+                                                <dd>Desarrollador full stack</dd>
+                                            </div>
+                                            <div>
+                                                <dt>Arquitectura</dt>
+                                                <dd>Clean Architecture</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                    <div class="trading-facts-stack">
+                                        <h3>Tecnologías utilizadas</h3>
+                                        <div class="trading-stack-groups">
+                                            <div class="trading-stack-group">
+                                                <h4>Backend y servicios</h4>
+                                                <ul>
+                                                    <li>.NET 10</li>
+                                                    <li>ASP.NET Core MVC</li>
+                                                    <li>ASP.NET Core Identity</li>
+                                                    <li>MailKit</li>
+                                                </ul>
+                                            </div>
+                                            <div class="trading-stack-group">
+                                                <h4>Datos</h4>
+                                                <ul>
+                                                    <li>Entity Framework Core 10</li>
+                                                    <li>SQL Server</li>
+                                                </ul>
+                                            </div>
+                                            <div class="trading-stack-group">
+                                                <h4>Interfaz</h4>
+                                                <ul>
+                                                    <li>Metronic 9</li>
+                                                    <li>Tailwind CSS</li>
+                                                    <li>Chart.js</li>
+                                                    <li>JavaScript</li>
+                                                    <li>DataTables 2.x</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
 
                             <div class="col-lg-12">
@@ -363,92 +393,107 @@
 
 
 
-                                    <div class="mt-40 main-post mb-100">
-                                        <h2 class="mb-30">Cómo está construido</h2>
-                                        <div class="project-trading-architecture" role="region" aria-label="Diagrama de arquitectura de TradingBookApp. Desplázate horizontalmente para recorrerlo." tabindex="0">
-<svg viewBox="0 0 1200 856" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="architecture-title architecture-desc">
-<title id="architecture-title">Arquitectura de TradingBookApp</title>
-<desc id="architecture-desc">Web referencia Application e Infrastructure, Infrastructure referencia Application y Application referencia Domain; Infrastructure conecta SQL Server y servicios externos.</desc>
-<defs><marker id="architecture-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#bbbaa6"/></marker></defs>
-<rect width="1200" height="856" fill="#0e0f0f"/>
+                                    <section class="trading-architecture" id="arquitectura" aria-labelledby="trading-architecture-title">
+                                        <header class="trading-section-head">
+                                            <h2 id="trading-architecture-title">Cómo está construido</h2>
+                                            <p><span class="trading-section-lead">De la interfaz al modelo de negocio.</span><span class="trading-section-instruction">Selecciona una capa para explorar sus responsabilidades y conexiones.</span></p>
+                                        </header>
 
-<!-- References point toward the project being referenced. -->
-<path class="edge" d="M368 144H440"/>
-<path class="edge" d="M760 144H832"/>
-<path class="edge" d="M208 252V442Q208 450 216 450H440"/>
-<path class="edge" d="M600 360V252"/>
-<path class="edge integration" d="M440 500H248Q240 500 240 508V640"/>
-<path class="edge integration" d="M760 500H968Q976 500 976 508V640"/>
-
-<!-- Connector labels occupy reserved whitespace. -->
-<rect class="mask" x="372" y="112" width="64" height="24"/>
-<text class="label" x="404" y="128" text-anchor="middle">usa</text>
-<rect class="mask" x="764" y="112" width="64" height="24"/>
-<text class="label" x="796" y="128" text-anchor="middle">usa</text>
-<rect class="mask" x="256" y="418" width="160" height="24"/>
-<text class="label" x="336" y="434" text-anchor="middle">registra adaptadores</text>
-<rect class="mask" x="608" y="284" width="152" height="56"/>
-<text class="label" x="616" y="304">implementa sus</text>
-<text class="label" x="616" y="324">interfaces</text>
-<rect class="mask" x="248" y="556" width="144" height="44"/>
-<text class="label" x="256" y="574">lectura / escritura</text>
-<text class="label" x="256" y="594">EF Core</text>
-<rect class="mask" x="984" y="556" width="128" height="44"/>
-<text class="label" x="992" y="574">HTTP / SMTP</text>
-<text class="label" x="992" y="594">automatización</text>
-
-<rect class="node" x="48" y="72" width="320" height="180" rx="8"/>
-<text class="tag" x="72" y="104">PRESENTACIÓN</text>
-<text class="name" x="72" y="144">Web</text>
-<text class="body" x="72" y="176">Controllers, Views y Razor Pages</text>
-<text class="body" x="72" y="200">Middleware y archivos estáticos</text>
-<text class="label" x="72" y="228">Program.cs compone los servicios</text>
-
-<rect class="node" x="440" y="72" width="320" height="180" rx="8"/>
-<text class="tag" x="464" y="104">CASOS DE USO</text>
-<text class="name" x="464" y="144">Application</text>
-<text class="body" x="464" y="176">Servicios, interfaces y DTOs</text>
-<text class="body" x="464" y="200">Órdenes, cuentas y análisis</text>
-<text class="label" x="464" y="228">Reglas y orquestación de validación IA</text>
-
-<rect class="node" x="832" y="72" width="320" height="180" rx="8"/>
-<text class="tag" x="856" y="104">MODELO DE NEGOCIO</text>
-<text class="name" x="856" y="144">Domain</text>
-<text class="body" x="856" y="176">Entidades, enums y constantes</text>
-<text class="body" x="856" y="200">Modelo compartido por las capas</text>
-<text class="label" x="856" y="228">Sin referencias a otros proyectos</text>
-
-<rect class="focal" x="440" y="360" width="320" height="180" rx="8"/>
-<text class="tag" x="464" y="392" style="fill:var(--amber)">ADAPTADORES</text>
-<text class="name" x="464" y="432">Infrastructure</text>
-<text class="body" x="464" y="464">Repositorios EF Core e Identity</text>
-<text class="body" x="464" y="488">Correo, logging y clientes IA</text>
-<text class="label" x="464" y="516">Implementaciones registradas por DI</text>
-
-<rect class="external" x="80" y="640" width="352" height="128" rx="8"/>
-<text class="name" x="104" y="680">SQL Server</text>
-<text class="body" x="104" y="708">ApplicationDbContext</text>
-<text class="body" x="104" y="732">LoggingDbContext</text>
-<text class="label" x="104" y="756">Tablas, vistas y procedimientos</text>
-
-<rect class="external" x="800" y="640" width="352" height="128" rx="8"/>
-<text class="name" x="824" y="680">Servicios externos</text>
-<text class="body" x="824" y="708">Proveedores de visión IA</text>
-<text class="body" x="824" y="732">SMTP y TradingView</text>
-<text class="label" x="824" y="756">Acceso mediante adaptadores</text>
-
-<line x1="48" y1="808" x2="1152" y2="808" stroke="#30312c"/>
-<path class="edge" d="M48 832H96"/>
-<text class="label" x="112" y="836">Referencia entre proyectos</text>
-<path class="edge integration" d="M440 832H488"/>
-<text class="label" x="504" y="836">Acceso a un sistema externo</text>
-<rect x="864" y="824" width="16" height="16" rx="4" fill="#141514" stroke="#bbbaa6"/>
-<text class="label" x="896" y="836">Capa de integración</text>
-</svg>
+                                        <div class="architecture-explorer" data-architecture>
+                                            <div class="architecture-toolbar">
+                                                <p>Clean Architecture <span>.NET 10</span></p>
+                                                <button type="button" class="architecture-reset" data-architecture-reset hidden aria-pressed="false">Ver mapa completo <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg></button>
+                                            </div>
+                                            <div class="architecture-workspace">
+                                                <div class="architecture-map" role="group" aria-label="Capas y sistemas de TradingBook">
+                                                    <svg class="architecture-wires" viewBox="0 0 760 560" fill="none" aria-hidden="true">
+                                                        <defs>
+                                                            <marker id="trading-wire-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="m1 1 5 2.5L1 6" fill="none" stroke="#858779" stroke-width="1.2"/></marker>
+                                                            <marker id="trading-trace-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="m1 1 5 2.5L1 6" fill="none" stroke="#e69955" stroke-width="1.2"/></marker>
+                                                        </defs>
+                                                        <!-- Arrow direction means reference/access, not runtime data flow. -->
+                                                        <g class="architecture-wire" data-from="web" data-to="application"><path d="M226 114H278"/><path class="architecture-trace" pathLength="1" d="M226 114H278"/></g>
+                                                        <g class="architecture-wire" data-from="application" data-to="domain"><path d="M480 114H532"/><path class="architecture-trace" pathLength="1" d="M480 114H532"/></g>
+                                                        <g class="architecture-wire" data-from="web" data-to="infrastructure"><path d="M127 170V290Q127 306 143 306H278"/><path class="architecture-trace" pathLength="1" d="M127 170V290Q127 306 143 306H278"/></g>
+                                                        <g class="architecture-wire" data-from="infrastructure" data-to="application"><path d="M380 250V172"/><path class="architecture-trace" pathLength="1" d="M380 250V172"/></g>
+                                                        <g class="architecture-wire is-external" data-from="infrastructure" data-to="sql"><path d="M330 362V389Q330 405 314 405H143Q127 405 127 421V430"/><path class="architecture-trace" pathLength="1" d="M330 362V389Q330 405 314 405H143Q127 405 127 421V430"/></g>
+                                                        <g class="architecture-wire is-external" data-from="infrastructure" data-to="services"><path d="M430 362V389Q430 405 446 405H617Q633 405 633 421V430"/><path class="architecture-trace" pathLength="1" d="M430 362V389Q430 405 446 405H617Q633 405 633 421V430"/></g>
+                                                        <g class="architecture-wire-labels">
+                                                            <text x="395" y="210">implementa</text><text x="395" y="229">interfaces</text>
+                                                            <text x="142" y="253">registra</text><text x="142" y="272">adaptadores</text>
+                                                            <text x="210" y="391">EF Core</text><text x="500" y="391">HTTP / SMTP</text>
+                                                        </g>
+                                                    </svg>
+                                                    <button class="architecture-node" type="button" data-layer="web" aria-controls="layer-web" disabled>
+                                                        <i class="fas fa-desktop" aria-hidden="true"></i><strong>Web</strong><span>Presentación</span>
+                                                    </button>
+                                                    <button class="architecture-node" type="button" data-layer="application" aria-controls="layer-application" disabled>
+                                                        <i class="fas fa-code" aria-hidden="true"></i><strong>Application</strong><span>Casos de uso</span>
+                                                    </button>
+                                                    <button class="architecture-node" type="button" data-layer="domain" aria-controls="layer-domain" disabled>
+                                                        <i class="fas fa-cube" aria-hidden="true"></i><strong>Domain</strong><span>Modelo de negocio</span>
+                                                    </button>
+                                                    <button class="architecture-node" type="button" data-layer="infrastructure" aria-controls="layer-infrastructure" disabled>
+                                                        <i class="fas fa-layer-group" aria-hidden="true"></i><strong>Infrastructure</strong><span>Adaptadores</span>
+                                                    </button>
+                                                    <button class="architecture-node is-external" type="button" data-layer="sql" aria-controls="layer-sql" disabled>
+                                                        <i class="fas fa-database" aria-hidden="true"></i><strong>SQL Server</strong><span>Persistencia</span>
+                                                    </button>
+                                                    <button class="architecture-node is-external" type="button" data-layer="services" aria-controls="layer-services" disabled>
+                                                        <i class="fas fa-plug" aria-hidden="true"></i><strong>Servicios externos</strong><span>Integraciones</span>
+                                                    </button>
+                                                </div>
+                                                <div class="architecture-inspector">
+                                                    <article class="architecture-detail" id="layer-overview" data-detail="overview">
+                                                        <h3>Dependencias con intención.</h3>
+                                                        <p>Web, Application, Domain e Infrastructure separan la presentación, los casos de uso, el modelo de negocio y los adaptadores.</p>
+                                                        <h4>Cómo leer el mapa</h4>
+                                                        <p>Las flechas apuntan al proyecto referenciado. Las líneas discontinuas indican acceso a sistemas externos.</p>
+                                                        <p>Domain no referencia otros proyectos.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-web" data-detail="web">
+                                                        <h3>Web</h3><p class="architecture-role">Presentación</p>
+                                                        <ul><li>Controllers, Views y Razor Pages</li><li>Middleware y archivos estáticos</li><li>Program.cs compone los servicios</li></ul>
+                                                        <h4>Referencias</h4><p>Usa Application y registra los adaptadores de Infrastructure.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-application" data-detail="application">
+                                                        <h3>Application</h3><p class="architecture-role">Casos de uso</p>
+                                                        <ul><li>Servicios, interfaces y DTOs</li><li>Órdenes, cuentas y análisis</li><li>Reglas y orquestación de validación IA</li></ul>
+                                                        <h4>Referencias</h4><p>Usa Domain. Sus interfaces son implementadas por Infrastructure.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-domain" data-detail="domain">
+                                                        <h3>Domain</h3><p class="architecture-role">Modelo de negocio</p>
+                                                        <ul><li>Entidades, enums y constantes</li><li>Modelo compartido por las capas</li><li>Sin referencias a otros proyectos</li></ul>
+                                                        <h4>Referencias</h4><p>Application usa este modelo. Domain permanece independiente de las demás capas.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-infrastructure" data-detail="infrastructure">
+                                                        <h3>Infrastructure</h3><p class="architecture-role">Adaptadores</p>
+                                                        <ul><li>Repositorios EF Core e Identity</li><li>Correo, logging y clientes IA</li><li>Implementaciones registradas por DI</li></ul>
+                                                        <h4>Referencias y acceso</h4><p>Implementa las interfaces de Application y conecta SQL Server y los servicios externos.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-sql" data-detail="sql">
+                                                        <h3>SQL Server</h3><p class="architecture-role">Persistencia</p>
+                                                        <ul><li>ApplicationDbContext</li><li>LoggingDbContext</li><li>Tablas, vistas y procedimientos</li></ul>
+                                                        <h4>Acceso</h4><p>Infrastructure realiza la lectura y escritura mediante Entity Framework Core.</p>
+                                                    </article>
+                                                    <article class="architecture-detail" id="layer-services" data-detail="services">
+                                                        <h3>Servicios externos</h3><p class="architecture-role">Integraciones</p>
+                                                        <ul><li>Proveedores de visión IA</li><li>SMTP y TradingView</li><li>Acceso mediante adaptadores</li></ul>
+                                                        <h4>Acceso</h4><p>Infrastructure conecta estos servicios mediante HTTP, SMTP y automatización.</p>
+                                                    </article>
+                                                    <a class="architecture-source" href="https://github.com/FernandoTR/NET-TradingBookApp" target="_blank" rel="noopener noreferrer">Explorar el código <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="architecture-legend" aria-label="Leyenda del diagrama">
+                                                <span><svg viewBox="0 0 32 12" fill="none" aria-hidden="true"><path d="M1 6h28m-5-4 5 4-5 4"/></svg>Referencia entre proyectos</span>
+                                                <span><svg viewBox="0 0 32 12" fill="none" aria-hidden="true"><path d="M1 6h26" stroke-dasharray="3 3"/><path d="m24 2 5 4-5 4"/></svg>Sistema externo</span>
+                                                <span class="architecture-selection-key"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="4"/></svg>Conexión seleccionada</span>
+                                            </div>
+                                            <p class="trading-sr-only" data-architecture-status role="status" aria-live="polite" aria-atomic="true"></p>
                                         </div>
-                                    </div>
+                                    </section>
 
-                                    <section class="mt-40 project-impact-grid" aria-label="Seguridad, contribución y resultado">
+                                    <section class="mt-40 project-impact-grid trading-outcomes" id="resultado" aria-label="Seguridad, contribución y resultado">
                                         <article class="project-impact-card">
                                             <header class="project-impact-card-head">
                                                 <span class="project-impact-icon" aria-hidden="true">
@@ -610,6 +655,7 @@
 
     <!-- custom scripts -->
     <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/trading.js?v=20261113"></script>
 
     <script>
         const lightbox = GLightbox({

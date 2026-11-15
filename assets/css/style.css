@@ -4758,7 +4758,9 @@ img.left {
 /* Open footer layout */
 .footer-ultra {
     padding: 0 0 30px;
-    background: linear-gradient(180deg, #0e0f0f 0%, #080909 70%);
+    /*background: linear-gradient(180deg, #0e0f0f 0%, #080909 70%);*/
+    background:  #080909;
+
 }
 
 .footer-ultra-box {
@@ -6769,7 +6771,7 @@ img.left {
   color: #fff;
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.4;
   letter-spacing: -.025em;
   text-wrap: balance;
 }
