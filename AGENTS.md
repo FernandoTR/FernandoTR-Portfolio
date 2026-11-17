@@ -3,7 +3,7 @@
 ## Repo Shape
 - Static GitHub Pages portfolio; there is no `package.json`, build step, test runner, linter, formatter, or CI workflow in this repo.
 - Serve from the repo root, not via `file://`: Windows `py -m http.server 8080`, macOS/Linux `python3 -m http.server 8080`, then open `http://localhost:8080`.
-- Production domain is fixed by `CNAME`: `byfernandotorres.online`. Keep canonical, Open Graph, Twitter, and JSON-LD URLs aligned to that domain.
+- Production domain is fixed by `CNAME`: `fernandotorres.lat`. Keep canonical, Open Graph, Twitter, and JSON-LD URLs aligned to that domain.
 
 ## Main Files
 - `index.html` is the home page and contains the portfolio carousel, contact form, SEO metadata, inline Web3Forms/hCaptcha submit logic, and conditional Three.js loader.

@@ -7,7 +7,7 @@
 
 **Incluye:**
 
-- Configurar un sitio privado en Umami Cloud Hobby para `byfernandotorres.online`, conservando GitHub Pages como alojamiento.
+- Configurar un sitio privado en Umami Cloud Hobby para `fernandotorres.lat`, conservando GitHub Pages como alojamiento.
 - Medir desde la carga de `index.html` y los cinco casos públicos: `trading`, `apiSalesforceSap`, `distribuidores`, `proveedores` y `viaticos`.
 - Consultar métricas generales y sesiones separadas: fecha, páginas visitadas, dispositivo, navegador, ubicación aproximada cuando esté disponible y duración estimada estándar.
 - Registrar vistas de página automáticamente, clics desde la home hacia casos de estudio, clics al CV y envíos confirmados del formulario de contacto.
@@ -39,7 +39,7 @@ Los campos y servicios del formulario existentes permanecen igual. Nombre, corre
 
 **Condición previa a la publicación:** resolver mediante revisión legal cómo ofrecer un aviso válido sin publicar un domicilio personal. Si no existe una solución válida, se puede preparar y verificar el código localmente, pero no activar la analítica en producción.
 
-1. Crear un sitio privado en el plan gratuito Umami Cloud Hobby para `byfernandotorres.online` y obtener su identificador de sitio. El portafolio sigue funcionando sin cambios.
+1. Crear un sitio privado en el plan gratuito Umami Cloud Hobby para `fernandotorres.lat` y obtener su identificador de sitio. El portafolio sigue funcionando sin cambios.
 2. Crear `privacidad.html` con texto revisado sobre analítica, contacto, Web3Forms y hCaptcha. No inventar datos para completar el aviso.
 3. Añadir el enlace «Aviso de privacidad» junto al enlace del CV en el pie de `index.html` y `assets/projects/trading.html`; incorporar solo los estilos necesarios en `assets/css/style.css`.
 4. Añadir el script de Umami a esas seis páginas, limitado al dominio de producción y sin parámetros de búsqueda, fragmentos ni identificación personalizada. Excluir `assets/projects/project-template.html`.

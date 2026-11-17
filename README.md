@@ -6,14 +6,14 @@
   <p>Desarrollo Full Stack .NET, software empresarial e integraciones entre SAP Business One y Salesforce.</p>
 
   <p>
-    <a href="https://byfernandotorres.online/">Ver sitio</a> ·
+    <a href="https://fernandotorres.lat/">Ver sitio</a> ·
     <a href="assets/docs/FernandoTorres_CV.pdf">Abrir CV</a> ·
     <a href="https://www.linkedin.com/in/fernandotorresrivera">LinkedIn</a>
   </p>
 
   <p>
     <img src="https://img.shields.io/badge/HTML%20%7C%20CSS%20%7C%20JavaScript-0e0f0f?style=flat-square" alt="HTML, CSS y JavaScript" />
-    <a href="https://byfernandotorres.online/"><img src="https://img.shields.io/badge/GitHub%20Pages-en%20línea-e69955?style=flat-square&amp;logo=github" alt="Publicado en GitHub Pages" /></a>
+    <a href="https://fernandotorres.lat/"><img src="https://img.shields.io/badge/GitHub%20Pages-en%20línea-e69955?style=flat-square&amp;logo=github" alt="Publicado en GitHub Pages" /></a>
   </p>
 </div>
 
@@ -143,8 +143,8 @@ El formulario, las fuentes de Google y la analítica usan servicios externos y r
 El sitio se publica directamente desde los archivos del repositorio en **GitHub Pages**:
 
 1. En **Settings → Pages**, selecciona **Deploy from a branch**, la rama que quieras publicar y la carpeta **`/ (root)`**.
-2. Configura el dominio personalizado `byfernandotorres.online`, sus registros DNS y HTTPS.
-3. Conserva [`CNAME`](CNAME) y las URLs canonical, Open Graph, Twitter y JSON-LD alineadas con `https://byfernandotorres.online/`.
+2. Configura el dominio personalizado `fernandotorres.lat`, sus registros DNS y HTTPS.
+3. Conserva [`CNAME`](CNAME) y las URLs canonical, Open Graph, Twitter y JSON-LD alineadas con `https://fernandotorres.lat/`.
 
 No hay un workflow de CI propio en el repositorio. GitHub Pages sirve el HTML y los recursos estáticos sin una compilación de la aplicación.
 

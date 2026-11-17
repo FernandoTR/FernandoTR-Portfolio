@@ -25,7 +25,7 @@ Los visitantes consultan el perfil, experiencia profesional, tecnologías y cert
 ## Capabilities and Constraints
 
 - Sitio estático HTML, CSS y JavaScript publicado mediante GitHub Pages. No hay build, gestor de paquetes, pruebas automatizadas ni CI configurados.
-- Dominio de producción: `https://byfernandotorres.online/`. Canonical, Open Graph, Twitter y JSON-LD deben mantenerse alineados con él.
+- Dominio de producción: `https://fernandotorres.lat/`. Canonical, Open Graph, Twitter y JSON-LD deben mantenerse alineados con él.
 - La home está en `index.html`; los casos de estudio están en `assets/projects/`. `project-template.html` es una plantilla interna con `noindex, nofollow`.
 - Carrusel de proyectos con Swiper y galerías con GLightbox. Conservar sus atributos de inicialización y el orden de scripts indicado en `AGENTS.md`.
 - Formulario con Web3Forms, hCaptcha, validación y estados de envío. Preservar los contratos de campos, IDs y mensajes con su JavaScript.
