@@ -1,146 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es-MX">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="theme-color" content="#0e0f0f">
-    <title>Portadas de LinkedIn — Fernando Torres</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="banners.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Fernando Torres — Banners LinkedIn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --amber:#e69955; --charcoal:#0e0f0f; --raised:#101111; --soft:#141514; --muted:#bbbaa6; --body:#aaa; --white:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--charcoal); color:var(--white); font-family:'Vela Sans',Inter,'Noto Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+    .banner { position:relative; width:1584px; height:396px; overflow:hidden; background:var(--charcoal); }
+    h1,h2,p { margin:0; }
+    .amber { color:var(--amber); }
+    .label { font-size:17px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--muted); }
+    .domain { font-size:25px; font-weight:500; letter-spacing:-.4px; color:var(--muted); }
+    .arrow { color:var(--amber); margin-left:18px; }
+    .minimal .content { position:absolute; top:72px; left:400px; }
+    .minimal h1 { font-size:76px; font-weight:500; letter-spacing:-2.7px; line-height:1.15; margin:12px 0 18px; }
+    .minimal .specialty { font-size:28px; color:var(--muted); }
+    .minimal .domain { margin-top:34px; }
+    .minimal .rule { position:absolute; left:350px; top:79px; height:226px; width:2px; background:var(--amber); }
+    .minimal .sculpture { position:absolute; right:-95px; top:-166px; width:490px; height:670px; border:1px solid #bbbaa626; border-radius:50%; transform:rotate(30deg); }
+    .minimal .sculpture::before,.minimal .sculpture::after { content:''; position:absolute; inset:48px; border:1px solid #bbbaa61c; border-radius:50%; }
+    .minimal .sculpture::after { inset:96px; background:var(--raised); }
+    .editorial .rail { position:absolute; left:0; width:298px; height:396px; background:var(--soft); border-right:1px solid #bbbaa62b; }
+    .editorial .rail span { display:block; margin:64px 0 0 77px; font-size:82px; letter-spacing:-8px; font-weight:500; color:var(--muted); }
+    .editorial .rail i { color:var(--amber); font-style:normal; }
+    .editorial .content { position:absolute; left:365px; top:54px; right:130px; }
+    .editorial .name { font-size:24px; color:var(--muted); }
+    .editorial h1 { font-weight:500; font-size:88px; line-height:1.2; letter-spacing:-4px; margin:14px 0 7px; }
+    .editorial .specialty { font-size:28px; color:var(--muted); }
+    .editorial footer { display:flex; align-items:center; justify-content:space-between; margin-top:30px; padding-top:20px; border-top:1px solid #bbbaa640; }
+    .editorial .label { font-size:14px; letter-spacing:2px; }
+    .geometric .content { position:absolute; left:355px; top:68px; z-index:1; }
+    .geometric h1 { font-size:64px; font-weight:500; line-height:1.15; letter-spacing:-2px; margin:14px 0 12px; }
+    .geometric .specialty { font-size:27px; color:var(--muted); }
+    .geometric .domain { margin-top:36px; }
+    .geometric svg { position:absolute; right:90px; top:48px; width:430px; height:300px; }
+    .geometric .edge { position:absolute; left:0; top:0; height:396px; width:265px; background:repeating-linear-gradient(135deg,transparent 0 31px,#bbbaa609 32px 33px); }
+    .architecture .content { position:absolute; left:355px; top:66px; z-index:1; }
+    .architecture .label { font-size:16px; letter-spacing:2.8px; }
+    .architecture h1 { font-size:65px; font-weight:500; letter-spacing:-2.6px; line-height:1.15; margin:18px 0 14px; }
+    .architecture .specialty { font-size:28px; color:var(--muted); }
+    .architecture .specialty span { color:var(--amber); }
+    .architecture .description { font-size:23px; color:var(--muted); margin-top:8px; }
+    .architecture .domain { margin-top:29px; font-size:24px; }
+    .architecture .art { position:absolute; right:52px; top:8px; width:590px; height:380px; }
+    .architecture .margin-line { position:absolute; left:310px; top:74px; width:2px; height:60px; background:var(--amber); }
+    .reference { border:0; }
+    .reference::after { content:''; position:absolute; inset:3px 21px 6px 28px; border:1px solid #bbbaa62b; pointer-events:none; }
+    .reference .content { position:absolute; left:468px; top:69px; z-index:1; }
+    .reference .label { display:flex; align-items:center; gap:12px; font-size:13px; letter-spacing:2px; }
+    .reference .label::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--amber); }
+    .reference h1 { font-size:56px; line-height:1.15; font-weight:400; letter-spacing:-2.5px; margin:26px 0 18px; }
+    .reference .specialty { color:var(--amber); font-size:26px; letter-spacing:-.6px; }
+    .reference .domain { position:absolute; left:468px; top:324px; font-size:19px; font-weight:400; letter-spacing:-.3px; z-index:1; }
+    .reference .drawing { position:absolute; inset:0; width:1584px; height:396px; }
+    .banner[hidden] { display:none; }
+  </style>
 </head>
-
 <body>
-    <header class="gallery-header">
-        <p class="eyebrow">Fernando Torres / Identidad profesional</p>
-        <h1>Tu siguiente primera impresión.</h1>
-        <div class="gallery-intro">
-            <p>Tres portadas de LinkedIn. Una misma identidad.<br>PNG · 1584 × 396 px · Paleta de DESIGN.md</p>
-            <label class="profile-toggle"><input type="checkbox" id="profile-zone"> Simular foto de perfil</label>
-        </div>
-    </header>
-
-    <main>
-        <section class="proposal" data-variant="editorial">
-            <div class="proposal-heading">
-                <div><span class="proposal-number">01</span><h2>Editorial minimalista</h2><span class="recommended">Recomendada</span></div>
-                <a class="download" href="editorial-1584x396.png" download>Descargar PNG <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="banner-frame">
-                <article class="banner editorial" aria-label="Portada editorial: Fernando Torres, Desarrollador Full Stack .NET. Sistemas empresariales, APIs e integraciones. byfernandotorres.online.">
-                    <div class="editorial-sidebar" aria-hidden="true"></div>
-                    <img class="editorial-logo" src="../../imgs/logo-light.svg" alt="" aria-hidden="true" width="78" height="71">
-                    <svg class="editorial-ornament" width="196" height="140" viewBox="0 0 196 140" fill="none" aria-hidden="true">
-                        <path d="M0 18H196M0 58H156M0 98H116M0 138H76" stroke="currentColor" stroke-opacity=".13"/>
-                        <path d="M0 18H44" stroke="#e69955" stroke-width="2"/>
-                    </svg>
-                    <div class="editorial-rail" aria-hidden="true"></div>
-                    <div class="editorial-topline" aria-hidden="true"><span></span></div>
-                    <p class="editorial-label" data-copy>Ingeniería de software</p>
-                    <h2 class="editorial-name" data-copy>Fernando Torres<span class="name-dot">.</span></h2>
-                    <p class="editorial-role" data-copy>Desarrollador Full Stack .NET</p>
-                    <p class="editorial-focus" data-copy>Sistemas empresariales · APIs · Integraciones</p>
-                    <div class="editorial-footer" data-copy>
-                        <span class="footer-rule" aria-hidden="true"></span>
-                        <span>byfernandotorres.online</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                </article>
-            </div>
-            <p class="proposal-note">Tipografía al frente, firma de marca y espacio generoso. Una presentación sobria y atemporal.</p>
-        </section>
-
-        <section class="proposal" data-variant="geometrico">
-            <div class="proposal-heading">
-                <div><span class="proposal-number">02</span><h2>Arquitectura conectada</h2></div>
-                <a class="download" href="geometrico-1584x396.png" download>Descargar PNG <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="banner-frame">
-                <article class="banner geometric" aria-label="Portada geométrica: Fernando Torres, Desarrollador Full Stack .NET. Sistemas empresariales, APIs e integraciones. byfernandotorres.online.">
-                    <div class="geometric-grid" aria-hidden="true"></div>
-                    <svg class="geometric-lines" width="1584" height="396" viewBox="0 0 1584 396" fill="none" aria-hidden="true">
-                        <path d="M0 106H268C291 106 294 82 318 82H384M0 143H230C259 143 265 119 294 119H350M94 0V45C94 62 107 69 125 69H203M0 180H194" stroke="#bbbaa6" stroke-opacity=".14"/>
-                        <path d="M110 106H230" stroke="#e69955" stroke-opacity=".6"/>
-                        <circle cx="268" cy="106" r="4" fill="#e69955"/>
-                        <circle cx="350" cy="119" r="3" fill="#bbbaa6" fill-opacity=".4"/>
-                        <path d="M1058 97H1100L1140 121M1415 246 1463 272H1584M1284 332V396" stroke="#bbbaa6" stroke-opacity=".28"/>
-                        <path d="m1116 221 168-88 168 88v30l-168 88-168-88Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".26"/>
-                        <path d="m1116 221 168 88 168-88M1284 309v30" stroke="#bbbaa6" stroke-opacity=".26"/>
-                        <path d="m1116 172 168-88 168 88v30l-168 88-168-88Z" fill="#141514" stroke="#bbbaa6" stroke-opacity=".32"/>
-                        <path d="m1116 172 168 88 168-88M1284 260v30" stroke="#bbbaa6" stroke-opacity=".32"/>
-                        <path d="m1116 123 168-88 168 88v30l-168 88-168-88Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".5"/>
-                        <path d="m1116 123 168 88 168-88M1284 211v30" stroke="#bbbaa6" stroke-opacity=".5"/>
-                        <path d="m1224 123 60-32 60 32-60 32Z" fill="#141514" stroke="#e69955" stroke-width="1.5"/>
-                        <path d="M1284 91V67m60 56h35m-155 0h-35m95 32v24" stroke="#e69955" stroke-opacity=".65"/>
-                        <circle cx="1284" cy="67" r="3" fill="#e69955"/>
-                        <circle cx="1379" cy="123" r="3" fill="#e69955"/>
-                        <circle cx="1189" cy="123" r="3" fill="#e69955"/>
-                        <circle cx="1284" cy="179" r="3" fill="#e69955"/>
-                        <path d="m1195 214 29 15m-29 34 29 15m-29-15 29 15" stroke="#e69955" stroke-opacity=".75" stroke-width="2"/>
-                        <path d="m1343 241 30-16m-30 65 30-16" stroke="#bbbaa6" stroke-opacity=".5" stroke-width="2"/>
-                    </svg>
-                    <div class="geometric-copy">
-                        <p class="geometric-label" data-copy><span aria-hidden="true"></span>Desarrollo e integración</p>
-                        <h2 class="geometric-name" data-copy>Fernando Torres</h2>
-                        <p class="geometric-role" data-copy>Desarrollador Full Stack .NET</p>
-                        <p class="geometric-focus" data-copy>Sistemas empresariales.<br>APIs e integraciones.</p>
-                        <p class="geometric-url" data-copy>byfernandotorres.online <span aria-hidden="true">↗</span></p>
-                    </div>
-                </article>
-            </div>
-            <p class="proposal-note">Capas isométricas y conexiones originales: una metáfora visual de sistemas que trabajan juntos.</p>
-        </section>
-
-        <section class="proposal" data-variant="tipografico">
-            <div class="proposal-heading">
-                <div><span class="proposal-number">03</span><h2>Especialidad protagonista</h2></div>
-                <a class="download" href="tipografico-1584x396.png" download>Descargar PNG <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="banner-frame">
-                <article class="banner typographic" aria-label="Portada tipográfica: Fernando Torres, Desarrollador Full Stack .NET. Sistemas empresariales, APIs e integraciones. byfernandotorres.online.">
-                    <div class="typographic-monogram" aria-hidden="true">FT</div>
-                    <svg class="typographic-slash" width="300" height="396" viewBox="0 0 300 396" fill="none" aria-hidden="true">
-                        <path d="M230-100 24 496h80L310-100Z" fill="#141514"/>
-                        <path d="M262-100 56 496" stroke="#bbbaa6" stroke-opacity=".13"/>
-                    </svg>
-                    <div class="typographic-accent" aria-hidden="true"></div>
-                    <p class="typographic-name" data-copy>Fernando Torres</p>
-                    <h2 class="typographic-role" data-copy><span class="role-prefix">Desarrollador</span>Full Stack <span class="dotnet">.NET</span></h2>
-                    <p class="typographic-focus" data-copy>Sistemas empresariales · APIs · Integraciones</p>
-                    <div class="typographic-footer" data-copy>
-                        <span class="footer-rule" aria-hidden="true"></span>
-                        <span>byfernandotorres.online</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                </article>
-            </div>
-            <p class="proposal-note">La especialidad es el mensaje principal. Mayor impacto tipográfico con un acento ámbar controlado.</p>
-        </section>
-    </main>
-
-    <footer class="gallery-footer">Las tres imágenes reservan la esquina inferior izquierda para tu foto de perfil. Sube el PNG a LinkedIn y conserva el encuadre completo.</footer>
-
-    <script>
-        const exportVariant = new URLSearchParams(window.location.search).get('export');
-        const variants = ['editorial', 'geometrico', 'tipografico'];
-
-        if (variants.includes(exportVariant)) {
-            document.body.classList.add('is-export');
-            document.querySelectorAll('.proposal').forEach(proposal => {
-                proposal.hidden = proposal.dataset.variant !== exportVariant;
-            });
-        } else {
-            const resizeObserver = new ResizeObserver(entries => {
-                entries.forEach(({ target, contentRect }) => {
-                    target.style.setProperty('--preview-scale', contentRect.width / 1584);
-                });
-            });
-            document.querySelectorAll('.banner-frame').forEach(frame => resizeObserver.observe(frame));
-        }
-    </script>
+  <section class="banner minimal" data-variant="minimalista" aria-label="Banner minimalista">
+    <div class="sculpture" aria-hidden="true"></div><div class="rule" aria-hidden="true"></div>
+    <div class="content"><p class="label">Desarrollo de software</p><h1>Fernando Torres<span class="amber">.</span></h1><p class="specialty"><span class="amber">Full Stack .NET</span> &nbsp;·&nbsp; Integraciones empresariales</p><p class="domain">fernandotorres.lat<span class="arrow">↗</span></p></div>
+  </section>
+  <section class="banner editorial" data-variant="editorial" aria-label="Banner editorial" hidden>
+    <div class="rail" aria-hidden="true"><span>FT<i>.</i></span></div>
+    <div class="content"><p class="name">Fernando Torres</p><h1>Full Stack <span class="amber">.NET</span></h1><p class="specialty">Integraciones empresariales</p><footer><p class="label">Desarrollo de software</p><p class="domain">fernandotorres.lat<span class="arrow">↗</span></p></footer></div>
+  </section>
+  <section class="banner geometric" data-variant="geometrico" aria-label="Banner geométrico" hidden>
+    <div class="edge" aria-hidden="true"></div>
+    <div class="content"><p class="label">Full Stack <span class="amber">.NET</span></p><h1>Fernando Torres<span class="amber">.</span></h1><p class="specialty">Integraciones empresariales</p><p class="domain">fernandotorres.lat<span class="arrow">↗</span></p></div>
+    <svg viewBox="0 0 430 300" fill="none" aria-hidden="true">
+      <path d="M215 18 415 150 215 282 15 150Z" stroke="#bbbaa6" stroke-opacity=".15"/>
+      <path d="M215 50 365 150 215 250 65 150Z" stroke="#bbbaa6" stroke-opacity=".22"/>
+      <path d="M65 150H160M270 150H365M215 50V104M215 196V250" stroke="#e69955" stroke-width="2"/>
+      <path d="M65 150V65H215M365 150V235H215" stroke="#bbbaa6" stroke-opacity=".3"/>
+      <rect x="154" y="96" width="122" height="108" rx="18" fill="#141514" stroke="#e69955"/>
+      <rect x="162" y="104" width="106" height="92" rx="12" stroke="#bbbaa6" stroke-opacity=".13"/>
+      <text x="215" y="162" fill="#fff" font-family="Inter,sans-serif" font-size="33" font-weight="500" text-anchor="middle">.NET</text>
+      <g fill="#141514" stroke="#bbbaa6"><rect x="46" y="131" width="38" height="38" rx="8"/><rect x="346" y="131" width="38" height="38" rx="8"/><rect x="196" y="31" width="38" height="38" rx="8"/><rect x="196" y="231" width="38" height="38" rx="8"/></g>
+      <g fill="#e69955"><circle cx="65" cy="150" r="4"/><circle cx="365" cy="150" r="4"/><circle cx="215" cy="50" r="4"/><circle cx="215" cy="250" r="4"/></g>
+    </svg>
+  </section>
+  <section class="banner architecture" data-variant="arquitectura-conectada" aria-label="Arquitectura conectada: Fernando Torres, Full Stack .NET e integraciones empresariales" hidden>
+    <div class="margin-line" aria-hidden="true"></div>
+    <div class="content">
+      <p class="label">Arquitectura conectada</p>
+      <h1>Fernando Torres<span class="amber">.</span></h1>
+      <p class="specialty">Full Stack <span>.NET</span></p>
+      <p class="description">Integraciones empresariales</p>
+      <p class="domain">fernandotorres.lat<span class="arrow">↗</span></p>
+    </div>
+    <!-- Original vector illustration: conceptual layers and connections, not a project topology. -->
+    <svg class="art" viewBox="0 0 590 380" fill="none" aria-hidden="true">
+      <defs>
+        <g id="connected-module">
+          <path d="M0 0 48-28 96 0 48 28Z" fill="#141514" stroke="#bbbaa6" stroke-opacity=".55"/>
+          <path d="M0 0V12L48 40V28Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".25"/>
+          <path d="M48 28 96 0V12L48 40Z" fill="#0e0f0f" stroke="#bbbaa6" stroke-opacity=".35"/>
+          <path d="M32 0 48-9 64 0 48 9Z" stroke="#e69955" stroke-width="1.5"/>
+        </g>
+      </defs>
+      <!-- Quiet isometric ground plane. -->
+      <g stroke="#bbbaa6" stroke-opacity=".09">
+        <path d="M26 239 286 89 564 250 304 400M26 279 286 129 564 290M26 319 286 169 564 330M76 348 336 198M146 388 406 238"/>
+        <path d="M26 239 304 400M96 199 374 360M166 159 444 320M236 119 514 280"/>
+      </g>
+      <!-- Routed connections tie four independent systems into the layered core. -->
+      <g stroke="#e69955" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M108 150V188L205 244"/>
+        <path d="M472 116V166L381 219"/>
+        <path d="M470 282 421 310 361 275"/>
+        <path d="M143 306 186 331 244 298"/>
+      </g>
+      <g stroke="#bbbaa6" stroke-opacity=".35" stroke-dasharray="3 6">
+        <path d="M108 127 229 57 345 124"/>
+        <path d="M472 103 398 60 343 92"/>
+      </g>
+      <!-- Lower layer: data and infrastructure. -->
+      <path d="M180 244 295 178 410 244 295 310Z" fill="#141514" stroke="#bbbaa6" stroke-opacity=".6"/>
+      <path d="M180 244V258L295 324V310Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".3"/>
+      <path d="M295 310 410 244V258L295 324Z" fill="#0e0f0f" stroke="#bbbaa6" stroke-opacity=".4"/>
+      <path d="M205 244 295 192 385 244 295 296Z" stroke="#bbbaa6" stroke-opacity=".15"/>
+      <!-- Middle layer: integration; the amber edge is the signal. -->
+      <g stroke="#bbbaa6" stroke-opacity=".4" stroke-dasharray="3 5"><path d="M180 183V243M410 183V243M295 249V309"/></g>
+      <path d="M180 183 295 117 410 183 295 249Z" fill="#141514" stroke="#e69955" stroke-width="1.5"/>
+      <path d="M180 183V195L295 261V249Z" fill="#101111" stroke="#e69955" stroke-opacity=".65"/>
+      <path d="M295 249 410 183V195L295 261Z" fill="#101111" stroke="#e69955" stroke-opacity=".65"/>
+      <path d="M211 183 295 135 379 183 295 231Z" stroke="#e69955" stroke-opacity=".3"/>
+      <!-- Upper layer: application, with a small original processor motif. -->
+      <g stroke="#bbbaa6" stroke-opacity=".4" stroke-dasharray="3 5"><path d="M180 120V182M410 120V182M295 186V248"/></g>
+      <path d="M180 120 295 54 410 120 295 186Z" fill="#141514" stroke="#bbbaa6" stroke-opacity=".8"/>
+      <path d="M180 120V132L295 198V186Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".4"/>
+      <path d="M295 186 410 120V132L295 198Z" fill="#0e0f0f" stroke="#bbbaa6" stroke-opacity=".5"/>
+      <path d="M211 120 295 72 379 120 295 168Z" stroke="#bbbaa6" stroke-opacity=".2"/>
+      <g transform="translate(295 120) matrix(.866 .5 -.866 .5 0 0)">
+        <rect x="-29" y="-29" width="58" height="58" rx="6" fill="#101111" stroke="#e69955" stroke-width="2"/>
+        <path d="M-18-38V-29M0-38V-29M18-38V-29M-18 29V38M0 29V38M18 29V38M-38-18H-29M-38 0H-29M-38 18H-29M29-18H38M29 0H38M29 18H38" stroke="#bbbaa6"/>
+        <path d="m-11-9-9 9 9 9M11-9 9 9M11-9 20 0 11 9" stroke="#e69955" stroke-width="2.5" stroke-linejoin="round"/>
+      </g>
+      <use href="#connected-module" x="60" y="122"/>
+      <use href="#connected-module" x="424" y="88"/>
+      <use href="#connected-module" x="422" y="254"/>
+      <use href="#connected-module" x="95" y="278"/>
+      <g fill="#e69955"><circle cx="108" cy="188" r="3"/><circle cx="472" cy="166" r="3"/><circle cx="421" cy="310" r="3"/><circle cx="186" cy="331" r="3"/></g>
+    </svg>
+  </section>
+  <section class="banner reference" data-variant="geometrico-isometrico" aria-label="Fernando Torres, Full Stack .NET, integraciones empresariales" hidden>
+    <div class="content">
+      <p class="label">Full Stack .NET</p>
+      <h1>Fernando Torres</h1>
+      <p class="specialty">Integraciones empresariales</p>
+    </div>
+    <p class="domain">fernandotorres.lat<span class="arrow">↗</span></p>
+    <svg class="drawing" viewBox="0 0 1584 396" fill="none" aria-hidden="true">
+      <defs>
+        <pattern id="reference-dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="3" cy="13" r="1" fill="#bbbaa6" fill-opacity=".2"/></pattern>
+        <linearGradient id="reference-fade"><stop stop-color="white" stop-opacity="0"/><stop offset=".36" stop-color="white"/><stop offset=".9" stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+        <mask id="reference-dot-mask"><rect x="980" width="580" height="396" fill="url(#reference-fade)"/></mask>
+      </defs>
+      <rect x="980" y="3" width="580" height="387" fill="url(#reference-dots)" mask="url(#reference-dot-mask)"/>
+      <!-- Fine circuit traces echo the supplied reference, leaving the avatar area quiet. -->
+      <g stroke="#bbbaa6" stroke-opacity=".13" stroke-width="1">
+        <path d="M120 3V44Q120 71 151 71H226M29 107H284Q303 107 316 94L327 84Q335 83 346 83H403"/>
+        <path d="M29 143H247Q267 143 282 132L299 122Q307 119 323 119H369M29 179H217"/>
+        <path d="M1056 98H1096L1127 118M1412 247 1450 268H1563M1275 323V390"/>
+      </g>
+      <path d="M136 107H253" stroke="#e69955" stroke-opacity=".6"/>
+      <circle cx="289" cy="107" r="3.6" fill="#e69955"/>
+      <circle cx="369" cy="119" r="2.8" fill="#bbbaa6" fill-opacity=".35"/>
+      <!-- Three precisely aligned isometric slabs, drawn back-to-front. -->
+      <g stroke-width="1.2" stroke-linejoin="round">
+        <path d="M1112 219 1275 134 1438 219 1275 305Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".27"/>
+        <path d="M1112 219V248L1275 333V305Z" fill="#0e0f0f" stroke="#bbbaa6" stroke-opacity=".27"/>
+        <path d="M1275 305 1438 219V248L1275 333Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".27"/>
+        <path d="M1189 260 1216 274" stroke="#e69955" stroke-opacity=".8"/>
+        <path d="M1332 286 1360 271" stroke="#bbbaa6" stroke-opacity=".55"/>
+        <path d="M1112 171 1275 86 1438 171 1275 257Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".32"/>
+        <path d="M1112 171V200L1275 286V257Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".32"/>
+        <path d="M1275 257 1438 171V200L1275 286Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".32"/>
+        <path d="M1189 212 1216 226" stroke="#e69955" stroke-opacity=".85"/>
+        <path d="M1332 238 1360 223" stroke="#bbbaa6" stroke-opacity=".6"/>
+        <path d="M1112 123 1275 37 1438 123 1275 209Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".48"/>
+        <path d="M1112 123V152L1275 238V209Z" fill="#0e0f0f" stroke="#bbbaa6" stroke-opacity=".42"/>
+        <path d="M1275 209 1438 123V152L1275 238Z" fill="#101111" stroke="#bbbaa6" stroke-opacity=".42"/>
+      </g>
+      <g stroke="#e69955" stroke-width="1.5" stroke-linejoin="round">
+        <path d="M1217 123 1275 92 1333 123 1275 154Z"/>
+        <path d="M1183 123H1217M1333 123H1367M1275 69V92M1275 154V177"/>
+      </g>
+      <g fill="#e69955"><circle cx="1183" cy="123" r="2.8"/><circle cx="1367" cy="123" r="2.8"/><circle cx="1275" cy="69" r="2.8"/><circle cx="1275" cy="177" r="2.8"/></g>
+    </svg>
+  </section>
+  <script>
+    const variant = new URLSearchParams(location.search).get('variant') || 'minimalista';
+    document.querySelectorAll('[data-variant]').forEach(banner => { banner.hidden = banner.dataset.variant !== variant; });
+  </script>
 </body>
-
 </html>
